@@ -55,7 +55,7 @@
             </p>
         </div>
 		<div class="row miwen_sanji_tuwen">
-            @foreach($me_news_details as $value)
+            @foreach($me_wen2 as $value)
             @if($value->pic_path)
             <p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style=" border:none; padding:0;"><img src="{{$value->pic_path}}" class="img-responsive"></p>
             <p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style=" border:none; padding:0 3vw;">
