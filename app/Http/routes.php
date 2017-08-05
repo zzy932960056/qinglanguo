@@ -82,73 +82,75 @@ Route::post('/index/dopwdupdate','LoginController@dopwdUpdate');
 
 
 /*************************************移动端*********************************/
-// Route::get('/','MobileController@index');
-// //手机觅宝点赞
-// Route::post('/me_bao/dodianzan','MobileController@doDianzan');
-// //觅闻首推三级
-// Route::get('/index/me_wen/cover/{id}','MobileController@me_wen_cover')->where('id', '[0-9]+');
-// //觅尚首推三级
-// Route::get('/index/me_shang/cover/{id}','MobileController@me_shang_cover')->where('id', '[0-9]+');
-// //觅闻
-// Route::get('/index/me_wen','MobileController@me_wen');
-// //觅闻三级
-// Route::get('/index/me_wen/details/{id}','MobileController@me_wen_details')->where('id', '[0-9]+');
-// //觅秀
-// Route::get('/index/me_xiu','MobileController@me_xiu');
-// //觅秀三级
-// Route::get('/index/me_xiu/third','MobileController@me_xiu_third');
-// //觅尚
-// Route::get('/index/me_shang','MobileController@me_shang_second');
-// //觅尚三级
-// Route::get('/index/me_shang/details/{id}','MobileController@me_shang_third')->where('id', '[0-9]+');
-// //觅宝
-// Route::get('/index/me_bao','MobileController@me_bao');
-// //觅宝三级视频
-// Route::get('/index/me_bao/video','MobileController@me_bao_third_video');
-// //觅宝三级孩子
-// Route::get('/index/me_bao/child','MobileController@me_bao_third_child');
-// //省市区联动1
-// Route::post('/index/liandong','MobileController@liandong');
-// //省市区联动2
-// Route::post('/index/liandong2','MobileController@liandong2');
-// //觅宝三级表单查询
-// Route::any('/index/me_bao/select_children','MobileController@me_bao_select_child');
-// //觅样
-// Route::get('/index/me_young','MobileController@me_young');
-// //觅样三级
-// Route::get('/index/me_join','MobileController@me_join');
-// //微信
-// Route::get('/index/me_join/weixin','MobileController@me_join_weixin');
-// //微博
-// Route::get('/index/me_join/weibo','MobileController@me_join_weibo');
-// //淘宝
-// Route::get('/index/me_join/taobao','MobileController@me_join_taobao');
-// //QQ
-// Route::get('/index/me_join/qq','MobileController@me_join_qq');
-// //登录
-// Route::get('/index/login','MloginController@me_login');
-// //do登陆
-// Route::post('/index/doLogin','MloginController@me_doLogin');
-// //do退出登录
-// Route::get('/index/logout','MloginController@me_logout');
-// //注册
-// Route::get('/index/register','MloginController@me_register');
-// //验证手机号
-// Route::post('/index/register/phone','MloginController@doPhone');
-// //发送验证码
-// Route::post('/sms/code','MloginController@sendCode');
-// //发送修改密码验证码
-// Route::post('/sms/forget/code','MloginController@sendforgetCode');
-// //do注册
-// Route::post('/index/doregister','MloginController@doRegister');
-// //注册成功
-// Route::get('/index/regsuccess','MloginController@regSuccess');
-// //忘记密码
-// Route::get('/index/forgetpass','MloginController@forgetPass');
-// //忘记密码检测手机
-// Route::post('/index/selectphone','MloginController@selectPhone');
-// //do修改密码
-// Route::post('/index/dopwdupdate','MloginController@dopwdUpdate');
+Route::group(['domain' => 'm.meyoungbaby.com'], function () {
+	Route::get('/','MobileController@index');
+	//手机觅宝点赞
+	Route::post('/me_bao/dodianzan','MobileController@doDianzan');
+	//觅闻首推三级
+	Route::get('/index/me_wen/cover/{id}','MobileController@me_wen_cover')->where('id', '[0-9]+');
+	//觅尚首推三级
+	Route::get('/index/me_shang/cover/{id}','MobileController@me_shang_cover')->where('id', '[0-9]+');
+	//觅闻
+	Route::get('/index/me_wen','MobileController@me_wen');
+	//觅闻三级
+	Route::get('/index/me_wen/details/{id}','MobileController@me_wen_details')->where('id', '[0-9]+');
+	//觅秀
+	Route::get('/index/me_xiu','MobileController@me_xiu');
+	//觅秀三级
+	Route::get('/index/me_xiu/third','MobileController@me_xiu_third');
+	//觅尚
+	Route::get('/index/me_shang','MobileController@me_shang_second');
+	//觅尚三级
+	Route::get('/index/me_shang/details/{id}','MobileController@me_shang_third')->where('id', '[0-9]+');
+	//觅宝
+	Route::get('/index/me_bao','MobileController@me_bao');
+	//觅宝三级视频
+	Route::get('/index/me_bao/video','MobileController@me_bao_third_video');
+	//觅宝三级孩子
+	Route::get('/index/me_bao/child','MobileController@me_bao_third_child');
+	//省市区联动1
+	Route::post('/index/liandong','MobileController@liandong');
+	//省市区联动2
+	Route::post('/index/liandong2','MobileController@liandong2');
+	//觅宝三级表单查询
+	Route::any('/index/me_bao/select_children','MobileController@me_bao_select_child');
+	//觅样
+	Route::get('/index/me_young','MobileController@me_young');
+	//觅样三级
+	Route::get('/index/me_join','MobileController@me_join');
+	//微信
+	Route::get('/index/me_join/weixin','MobileController@me_join_weixin');
+	//微博
+	Route::get('/index/me_join/weibo','MobileController@me_join_weibo');
+	//淘宝
+	Route::get('/index/me_join/taobao','MobileController@me_join_taobao');
+	//QQ
+	Route::get('/index/me_join/qq','MobileController@me_join_qq');
+	//登录
+	Route::get('/index/login','MloginController@me_login');
+	//do登陆
+	Route::post('/index/doLogin','MloginController@me_doLogin');
+	//do退出登录
+	Route::get('/index/logout','MloginController@me_logout');
+	//注册
+	Route::get('/index/register','MloginController@me_register');
+	//验证手机号
+	Route::post('/index/register/phone','MloginController@doPhone');
+	//发送验证码
+	Route::post('/sms/code','MloginController@sendCode');
+	//发送修改密码验证码
+	Route::post('/sms/forget/code','MloginController@sendforgetCode');
+	//do注册
+	Route::post('/index/doregister','MloginController@doRegister');
+	//注册成功
+	Route::get('/index/regsuccess','MloginController@regSuccess');
+	//忘记密码
+	Route::get('/index/forgetpass','MloginController@forgetPass');
+	//忘记密码检测手机
+	Route::post('/index/selectphone','MloginController@selectPhone');
+	//do修改密码
+	Route::post('/index/dopwdupdate','MloginController@dopwdUpdate');
+}
 /*************************************移动端*********************************/
 
 

@@ -391,12 +391,11 @@ class AdminController extends Controller
 
     //七牛云文件上传
     public function admin_upload(){
-        // $storage = \Storage::disk(config('admin.upload.disk'));
-        // $uploadToken = $storage->uploadToken();
-        // $data['uptoken'] = $uploadToken;
-        // var_dump($data);
-        // return view('upload', $data);
-        return redirect('http://op.hyzemedia.com/admin/upload');
+        $storage = \Storage::disk(config('admin.upload.disk'));
+        $uploadToken = $storage->uploadToken();
+        $data['uptoken'] = $uploadToken;
+        return view('upload', $data);
+        //return redirect('http://op.hyzemedia.com/admin/upload');
     }
 
     //CDN图片管理

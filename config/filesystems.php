@@ -77,18 +77,19 @@ return [
             'bucket' => 'your-bucket',
         ],
         /*****************************七牛云********************************/
-        // 'qiniu' => [
-        //     'driver'  => 'qiniu',
-        //     'domains' => [
-        //         'default'   => env('QIQIU_DOMAIN', ''), //你的七牛域名
-        //         'https'     => 'dn-yourdomain.qbox.me',         //你的HTTPS域名
-        //         'custom'    => 'static.abc.com',                //你的自定义域名
-        //     ],
-        //     'access_key'=> '4Ob38ZKy1VOFntbr8oDJVhR3Q9N6FnOTFzztypLh',  //AccessKey
-        //     'secret_key'=> 'E33H1DzAnSbM-i_MiHVVrRMNGQ0cXIJES5FE_0mg',  //SecretKey
-        //     'bucket'    => 'hyze',  //Bucket名字
-        //     'notify_url'=> '',  //持久化处理回调地址
-        // ],
+        'qiniu' => [
+            'driver'  => 'qiniu',
+            'domains' => [
+                'default'   => 'static.meyoungbaby.com', //你的七牛域名
+                'https'     => 'static.meyoungbaby.com',         //你的HTTPS域名
+                'custom'    => 'static.meyoungbaby.com',                //你的自定义域名
+            ],
+            'access_key'=> 'K2byfqhFuAXM6ihYrCs94KgaGZkNj-DThtujOqhP',  //AccessKey
+            'secret_key'=> '2AujxsqJC9THuuISgm5ednzZIPLnPIG1tsiS3ovQ',  //SecretKey
+            'bucket'    => 'meyong',  //Bucket名字
+            'notify_url'=> '',  //持久化处理回调地址
+            'access'    => 'public'  //空间访问控制 public 或 private
+        ],
         /*****************************七牛云********************************/
 
     ],
