@@ -93,7 +93,7 @@ server('production', 'www.hyzemedia.com')
     ->user('oipublish')
     ->password('hyze@publish')
 //    ->identityFile()
-    ->set('deploy_path', '/opt/hyze/meyong');
+    ->set('deploy_path', '/opt/hyze/meyoung');
 
 
 // Tasks
