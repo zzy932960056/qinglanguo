@@ -1,5 +1,5 @@
 <?php
-
+use SoapClient;
 namespace App\Services;
 
 //短信接口类
