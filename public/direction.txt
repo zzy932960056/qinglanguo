@@ -1,0 +1,3 @@
+css、image、js:管理员后台
+css2、images、js2:前台
+css3、images_zazhi、js3:前台杂志模块
