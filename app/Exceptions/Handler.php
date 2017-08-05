@@ -33,6 +33,10 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $e)
     {
+        // if ($e instanceof HttpException) {
+        //     $e->getCode = 404;
+        //     return view("errr");
+        // }
         parent::report($e);
     }
 
