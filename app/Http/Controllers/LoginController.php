@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 use SoapClient;
-use App\Serives\WsMessageSend;
+use App\Services\WsMessageSend;
 
 class LoginController extends Controller
 {   
