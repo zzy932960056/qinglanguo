@@ -150,7 +150,7 @@ Route::group(['domain' => 'm.meyoungbaby.com'], function () {
 	Route::post('/index/selectphone','MloginController@selectPhone');
 	//do修改密码
 	Route::post('/index/dopwdupdate','MloginController@dopwdUpdate');
-}
+});
 /*************************************移动端*********************************/
 
 
