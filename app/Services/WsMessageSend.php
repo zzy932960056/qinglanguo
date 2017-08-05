@@ -1,7 +1,6 @@
 <?php
-use SoapClient;
 namespace App\Services;
-
+use SoapClient;
 //短信接口类
     class WsMessageSend
     {
