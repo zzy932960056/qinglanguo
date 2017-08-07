@@ -10,7 +10,7 @@ use App\Meusers;
 class UserController extends Controller
 {   
     public function index(){
-        session_start();
+        @session_start();
         $users = Meusers::paginate(10);
         return view('user',[
                 'users'=>$users,
