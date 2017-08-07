@@ -1,3 +1,6 @@
+<?php
+	@session_start();
+?>
 <div class="header navbar navbar-inverse navbar-fixed-top">
 
 		<!-- BEGIN TOP NAVIGATION BAR -->
