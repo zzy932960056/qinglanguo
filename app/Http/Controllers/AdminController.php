@@ -36,7 +36,7 @@ class AdminController extends Controller
         $user_pwd = md5($user_pwd);
         $admin = DB::table('admin_users')->where(['username'=>$user_name ,'password'=>$user_pwd])->get();
         if($admin){
-            session_start();
+            @session_start();
             $_SESSION['admin_name'] = $user_name;
             return redirect('/admin/adminindex');
         }else{
