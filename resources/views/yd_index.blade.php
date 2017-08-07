@@ -23,7 +23,7 @@
 <div class="container-fluid">
 
 	<div class="row wow animated fadeInDown"><img src="{{URL::asset('/images_yd/index_tiao.png')}}" class="img-responsive" style="width:100%"></div>
-	<div class="row wow animated fadeInDown"><a href="/"><img src="{{URL::asset('/images_yd/logo.png')}}" class="img-responsive" style="margin:40px auto"></a></div>
+	<div class="row wow animated fadeInDown" style="text-align:center;"><a href="/"><img src="{{URL::asset('/images_yd/logo.png')}}" class="img-responsive" style="margin:40px 0; display:inline-block"></a></div>
     
     <!--轮播-->
     <div class="row wow animated fadeInDown">
