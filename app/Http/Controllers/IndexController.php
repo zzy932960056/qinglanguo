@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 class IndexController extends Controller
 {   
     public function index(){
-        session_start();
+        @session_start();
         //remember_me
         if(isset($_COOKIE['user_info'])){
             $_SESSION['user_info'] = $_COOKIE['user_info'];
