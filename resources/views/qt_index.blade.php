@@ -65,9 +65,9 @@ body { width: 100%; overflow: hidden;}
                 <div class="Vidage__image"></div>
         
                 <video id="VidageVideo" class="Vidage__video" preload="metadata" autoplay muted>
-                    <source src="{{URL::asset('/videos/me.mp4')}}" type="video/mp4">
-                <!--     <source src="http://static.meyoungbaby.com/meyoung.webm" type="video/webm">
-                    <source src="{{$first_video['video_path']}}" type="video/mp4"> -->
+                    <!-- <source src="{{URL::asset('/videos/me.mp4')}}" type="video/mp4"> -->
+                    <source src="http://static.meyoungbaby.com/meyoung.webm" type="video/webm">
+                    <source src="{{$first_video['video_path']}}" type="video/mp4">
                 </video>
         
                 <div class="Vidage__backdrop"></div>
@@ -158,8 +158,8 @@ body { width: 100%; overflow: hidden;}
                     <div class="Vidage__image"></div>
             
                     <video id="VidageVideo" class="Vidage__video" preload="metadata" loop autoplay muted>
-                        <!-- <source src="{{URL::asset('/videos/mixiu.mp4')}}" type="video/mp4"> -->
-                        <source src="{{$me_xiu_video['video_path']}}" type="video/mp4">
+                        <source src="{{URL::asset('/videos/mixiu.mp4')}}" type="video/mp4">
+                     <!--    <source src="{{$me_xiu_video['video_path']}}" type="video/mp4"> -->
                     </video>
             
                     <div class="Vidage__backdrop"></div>
