@@ -11,7 +11,10 @@ use App\Mebaovideo;
 class MebaoController extends Controller
 {   
     public function me_bao_first(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $me_bao_first = DB::table('me_bao_first')->get();
         return view('me_bao_cover',[
                 'me_bao_first'=>$me_bao_first,
@@ -19,7 +22,10 @@ class MebaoController extends Controller
     }
 
     public function me_bao_first_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $bao = DB::table('me_bao_first')->where('id',$wid)->get();
@@ -44,7 +50,10 @@ class MebaoController extends Controller
     }
 
     public function me_bao_index(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $bao = Mebao::paginate(5);
         return view('bao',[
                 'bao'=>$bao,
@@ -66,7 +75,10 @@ class MebaoController extends Controller
     }
 
     public function me_bao_index_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('bao_insert');
     }
 
@@ -124,7 +136,10 @@ class MebaoController extends Controller
     }
 
     public function me_bao_index_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $bid = $id;
         $data = [];
         $bao = DB::table('me_bao')->where('id',$bid)->get();
@@ -186,7 +201,10 @@ class MebaoController extends Controller
     }
 
     public function me_bao_video(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $bao_video = Mebaovideo::paginate(5);
         return view('bao_video',[
                 'bao_video'=>$bao_video,
@@ -208,7 +226,10 @@ class MebaoController extends Controller
     }
 
     public function me_bao_video_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('bao_video_insert');
     }
 
@@ -244,7 +265,10 @@ class MebaoController extends Controller
     }
 
     public function me_bao_video_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $bid = $id;
         $data = [];
         $bao_video = DB::table('me_bao_video')->where('id',$bid)->get();

@@ -48,6 +48,9 @@ class AdminController extends Controller
     //管理后台主页
     public function adminIndex(){
         @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $admin = DB::table('admin_users')->orderBy('id','asc')->get();
         $data['admin'] = $admin;
@@ -57,12 +60,18 @@ class AdminController extends Controller
     //后台上锁
     public function adminLock(){
         @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('extra_lock');
     }
 
     //锁屏登录
     public function lockLogin(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $admin_name = $_SESSION['admin_name'];
         $admin_pwd = $_POST['apwd'];
         $admin_pwd = md5($admin_pwd);
@@ -77,17 +86,23 @@ class AdminController extends Controller
 
     //修改资料
     public function update(){
-       @session_start();
-       $admin_name = $_SESSION['admin_name'];
-       $admin = DB::table('admin_users')->where(['username'=>$admin_name])->get();
-       $data = [];
-       $data['admin'] = $admin;
-       return view('admin_self_update',$data);
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
+        $admin_name = $_SESSION['admin_name'];
+        $admin = DB::table('admin_users')->where(['username'=>$admin_name])->get();
+        $data = [];
+        $data['admin'] = $admin;
+        return view('admin_self_update',$data);
     }
 
     //do修改资料
     public function doUpdate(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $admin_name = $_SESSION['admin_name'];
         $aname = $_POST['aname'];
         $apwd = $_POST['apwd'];
@@ -123,7 +138,10 @@ class AdminController extends Controller
 
     //管理员展示
     public function admin(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $admin = DB::table('admin_users')->orderBy('id','asc')->get();
         $data['admin'] = $admin;
@@ -147,7 +165,10 @@ class AdminController extends Controller
 
     //管理员新增
     public function admin_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $role = DB::table('admin_role')->select('role_id','role_sign','role_name','update_time')->orderBy('role_id','asc')->get();
         $data['role'] = $role;
@@ -185,7 +206,10 @@ class AdminController extends Controller
 
     //管理员编辑
     public function admin_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $aid = $id;
         $data = [];
         $admin = DB::table('admin_users')->where('id',$aid)->get();
@@ -242,6 +266,9 @@ class AdminController extends Controller
     //管理员角色展示
     public function admin_role(){
         @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $role = DB::table('admin_role')->select('role_id','role_sign','role_name','update_time')->orderBy('role_id','asc')->get();
         $data['role'] = $role;
@@ -250,7 +277,10 @@ class AdminController extends Controller
 
     //管理员角色新增
     public function admin_role_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('admin_role_insert');
     }
 
@@ -288,7 +318,10 @@ class AdminController extends Controller
 
     //管理员角色编辑
     public function admin_role_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $cid = $id;
         $role = DB::table('admin_role')->where('role_id',$cid)->get();
         $data['role'] = (array)$role[0];
@@ -297,7 +330,10 @@ class AdminController extends Controller
 
     //do管理员角色编辑
     public function admin_role_doUpdate($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $cid = $id;
         $role_sign = $_POST['role_sign'];
         $role_name = $_POST['role_name'];
@@ -317,6 +353,9 @@ class AdminController extends Controller
     //权限展示
     public function admin_power(){
         @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $power = DB::table('admin_power')->orderBy('power_id','asc')->get();
         $data['power'] = $power;
@@ -325,13 +364,19 @@ class AdminController extends Controller
 
     //权限新增
     public function admin_power_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('admin_power_insert');
     }
 
     //do权限新增
     public function admin_power_doInsert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $power_sign = $_POST['sign'];
         $power_name = $_POST['sname'];
         $time = date('Y-m-d H:i:s',time());
@@ -364,7 +409,10 @@ class AdminController extends Controller
 
     //权限编辑
     public function admin_power_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $cid = $id;
         $power = DB::table('admin_power')->where('power_id',$cid)->get();
         $data['power'] = (array)$power[0];
@@ -391,6 +439,10 @@ class AdminController extends Controller
 
     //七牛云文件上传
     public function admin_upload(){
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $storage = \Storage::disk(config('admin.upload.disk'));
         $uploadToken = $storage->uploadToken();
         $data['uptoken'] = $uploadToken;
@@ -400,7 +452,10 @@ class AdminController extends Controller
 
     //CDN图片管理
     public function cdn_image(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $image = DB::table('cdn_image')->orderBy('id','asc')->get();
         $data['image'] = $image;
@@ -409,7 +464,10 @@ class AdminController extends Controller
 
     //CDN图片新增上传
     public function admin_pic_upload(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('admin_pic_upload');
     }
 
@@ -480,7 +538,10 @@ class AdminController extends Controller
 
     //CDN图片编辑
     public function admin_image_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $pic_id = $id;
         $picture = DB::table('cdn_image')->where('id',$pic_id)->get();
         $data['picture'] = (array)$picture[0];
@@ -552,7 +613,10 @@ class AdminController extends Controller
 
     //CDN视频管理
     public function cdn_video(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $video = DB::table('cdn_video')->orderBy('video_type','asc')->get();
         $data['video'] = $video;
@@ -561,7 +625,10 @@ class AdminController extends Controller
 
     //CDN视频新增上传
     public function admin_video_upload(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $type_name = DB::table('video_type')->select('id','type_name','type_id')->orderBy('type_id','asc')->get();
         $data['type_name'] = $type_name;
@@ -639,7 +706,10 @@ class AdminController extends Controller
 
     //CDN视频编辑
     public function admin_video_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $video_id = $id;
         $video = DB::table('cdn_video')->where('id',$video_id)->get();
         $data['video'] = (array)$video[0];
@@ -726,7 +796,10 @@ class AdminController extends Controller
     }
 
     public function admin_file_upload(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('admin_file_upload');
     }
 
@@ -757,12 +830,6 @@ class AdminController extends Controller
             }
         }
     } 
-
-
-
-
-
-       
 
     
 }

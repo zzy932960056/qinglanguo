@@ -10,7 +10,10 @@ use App\Menews;
 class MenewsController extends Controller
 {   
     public function me_news_cover(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $me_news = DB::table('me_news_cover')->get();
         return view('me_news_cover',[
                 'me_news'=>$me_news,
@@ -18,7 +21,10 @@ class MenewsController extends Controller
     }
 
     public function me_news_cover_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $news = DB::table('me_news_cover')->where('id',$wid)->get();
@@ -57,7 +63,10 @@ class MenewsController extends Controller
     }
 
     public function me_news_cover_index($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $news = DB::table('me_news_details_cover')->where('news_id',$wid)->get();
@@ -81,7 +90,10 @@ class MenewsController extends Controller
     }
 
     public function me_news_cover_index_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $news = DB::table('me_news_details_cover')->where('id',$wid)->get();
@@ -111,7 +123,10 @@ class MenewsController extends Controller
     }
     
     public function me_news_insert_cover($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $data['new_id'] = $id;
         return view('me_news_insert_cover',$data);
@@ -138,7 +153,10 @@ class MenewsController extends Controller
     }
 
     public function me_news_index(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $me_news = Menews::paginate(5);
         return view('me_news',[
                 'me_news'=>$me_news,
@@ -161,7 +179,10 @@ class MenewsController extends Controller
     }
 
     public function me_news_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('me_news_insert');
     }
 
@@ -201,7 +222,10 @@ class MenewsController extends Controller
     }
     
     public function me_news_index_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('me_news_index_insert');
     }
 
@@ -226,7 +250,10 @@ class MenewsController extends Controller
     }
 
     public function me_news_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $news = DB::table('me_news')->where('id',$wid)->get();
@@ -270,7 +297,10 @@ class MenewsController extends Controller
     }
 
     public function me_news_index_index($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $news = DB::table('me_news_details')->where('news_id',$wid)->get();
@@ -294,7 +324,10 @@ class MenewsController extends Controller
     }
 
     public function me_news_index_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $news = DB::table('me_news_details')->where('id',$wid)->get();
@@ -324,7 +357,10 @@ class MenewsController extends Controller
     }
     
     public function me_news_insert_index($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $data['new_id'] = $id;
         return view('me_news_insert_index',$data);

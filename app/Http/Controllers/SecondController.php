@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class SecondController extends Controller
 {   
 	public function second_screen(){
-    	session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $info = DB::table('dierping')->orderBy('id','asc')->get();
         $data['info'] = $info;
@@ -18,7 +21,10 @@ class SecondController extends Controller
     }
 
     public function second_screen_update($id){
-    	@session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
     	$sid = $id;
        	$second_data = DB::table('dierping')->where(['id'=>$sid])->get();
 	    $data = [];

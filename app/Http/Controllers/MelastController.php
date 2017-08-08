@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class MelastController extends Controller
 {   
 	public function meLast(){
-    	session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $info = DB::table('me_last')->orderBy('id','asc')->get();
         $data['info'] = $info;
@@ -18,7 +21,10 @@ class MelastController extends Controller
     }
 
     public function meLast_update($id){
-    	@session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
     	$lid = $id;
        	$me_last = DB::table('me_last')->where(['id'=>$lid])->get();
 	    $data = [];

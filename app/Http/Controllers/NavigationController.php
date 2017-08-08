@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class NavigationController extends Controller
 {   
 	public function navigation_image(){
-    	session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $info = DB::table('navigation_image')->get();
         $data['info'] = $info;
@@ -18,7 +21,10 @@ class NavigationController extends Controller
     }
 
     public function navigation_image_update($id){
-    	@session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
     	$sid = $id;
        	$image_info = DB::table('navigation_image')->where(['id'=>$sid])->get();
 	    $data = [];

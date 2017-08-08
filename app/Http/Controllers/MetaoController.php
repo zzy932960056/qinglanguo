@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class MetaoController extends Controller
 {   
 	public function meTao(){
-    	session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $info = DB::table('me_tao')->orderBy('id','asc')->get();
         $data['info'] = $info;
@@ -18,7 +21,10 @@ class MetaoController extends Controller
     }
 
     public function meTao_update($id){
-    	@session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
     	$tid = $id;
        	$me_tao = DB::table('me_tao')->where(['id'=>$tid])->get();
 	    $data = [];

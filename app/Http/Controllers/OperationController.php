@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class OperationController extends Controller
 {   
 	public function screen_video(){
-    	session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $video = DB::table('screen_video')->orderBy('id','asc')->get();
         $data['video'] = $video;
@@ -18,7 +21,10 @@ class OperationController extends Controller
     }
 
     public function screen_video_update($id){
-    	@session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
     	$vid = $id;
        	$video_data = DB::table('screen_video')->where(['id'=>$vid])->get();
 	    $data = [];

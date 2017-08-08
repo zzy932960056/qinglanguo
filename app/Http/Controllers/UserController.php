@@ -11,6 +11,9 @@ class UserController extends Controller
 {   
     public function index(){
         @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $users = Meusers::paginate(10);
         return view('user',[
                 'users'=>$users,
@@ -32,7 +35,10 @@ class UserController extends Controller
     }
 
     public function index_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('index_insert');
     }
 
@@ -64,7 +70,10 @@ class UserController extends Controller
     }
 
     public function index_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $uid = $id;
         $data = [];
         $user = DB::table('me_users')->where('id',$uid)->get();

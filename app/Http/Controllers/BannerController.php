@@ -10,7 +10,10 @@ use Illuminate\Support\Facades\Storage;
 class BannerController extends Controller
 {   
 	public function banner_pic(){
-    	session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $banner = DB::table('me_banner')->orderBy('id','asc')->get();
         $data['banner'] = $banner;
@@ -18,7 +21,10 @@ class BannerController extends Controller
     }
 
     public function banner_pic_update($id){
-    	@session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
     	$bid = $id;
        	$banner_data = DB::table('me_banner')->where(['id'=>$bid])->get();
 	    $data = [];

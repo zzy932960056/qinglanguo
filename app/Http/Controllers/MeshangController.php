@@ -10,7 +10,10 @@ use App\Meshang;
 class MeshangController extends Controller
 {   
     public function me_shang_cover(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $me_shang = DB::table('me_shang_first')->get();
         return view('me_shang_cover',[
                 'me_shang'=>$me_shang,
@@ -18,7 +21,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_cover_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $shang = DB::table('me_shang_first')->where('id',$wid)->get();
@@ -47,7 +53,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_cover_text($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $shang = DB::table('me_shang_first_text')->where('shang_id',$wid)->get();
@@ -71,7 +80,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_cover_text_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $text = DB::table('me_shang_first_text')->where('id',$wid)->get();
@@ -97,7 +109,10 @@ class MeshangController extends Controller
     }
     
     public function me_shang_cover_text_insert($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $data['new_id'] = $id;
         return view('me_shang_cover_text_insert',$data);
@@ -123,7 +138,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_cover_magazine($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $shang = DB::table('me_shang_first_pic')->where('shang_id',$wid)->get();
@@ -147,7 +165,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_cover_magazine_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $magazine = DB::table('me_shang_first_pic')->where('id',$wid)->get();
@@ -177,7 +198,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_cover_magazine_insert($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $data['new_id'] = $id;
         return view('me_shang_cover_magazine_insert',$data);
@@ -204,7 +228,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_index(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $me_shang = Meshang::paginate(5);
         return view('me_shang',[
                 'me_shang'=>$me_shang,
@@ -228,7 +255,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $magazine = DB::table('me_shang_magazine')->where('id',$wid)->get();
@@ -270,7 +300,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         return view('me_shang_insert');
     }
@@ -309,7 +342,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_magazine_index($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $shang = DB::table('me_shang_magazine_pic')->where('shang_id',$wid)->get();
@@ -333,7 +369,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_magazine_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $magazine = DB::table('me_shang_magazine_pic')->where('id',$wid)->get();
@@ -363,7 +402,10 @@ class MeshangController extends Controller
     }
     
     public function me_shang_magazine_insert($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $data['shang_id'] = $id;
         return view('me_shang_magazine_insert',$data);
@@ -397,7 +439,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_text_index($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $shang = DB::table('me_shang_magazine_text')->where('shang_id',$wid)->get();
@@ -421,7 +466,10 @@ class MeshangController extends Controller
     }
 
     public function me_shang_text_index_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $wid = $id;
         $data = [];
         $magazine = DB::table('me_shang_magazine_text')->where('id',$wid)->get();
@@ -447,7 +495,10 @@ class MeshangController extends Controller
     }
     
     public function me_shang_text_index_insert($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $data['shang_id'] = $id;
         return view('me_shang_magazine_text_insert',$data);

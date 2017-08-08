@@ -11,7 +11,10 @@ use App\Mexiu;
 class MexiuController extends Controller
 {   
 	public function image_left(){
-    	session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $info = DB::table('me_xiu_left')->get();
         $data['info'] = $info;
@@ -19,7 +22,10 @@ class MexiuController extends Controller
     }
 
     public function image_left_update($id){
-    	@session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
     	$sid = $id;
        	$image_info = DB::table('me_xiu_left')->where(['id'=>$sid])->get();
 	    $data = [];
@@ -46,7 +52,10 @@ class MexiuController extends Controller
     }
 
     public function image_right(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $info = DB::table('me_xiu_right')->get();
         $data['info'] = $info;
@@ -55,6 +64,9 @@ class MexiuController extends Controller
 
     public function image_right_update($id){
         @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $sid = $id;
         $image_info = DB::table('me_xiu_right')->where(['id'=>$sid])->get();
         $data = [];
@@ -94,7 +106,10 @@ class MexiuController extends Controller
     }
     //二级视频
     public function video_second(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $data = [];
         $info = DB::table('me_xiu_video')->get();
         $data['info'] = $info;
@@ -103,6 +118,9 @@ class MexiuController extends Controller
 
     public function video_second_update($id){
         @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $sid = $id;
         $video_info = DB::table('me_xiu_video')->where(['id'=>$sid])->get();
         $data = [];
@@ -150,7 +168,10 @@ class MexiuController extends Controller
     }
     //三级视频
     public function video_third(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $info = Mexiu::paginate(5);
         return view('mexiu_video_third',[
                 'info'=>$info,
@@ -172,7 +193,10 @@ class MexiuController extends Controller
     }
 
     public function video_third_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('mexiu_video_third_insert');
     }
 
@@ -207,6 +231,9 @@ class MexiuController extends Controller
 
     public function video_third_update($id){
         @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $vid = $id;
         $video_info = DB::table('me_xiu_video_third')->where(['id'=>$vid])->get();
         $data = [];

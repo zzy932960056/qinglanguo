@@ -10,7 +10,10 @@ use App\Mejoin;
 class JoinController extends Controller
 {   
     public function join_index(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $join = Mejoin::paginate(5);
         return view('join',[
                 'join'=>$join,
@@ -32,7 +35,10 @@ class JoinController extends Controller
     }
 
     public function join_insert(){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         return view('join_insert');
     }
 
@@ -64,7 +70,10 @@ class JoinController extends Controller
     }
 
     public function join_update($id){
-        session_start();
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
         $jid = $id;
         $data = [];
         $join = DB::table('me_join')->where('id',$jid)->get();
