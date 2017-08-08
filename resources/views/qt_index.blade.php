@@ -151,24 +151,10 @@ body { width: 100%; overflow: hidden;}
 	</div>
 
 <!--第四屏 觅秀-->
-
-<!--第四屏 觅秀-->
 	<div class="page page4">
 		<div class="contain" id="xiexiede" style="position:relative">
             <a href="/index/me_xiu">
-                <div class="Vidage" style="z-index:9 !important; top:0vh !important;" id="ifie">
-                    <div class="Vidage__image"></div>
-            
-                    <video id="VidageVideo2" class="Vidage__video" preload="metadata" loop autoplay muted>
-                        <!-- <source src="{{URL::asset('/videos/mixiu.mp4')}}" type="video/mp4"> -->
-                        <source src="http://static.meyoungbaby.com/mexiu.webm" type="video/webm">
-                        <source src="{{$me_xiu_video['video_path']}}" type="video/mp4">
-                    </video>
-            
-                    <div class="Vidage__backdrop"></div>
-                </div>
-
-                <div class="Vidage" style="z-index:9 !important; top:90vh; transform:skew(0deg,10deg) translate3d(0, 0, 0);" id="elseie">
+                <div class="Vidage" style="z-index:9 !important; top:90vh; transform:skew(0deg,10deg) translate3d(0, 0, 0);">
                     <div class="Vidage__image"></div>
             
                     <video id="VidageVideo2" class="Vidage__video" preload="metadata" loop autoplay muted>
@@ -199,7 +185,6 @@ body { width: 100%; overflow: hidden;}
             </div>
 		</div>
 	</div>
-
 
 <!--第五屏 觅尚-->
 	<div class="page page5">
@@ -567,37 +552,7 @@ runPage = new FullPage({
         new Vidage('#VidageVideo2');
 	</script>
     
-<script>
-    function myBrowser(){
-        $("#elseie").show();
-        $("#ifie").hide();
-        var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
-        var isOpera = userAgent.indexOf("Opera") > -1;
-        if (isOpera) {
-        return "Opera"
-        }; //判断是否Opera浏览器
-        if (userAgent.indexOf("Firefox") > -1) {
-        return "FF";
-        } //判断是否Firefox浏览器
-        if (userAgent.indexOf("Chrome") > -1){
-        return "Chrome";
-        }
-        if (userAgent.indexOf("Safari") > -1) {
-        return "Safari";
-        } //判断是否Safari浏览器
-        if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
-        return "IE";
-        }; //判断是否IE浏览器
-        }
 
-        //以下是调用上面的函数
-        var mb = myBrowser();
-        if ("IE" == mb) {
-            alert();
-            $("#ifie").show();
-            $("#elseie").hide;
-        }
-</script>
     
 <script src="{{URL::asset('/js2/index_js.js')}}"></script>
 <script>
