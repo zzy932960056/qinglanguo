@@ -73,12 +73,9 @@ body { width: 100%; overflow: hidden;}
                 <div class="Vidage__backdrop"></div>
             </div>
              
-             
-            <div class=" container-fluid" style="position:absolute; bottom:5%; text-align:center !important; width:100%">
-            	<span style="width:70px; height:70px; border-radius:50%; border:1px solid #fff; display:inline-block; line-height:70px"><img src="{{URL::asset('/images/img1.gif')}}"></span>
-            </div>
-            
-            
+            <div class=" container-fluid wow animated fadeIn" data-wow-duration="1s" data-wow-delay="2s" style="position:absolute; bottom:5%; text-align:center !important; width:100%">
+                <span style="width:70px; height:70px; border-radius:50%; border:1px solid #000; display:inline-block; line-height:70px"><img src="{{URL::asset('/images/img1.gif')}}" style="width:24px; height:40px"></span>
+            </div> 
             
 		</div>
 	</div>
