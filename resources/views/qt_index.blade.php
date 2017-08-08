@@ -157,8 +157,9 @@ body { width: 100%; overflow: hidden;}
                 <div class="Vidage" style="z-index:9 !important; top:90vh; transform:skew(0deg,10deg) translate3d(0, 0, 0);">
                     <div class="Vidage__image"></div>
             
-                    <video id="VidageVideo" class="Vidage__video" preload="metadata" loop autoplay muted>
+                    <video id="VidageVideo2" class="Vidage__video" preload="metadata" loop autoplay muted>
                         <!-- <source src="{{URL::asset('/videos/mixiu.mp4')}}" type="video/mp4"> -->
+                        <source src="http://static.meyoungbaby.com/mexiu.webm" type="video/webm">
                         <source src="{{$me_xiu_video['video_path']}}" type="video/mp4">
                     </video>
             
@@ -548,6 +549,7 @@ runPage = new FullPage({
 	<script src="{{URL::asset('/js2/Vidage.min.js')}}"></script>
 	<script>
 		new Vidage('#VidageVideo');
+        new Vidage('#VidageVideo2');
 	</script>
     
 
