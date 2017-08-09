@@ -339,13 +339,13 @@ class MenewsController extends Controller
         $little_pic = $_POST['little_pic'];
         $title = $_POST['title'];
         $mid = $_POST['mid'];
-        if($little_pic == ''){
-            echo "<script>alert('图片路径不能为空')</script>";
-            return self::me_news_index_update($id);
-        }else if($title == ''){
-            echo "<script>alert('标题不能为空')</script>";
-            return self::me_news_index_update($id);
-        }
+        // if($little_pic == ''){
+        //     echo "<script>alert('图片路径不能为空')</script>";
+        //     return self::me_news_index_update($id);
+        // }else if($title == ''){
+        //     echo "<script>alert('觅闻详情不能为空')</script>";
+        //     return self::me_news_index_update($id);
+        // }
         $num = DB::table('me_news_details')->where('id',$id)->update(
             ['pic_path'=>$little_pic,'content'=>$title]
             );
