@@ -37,7 +37,7 @@
         .miwen_sanji img{display: inline-block; width: 100%;}
     </style>
     <div class="row miwen_sanji" >
-        <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown" style="margin-top: 2vh !important;">
+        <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown" style="margin-top: 4vh !important;">
             <img src="{{$me_news['head_pic']}}" class="img-responsive thumbnail">
         </div>
         <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown">
