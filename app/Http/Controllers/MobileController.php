@@ -98,11 +98,11 @@ class MobileController extends Controller
         $banner_wen = DB::table('me_banner')->where('banner_sort','觅闻')->get();
         $banner_wen = (array)$banner_wen[0];
         $data['banner_wen'] = $banner_wen;
-        $me_news_hot = DB::table('me_news')->where('kind','HOT')->get();
+        $me_news_hot = DB::table('me_news')->where('kind','HOT')->orderBy('date', 'desc')->get();
         $data['me_news_hot'] = $me_news_hot;
-        $me_news_yule = DB::table('me_news')->where('kind','娱乐')->get();
+        $me_news_yule = DB::table('me_news')->where('kind','娱乐')->orderBy('date', 'desc')->get();
         $data['me_news_yule'] = $me_news_yule;
-        $me_news_chuanda = DB::table('me_news')->where('kind','穿搭')->get();
+        $me_news_chuanda = DB::table('me_news')->where('kind','穿搭')->orderBy('date', 'desc')->get();
         $data['me_news_chuanda'] = $me_news_chuanda;
         return view('yd_miwen',$data);
     }

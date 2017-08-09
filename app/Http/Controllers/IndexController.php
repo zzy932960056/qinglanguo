@@ -77,7 +77,7 @@ class IndexController extends Controller
         $banner_wen = DB::table('me_banner')->where('banner_sort','觅闻')->get();
         $banner_wen = (array)$banner_wen[0];
         $data['banner_wen'] = $banner_wen;
-        $me_news_hot = DB::table('me_news')->where('kind','HOT')->get();
+        $me_news_hot = DB::table('me_news')->where('kind','HOT')->orderBy('date', 'desc')->get();
         $num1 = count($me_news_hot);
         $arr1 = [];
         $j = 0;
@@ -89,7 +89,7 @@ class IndexController extends Controller
             }
         }
         $data['me_news_hot'] = $arr1;
-        $me_news_yule = DB::table('me_news')->where('kind','娱乐')->get();
+        $me_news_yule = DB::table('me_news')->where('kind','娱乐')->orderBy('date', 'desc')->get();
         $num2 = count($me_news_yule);
         $arr2 = [];
         $n = 0;
@@ -101,7 +101,7 @@ class IndexController extends Controller
             }
         }
         $data['me_news_yule'] = $arr2;
-        $me_news_chuanda = DB::table('me_news')->where('kind','穿搭')->get();
+        $me_news_chuanda = DB::table('me_news')->where('kind','穿搭')->orderBy('date', 'desc')->get();
         $num3 = count($me_news_chuanda);
         $arr3 = [];
         $q = 0;
