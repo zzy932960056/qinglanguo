@@ -37,14 +37,14 @@
         .miwen_sanji img{display: inline-block; width: 100%;}
     </style>
     <div class="row miwen_sanji" >
-        <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown" style="margin-top: 2vh;">
+        <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown" style="margin-top: 2vh !important;">
             <img src="{{$me_news['head_pic']}}" class="img-responsive thumbnail">
         </div>
         <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown">
 			<div class="col-xs-3"><img src="{{URL::asset('/images_yd/miwen_sanji_wenzi1.png')}}" class="img-responsive"></div>
         </div>
         <div class="col-xs-12 miwen_sanji_bt wow animated fadeInDown">
-            <p style="padding:0 3vw; font-weight:bold; font-size:46px;">{{$me_news['title']}}</p>
+            <p style="padding:0 3vw; font-weight:bold; font-size:46px !important;">{{$me_news['title']}}</p>
         </div>
         
         <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown">
