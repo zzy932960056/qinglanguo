@@ -38,7 +38,7 @@
 
 <!--觅闻三级-->
 <style>
-    .miwen_sanji{letter-spacing: 2px;text-indent: 3em;}
+    .miwen_sanji{letter-spacing: 2px;}
     #img_id_third{text-align: center;}
     .miwen_sanji img{max-width: 100%;display:inline-block;}
 
