@@ -37,6 +37,12 @@
 </div>
 
 <!--觅闻三级-->
+<style>
+    .miwen_sanji{letter-spacing: 2px;text-indent: 3em;}
+    #img_id_third{text-align: center;}
+    .miwen_sanji img{max-width: 100%;display:inline-block;}
+
+</style>
 <div class="container-fluid miwen_sanji" style="margin-top:15vh; margin-bottom:10vh">
 	<div class="container">
         <div class="row animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
@@ -57,7 +63,7 @@
 		<div class="row miwen_sanji_tuwen">
             @foreach($me_news_details as $value)
             @if($value->pic_path)
-        	<p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style=" border:none; padding:0;"><img src="{{$value->pic_path}}" class="img-responsive"></p>
+        	<p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style=" border:none; padding:0;" id="img_id_third"><img src="{{$value->pic_path}}" class="img-responsive"></p>
             <p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style=" border:none; padding:0 3vw;">
                 {{$value->content}}
             </p>
