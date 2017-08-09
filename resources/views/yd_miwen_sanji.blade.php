@@ -37,14 +37,14 @@
         .miwen_sanji img{display: inline-block; width: 100%;}
     </style>
     <div class="row miwen_sanji" >
-        <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown">
+        <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown" style="margin-top: 2vh;">
             <img src="{{$me_news['head_pic']}}" class="img-responsive thumbnail">
         </div>
         <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown">
 			<div class="col-xs-3"><img src="{{URL::asset('/images_yd/miwen_sanji_wenzi1.png')}}" class="img-responsive"></div>
         </div>
         <div class="col-xs-12 miwen_sanji_bt wow animated fadeInDown">
-            <p style="padding:0 3vw;">{{$me_news['title']}}</p>
+            <p style="padding:0 3vw; font-weight:bold; font-size:46px;">{{$me_news['title']}}</p>
         </div>
         
         <div class="col-xs-12 miwen_sanji_bt_img wow animated fadeInDown">
@@ -56,7 +56,7 @@
         <div class="col-xs-12 miwen_sanji_bt" style="padding:0 30px;">
                 @foreach($me_news_details as $value)
                 @if($value->pic_path)
-                <p class="wow animated fadeInDown" style="margin:2vh 0; text-align: center;"><img src="{{$value->pic_path}}" class="img-responsive thumbnail"></p>
+                <p class="wow animated fadeInDown" style="margin:4vh 0; text-align: center;"><img src="{{$value->pic_path}}" class="img-responsive thumbnail"></p>
                 <p class="wow animated fadeInDown" style="padding:0 3vw;">{{$value->content}}</p>
                 @else
                 <p class="wow animated fadeInDown" style="padding:0 3vw;">{{$value->content}}</p>

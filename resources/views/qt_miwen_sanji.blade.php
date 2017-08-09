@@ -45,8 +45,8 @@
 </style>
 <div class="container-fluid miwen_sanji" style="margin-top:15vh; margin-bottom:10vh">
 	<div class="container">
-        <div class="row animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
-			<img src="{{$me_news['head_pic']}}" class="img-responsive">
+        <div class="row animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style="text-align:center;">
+			<img src="{{$me_news['head_pic']}}" class="img-responsive" style="display:inline-block;">
         </div>
         <div class="row miwen_sanji_biaoti">
         	<p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style="padding:0">
@@ -63,7 +63,7 @@
 		<div class="row miwen_sanji_tuwen">
             @foreach($me_news_details as $value)
             @if($value->pic_path)
-        	<p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style=" border:none; padding:0;" id="img_id_third"><img src="{{$value->pic_path}}" class="img-responsive"></p>
+        	<p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style=" border:none; padding:0 3vw;" id="img_id_third"><img src="{{$value->pic_path}}" class="img-responsive"></p>
             <p class="animated wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s" style=" border:none; padding:0 3vw;">
                 {{$value->content}}
             </p>
