@@ -33,7 +33,7 @@
     
     <!--觅闻-->
     <style>
-        .miwen_sanji p{margin-bottom: 3vh;letter-spacing: 0.3em !important; line-height: 2em;}
+        .miwen_sanji p{margin-bottom: 3vh;letter-spacing: 0.3em !important; line-height: 2em;font-size: 34px !important;}
         .miwen_sanji img{display: inline-block; max-width: 100%;}
     </style>
     <div class="row miwen_sanji" >
