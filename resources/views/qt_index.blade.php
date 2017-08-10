@@ -42,7 +42,7 @@ body { width: 100%; overflow: hidden;}
                             <label for="tm">
                                 <span id="anniu_ceng1"><img src="../../images/anniu.png" id="anniu_tu1"></span>
                                 @if(isset($_SESSION['phone']))
-                                <a class="denglu_btn_btn" href="javascript:;"style="right:-5vw"><span><?=$_SESSION['phone']?></span></a><a href="/index/logout" id="logout">退出</a>
+                                <a class="denglu_btn_btn" href="javascript:;"style="left:-5vw"><span><?=$_SESSION['phone']?></span></a><a href="/index/logout" id="logout">退出</a>
                                 @else
                                 <a class="denglu_btn_btn" href="/index/login" style=""><span>登陆</span></a>
                                 @endif
