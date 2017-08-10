@@ -31,12 +31,3 @@
         </section>
      </form>
 </div>
-<script>
-    function logout(){
-        if(confirm('确认退出登录?') == false){
-            return false;
-        }else{
-            location.href = "/index/logout";
-        }
-    }
-</script>
