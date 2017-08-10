@@ -31,7 +31,7 @@ a{color: inherit !important; outline:none !important; text-decoration:none !impo
 		cursor: pointer; text-transform: uppercase;
 	}
 	.sidenav {
-		width: 100vw;position: absolute; right: 0; top: 0; bottom: 0; padding-top: 20vh; z-index:999; height:100vh; transform: translateX(100vw); transition: all 0.5s;
+		width: 100vw;position: absolute; right: 0; top: 0; bottom: 0; padding-top: 20vh; z-index:999; height:100vh; transform: translateX(200vw); transition: all 0.5s;
 		background:#fddd34; padding-left:6vw;
 	}
 	.sidenav a { color: white; text-decoration: none; }
