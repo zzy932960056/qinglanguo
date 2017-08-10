@@ -7,7 +7,7 @@ a{color: inherit !important; outline:none !important; text-decoration:none !impo
 #xiexiede{transform: skew(0deg, -10deg) translate3d(0, 0, 0);}
 .logo{position: fixed; max-width:10vw;left:2vw; top:5vh; z-index:998; display:block}
 .denglu_btn_btn{position:absolute; left:-3vw; top:50%}
-#logout{position:absolute; right:-7vw; top:50%}
+#logout{position:absolute; left:-7vw; top:50%}
 .fanhuishouye{position:absolute;left:2vw;top:1.5vh;display: block;height:5vh;width: 20%;z-index: 999}
 /*导航*/
 	
