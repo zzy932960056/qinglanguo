@@ -31,9 +31,9 @@ body { width: 100%; overflow: hidden;}
                             <li><a href="/index/me_wen"><b id="daohangli1"><div id="daohangimg1"><img src="{{URL::asset('/images/works-heading2.png')}}" id="daohangimg11"></div></b></a></li>
                             <li><a href="/index/me_xiu"><b id="daohangli2"><div id="daohangimg2"><img src="{{URL::asset('/images/works-heading3.png')}}" id="daohangimg22"></div></b></a></li>
                             <li><a href="/index/me_shang"><b id="daohangli3"><div id="daohangimg3"><img src="{{URL::asset('/images/works-heading4.png')}}" id="daohangimg33"></div></b></a></li>
-                            <li><a href="/"><b id="daohangli4"><div id="daohangimg4"><img src="{{URL::asset('/images/works-heading6.png')}}" id="daohangimg44"></div></b></a></li>
+                            <li><a href="javascript:;"><b id="daohangli4"><div id="daohangimg4"><img src="{{URL::asset('/images/works-heading6.png')}}" id="daohangimg44"></div></b></a></li>
                             <li><a href="/index/me_bao"><b id="daohangli5"><div id="daohangimg5"><img src="{{URL::asset('/images/works-heading5.png')}}" id="daohangimg55"></div></b></a></li>
-                            <li><a href="/"><b id="daohangli6"><div id="daohangimg6"><img src="{{URL::asset('/images/works-heading7.png')}}" id="daohangimg66"></div></b></a></li>
+                            <li><a href="javascript:;"><b id="daohangli6"><div id="daohangimg6"><img src="{{URL::asset('/images/works-heading7.png')}}" id="daohangimg66"></div></b></a></li>
                             <div class="daohang_tupian animated wow" data-wow-duration="1s" data-wow-delay="1s">
                                 <img src="{{$navigation_image['image_path']}}" class="img-responsive" style="width:100%">
                             </div>
@@ -53,7 +53,7 @@ body { width: 100%; overflow: hidden;}
                      </form>
 			    </div>
 
-            <div class="logo"><a href="/"><img src="{{URL::asset('/images/logo1.png')}}" class="img-responsive"></a></div>
+            <div class="logo"><a href="/"><img src="{{URL::asset('/images/000000000.png')}}" class="img-responsive"></a></div>
 
        
 <div id="pageContain">
@@ -533,6 +533,14 @@ runPage = new FullPage({
 	mode: 'wheel, touch, nav:navBar',
 	easing: 'ease'
 });
+var gomiyang = document.getElementById('daohangimg6');
+    gomiyang.onclick = function() {
+        runPage.go(7);
+    }
+    var gomitao = document.getElementById('daohangimg4');
+    gomitao.onclick = function() {
+        runPage.go(5);
+    }
 </script>
 	<script>
 		$(function(){

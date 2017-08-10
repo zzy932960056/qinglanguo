@@ -60,7 +60,15 @@ $(function(){
 		$(".sidenav").css("background","#fddd35");
 		})
 		
-		
+	$("#daohangimg4").click(function(){
+		$("#tm").attr("checked",false);
+		$("#anniu_tu1").attr("src",$("#anniu_tu1").attr("src")=="../../images/anniu_cha.png"?"../../images/anniu.png":"../../images/anniu_cha.png");
+		})
+	
+	$("#daohangimg6").click(function(){
+		$("#tm").attr("checked",false);
+		$("#anniu_tu1").attr("src",$("#anniu_tu1").attr("src")=="../../images/anniu_cha.png"?"../../images/anniu.png":"../../images/anniu_cha.png");
+		})	
 		
 		
 	$("#weixin").click(function(){
