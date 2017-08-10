@@ -33,7 +33,7 @@ body { width: 100%; overflow: hidden;}
                             <li><a href="/index/me_shang"><b id="daohangli3"><div id="daohangimg3"><img src="{{URL::asset('/images/works-heading44.png')}}" id="daohangimg33"></div></b></a></li>
                             <li><a href="javascript:;"><b id="daohangli4"><div id="daohangimg4"><img src="{{URL::asset('/images/works-heading66.png')}}" id="daohangimg44"></div></b></a></li>
                             <li><a href="/index/me_bao"><b id="daohangli5"><div id="daohangimg5"><img src="{{URL::asset('/images/works-heading55.png')}}" id="daohangimg55"></div></b></a></li>
-                            <li><a href="javascript:;"><b id="daohangli6"><div id="daohangimg6"><img src="{{URL::asset('/images/works-heading77.png')}}" id="daohangimg66"></div></b></a></li>
+                            <li><a href="javascript:;"><b id="daohangli6"><div id="daohangimg6"><img src="{{URL::asset('/images/works-heading777.png')}}" id="daohangimg66"></div></b></a></li>
                             <div class="daohang_tupian animated wow" data-wow-duration="1s" data-wow-delay="1s">
                                 <img src="{{$navigation_image['image_path']}}" class="img-responsive" style="width:100%">
                             </div>
