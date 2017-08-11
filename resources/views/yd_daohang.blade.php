@@ -19,7 +19,7 @@
         </div>
 
         <section>
-            <label for="tm">
+            <label for="tm" id="html">
                 <span id="anniu_ceng1"><img src="http://ogqtpampu.bkt.clouddn.com/daohang_btn.png" id="anniu_tu1"></span>
                 @if(isset($_SESSION['phone']))
                 <a class="denglu_btn_btn2" href="javascript:logout()"><span><?=$_SESSION['phone']?></span></a>

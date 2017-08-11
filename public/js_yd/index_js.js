@@ -5,6 +5,10 @@
 $(function(){
 	
     new WOW().init();
+    
+	$("#html").click(function(){
+	$("html").toggleClass('html');
+	})	
 
 	$("#anniu_ceng1").click(function(){
         $("#anniu_tu1").attr("src",$("#anniu_tu1").attr("src")=="http://ogqtpampu.bkt.clouddn.com/daohang_btn_cha.png"?"http://ogqtpampu.bkt.clouddn.com/daohang_btn.png":"http://ogqtpampu.bkt.clouddn.com/daohang_btn_cha.png");
