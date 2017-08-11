@@ -293,4 +293,9 @@ $(document).ready(function(){
         }
     }
 </script>
+<style>
+    .index_banner1{width:100%; height:30vh; background:url({{$banner_wen['banner_path']}}) no-repeat center center; background-size:cover}
+    .index_banner2{width:100%; height:30vh; background:url({{$banner_xiu['banner_path']}}) no-repeat center center; background-size:cover}
+    .index_banner3{width:100%; height:30vh; background:url({{$banner_bao['banner_path']}}) no-repeat center center; background-size:cover}
+</style> 
 </html>
