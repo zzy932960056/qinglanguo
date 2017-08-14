@@ -110,7 +110,12 @@
 
 
 <!--觅宝视频三级-->
-@foreach($video as $ke => $val)
+<style>
+    .picc{position:fixed !important; left:0; right:0; top:0; bottom:0; z-index:9999; display:none}
+    
+    .chacha{ width:40px; height:40px; position:absolute; right:-80px; top:-80px;; border:none; cursor:pointer}
+</style> 
+<!-- @foreach($video as $ke => $val)
     <div class="modal fade" id="picc{{$ke+1}}" style="background:rgba(0,0,0,.6)">
         <div class="container" style="position:relative; height:100vh; padding:0">
             <div class="modal-dialog mibao_mengceng">
@@ -126,7 +131,42 @@
             </div>
         </div>
     </div>
-@endforeach 
+@endforeach  -->
+
+        @foreach($video as $key => $value)
+        <div id="picc{{$key+1}}" class="picc" style="background:rgba(0,0,0,.6); position:relative">
+            <div class="container" style="position:relative; height:100vh; padding:0">
+                <div class="modal-dialog mibao_mengceng">
+                    <div class="chacha" id="chacha{{$key+1}}"><img src="{{URL::asset('/images/video_close.png')}}" class="img-responsive"></div><br>
+
+                    <div class="container" style="padding:0">
+
+                        <video controls preload="none" id="myVideo{{$key+1}}">
+                            <source src="{{$value->video_path}}" type="video/mp4">
+                        </video>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>plyr.setup();</script>
+                        
+        <script>
+            $(function(){
+                var audio = document.getElementById("myVideo{{$key+1}}");
+                $("#picc{{$key+1}}").hide;
+                $("#chufa_aaa{{$key+1}}").click(function(){
+                    $("#picc{{$key+1}}").show();
+                    })
+                $("#chacha{{$key+1}}").click(function(){
+                    $("#picc{{$key+1}}").hide();
+                    audio.pause();  //暂停
+                    })
+                })
+        </script>
+        @endforeach    
 
     	<div class="row mibao_mibao_biaoti animated wow bounceIn" data-wow-duration="1s" data-wow-delay="1s"><img src="{{URL::asset('/images/mibao_biaoti2.png')}}" class="img-responsive"></div>
         <div class="row animated wow zoomIn" style="position:relative; margin-top:10vh; margin-bottom:7vh">
@@ -138,40 +178,36 @@
                         @foreach($value as $ke => $va)
                         @if($ke == 1)
                         <div class="col-md-8 col-sm-8 col-xs-8">
-                            <a href="#" data-toggle="modal" data-target="#picc1">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="box">
-                                        <div class="box-img">
-                                            <img src="{{$va->video_img}}" class="img-responsive">
-                                        </div>
-                                        <div class="box-content" style="background:rgba(54,188,167,0.7);">
-                                            <div id="shipin_jianjie">
-                                                <h4 class="title">{{$va->video_title}}</h4>
-                                                <p class="description">{{$va->video_content}}</p>
-                                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa1">
+                                <div class="box">
+                                    <div class="box-img">
+                                        <img src="{{$va->video_img}}" class="img-responsive">
+                                    </div>
+                                    <div class="box-content" style="background:rgba(54,188,167,0.7);">
+                                        <div id="shipin_jianjie">
+                                            <h4 class="title">{{$va->video_title}}</h4>
+                                            <p class="description">{{$va->video_content}}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                         @else
                         <div class="col-md-4 col-sm-4 col-xs-4">
                             @foreach($va as $k => $v)
-                            <a href="#" data-toggle="modal" data-target="#picc{{$k}}">
-                                <div class="col-md-12 col-sm-12 col-xs-12" id="mixiu_shipin_mengceng">
-                                    <div class="box">
-                                        <div class="box-img">
-                                            <img src="{{$v->video_img}}" class="img-responsive">
-                                        </div>
-                                        <div class="box-content" style="background:rgba(54,188,167,0.7);">
-                                            <div id="shipin_jianjie">
-                                                <h4 class="title">{{$v->video_title}}</h4>
-                                                <p class="description">{{$v->video_content}}</p>
-                                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa{{$k}}">
+                                <div class="box">
+                                    <div class="box-img">
+                                        <img src="{{$v->video_img}}" class="img-responsive">
+                                    </div>
+                                    <div class="box-content" style="background:rgba(54,188,167,0.7);">
+                                        <div id="shipin_jianjie">
+                                            <h4 class="title">{{$v->video_title}}</h4>
+                                            <p class="description">{{$v->video_content}}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                             @endforeach
 						</div>
                         @endif
@@ -182,27 +218,24 @@
                         @foreach($value as $ke => $va)
                         @if($ke == 1)
                         <div class="col-md-8 col-sm-8 col-xs-8">
-                            <a href="#" data-toggle="modal" data-target="#picc4">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="box">
-                                        <div class="box-img">
-                                            <img src="{{$va->video_img}}" class="img-responsive">
-                                        </div>
-                                        <div class="box-content" style="background:rgba(54,188,167,0.7);">
-                                            <div id="shipin_jianjie">
-                                                <h4 class="title">{{$va->video_title}}</h4>
-                                                <p class="description">{{$va->video_content}}</p>
-                                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa4">
+                                <div class="box">
+                                    <div class="box-img">
+                                        <img src="{{$va->video_img}}" class="img-responsive">
+                                    </div>
+                                    <div class="box-content" style="background:rgba(54,188,167,0.7);">
+                                        <div id="shipin_jianjie">
+                                            <h4 class="title">{{$va->video_title}}</h4>
+                                            <p class="description">{{$va->video_content}}</p>
                                         </div>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                         @else
                         <div class="col-md-4 col-sm-4 col-xs-4">
                             @foreach($va as $k => $v)
-                            <a href="#" data-toggle="modal" data-target="#picc{{$k}}">
-                                <div class="col-md-12 col-sm-12 col-xs-12" id="mixiu_shipin_mengceng">
+                                <div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa{{$k}}">
                                     <div class="box">
                                         <div class="box-img">
                                             <img src="{{$v->video_img}}" class="img-responsive">
@@ -215,7 +248,6 @@
                                         </div>
                                     </div>
                                 </div>
-                            </a>
                             @endforeach
 						</div>
                         @endif
