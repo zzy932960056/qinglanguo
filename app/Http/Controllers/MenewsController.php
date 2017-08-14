@@ -157,7 +157,7 @@ class MenewsController extends Controller
         if(!isset($_SESSION['admin_name'])){
             return redirect('/admin/login');
         }
-        $me_news = Menews::paginate(5);
+        $me_news = Menews::paginate(30);
         return view('me_news',[
                 'me_news'=>$me_news,
             ]);

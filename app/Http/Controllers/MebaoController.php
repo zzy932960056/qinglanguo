@@ -54,7 +54,7 @@ class MebaoController extends Controller
         if(!isset($_SESSION['admin_name'])){
             return redirect('/admin/login');
         }
-        $bao = Mebao::paginate(5);
+        $bao = Mebao::paginate(30);
         return view('bao',[
                 'bao'=>$bao,
             ]);

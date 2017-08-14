@@ -178,7 +178,7 @@
                         @foreach($value as $ke => $va)
                         @if($ke == 1)
                         <div class="col-md-8 col-sm-8 col-xs-8">
-                            <div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa1">
+                            <div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa1" style="cursor:pointer">
                                 <div class="box">
                                     <div class="box-img">
                                         <img src="{{$va->video_img}}" class="img-responsive">
@@ -195,7 +195,7 @@
                         @else
                         <div class="col-md-4 col-sm-4 col-xs-4">
                             @foreach($va as $k => $v)
-                            <div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa{{$k}}">
+                            <div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa{{$k}}" style="cursor:pointer">
                                 <div class="box">
                                     <div class="box-img">
                                         <img src="{{$v->video_img}}" class="img-responsive">
@@ -218,7 +218,7 @@
                         @foreach($value as $ke => $va)
                         @if($ke == 1)
                         <div class="col-md-8 col-sm-8 col-xs-8">
-                            <div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa4">
+                            <div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa4" style="cursor:pointer">
                                 <div class="box">
                                     <div class="box-img">
                                         <img src="{{$va->video_img}}" class="img-responsive">
@@ -235,7 +235,7 @@
                         @else
                         <div class="col-md-4 col-sm-4 col-xs-4">
                             @foreach($va as $k => $v)
-                                <div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa{{$k}}">
+                                <div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa{{$k}}" style="cursor:pointer">
                                     <div class="box">
                                         <div class="box-img">
                                             <img src="{{$v->video_img}}" class="img-responsive">
