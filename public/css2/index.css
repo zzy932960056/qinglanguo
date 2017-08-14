@@ -508,7 +508,7 @@ background:#FF0; float:left;cursor:pointer; position:relative; z-index:999}
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) !important;  /* 使用css3的transform来实现 */
+    transform: translate(-50%, -55%) !important;  /* 使用css3的transform来实现 */
 }
 .mibao_tanchu_biaoti{width:100%; height:10vh; background:#31da99; line-height:10vh}
 .mibao_tanchu_biaoti p{width:50%; height:100%; text-align:left; float:left; padding-left:10%; margin-bottom:0}
