@@ -88,7 +88,7 @@
 
 	<!--底部-->
 	<div class="row wow animated fadeInDown index_dibu" style="background:#fdb800">
-    	© 2006-2016 北京华艺卓尔文化传媒有限公司
+    	© 2006-2017 北京华艺卓尔文化传媒有限公司
         <a href="javascript:;" id="toTop" title="回到顶部"></a><img src="{{URL::asset('/images_yd/top.png')}}" class="img-responsive" id="top_huojian">
     </div>
 	
