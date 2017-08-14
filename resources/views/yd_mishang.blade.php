@@ -19,7 +19,7 @@
     
     @include('yd_daohang');
                 
-<div class="container-fluid">
+<div class="container-fluid" style="margin-top:-20px;">
 	<div class="row wow animated fadeInDown"><img src="{{URL::asset('/images_yd/mishang_tiao.png')}}" class="img-responsive" style="width:100%"></div>
 	<div class="row wow animated fadeInDown"><a href="/"><img src="{{URL::asset('/images_yd/logo.png')}}" class="img-responsive" style="margin:40px auto"></a></div>
     
