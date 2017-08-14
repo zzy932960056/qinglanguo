@@ -41,7 +41,11 @@
 <div class="container-fluid" style="margin-top:5vh;">
 	<div class="container" id="yiping_ersanji">
     
+<style>
+    .picc{position:fixed !important; left:0; right:0; top:0; bottom:0; z-index:9999; display:none}
     
+    .chacha{ width:40px; height:40px; position:absolute; right:-80px; top:-80px;; border:none; cursor:pointer}
+</style>      
 <!--         @foreach($bao as $key => $value)
         <div class="modal fade" id="picc{{$key+1}}" style="background:rgba(0,0,0,.6)">
             <div class="container" style="position:relative; height:100vh; padding:0">
@@ -95,11 +99,7 @@
         @endforeach          
     
 
-<style>
-    .picc{position:fixed !important; left:0; right:0; top:0; bottom:0; z-index:9999; display:none}
-    
-    .chacha{ width:40px; height:40px; position:absolute; right:-80px; top:-80px;; border:none; cursor:pointer}
-</style>    
+  
     
     
         <div class="row mixiu-mibao_shipin_sanji" style="position:relative; margin-top:16vh;">
