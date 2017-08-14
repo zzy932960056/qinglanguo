@@ -113,7 +113,7 @@
 <style>
     .picc{position:fixed !important; left:0; right:0; top:0; bottom:0; z-index:9999; display:none}
     
-    .chacha{ width:40px; height:40px; position:absolute; right:20px; top:20px;; border:none; cursor:pointer}
+    .chacha{ width:40px; height:40px; position:absolute; right:15px; top:35px; z-index:99; border:none; cursor:pointer}
 </style> 
 <!-- @foreach($video as $ke => $val)
     <div class="modal fade" id="picc{{$ke+1}}" style="background:rgba(0,0,0,.6)">

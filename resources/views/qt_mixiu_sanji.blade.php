@@ -38,7 +38,12 @@
 </div>
 
 <!--觅秀视频三级-->
-@foreach($xiu as $ke => $val)
+<style>
+    .picc{position:fixed !important; left:0; right:0; top:0; bottom:0; z-index:9999; display:none}
+    
+    .chacha{ width:40px; height:40px; position:absolute; right:15px; top:35px; z-index:99; border:none; cursor:pointer}
+</style> 
+<!-- @foreach($xiu as $ke => $val)
     <div class="modal fade" id="picc{{$ke+1}}" style="background:rgba(0,0,0,.6)">
         <div class="container" style="position:relative; height:100vh; padding:0">
             <div class="modal-dialog mibao_mengceng">
@@ -54,7 +59,41 @@
             </div>
         </div>
     </div>
-@endforeach     
+@endforeach -->  
+        @foreach($xiu as $key => $value)
+        <div id="picc{{$key+1}}" class="picc" style="background:rgba(0,0,0,.6); position:relative">
+            <div class="container" style="position:relative; height:100vh; padding:0">
+                <div class="modal-dialog mibao_mengceng">
+                    <div class="chacha" id="chacha{{$key+1}}"><img src="{{URL::asset('/images/video_close.png')}}" class="img-responsive"></div><br>
+
+                    <div class="container" style="padding:0">
+
+                        <video controls preload="none" id="myVideo{{$key+1}}">
+                            <source src="{{$value->video_path}}" type="video/mp4">
+                        </video>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>plyr.setup();</script>
+                        
+        <script>
+            $(function(){
+                var audio = document.getElementById("myVideo{{$key+1}}");
+                $("#picc{{$key+1}}").hide;
+                $("#chufa_aaa{{$key+1}}").click(function(){
+                    $("#picc{{$key+1}}").show();
+                    })
+                $("#chacha{{$key+1}}").click(function(){
+                    $("#picc{{$key+1}}").hide();
+                    audio.pause();  //暂停
+                    })
+                })
+        </script>
+        @endforeach     
     
 
 <div class="container-fluid" style="margin-top:5vh;">
@@ -87,41 +126,37 @@
                                 <div class="item active" style="padding-top:4vh">
                                     @foreach($value as $ke => $va)
                                     @if(is_int($ke/3))
-                                    <a href="#" data-toggle="modal" data-target="#picc{{$ke}}">
-                                        <input type="hidden" value="{{$va->id}}" />
-                                        <input type="hidden" value="{{$va->video_path}}" />
-                                        <div class="col-md-4 col-sm-4 col-xs-4" style=" margin-right:0">
-                                            <div class="box">
-                                                <div class="box-img">
-                                                    <img src="{{$va->video_pic_path}}" class="img-responsive">
-                                                </div>
-                                                <div class="box-content">
-                                                    <div id="shipin_jianjie">
-                                                        <h4 class="title">{{$va->video_title}}</h4>
-                                                        <p class="description">{{$va->video_describe}}</p>
-                                                    </div>
+                                    <input type="hidden" value="{{$va->id}}" />
+                                    <input type="hidden" value="{{$va->video_path}}" />
+                                    <div class="col-md-4 col-sm-4 col-xs-4" style=" margin-right:0" id="chufa_aaa{{$ke}}">
+                                        <div class="box">
+                                            <div class="box-img">
+                                                <img src="{{$va->video_pic_path}}" class="img-responsive">
+                                            </div>
+                                            <div class="box-content">
+                                                <div id="shipin_jianjie">
+                                                    <h4 class="title">{{$va->video_title}}</h4>
+                                                    <p class="description">{{$va->video_describe}}</p>
                                                 </div>
                                             </div>
-                                        </div> 
-                                    </a> 
-                                    @else       
-                                    <a href="#" data-toggle="modal" data-target="#picc{{$ke}}">
-                                        <input type="hidden" value="{{$va->id}}" />
-                                        <input type="hidden" value="{{$va->video_path}}" />
-                                        <div class="col-md-4 col-sm-4 col-xs-4">
-                                            <div class="box">
-                                                <div class="box-img">
-                                                    <img src="{{$va->video_pic_path}}" class="img-responsive">
-                                                </div>
-                                                <div class="box-content">
-                                                    <div id="shipin_jianjie">
-                                                        <h4 class="title">{{$va->video_title}}</h4>
-                                                        <p class="description">{{$va->video_describe}}</p>
-                                                    </div>
+                                        </div>
+                                    </div> 
+                                    @else
+                                    <input type="hidden" value="{{$va->id}}" />
+                                    <input type="hidden" value="{{$va->video_path}}" />
+                                    <div class="col-md-4 col-sm-4 col-xs-4" id="chufa_aaa{{$ke}}">
+                                        <div class="box">
+                                            <div class="box-img">
+                                                <img src="{{$va->video_pic_path}}" class="img-responsive">
+                                            </div>
+                                            <div class="box-content">
+                                                <div id="shipin_jianjie">
+                                                    <h4 class="title">{{$va->video_title}}</h4>
+                                                    <p class="description">{{$va->video_describe}}</p>
                                                 </div>
                                             </div>
-                                        </div> 
-                                    </a>
+                                        </div>
+                                    </div>
                                     @endif
                                     @endforeach   
                                 </div>
@@ -129,41 +164,37 @@
                                 <div class="item" style="padding-top:4vh">
                                     @foreach($value as $ke => $va)
                                     @if(is_int($ke/3))
-                                    <a href="#" data-toggle="modal" data-target="#picc{{$ke}}">
-                                        <input type="hidden" value="{{$va->id}}" />
-                                        <input type="hidden" value="{{$va->video_path}}" />
-                                        <div class="col-md-4 col-sm-4 col-xs-4" style=" margin-right:0">
-                                            <div class="box">
-                                                <div class="box-img">
-                                                    <img src="{{$va->video_pic_path}}" class="img-responsive">
-                                                </div>
-                                                <div class="box-content">
-                                                    <div id="shipin_jianjie">
-                                                        <h4 class="title">{{$va->video_title}}</h4>
-                                                        <p class="description">{{$va->video_describe}}</p>
-                                                    </div>
+                                    <input type="hidden" value="{{$va->id}}" />
+                                    <input type="hidden" value="{{$va->video_path}}" />
+                                    <div class="col-md-4 col-sm-4 col-xs-4" style=" margin-right:0" id="chufa_aaa{{$ke}}">
+                                        <div class="box">
+                                            <div class="box-img">
+                                                <img src="{{$va->video_pic_path}}" class="img-responsive">
+                                            </div>
+                                            <div class="box-content">
+                                                <div id="shipin_jianjie">
+                                                    <h4 class="title">{{$va->video_title}}</h4>
+                                                    <p class="description">{{$va->video_describe}}</p>
                                                 </div>
                                             </div>
-                                        </div> 
-                                    </a> 
-                                    @else       
-                                    <a href="#" data-toggle="modal" data-target="#picc{{$ke}}">
-                                        <input type="hidden" value="{{$va->id}}" />
-                                        <input type="hidden" value="{{$va->video_path}}" />
-                                        <div class="col-md-4 col-sm-4 col-xs-4">
-                                            <div class="box">
-                                                <div class="box-img">
-                                                    <img src="{{$va->video_pic_path}}" class="img-responsive">
-                                                </div>
-                                                <div class="box-content">
-                                                    <div id="shipin_jianjie">
-                                                        <h4 class="title">{{$va->video_title}}</h4>
-                                                        <p class="description">{{$va->video_describe}}</p>
-                                                    </div>
+                                        </div>
+                                    </div>
+                                    @else  
+                                    <input type="hidden" value="{{$va->id}}" />
+                                    <input type="hidden" value="{{$va->video_path}}" />
+                                    <div class="col-md-4 col-sm-4 col-xs-4" id="chufa_aaa{{$ke}}">
+                                        <div class="box">
+                                            <div class="box-img">
+                                                <img src="{{$va->video_pic_path}}" class="img-responsive">
+                                            </div>
+                                            <div class="box-content">
+                                                <div id="shipin_jianjie">
+                                                    <h4 class="title">{{$va->video_title}}</h4>
+                                                    <p class="description">{{$va->video_describe}}</p>
                                                 </div>
                                             </div>
-                                        </div> 
-                                    </a>
+                                        </div>
+                                    </div> 
                                     @endif
                                     @endforeach   
                                 </div>

@@ -106,7 +106,7 @@
                     <div class="row">
                         <div class="col-xs-12 index_mibao_xinxi_datu"><img src="{{$va->picture_big}}" class="img-responsive" style="width:100%"></div>
                         <div class="col-xs-12">
-                            <div class="col-xs-12" style=" background:#fff; padding:0; padding-bottom:2vh">
+                            <div class="col-xs-12" style=" background:#fff; padding:0;">
                                 <p class="index_mibao_mengceng_bt">
                                     <img src="{{URL::asset('/images_yd/particle-2.png')}}" class="img-responsive"><span id="clike{{$va->id}}">{{$va->like}}</span>
                                     <a class="index_mibao_dianzan_btn" onclick="dodianzan(this)" style="cursor:pointer"><input type="hidden" name="hidden" value="{{$va->id}}"/>给我点赞,么么哒<img src="{{URL::asset('/images_yd/particle-2.png')}}" class="img-responsive index_mibao_dianzan_xin{{$va->id}}"></a>
@@ -121,7 +121,9 @@
                                     <div class="col-xs-6">淘宝市场>></div> -->
                                 </div>
                             </div>
-                            
+                            <div class="col-xs-12" style="background:#fff">
+                                <img src="{{URL::asset('/images_yd/huaban2.gif')}}" class="img-responsive">
+                            </div>
                         </div>
                     </div>
                 
