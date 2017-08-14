@@ -209,7 +209,7 @@
 
                             </div>
                             <div class="col-xs-12" style="background:#fff">
-                                <img src="{{URL::asset('/images_yd/huaban2.gif')}}" class="img-responsive">
+                                <img src="{{URL::asset('/images_yd/huaban.gif')}}" class="img-responsive">
                             </div>
                         </div>
                     </div>
