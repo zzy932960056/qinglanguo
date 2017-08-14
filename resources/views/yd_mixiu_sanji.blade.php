@@ -30,7 +30,7 @@
     
         @foreach($video_third as $value)
         <div class="modal fade" id="picc{{$value->id}}" style="background:rgba(17,99,150,.6);">
-        	<a href="javascript:;" class="index_mibao_tanchu_fanhu" data-dismiss="modal"><img src="{{URL::asset('/images_yd/close.png')}}" class="img-responsive"></a>
+        	<a href="javascript:;" class="index_mibao_tanchu_fanhu" data-dismiss="modal"><img src="{{URL::asset('/images_yd/video_close.png')}}" class="img-responsive"></a>
             <div class="container" style="position:relative; height:100vh" id="mibao_xinxi">
                 <div class="modal-dialog mibao_mengceng">
 					<div class="row">

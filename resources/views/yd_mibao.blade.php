@@ -64,7 +64,7 @@
         @endforeach
         @foreach($bao as $ke => $va)
         <div class="modal fade" id="picmc{{$va->id}}" style="background:rgba(49,218,153,.6)">
-            <a href="javascript:;" class="index_mibao_tanchu_fanhu" data-dismiss="modal"><img src="{{URL::asset('/images_yd/close.png')}}" class="img-responsive"></a>
+            <a href="javascript:;" class="index_mibao_tanchu_fanhu" data-dismiss="modal"><img src="{{URL::asset('/images_yd/video_close.png')}}" class="img-responsive"></a>
             <div class="container" style="position:relative; height:100vh" id="mibao_xinxi">
                 <div class="modal-dialog mibao_mengceng">
                     <div class="row">
@@ -104,7 +104,7 @@
     
         @foreach($video as $ke => $va)
         <div class="modal fade" id="picz{{$va->id}}" style="background:rgba(54,188,167,.6)">
-        	<a href="javascript:;" class="index_mibao_tanchu_fanhu" data-dismiss="modal"><img src="{{URL::asset('/images_yd/close.png')}}" class="img-responsive"></a>
+        	<a href="javascript:;" class="index_mibao_tanchu_fanhu" data-dismiss="modal"><img src="{{URL::asset('/images_yd/video_close.png')}}" class="img-responsive"></a>
             <div class="container" style="position:relative; height:100vh" id="mibao_xinxi">
                 <div class="modal-dialog mibao_mengceng">
 					<div class="row">

@@ -107,7 +107,12 @@
 
 
             <!-- 视频模块 -->
-            @foreach($me_xiu_video as $key => $value)
+<style>
+    .picc{position:fixed !important; left:0; right:0; top:0; bottom:0; z-index:9999; display:none}
+    
+    .chacha{ width:40px; height:40px; position:absolute; right:20px; top:20px;; border:none; cursor:pointer}
+</style> 
+<!--             @foreach($me_xiu_video as $key => $value)
             <div class="modal fade" id="picc{{$key}}" style="background:rgba(0,0,0,.6)">
                 <div class="container" style="position:relative; height:100vh; padding:0">
                     <div class="modal-dialog mibao_mengceng">
@@ -123,11 +128,44 @@
                     </div>
                 </div>
             </div>
-            @endforeach  
-        
+            @endforeach  --> 
+        @foreach($me_xiu_video as $key => $value)
+        <div id="picc{{$key}}" class="picc" style="background:rgba(0,0,0,.6); position:relative">
+            <div class="container" style="position:relative; height:100vh; padding:0">
+                <div class="modal-dialog mibao_mengceng">
+                    <div class="chacha" id="chacha{{$key}}"><img src="{{URL::asset('/images/video_close.png')}}" class="img-responsive"></div><br>
+
+                    <div class="container" style="padding:0">
+
+                        <video controls preload="none" id="myVideo{{$key}}">
+                            <source src="{{$me_xiu_video[$key]->video_path}}" type="video/mp4">
+                        </video>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>plyr.setup();</script>
+                        
+        <script>
+            $(function(){
+                var audio = document.getElementById("myVideo{{$key}}");
+                $("#picc{{$key}}").hide;
+                $("#chufa_aaa{{$key}}").click(function(){
+                    $("#picc{{$key}}").show();
+                    })
+                $("#chacha{{$key}}").click(function(){
+                    $("#picc{{$key}}").hide();
+                    audio.pause();  //暂停
+                    })
+                })
+        </script>
+        @endforeach  
+
         	<div class="col-md-4 col-sm-4 col-xs-4">
-            	<a href="#" data-toggle="modal" data-target="#picc0">
-                	<div class="col-md-12 col-sm-12 col-xs-12">
+                	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa0">
                         <div class="box">
                             <div class="box-img">
                                 <img src="{{$me_xiu_video[0]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -140,9 +178,7 @@
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" data-toggle="modal" data-target="#picc1">
-                	<div class="col-md-12 col-sm-12 col-xs-12">
+                	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa1">
                         <div class="box">
                             <div class="box-img">
                                 <img src="{{$me_xiu_video[1]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -155,49 +191,43 @@
                             </div>
                         </div>
                     </div>
-                </a>
             </div>
         	<div class="col-md-8 col-sm-8 col-xs-8">
-                <a href="#" data-toggle="modal" data-target="#picc2">
-                	<div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="box">
-                            <div class="box-img">
-                                <img src="{{$me_xiu_video[2]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
-                            </div>
-                            <div class="box-content">
-                            	<div id="shipin_jianjie">
-                                    <h4 class="title">{{$me_xiu_video[2]->video_title}}</h4>
-                                    <p class="description">{{$me_xiu_video[2]->video_descrip}}</p>
-                                </div>
+            	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa2">
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="{{$me_xiu_video[2]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
+                        </div>
+                        <div class="box-content">
+                        	<div id="shipin_jianjie">
+                                <h4 class="title">{{$me_xiu_video[2]->video_title}}</h4>
+                                <p class="description">{{$me_xiu_video[2]->video_descrip}}</p>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
 
 
         <div class="row mixiu_shipin2">
         	<div class="col-md-8 col-sm-8 col-xs-8">
-                <a href="#" data-toggle="modal" data-target="#picc3">
-                	<div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="box">
-                            <div class="box-img">
-                                <img src="{{$me_xiu_video[3]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
-                            </div>
-                            <div class="box-content">
-                                <div id="shipin_jianjie">
-                                    <h4 class="title">{{$me_xiu_video[3]->video_title}}</h4>
-                                    <p class="description">{{$me_xiu_video[3]->video_descrip}}</p>
-                                </div>
+            	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa3">
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="{{$me_xiu_video[3]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
+                        </div>
+                        <div class="box-content">
+                            <div id="shipin_jianjie">
+                                <h4 class="title">{{$me_xiu_video[3]->video_title}}</h4>
+                                <p class="description">{{$me_xiu_video[3]->video_descrip}}</p>
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         	<div class="col-md-4 col-sm-4 col-xs-4">
-                <a href="#" data-toggle="modal" data-target="#picc4">
-                	<div class="col-md-12 col-sm-12 col-xs-12" id="mixiu_shipin_mengceng">
+                	<div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa4">
                         <div class="box">
                             <div class="box-img">
                                 <img src="{{$me_xiu_video[4]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -210,9 +240,7 @@
                             </div>
                         </div>
                     </div>
-                </a>
-                <a href="#" data-toggle="modal" data-target="#picc5">
-                	<div class="col-md-12 col-sm-12 col-xs-12" id="mixiu_shipin_mengceng">
+                	<div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa5">
                         <div class="box">
                             <div class="box-img">
                                 <img src="{{$me_xiu_video[5]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -225,7 +253,6 @@
                             </div>
                         </div>
                     </div>
-                </a>
             </div>
         </div>
 
