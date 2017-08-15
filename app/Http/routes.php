@@ -157,6 +157,7 @@ Route::post('/index/dopwdupdate','LoginController@dopwdUpdate');
 Route::get('/index/news','PageController@index_news');
 Route::get('/index/show','PageController@index_show');
 Route::get('/index/vogue','PageController@index_vogue');
+Route::get('/index/child','PageController@index_child');
 Route::get('/index/young','PageController@index_young');
 /**************************新增跳转*****************************/
 /*************************************PC端*********************************/
