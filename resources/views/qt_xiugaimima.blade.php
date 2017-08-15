@@ -15,6 +15,7 @@
 <body>
 
 <div class="index_zhuce">
+	<a href="/"><img src="{{URL::asset('/images/yellowcha.png')}}" class="img-responsive" style="position:absolute; right:20px; top:20px; width:30px; height:30px; cursor:pointer"></a>
 	<a href="/"><img src="{{URL::asset('/images/logo.png')}}" class="img-responsive index_zhuce_logo"></a>
     <form>
     	<label>手机号：</label><input placeholder="请输入您的手机号" id="telphone" name="telphone"><div id="haomachucuo"><img src="{{URL::asset('/images/denglu_1.png')}}" class="img-responsive"><span>哎呦，出错了</span></div><div id="haomazhengque"><img src="{{URL::asset('/images/denglu_2.png')}}" class="img-responsive"><span>恭喜你，正确</span></div><div id="shurushoujihao"><img src="{{URL::asset('/images/denglu_3.png')}}" class="img-responsive"><span>请输入手机号</span></div><br />

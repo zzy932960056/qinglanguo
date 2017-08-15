@@ -15,6 +15,7 @@
 <body>
 
 <div class="index_denglu">
+    <a href="/"><img src="{{URL::asset('/images/yellowcha.png')}}" class="img-responsive" style="position:absolute; right:20px; top:20px; width:30px; height:30px; cursor:pointer"></a>
 	<a href="/"><img src="{{URL::asset('/images/logo.png')}}" class="img-responsive index_denglu_logo"></a>
     <form action="" method="post">
     	<input type="text" name="uname" placeholder="请输入手机号"/>

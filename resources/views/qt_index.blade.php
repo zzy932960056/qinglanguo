@@ -227,25 +227,6 @@ body { width: 100%; overflow: hidden;}
 		</div>
 	</div>
 
-<!--第六屏 觅淘-->
-<!-- 	<div class="page page6">
-		<div class="contain" id="xiexiede">
-        	<div class="container-fluid jinru5" style="background:#e23c7b">
-            </div>
-        	<div class="container-fluid jinru6" style="background:#f89fc1">
-            	<div class="container animated wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                	<div class="col-md-4 col-sm-4 col-xs-4"><img src="{{URL::asset('/images/mitao.png')}}" class="img-responsive"></div>
-                </div>
-            </div>
-        	<div class="container-fluid jinru7" style="padding-left:0; padding-right:0;">
-            	<img src="{{$me_tao['image_path']}}" class="img-responsive" style="width:100%">
-            </div>
-        	<div class="container-fluid jinru8" style="background:#f89fc1;">
-            </div>
-        	<div class="container-fluid jinru9" style="background:#e23c7b">
-            </div>
-		</div>
-	</div> -->
  <!--第六屏 觅淘-->
     <div class="page page6">
     
