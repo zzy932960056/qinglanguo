@@ -306,49 +306,49 @@ body { width: 100%; overflow: hidden;}
                                 <div class="item active">
                                     <div class="row index_wu_daceng">
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[0]->id}}">
-                                        <div class="col-md-3 animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[0]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[1]->id}}">
-                                        <div class="col-md-3 animated fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[1]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[2]->id}}">
-                                        <div class="col-md-3 animated fadeInDown" data-wow-duration="1s" data-wow-delay="1.5s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[2]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[3]->id}}">
-                                        <div class="col-md-3 animated fadeInDown" data-wow-duration="1s" data-wow-delay="2s" style="margin-right:0">
+                                        <div class="col-md-3" style="margin-right:0">
                                             <img src="{{$bao[3]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[4]->id}}">
-                                        <div class="col-md-3 animated fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[4]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[5]->id}}">
-                                        <div class="col-md-3 animated fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[5]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[6]->id}}">
-                                        <div class="col-md-3 animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[6]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[7]->id}}">
-                                        <div class="col-md-3 animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" style="margin-right:0">
+                                        <div class="col-md-3" style="margin-right:0">
                                             <img src="{{$bao[7]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
@@ -358,49 +358,49 @@ body { width: 100%; overflow: hidden;}
                                 <div class="item">
                                     <div class="row index_wu_daceng">
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[8]->id}}">
-                                        <div class="col-md-3 animated fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[8]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[9]->id}}">
-                                        <div class="col-md-3 animated fadeInDown" data-wow-duration="1s" data-wow-delay="1s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[9]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[10]->id}}">
-                                        <div class="col-md-3 animated fadeInDown" data-wow-duration="1s" data-wow-delay="1.5s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[10]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[11]->id}}">
-                                        <div class="col-md-3 animated fadeInDown" data-wow-duration="1s" data-wow-delay="2s" style="margin-right:0">
+                                        <div class="col-md-3" style="margin-right:0">
                                             <img src="{{$bao[11]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[12]->id}}">
-                                        <div class="col-md-3 animated fadeInUp" data-wow-duration="1s" data-wow-delay="2s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[12]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[13]->id}}">
-                                        <div class="col-md-3 animated fadeInUp" data-wow-duration="1s" data-wow-delay="1.5s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[13]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[14]->id}}">
-                                        <div class="col-md-3 animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
+                                        <div class="col-md-3">
                                             <img src="{{$bao[14]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[15]->id}}">
-                                        <div class="col-md-3 animated fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" style="margin-right:0">
+                                        <div class="col-md-3" style="margin-right:0">
                                             <img src="{{$bao[15]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
