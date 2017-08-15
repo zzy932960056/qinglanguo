@@ -118,25 +118,25 @@ body { width: 100%; overflow: hidden;}
         	<div class="container-fluid jinru7">
             	<div class="container">
                 	<a href="/index/me_wen/cover/{{$me_wen[0]->id}}">
-                	<div class="col-md-4 col-sm-4 col-xs-4 index_san animated wow fadeInRight" data-wow-duration="1s" data-wow-delay="1s" style="padding-right:4vw">
+                	<div class="col-md-4 col-sm-4 col-xs-4 index_san animated fadeInRight" data-wow-duration="1s" data-wow-delay="1s" style="padding-right:4vw">
                     	<div class="index_san_div1"><img src="{{$me_wen[0]->little_pic}}"></div>
                         <div class="index_san_div2"><p class="index_xinwen_biaoti">{{$me_wen[0]->title}}</p></div>
                     </div>
                     </a>
                     <a href="/index/me_wen/cover/{{$me_wen[1]->id}}">
-                	<div class="col-md-4 col-sm-4 col-xs-4 index_san animated wow fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s" style="padding:0 2vw">
+                	<div class="col-md-4 col-sm-4 col-xs-4 index_san animated fadeInRight" data-wow-duration="1s" data-wow-delay="1.5s" style="padding:0 2vw">
                     	<div class="index_san_div1"><img src="{{$me_wen[1]->little_pic}}"></div>
                         <div class="index_san_div2"><p class="index_xinwen_biaoti">{{$me_wen[1]->title}}</p></div>
                     </div>
                     </a>
                     <a href="/index/me_wen/cover/{{$me_wen[2]->id}}">
-                	<div class="col-md-4 col-sm-4 col-xs-4 index_san animated wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s" style="padding-left:4vw">
+                	<div class="col-md-4 col-sm-4 col-xs-4 index_san animated fadeInRight" data-wow-duration="1s" data-wow-delay="2s" style="padding-left:4vw">
                     	<div class="index_san_div1"><img src="{{$me_wen[2]->little_pic}}"></div>
                         <div class="index_san_div2"><p class="index_xinwen_biaoti">{{$me_wen[2]->title}}</p></div>
                     </div>
                     </a>
                     <div class="col-md-12 col-sm-12 col-xs-12" style="text-align:center; margin-top:10vh">
-                    	<a href="/index/me_wen"><div class="index_san_more animated wow fadeInDownBig" data-wow-duration="1s" data-wow-delay="1s">查看更多<span class="index_san_more_span"></span></div></a>
+                    	<a href="/index/me_wen"><div class="index_san_more animated fadeInDownBig" data-wow-duration="1s" data-wow-delay="1s">查看更多<span class="index_san_more_span"></span></div></a>
                     </div>
                 </div>
             </div>
