@@ -153,6 +153,12 @@ Route::get('/index/forgetpass','LoginController@forgetPass');
 Route::post('/index/selectphone','LoginController@selectPhone');
 //do修改密码
 Route::post('/index/dopwdupdate','LoginController@dopwdUpdate');
+/**************************新增跳转*****************************/
+Route::get('/index/young','IndexController@index_young');
+
+
+
+/**************************新增跳转*****************************/
 /*************************************PC端*********************************/
 
 
