@@ -165,7 +165,7 @@
         @endforeach  
 
         	<div class="col-md-4 col-sm-4 col-xs-4">
-                	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa0">
+                	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa0" style="cursor:pointer">
                         <div class="box">
                             <div class="box-img">
                                 <img src="{{$me_xiu_video[0]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -178,7 +178,7 @@
                             </div>
                         </div>
                     </div>
-                	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa1">
+                	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa1" style="cursor:pointer">
                         <div class="box">
                             <div class="box-img">
                                 <img src="{{$me_xiu_video[1]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -193,7 +193,7 @@
                     </div>
             </div>
         	<div class="col-md-8 col-sm-8 col-xs-8">
-            	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa2">
+            	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa2" style="cursor:pointer">
                     <div class="box">
                         <div class="box-img">
                             <img src="{{$me_xiu_video[2]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -212,7 +212,7 @@
 
         <div class="row mixiu_shipin2">
         	<div class="col-md-8 col-sm-8 col-xs-8">
-            	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa3">
+            	<div class="col-md-12 col-sm-12 col-xs-12" id="chufa_aaa3" style="cursor:pointer">
                     <div class="box">
                         <div class="box-img">
                             <img src="{{$me_xiu_video[3]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -227,7 +227,7 @@
                 </div>
             </div>
         	<div class="col-md-4 col-sm-4 col-xs-4">
-                	<div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa4">
+                	<div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa4" style="cursor:pointer">
                         <div class="box">
                             <div class="box-img">
                                 <img src="{{$me_xiu_video[4]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
@@ -240,7 +240,7 @@
                             </div>
                         </div>
                     </div>
-                	<div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa5">
+                	<div class="col-md-12 col-sm-12 col-xs-12 mixiu_shipin_mengceng" id="chufa_aaa5" style="cursor:pointer">
                         <div class="box">
                             <div class="box-img">
                                 <img src="{{$me_xiu_video[5]->video_pic_path}}" class="img-responsive animated wow bounceIn" data-wow-duration="1s" data-wow-delay=".2s">
