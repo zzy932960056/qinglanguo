@@ -540,7 +540,7 @@ runPage = new FullPage({
 	easing: 'ease'
 });
 $(document).ready(function(){
-    runPage.go(7);
+    runPage.go(3);
 })
 var gomiyang = document.getElementById('daohangimg6');
     gomiyang.onclick = function() {
