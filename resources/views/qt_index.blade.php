@@ -228,7 +228,7 @@ body { width: 100%; overflow: hidden;}
 	</div>
 
 <!--第六屏 觅淘-->
-	<div class="page page6">
+<!-- 	<div class="page page6">
 		<div class="contain" id="xiexiede">
         	<div class="container-fluid jinru5" style="background:#e23c7b">
             </div>
@@ -245,8 +245,33 @@ body { width: 100%; overflow: hidden;}
         	<div class="container-fluid jinru9" style="background:#e23c7b">
             </div>
 		</div>
-	</div>
- 
+	</div> -->
+ <!--第六屏 觅淘-->
+    <div class="page page6">
+    
+        <div class="contain" id="xiexiede" style="position:relative">
+
+            <img src="{{$me_tao['image_path']}}" class="img-responsive" style=" position:absolute; z-index:9 !important; top:90vh; transform:skew(0deg,10deg) translate3d(0, 0, 0); ">
+        
+            <div class="container-fluid jinru5" style="background:#e23c7b;">
+            </div>
+            <div class="container-fluid jinru6" style="background:rgba(248,159,193,0.8); opacity:1; overflow:hidden; ">
+                <div class="container animated wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                    <div class="col-md-4 col-sm-4 col-xs-4"><img src="{{URL::asset('/images/mitao.png')}}" class="img-responsive"></div>
+                </div>
+            </div>
+            
+            <div class="container-fluid jinru7" style="background:#d9bbf9;">
+            
+                
+            </div>
+            
+            <div class="container-fluid" style="background:rgba(248,159,193,0.8); opacity:1; height:10vh; z-index:10; margin-top:0; position:relative">
+            </div>
+            <div class="container-fluid animated wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="background:#e23c7b; z-index:10; margin-top:0; position:relative; height:50vh">
+            </div>
+        </div>
+    </div>
 <!--第七屏 觅宝-->
 
 
