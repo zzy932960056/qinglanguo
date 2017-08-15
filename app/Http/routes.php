@@ -155,7 +155,7 @@ Route::post('/index/selectphone','LoginController@selectPhone');
 Route::post('/index/dopwdupdate','LoginController@dopwdUpdate');
 /**************************新增跳转*****************************/
 Route::get('/index/news','PageController@index_news');
-Route::get('/index/young','IndexController@index_young');
+Route::get('/index/young','PageController@index_young');
 /**************************新增跳转*****************************/
 /*************************************PC端*********************************/
 
