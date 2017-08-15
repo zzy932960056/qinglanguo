@@ -166,7 +166,7 @@ body { width: 100%; overflow: hidden;}
         	<div class="container-fluid jinru5" style="background:#116396;">
             </div>
         	<div class="container-fluid jinru6" style="background:rgba(17,99,150,0.5); opacity:1; overflow:hidden; ">
-            	<div class="container animated wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+            	<div class="container animated fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
                 	<div class="col-md-4 col-sm-4 col-xs-4"><img src="{{URL::asset('/images/mixiu.png')}}" class="img-responsive"></div>
                 </div>
             </div>

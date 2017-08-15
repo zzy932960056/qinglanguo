@@ -189,7 +189,7 @@ body { width: 100%; overflow: hidden;}
         	<div class="container-fluid jinru5" style="background:#fdb800">
             </div>
         	<div class="container-fluid jinru6" style="background:#fbdc8b">
-            	<div class="container animated wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s" style="padding:0">
+            	<div class="container animated fadeInLeft" data-wow-duration="1s" data-wow-delay="1s" style="padding:0">
                 	<div class="col-md-4 col-sm-4 col-xs-4" style="padding:0"><img src="{{URL::asset('/images/mishang.png')}}" class="img-responsive"></div>
                 </div>
             </div>
