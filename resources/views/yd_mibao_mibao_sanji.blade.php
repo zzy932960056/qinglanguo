@@ -85,7 +85,7 @@
     
 
     <!--觅宝-->
-    <div class="row index_mibao" style="margin-top:2vh; min-height:95vh;">
+    <div class="row index_mibao" style="margin-top:2vh; min-height:85vh;">
         @foreach($me_bao as $key => $value)
         <div class="col-xs-12 wow animated fadeInDown">
             @foreach($value as $k => $v)
