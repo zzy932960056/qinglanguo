@@ -418,7 +418,7 @@ body { width: 100%; overflow: hidden;}
                     </a>
                     <a href="/index/me_bao">
                     <div class="col-md-12 col-sm-12 col-xs-12" style="text-align:center; margin-top:4vh">
-                    	<a href="/index/me_bao"><div class="index_qi_more animated wow fadeInDownBig" data-wow-duration="1s" data-wow-delay="1s">查看更多<span class="index_qi_more_span" style="background:#9cded4"></span></div></a>
+                    	<a href="/index/me_bao"><div class="index_qi_more animated fadeInDownBig" data-wow-duration="1s" data-wow-delay="1s">查看更多<span class="index_qi_more_span" style="background:#9cded4"></span></div></a>
                     </div>
                     </a>
                 </div>
