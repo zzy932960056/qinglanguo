@@ -178,7 +178,7 @@ body { width: 100%; overflow: hidden;}
             
         	<div class="container-fluid" style="background:rgba(17,99,150,0.5); opacity:1; height:10vh; z-index:10; margin-top:0; position:relative">
             </div>
-        	<div class="container-fluid animated wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="background:#116396; z-index:10; margin-top:0; position:relative; height:50vh">
+        	<div class="container-fluid animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s" style="background:#116396; z-index:10; margin-top:0; position:relative; height:50vh">
             </div>
 		</div>
 	</div>
