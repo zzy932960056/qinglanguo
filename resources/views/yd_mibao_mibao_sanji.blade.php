@@ -20,7 +20,7 @@
     @include('yd_daohang');
 
 
-<div class="container-fluid" style="margin-top:-20px; min-height:95vh;">
+<div class="container-fluid" style="margin-top:-20px;">
 
 	<div class="row wow animated fadeInDown"><img src="{{URL::asset('/images_yd/mibao_tiao.png')}}" class="img-responsive" style="width:100%"></div>
 	<div class="row wow animated fadeInDown" style="position:relative">
@@ -85,7 +85,7 @@
     
 
     <!--觅宝-->
-    <div class="row index_mibao" style="margin-top:2vh">
+    <div class="row index_mibao" style="margin-top:2vh; min-height:95vh;">
         @foreach($me_bao as $key => $value)
         <div class="col-xs-12 wow animated fadeInDown">
             @foreach($value as $k => $v)
