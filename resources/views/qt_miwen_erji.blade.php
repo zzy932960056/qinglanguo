@@ -21,7 +21,7 @@
             <a class="fanhuishouye" href="/"></a>
         </div>
     	<div class="col-md-6 col-sm-6 col-xs-6">
-            <a href="/" class="mibao_fanhui animated fadeInDown" style="background:#f44321"><b class="mibao_fanhui_b animated">返回<br>Back</b></a>
+            <a href="/index/news" class="mibao_fanhui animated fadeInDown" style="background:#f44321"><b class="mibao_fanhui_b animated">返回<br>Back</b></a>
         </div>
 </div>
 <div class="container-fluid navbar-fixed-bottom fadeInRight animated" style="padding:0">
