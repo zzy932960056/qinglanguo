@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>觅样</title>
-<link rel="shortcut icon" href="{{URL::asset('/images/favicon.ico')}}">
-<link rel="Bookmark" href="{{URL::asset('/images/favicon.ico')}}">
+<link rel="shortcut icon" href="{{URL::asset('/images/meyoung.ico')}}">
+<link rel="Bookmark" href="{{URL::asset('/images/meyoung.ico')}}">
 <link href="{{URL::asset('/css2/animate.css')}}" rel="stylesheet" type="text/css">
 <link href="{{URL::asset('/css2/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 <link href="{{URL::asset('/css2/index.css')}}" rel="stylesheet" type="text/css">
@@ -308,49 +308,49 @@ body { width: 100%; overflow: hidden;}
                                 <div class="item active">
                                     <div class="row index_wu_daceng">
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[0]->id}}">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 animated fadeIn">
                                             <img src="{{$bao[0]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[1]->id}}">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 animated fadeIn">
                                             <img src="{{$bao[1]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[2]->id}}">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 animated fadeIn">
                                             <img src="{{$bao[2]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[3]->id}}">
-                                        <div class="col-md-3" style="margin-right:0">
+                                        <div class="col-md-3 animated fadeIn" style="margin-right:0">
                                             <img src="{{$bao[3]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[4]->id}}">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 animated fadeIn">
                                             <img src="{{$bao[4]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[5]->id}}">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 animated fadeIn">
                                             <img src="{{$bao[5]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[6]->id}}">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 animated fadeIn">
                                             <img src="{{$bao[6]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
                                         </a>
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[7]->id}}">
-                                        <div class="col-md-3" style="margin-right:0">
+                                        <div class="col-md-3 animated fadeIn" style="margin-right:0">
                                             <img src="{{$bao[7]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>
@@ -360,7 +360,7 @@ body { width: 100%; overflow: hidden;}
                                 <div class="item">
                                     <div class="row index_wu_daceng">
                                         <a href="#" data-toggle="modal" data-target="#pic{{$bao[8]->id}}">
-                                        <div class="col-md-3">
+                                        <div class="col-md-3 ">
                                             <img src="{{$bao[8]->hot_pic}}">
                                             <span class="lvmengceng"></span>
                                         </div>

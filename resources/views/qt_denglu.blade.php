@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>觅样登录</title>
-<link rel="shortcut icon" href="{{URL::asset('/images/favicon.ico')}}">
-<link rel="Bookmark" href="{{URL::asset('/images/favicon.ico')}}">
+<link rel="shortcut icon" href="{{URL::asset('/images/meyoung.ico')}}">
+<link rel="Bookmark" href="{{URL::asset('/images/meyoung.ico')}}">
 <link href="{{URL::asset('/css2/animate.css')}}" rel="stylesheet" type="text/css">
 <link href="{{URL::asset('/css2/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
 <link href="{{URL::asset('/css2/index.css')}}" rel="stylesheet" type="text/css">
