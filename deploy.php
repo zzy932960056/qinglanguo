@@ -82,7 +82,7 @@ after('deploy', 'success');
 
 // Configuration
 set('writable_use_sudo', false);
-set('repository', 'git@git.coding.net:zzy932960056/meyoung.git');
+set('repository', 'git@git.coding.net:zzy932960056/jiangji.git');
 add('shared_files', []);
 add('shared_dirs', []);
 add('writable_dirs', []);
@@ -93,7 +93,7 @@ server('production', 'www.hyzemedia.com')
     ->user('oipublish')
     ->password('hyze@publish')
 //    ->identityFile()
-    ->set('deploy_path', '/opt/hyze/meyoung');
+    ->set('deploy_path', '/opt/hyze/jiangji');
 
 
 // Tasks

@@ -9,13 +9,6 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {   
-    //防盗链
-    // public function _initialize(){
-        // if(!Auth::check()){
-        //    echo "<script>alert('请登录')</script>";
-        //    return self::login();
-        // }
-    // }
 
     //登录
     public function login(){
@@ -447,7 +440,6 @@ class AdminController extends Controller
         $uploadToken = $storage->uploadToken();
         $data['uptoken'] = $uploadToken;
         return view('upload', $data);
-        //return redirect('http://op.hyzemedia.com/admin/upload');
     }
 
     //CDN图片管理
@@ -629,10 +621,7 @@ class AdminController extends Controller
         if(!isset($_SESSION['admin_name'])){
             return redirect('/admin/login');
         }
-        $data = [];
-        $type_name = DB::table('video_type')->select('id','type_name','type_id')->orderBy('type_id','asc')->get();
-        $data['type_name'] = $type_name;
-        return view('admin_video_upload',$data);
+        return view('admin_video_upload');
     }
 
     //doCDN视频新增上传

@@ -170,24 +170,6 @@
 
 												</div>
 
-												<!-- 加视频类型(查表下拉列表) -->
-												<div class="control-group">
-
-													<label class="control-label">视频类型</label>
-
-													<div class="controls">
-
-														<select name="video_type" class="small m-wrap" tabindex="1">
-															@foreach($type_name as $ty)
-															<option value="{{$ty->type_id}}">{{$ty->type_name}}</option>
-															@endforeach
-														</select>
-																
-													</div>
-
-												</div>
-
-
 												<div class="control-group">
 
 													<label class="control-label">封面</label>

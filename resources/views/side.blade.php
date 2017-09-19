@@ -151,7 +151,7 @@
 
 							<a href="/operation/screen_video">
 
-							屏幕视频管理</a>
+							首屏视频管理</a>
 
 						</li>
 
@@ -159,139 +159,39 @@
 
 							<a href="/banner/banner_pic">
 
-							banner图管理</a>
+							pc端banner图</a>
 
 						</li>
 
 						<li >
 
-							<a href="/navigation/navigation_image">
+							<a href="/banner/banner_mobile_pic">
 
-							导航大图管理</a>
-
-						</li>
-
-						<li >
-
-							<a href="/second/second_screen">
-
-							第二屏信息</a>
+							移动端banner图</a>
 
 						</li>
 
 						<li >
 
-							<a href="/metao/metao">
+							<a href="/info/info_index">
 
-							第六屏觅淘</a>
-
-						</li>
-
-						<li >
-
-							<a href="/melast/melast">
-
-							第八屏觅样</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li class="">
-
-					<a href="javascript:;">
-
-					<i class="icon-user"></i> 
-
-					<span class="title">用户管理</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li >
-
-							<a href="/user/index">
-
-							注册用户</a>
-
-						</li>
-
-					</ul>
-
-				</li>
-
-				<li class="">
-
-					<a href="javascript:;">
-
-					<i class="icon-th"></i> 
-
-					<span class="title">合作伙伴</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li >
-
-							<a href="/join/index">
-
-							伙伴管理</a>
-
-						</li>
-						
-					</ul>
-
-				</li>
-
-				<li class="">
-
-					<a href="javascript:;">
-
-					<i class="icon-briefcase"></i> 
-
-					<span class="title">觅闻</span>
-
-					<span class="arrow "></span>
-
-					</a>
-
-					<ul class="sub-menu">
-
-						<li >
-
-							<a href="/me_news/cover">
-
-							<i class="icon-cogs"></i>
-
-							觅闻首推</a>
+							公司信息维护</a>
 
 						</li>
 
 						<li >
 
-							<a href="/me_news/index">
+							<a href="/admin/relation">
 
-							<i class="icon-cogs"></i>
-
-							觅闻管理</a>
+							PC端联系匠几大图</a>
 
 						</li>
 
 						<li >
 
-							<a href="/me_news/insert/index">
+							<a href="/admin/relation_mobile">
 
-							<i class="icon-font"></i>
-
-							觅闻三级详情图文</a>
+							移动端联系匠几大图</a>
 
 						</li>
 
@@ -305,7 +205,7 @@
 
 					<i class="icon-briefcase"></i> 
 
-					<span class="title">觅秀</span>
+					<span class="title">匠几</span>
 
 					<span class="arrow "></span>
 
@@ -315,41 +215,71 @@
 
 						<li >
 
-							<a href="/me_xiu/image_left">
+							<a href="/admin/jiangji">
 
 							<i class="icon-cogs"></i>
 
-							介绍图管理(左图)</a>
+							PC端匠几服务简介</a>
 
 						</li>
 
 						<li >
 
-							<a href="/me_xiu/image_right">
+							<a href="/admin/mobile_jiangji">
 
 							<i class="icon-cogs"></i>
 
-							轮播图管理(右图)</a>
+							移动端匠几服务简介</a>
 
 						</li>
 
 						<li >
 
-							<a href="/me_xiu/video/second">
+							<a href="/admin/jiangji/module">
 
-							<i class="icon-coffee"></i>
+							<i class="icon-cogs"></i>
 
-							视频管理(二级)</a>
+							PC端匠几服务图文</a>
 
 						</li>
 
 						<li >
 
-							<a href="/me_xiu/video/third">
+							<a href="/admin/jiangji_mobile/module">
 
-							<i class="icon-coffee"></i>
+							<i class="icon-cogs"></i>
 
-							视频管理(三级)</a>
+							移动端匠几服务图文</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/team">
+
+							<i class="icon-cogs"></i>
+
+							匠几团队</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/jiangji/cooperation">
+
+							<i class="icon-cogs"></i>
+
+							PC端合作流程</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/jiangji_mobile/cooperation">
+
+							<i class="icon-cogs"></i>
+
+							移动端合作流程</a>
 
 						</li>
 
@@ -363,7 +293,7 @@
 
 					<i class="icon-briefcase"></i> 
 
-					<span class="title">觅尚</span>
+					<span class="title">匠几文化</span>
 
 					<span class="arrow "></span>
 
@@ -373,21 +303,21 @@
 
 						<li >
 
-							<a href="/me_shang/cover">
+							<a href="/admin/culture">
 
 							<i class="icon-cogs"></i>
 
-							觅尚首推</a>
+							PC端匠几文化</a>
 
 						</li>
 
 						<li >
 
-							<a href="/me_shang/index">
+							<a href="/admin/culture_mobile">
 
-							<i class="icon-coffee"></i>
+							<i class="icon-cogs"></i>
 
-							杂志管理</a>
+							移动端匠几文化</a>
 
 						</li>
 
@@ -401,7 +331,7 @@
 
 					<i class="icon-briefcase"></i> 
 
-					<span class="title">觅宝</span>
+					<span class="title">匠几服务</span>
 
 					<span class="arrow "></span>
 
@@ -409,33 +339,13 @@
 
 					<ul class="sub-menu">
 
-						<!-- <li >
+						<li >
 
-							<a href="/me_bao/first">
+							<a href="/admin/service">
 
 							<i class="icon-cogs"></i>
 
-							觅宝一级图片</a>
-
-						</li> -->
-
-						<li >
-
-							<a href="/me_bao/index">
-
-							<i class="icon-group"></i>
-
-							觅宝管理</a>
-
-						</li>
-
-						<li >
-
-							<a href="/me_bao/video">
-
-							<i class="icon-coffee"></i>
-
-							觅宝视频管理</a>
+							匠几服务</a>
 
 						</li>
 
@@ -443,39 +353,97 @@
 
 				</li>
 
-				<li class="last ">
+				<li class="">
 
-					<a href="/admin/pic_upload">
+					<a href="javascript:;">
 
-					<i class="icon-bar-chart"></i> 
+					<i class="icon-briefcase"></i> 
 
-					<span class="title">图片上传</span>
+					<span class="title">品牌案例</span>
+
+					<span class="arrow "></span>
 
 					</a>
+
+					<ul class="sub-menu">
+
+						<li >
+
+							<a href="/admin/case">
+
+							<i class="icon-cogs"></i>
+
+							品牌案例</a>
+
+						</li>
+
+					</ul>
 
 				</li>
 
-				<li class="last ">
+				<li class="">
 
-					<a href="/admin/video_upload">
+					<a href="javascript:;">
 
-					<i class="icon-bar-chart"></i> 
+					<i class="icon-briefcase"></i> 
 
-					<span class="title">视频上传</span>
+					<span class="title">配套采购</span>
+
+					<span class="arrow "></span>
 
 					</a>
+
+					<ul class="sub-menu">
+
+						<li >
+
+							<a href="/admin/purchase">
+
+							<i class="icon-cogs"></i>
+
+							PC端配套采购</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/purchase_mobile">
+
+							<i class="icon-cogs"></i>
+
+							移动端配套采购</a>
+
+						</li>
+
+					</ul>
 
 				</li>
 
-				<li class="last ">
+				<li class="">
 
-					<a href="/admin/file_upload">
+					<a href="javascript:;">
 
-					<i class="icon-bar-chart"></i> 
+					<i class="icon-briefcase"></i> 
 
-					<span class="title">文件上传(本地)</span>
+					<span class="title">匠几动态</span>
+
+					<span class="arrow "></span>
 
 					</a>
+
+					<ul class="sub-menu">
+
+						<li >
+
+							<a href="/admin/news">
+
+							<i class="icon-cogs"></i>
+
+							匠几动态</a>
+
+						</li>
+
+					</ul>
 
 				</li>
 

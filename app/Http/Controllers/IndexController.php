@@ -6,565 +6,245 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
+use App\Jiangjinews;
 
 class IndexController extends Controller
 {   
+	//匠几主页
     public function index(){
-        @session_start();
-        //remember_me
-        if(isset($_COOKIE['user_info'])){
-            $_SESSION['user_info'] = $_COOKIE['user_info'];
-            if(isset($_COOKIE['phone'])){
-                $_SESSION['phone'] = $_COOKIE['phone'];
-            }
-        }
+    	$data = [];
+    	//首屏视频
+    	$screen_video = DB::table('screen_video')
+    		->where('video_screen','首屏')
+    		->pluck('video_path');
+    	$screen_video = $screen_video[0];
+        $data['screen_video'] = $screen_video;
+        //匠几服务
+        $service = DB::table('service_introduce')->orderBy('id','asc')->get();
+        $data['service'] = $service;
+        //匠几服务图
+        $info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        //底部+弹窗
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;
+        //品牌案例
+        $jiangji_case = DB::table('jiangji_case')
+	        ->select(['id','case_title','cover_pic','case_index'])
+	        ->where('is_cover',1)
+	        ->limit(5)
+	        ->get();
+	    $data['jiangji_case'] = $jiangji_case;
+	    //匠几团队
+	    $jiangji_team = DB::table('jiangji_team')->orderBy('id','asc')->get();
+	    $i = '';
+	    foreach($jiangji_team as $key => $value){
+	    	$i = $value->id;
+	    	$jiangji_team_intro = DB::table('jiangji_team_intro')->where('staff_id',$i)->pluck('staff_intro');
+	    	$jiangji_team[$key]->jiangji_team_intro = $jiangji_team_intro;
+	    }
+	    $data['jiangji_team'] = $jiangji_team;
+	    //匠几动态
+	    $jiangji_news = DB::table('jiangji_news')
+	    	->select(['id','title','date_time','hot_pic','hot_desp'])
+	    	->where('is_hot',1)
+	    	->limit(5)
+	    	->get();
+	    $data['jiangji_news'] = $jiangji_news;
+	    //合作流程
+	    $jiangji_cooperation = DB::table('jiangji_cooperation')->get();
+	    $data['jiangji_cooperation'] = $jiangji_cooperation;
+        return view('qt_jiangji_index',$data);
+    }
+
+    //匠几文化
+    public function culture(){
+    	$data = [];
+    	//底部+弹窗
+    	$info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;
+        //banner
+    	$banner = DB::table('jiang_banner')->where('banner_sort','匠几文化')->get();
+    	$data['banner'] = $banner;
+    	//匠几文化
+    	$culture = DB::table('jiangji_culture')->orderBy('id','asc')->get();
+    	$data['culture'] = $culture;
+    	return view('qt_culture',$data);
+    }
+
+    //匠几服务
+    public function service(){
+    	$data = [];
+    	//底部+弹窗
+    	$info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;    	
+        //banner
+    	$banner = DB::table('jiang_banner')->where('banner_sort','匠几服务')->get();
+    	$data['banner'] = $banner;
+    	//匠几服务
+    	$service = DB::table('jiangji_service')->orderBy('id','asc')->get();
+    	$i = '';
+    	foreach($service as $key => $value){
+	    	$i = $value->id;
+	    	$service_label = DB::table('jiangji_service_label')->where('service_id',$i)->pluck('label_name');
+	    	$service[$key]->service_label = $service_label;
+	    }
+    	$data['service'] = $service;
+    	return view('qt_service',$data);
+    }
+
+    //品牌案例
+    public function case(){
+    	$data = [];
+    	//底部+弹窗
+    	$info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;
+        //banner
+    	$banner = DB::table('jiang_banner')->where('banner_sort','品牌案例')->get();
+    	$data['banner'] = $banner;
+    	//品牌案例
+        $hot_case = DB::table('jiangji_case')
+            ->select(['id','case_title','service_content','coord','case_pic1','case_pic2','case_pic3'])
+            ->where('is_hot',1)
+            ->limit(3)
+            ->orderBy('id','asc')
+            ->get();
+        $data['hot_case'] = $hot_case;
+        $case = DB::table('jiangji_case')
+            ->select(['id','case_title','service_content','coord','case_pic1'])
+            ->where('is_hot',0)
+            ->orderBy('id','asc')
+            ->get();
+        $data['case'] = $case;
+    	return view('qt_case',$data);
+    }
+
+    public function case_details($id){
         $data = [];
-        //导航图片
-        $navigation_image = DB::table('navigation_image')->get();
-        $navigation_image = (array)$navigation_image[0];
-        $data['navigation_image'] = $navigation_image;
-        //第一屏视频
-        $first_video = DB::table('screen_video')->where('video_screen','首屏')->get();
-        $first_video = (array)$first_video[0];
-        $data['first_video'] = $first_video;
-        //第二屏介绍信息
-        $dierping = DB::table('dierping')->get();
-        $dierping = (array)$dierping[0];
-        $data['dierping'] = $dierping;
-        //第三屏觅闻
-        $me_wen = DB::table('me_news_cover')->get();
-        $data['me_wen'] = $me_wen;
-        //第四屏觅秀
-        $me_xiu_video = DB::table('screen_video')->where('video_screen','觅秀')->get();
-        $me_xiu_video = (array)$me_xiu_video[0];
-        $data['me_xiu_video'] = $me_xiu_video;
-        //第五屏觅尚
-        $me_shang = DB::table('me_shang_first')->get();
-        $data['me_shang'] = $me_shang;
-        //第六屏觅淘
-        $me_tao = DB::table('me_tao')->get();
-        $me_tao = (array)$me_tao[0];
-        $data['me_tao'] = $me_tao;
-        //第七屏觅宝
-        $bao = DB::table('me_bao')->where('is_hot',1)->orderBy('like', 'desc')->take(16)->get();
-        $data['bao'] = $bao;
-        //第八屏觅样
-        $last = DB::table('me_last')->get();
-        $last = (array)$last[0];
-        $data['last'] = $last;
-        return view('qt_index',$data);
+        //底部+弹窗
+        $info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;
+        //banner
+        $banner = DB::table('jiang_banner')->where('banner_sort','品牌案例')->get();
+        $data['banner'] = $banner;
+        //品牌案例
+        $case = DB::table('jiangji_case')->where('id',$id)->get();
+        $case = $case[0];
+        $data['case'] = $case;
+        return view('qt_case_third',$data);
+    }
+
+    //配套采购
+    public function purchase(){
+    	$data = [];
+    	//底部+弹窗
+    	$info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;
+        //banner
+    	$banner = DB::table('jiang_banner')->where('banner_sort','配套采购')->get();
+    	$data['banner'] = $banner;
+    	//配套采购
+    	$purchase = DB::table('jiangji_purchase')->orderBy('id','asc')->get();
+    	$data['purchase'] = $purchase;
+    	return view('qt_purchase',$data);
+    }
+
+    //匠几动态
+    public function news(){
+        $data = [];
+        //底部+弹窗
+        $info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;
+        //banner
+        $banner = DB::table('jiang_banner')->where('banner_sort','匠几动态')->get();
+        $data['banner'] = $banner;
+        //匠几动态(全部动态)
+        $news = Jiangjinews::orderBy('date_time','desc')->paginate(5);
+        $data['news'] = $news;
+        //行业分享
+        $news_hy = DB::table('jiangji_news')
+            ->where('category','行业分享')
+            ->orderBy('date_time','desc')
+            ->get();
+        $data['news_hy'] = $news_hy;
+        //匠几日志
+        $news_rz = DB::table('jiangji_news')
+            ->where('category','匠几日志')
+            ->orderBy('date_time','desc')
+            ->get();
+        $data['news_rz'] = $news_rz;
+        //品牌声浪
+        $news_pp = DB::table('jiangji_news')
+            ->where('category','品牌声浪')
+            ->orderBy('date_time','desc')
+            ->get();
+        $data['news_pp'] = $news_pp;
+        return view('qt_news',$data);
+    }
+
+    public function news_details($id){
+        $data = [];
+        //底部+弹窗
+        $info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;
+        //banner
+        $banner = DB::table('jiang_banner')->where('banner_sort','匠几动态')->get();
+        $data['banner'] = $banner;
+        //匠几动态
+        $news = DB::table('jiangji_news')->where('id',$id)->get();
+        $data['news'] = $news;
+        $template_no = DB::table('jiangji_news')->where('id',$id)->pluck('template_no');
+        $template_no = $template_no[0];
+        if($template_no == 1){
+            $news_details = DB::table('jiangji_news_template1')
+                ->orderBy('id','asc')->where('news_id',$id)->get();
+            $data['news_details'] = (array)$news_details;
+            return view('qt_news_details_first',$data);
+        }else if($template_no == 2){
+            $news_details = DB::table('jiangji_news_template2')
+                ->orderBy('id','asc')->where('news_id',$id)->get();
+            $data['news_details'] = (array)$news_details;
+            return view('qt_news_details_second',$data);
+        }else if($template_no == 3){
+            $news_details = DB::table('jiangji_news_template3')
+                ->orderBy('id','asc')->where('news_id',$id)->get();
+            $data['news_details'] = (array)$news_details;
+            return view('qt_news_details_third',$data);
+        }
+    }
+
+    //联系匠几
+    public function contact(){
+    	$data = [];
+    	//底部+弹窗
+    	$info = DB::table('service_module')->orderBy('id','asc')->get();
+        $data['info'] = $info;
+        $company_info = DB::table('company_info')->where('id',1)->get();
+        $data['company_info'] = $company_info;
+        //banner
+    	$banner = DB::table('jiang_banner')->where('banner_sort','联系匠几')->get();
+    	$data['banner'] = $banner;
+    	//联系匠几
+    	$contact = DB::table('jiangji_relation')->get();
+    	$data['contact'] = $contact;
+    	return view('qt_lianxijiangji',$data);
     }
     
-    public function me_wen_cover($id){
-        $data = [];
-        $banner_wen = DB::table('me_banner')->where('banner_sort','觅闻')->get();
-        $banner_wen = (array)$banner_wen[0];
-        $data['banner_wen'] = $banner_wen;
-        $me_wen1 = DB::table('me_news_cover')->where('id',$id)->get();
-        $me_wen1 = (array)$me_wen1[0];
-        $me_wen2 = DB::table('me_news_details_cover')->where('news_id',$id)->get();
-        $data['me_wen1'] = $me_wen1;
-        $data['me_wen2'] = $me_wen2;
-        return view('qt_miwen_shoutui_sanji',$data);
-    }
-
-    public function me_wen(){
-        $data = [];
-        $banner_wen = DB::table('me_banner')->where('banner_sort','觅闻')->get();
-        $banner_wen = (array)$banner_wen[0];
-        $data['banner_wen'] = $banner_wen;
-        $me_news_hot = DB::table('me_news')->where('kind','HOT')->orderBy('date', 'desc')->get();
-        $num1 = count($me_news_hot);
-        $arr1 = [];
-        $j = 0;
-        for($i=1;$i<=$num1;$i++){
-            $a = array_shift($me_news_hot);
-            $arr1[$j][$i] = $a;
-            if(is_int($i/4)){
-                $j++;
-            }
-        }
-        $data['me_news_hot'] = $arr1;
-        $me_news_yule = DB::table('me_news')->where('kind','娱乐')->orderBy('date', 'desc')->get();
-        $num2 = count($me_news_yule);
-        $arr2 = [];
-        $n = 0;
-        for($m=1;$m<=$num2;$m++){
-            $b = array_shift($me_news_yule);
-            $arr2[$n][$m] = $b;
-            if(is_int($m/4)){
-                $n++;
-            }
-        }
-        $data['me_news_yule'] = $arr2;
-        $me_news_chuanda = DB::table('me_news')->where('kind','穿搭')->orderBy('date', 'desc')->get();
-        $num3 = count($me_news_chuanda);
-        $arr3 = [];
-        $q = 0;
-        for($p=1;$p<=$num3;$p++){
-            $c = array_shift($me_news_chuanda);
-            $arr3[$q][$p] = $c;
-            if(is_int($p/4)){
-                $q++;
-            }
-        }
-        $data['me_news_chuanda'] = $arr3;
-        return view('qt_miwen_erji',$data);
-    }
-
-    public function me_wen_details($id){
-        $data = [];
-        $banner_wen = DB::table('me_banner')->where('banner_sort','觅闻')->get();
-        $banner_wen = (array)$banner_wen[0];
-        $data['banner_wen'] = $banner_wen;
-        $me_news = DB::table('me_news')->where('id',$id)->get();
-        $me_news = (array)$me_news[0];
-        $me_news_details = DB::table('me_news_details')->where('news_id',$id)->get();
-        $data['me_news'] = $me_news;
-        $data['me_news_details'] = $me_news_details;
-        return view('qt_miwen_sanji',$data);
-    }
-
-    public function me_xiu(){
-        $data = [];
-        $banner_xiu = DB::table('me_banner')->where('banner_sort','觅秀')->get();
-        $banner_xiu = (array)$banner_xiu[0];
-        $data['banner_xiu'] = $banner_xiu;
-        $me_xiu_left = DB::table('me_xiu_left')->get();
-        $me_xiu_left = (array)$me_xiu_left[0];
-        $data['me_xiu_left'] = $me_xiu_left;
-        $me_xiu_right = DB::table('me_xiu_right')->get();
-        $data['me_xiu_right'] = $me_xiu_right;
-        $me_xiu_video = DB::table('me_xiu_video')->get();
-        $data['me_xiu_video'] = $me_xiu_video;
-        return view('qt_mixiu_erji',$data);
-    }
-
-    public function me_xiu_third(){
-        $data = [];
-        $me_xiu_video_third = DB::table('me_xiu_video_third')->get();
-        $num = count($me_xiu_video_third);
-        $arr = [];
-        $j = 0;
-        for($i=1;$i<=$num;$i++){
-            $a = array_shift($me_xiu_video_third);
-            $arr[$j][$i] = $a;
-            if(is_int($i/6)){
-                $j++;
-            }
-        }
-        $data['xiu_video'] = $arr;
-        $me_xiu_video = DB::table('me_xiu_video_third')->get();
-        $data['xiu'] = $me_xiu_video;
-        $coun = count($me_xiu_video);
-        $cou = '';
-        if(is_int($coun/6)){
-            $cou = $coun/6;
-        }else{
-            $cou = ceil($coun/6);
-        }
-        $carousel = [];
-        for($n=1;$n<=$cou;$n++){
-            $carousel[$n] = $n-1;
-        }
-        $data['carousel'] = $carousel;
-        return view('qt_mixiu_sanji',$data);
-    }
-
-    public function me_shang_cover($id){
-        $data = [];
-        $me_shang_first = DB::table('me_shang_first')->where('id',$id)->get();
-        $me_shang_first = (array)$me_shang_first[0];
-        $me_shang_first_pic = DB::table('me_shang_first_pic')->where('shang_id',$id)->orderBy('magazine_page', 'asc')->get();
-        $me_shang_first_text = DB::table('me_shang_first_text')->where('shang_id',$id)->get();
-        $data['me_shang_first'] = $me_shang_first;
-        $data['me_shang_first_pic'] = $me_shang_first_pic;
-        $data['me_shang_first_text'] = $me_shang_first_text;
-        return view('qt_mishang_shoutui_sanji',$data);
-    }
-
-    public function me_shang_second(){
-        $data = [];
-        $me_shang = DB::table('me_shang_magazine')->get();
-        $num = count($me_shang);
-        $arr = [];
-        $j = 0;
-        for($i=1;$i<=$num;$i++){
-            $a = array_shift($me_shang);
-            if(is_int((($i-1)/5))){
-                $arr[$j][1] = $a;
-            }else{
-                $arr[$j][2][$i] = $a;
-            }
-            if(is_int($i/5)){
-                $j++;
-            }
-        }
-        $data['me_shang'] = $arr;
-        return view('qt_mishang_erji',$data);
-    }
-
-    public function me_shang_third($id){
-        $data = [];
-        $me_shang = DB::table('me_shang_magazine')->where('id',$id)->get();
-        $me_shang = (array)$me_shang[0];
-        $me_shang_pic = DB::table('me_shang_magazine_pic')->where('shang_id',$id)->orderBy('magazine_page', 'asc')->get();
-        $me_shang_text = DB::table('me_shang_magazine_text')->where('shang_id',$id)->get();
-        $data['me_shang'] = $me_shang;
-        $data['me_shang_pic'] = $me_shang_pic;
-        $data['me_shang_text'] = $me_shang_text;
-        return view('qt_mishang_sanji',$data);
-    }
-
-    public function me_bao(){
-        $data = [];
-        $banner_bao = DB::table('me_banner')->where('banner_sort','觅宝')->get();
-        $banner_bao = (array)$banner_bao[0];
-        $data['banner_bao'] = $banner_bao;
-        $bao = DB::table('me_bao')->where('is_hot',1)->orderBy('like', 'desc')->take(9)->get();
-        $data['bao'] = $bao;
-        $bao_video = DB::table('me_bao_video')->where('is_hot',1)->orderBy('id','asc')->take(6)->get();
-        $data['video'] = $bao_video;
-        $num = count($bao_video);
-        $arr = [];
-        $j = 0;
-        for($i=1;$i<=$num;$i++){
-            $a = array_shift($bao_video);
-            if(is_int((($i-1)/3))){
-                $arr[$j][1] = $a;
-            }else{
-                $arr[$j][2][$i] = $a;
-            }
-            if(is_int($i/3)){
-                $j++;
-            }
-        }
-        $data['bao_video'] = $arr;
-        return view('qt_mibao_erji',$data);
-    }
-
-    public function doDianzan(){
-        $cid = $_POST['cid'];
-        $num = DB::table('me_bao')->where('id',$cid)->increment('like');
-        if($num == 1){
-            return new JsonResponse(
-                    array('msg' => 'ok')
-                );
-        }else{
-            return new JsonResponse(
-                    array('msg' => 'no')
-                );
-        }
-    }
-
-    public function me_bao_third_video(){
-        $data = [];
-        $me_bao_video = DB::table('me_bao_video')->get();
-        $data['bao'] = $me_bao_video;
-        $coun = count($me_bao_video);
-        $cou = '';
-        if(is_int($coun/6)){
-            $cou = $coun/6;
-        }else{
-            $cou = ceil($coun/6);
-        }
-        $carousel = [];
-        for($n=1;$n<=$cou;$n++){
-            $carousel[$n] = $n-1;
-        }
-        $data['carousel'] = $carousel;
-        $num = count($me_bao_video);
-        $arr = [];
-        $j = 0;
-        for($i=1;$i<=$num;$i++){
-            $a = array_shift($me_bao_video);
-            $arr[$j][$i] = $a;
-            if(is_int($i/6)){
-                $j++;
-            }
-        }
-        $data['bao_video'] = $arr;
-        return view('qt_mibao_shipin_sanji',$data);
-    }
-
-    public function me_bao_third_child(){
-        $data = [];
-        $bao = DB::table('me_bao')->orderBy('like', 'desc')->get();
-        $data['bao'] = $bao;
-        $nvbao = DB::table('me_bao')->where('sex','女')->orderBy('like','desc')->get();
-        $data['nvbao'] = $nvbao;
-        $nanbao = DB::table('me_bao')->where('sex','男')->orderBy('like','desc')->get();
-        $data['nanbao'] = $nanbao;
-        $bao_age1 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[0,3])->orderBy('like','desc')->get();
-        $data['bao_age1'] = $bao_age1;
-        $bao_age2 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[4,6])->orderBy('like','desc')->get();
-        $data['bao_age2'] = $bao_age2;
-        $bao_age3 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[7,9])->orderBy('like','desc')->get();
-        $data['bao_age3'] = $bao_age3;
-        $bao_age4 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[10,12])->orderBy('like','desc')->get();
-        $data['bao_age4'] = $bao_age4;
-        $bao_age5 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[13,15])->orderBy('like','desc')->get();
-        $data['bao_age5'] = $bao_age5;
-        return view('qt_mibao_mibao_sanji',$data);
-    }
-
-    public function me_bao_third_child_city($city){
-        $data = [];
-        $bao = DB::table('me_bao')->where('region',$city)->orderBy('like', 'desc')->get();
-        $data['bao'] = $bao;
-        $nvbao = DB::table('me_bao')->where('sex','女')->orderBy('like','desc')->get();
-        $data['nvbao'] = $nvbao;
-        $nanbao = DB::table('me_bao')->where('sex','男')->orderBy('like','desc')->get();
-        $data['nanbao'] = $nanbao;
-        $bao_age1 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[0,3])->orderBy('like','desc')->get();
-        $data['bao_age1'] = $bao_age1;
-        $bao_age2 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[4,6])->orderBy('like','desc')->get();
-        $data['bao_age2'] = $bao_age2;
-        $bao_age3 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[7,9])->orderBy('like','desc')->get();
-        $data['bao_age3'] = $bao_age3;
-        $bao_age4 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[10,12])->orderBy('like','desc')->get();
-        $data['bao_age4'] = $bao_age4;
-        $bao_age5 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[13,15])->orderBy('like','desc')->get();
-        $data['bao_age5'] = $bao_age5;
-        return view('qt_mibao_mibao_sanji',$data);
-    }
-
-    public function me_bao_third_city_child(){
-        $data = [];
-        $city = isset($_POST['city'])?$_POST['city']:'';
-        $bao = DB::table('me_bao')->where('region',$city)->orderBy('like', 'desc')->get();
-        $bao = isset($bao)?$bao:[];
-        $data['bao'] = $bao;
-        $nvbao = DB::table('me_bao')->where('sex','女')->orderBy('like','desc')->get();
-        $data['nvbao'] = $nvbao;
-        $nanbao = DB::table('me_bao')->where('sex','男')->orderBy('like','desc')->get();
-        $data['nanbao'] = $nanbao;
-        $bao_age1 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[0,3])->orderBy('like','desc')->get();
-        $data['bao_age1'] = $bao_age1;
-        $bao_age2 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[4,6])->orderBy('like','desc')->get();
-        $data['bao_age2'] = $bao_age2;
-        $bao_age3 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[7,9])->orderBy('like','desc')->get();
-        $data['bao_age3'] = $bao_age3;
-        $bao_age4 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[10,12])->orderBy('like','desc')->get();
-        $data['bao_age4'] = $bao_age4;
-        $bao_age5 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[13,15])->orderBy('like','desc')->get();
-        $data['bao_age5'] = $bao_age5;
-        return view('qt_mibao_mibao_sanji',$data);
-    }
-
-    public function me_bao_select_child(){
-        $data = [];
-        $sex = isset($_POST['sex'])?$_POST['sex']:'';
-        $age = isset($_POST['age'])?$_POST['age']:'';
-        $city = isset($_POST['city'])?$_POST['city']:'';
-        $city_name = DB::table('division_city')->where('city_id',$city)->pluck('city_name');
-        if($city_name){
-            $city_name = $city_name[0];  
-        }else{
-            $city_name = '';
-        }
-        if($sex == 1){
-            if($age == 1){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','男'],
-                    ['age','>=',0],
-                    ['age','<=',3],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get();
-            }else if($age == 2){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','男'],
-                    ['age','>=',4],
-                    ['age','<=',6],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get();
-            }else if($age == 3){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','男'],
-                    ['age','>=',7],
-                    ['age','<=',9],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get();                
-            }else if($age == 4){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','男'],
-                    ['age','>=',10],
-                    ['age','<=',12],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get(); 
-            }else if($age == 5){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','男'],
-                    ['age','>=',13],
-                    ['age','<=',15],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get(); 
-            }
-        }else if($sex == 2){
-            if($age == 1){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','女'],
-                    ['age','>=',0],
-                    ['age','<=',3],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get();
-            }else if($age == 2){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','女'],
-                    ['age','>=',4],
-                    ['age','<=',6],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get();
-            }else if($age == 3){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','女'],
-                    ['age','>=',7],
-                    ['age','<=',9],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get();                
-            }else if($age == 4){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','女'],
-                    ['age','>=',10],
-                    ['age','<=',12],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get(); 
-            }else if($age == 5){
-                $bao = DB::table('me_bao')->where([
-                    ['sex','=','女'],
-                    ['age','>=',13],
-                    ['age','<=',15],
-                    ['region','=',$city_name],
-                    ])->orderBy('like','desc')->get(); 
-            }
-        }
-        $bao = isset($bao)?$bao:[];
-        $data['bao'] = $bao;
-        $nvbao = DB::table('me_bao')->where('sex','女')->orderBy('like','desc')->get();
-        $data['nvbao'] = $nvbao;
-        $nanbao = DB::table('me_bao')->where('sex','男')->orderBy('like','desc')->get();
-        $data['nanbao'] = $nanbao;
-        $bao_age1 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[0,3])->orderBy('like','desc')->get();
-        $data['bao_age1'] = $bao_age1;
-        $bao_age2 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[4,6])->orderBy('like','desc')->get();
-        $data['bao_age2'] = $bao_age2;
-        $bao_age3 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[7,9])->orderBy('like','desc')->get();
-        $data['bao_age3'] = $bao_age3;
-        $bao_age4 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[10,12])->orderBy('like','desc')->get();
-        $data['bao_age4'] = $bao_age4;
-        $bao_age5 = DB::table('me_bao')->whereRaw('age>=? and age<=?',[13,15])->orderBy('like','desc')->get();
-        $data['bao_age5'] = $bao_age5;
-        return view('qt_mibao_mibao_sanji',$data);
-    }
-
-    public function liandong(){
-        $cid = $_POST['cid'];
-        $province = DB::table('division_province')->get();
-        $arr = [];
-        foreach($province as $key => $value){
-            if($value->area_id == $cid){
-                $arr[] = $value;
-            }
-        }
-        $arr = json_encode($arr);
-        echo $arr;
-    }
-
-    public function liandong2(){
-        $cid = $_POST['cid'];
-        $city = DB::table('division_city')->get();
-        $arr = [];
-        foreach($city as $key => $value){
-            if($value->province_id == $cid){
-                $arr[] = $value;
-            }
-        }
-        $arr = json_encode($arr);
-        echo $arr;
-    }
-
-    public function me_join(){
-        $data = [];
-        $pinpai = DB::table('me_join')->where('kind','品牌')->get();
-        $coun1 = count($pinpai);
-        $cou1 = '';
-        if(is_int($coun1/9)){
-            $cou1 = $coun1/9;
-        }else{
-            $cou1 = ceil($coun1/9);
-        }
-        $carousel1 = [];
-        for($n=1;$n<=$cou1;$n++){
-            $carousel1[$n] = $n-1;
-        }
-        $data['carousel1'] = $carousel1;
-        $b = count($pinpai);
-        $arr = [];
-        $j = 0;
-        for($i=1;$i<=$b;$i++){
-            $a = array_shift($pinpai);
-            $arr[$j][$i] = $a;
-            if(is_int($i/9)){
-                $j++;
-            }
-        }
-        $data['pinpai'] = $arr;
-
-        $meiti = DB::table('me_join')->where('kind','媒体')->get();
-        $coun2 = count($meiti);
-        $cou2 = '';
-        if(is_int($coun2/9)){
-            $cou2 = $coun2/9;
-        }else{
-            $cou2 = ceil($coun2/9);
-        }
-        $carousel2 = [];
-        for($n=1;$n<=$cou2;$n++){
-            $carousel2[$n] = $n-1;
-        }
-        $data['carousel2'] = $carousel2;
-        $c = count($meiti);
-        $arr2 = [];
-        $p = 0;
-        for($q=1;$q<=$c;$q++){
-            $u = array_shift($meiti);
-            $arr2[$p][$q] = $u;
-            if(is_int($q/9)){
-                $p++;
-            }
-        }
-        $data['meiti'] = $arr2;
-
-        $huoban = DB::table('me_join')->where('kind','伙伴')->get();
-        $coun3 = count($huoban);
-        $cou3 = '';
-        if(is_int($coun3/9)){
-            $cou3 = $coun3/9;
-        }else{
-            $cou3 = ceil($coun3/9);
-        }
-        $carousel3 = [];
-        for($n=1;$n<=$cou3;$n++){
-            $carousel3[$n] = $n-1;
-        }
-        $data['carousel3'] = $carousel3;
-        $d = count($huoban);
-        $arr3 = [];
-        $s = 0;
-        for($t=1;$t<=$d;$t++){
-            $v = array_shift($huoban);
-            $arr3[$s][$t] = $v;
-            if(is_int($t/9)){
-                $s++;
-            }
-        }
-        $data['huoban'] = $arr3;
-
-        $join_us = DB::table('me_last')->select('join_us1','join_us2')->get();
-        $join_us = (array)$join_us[0];
-        $data['join_us'] = $join_us;
-        return view('qt_miyang_erji',$data);
-    }
+ 
 
 
 }

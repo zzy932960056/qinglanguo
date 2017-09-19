@@ -1,303 +1,269 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<!-- saved from url=(0016)http://so-ai.jp/ -->
+<html lang="ja" class="">
 <head>
-<meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
 
-<title>觅样</title>
-<link href="{{URL::asset('/css_yd/animate.css')}}" rel="stylesheet" type="text/css">
-<link href="{{URL::asset('/css_yd/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-<link href="{{URL::asset('/css_yd/index.css')}}" rel="stylesheet" type="text/css">
+	<title>匠几</title>
 
-
-
-</head>
-
-<body>
-
-    <!--侧滑导航-->
-    @include('yd_daohang');
-
-
-<div class="container-fluid" style="margin-top:-20px;">
-
-	<div class="row wow animated fadeInDown"><img src="{{URL::asset('/images_yd/index_tiao.png')}}" class="img-responsive" style="width:100%"></div>
-	<div class="row wow animated fadeInDown" style="text-align:center;"><a href="/"><img src="{{URL::asset('/images_yd/logo.png')}}" class="img-responsive" style="margin:40px 0; display:inline-block"></a></div>
+  <link href="{{URL::asset('/yd_css/bootstrap.min.css')}}" rel="stylesheet" media="screen">
+	<link href="{{URL::asset('/yd_css/so-ai.css')}}" rel="stylesheet" media="screen">
+	<link href="{{URL::asset('/yd_css/index.css')}}" rel="stylesheet" media="screen">
+	<link href="{{URL::asset('/yd_css/animate.css')}}" rel="stylesheet" media="screen">
     
-    <!--轮播-->
-    <div class="row wow animated fadeInDown">
+	<script type="text/javascript" src="{{URL::asset('/yd_js/jquery-1.11.3.min.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('/yd_js/wow.min.js')}}"></script>
+</head>  
+
+
+<div class="top-content index2" style="position:relative; z-index:2">
+	<div class="slider-wrapper">
+		<div class="slider-inner item-5 after-load" style="display: block;">
+		</div>
+	</div>
+	<div class="border">
+		<div class="bottom">
+			<div class="bottom-table">
+				<div class="side-cell">
+					<p></p>
+				</div>
+				<div class="center-cell" style="text-align:center; padding:0 5px">
+					<img src="{{URL::asset('/yd_images/hello.png')}}" class="img-responsive" style="display: inline-block">
+				</div>
+				<div class="side-cell">
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div style="position: absolute; bottom: 20px; left: 50%;">
+              <h4 class="rounded-text hello">
+              <span style="transform: rotate(-30deg); -webkit-transform: rotate(-30deg);">H</span>
+              <span style="transform: rotate(-15deg); -webkit-transform: rotate(-15deg);">E</span>
+              <span style="transform: rotate(-0deg); -webkit-transform: rotate(-0deg);">L</span>
+              <span style="transform: rotate(15deg); -webkit-transform: rotate(15deg);">L</span>
+              <span style="transform: rotate(30deg); -webkit-transform: rotate(30deg);">O</span>
+              </h4>
+		</div>
+	</div>
+</div>
     
-    	<div id="myCarousel" class="carousel slide pad_010 b_k" data-ride="carousel">
-             <!-- 轮播（Carousel）指标 -->
-             <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-             </ol>   
-             <!-- 轮播（Carousel）项目 -->
-             <div class="carousel-inner bor_btm">
-                  <div class="item active">
-				      <div class="index_banner1">
+  @include('yd_navigation')
+
+<!--匠几服务-->
+<div class="container-fluid" style="margin-top:80px">
+	<div class="row index_zhuti_title"><a href="/service"><img src="{{URL::asset('/yd_images/jiangjifuwu_title.png')}}" class="img-responsive"></a>
+    </div>
+    <div class="row index_zhuti_jjfw_1">
+        {!! $service_introduce->service_introduce !!}
+    </div>
+    <div class="row index_zhuti_jjfw_2">
+    
+            <div id="picc" class="carousel slide pad_010 b_k">
+                 <!-- 轮播（Carousel）指标 -->
+                        <ol class="carousel-indicators" id="jjfw_ol">
+                            <li class="active" data-target="#picc" data-slide-to="0" id="aaaa"><span class="jjfw_lo_span"></span></li>
+                            <li data-target="#picc" data-slide-to="1" id="bbbb"><span class="jjfw_lo_span"></span></li>
+                            <li data-target="#picc" data-slide-to="2" id="cccc"><span class="jjfw_lo_span"></span></li>
+                            <li data-target="#picc" data-slide-to="3" id="dddd"><span class="jjfw_lo_span"></span></li>
+                            <li data-target="#picc" data-slide-to="4" id="eeee"><span class="jjfw_lo_span"></span></li>
+                            <li data-target="#picc" data-slide-to="5" id="ffff"><span class="jjfw_lo_span"></span></li>
+                            <li data-target="#picc" data-slide-to="6" id="gggg"><span class="jjfw_lo_span"></span></li>
+                        </ol>
+                 <!-- 轮播（Carousel）项目 -->
+                 <div class="carousel-inner bor_btm">
+                      @foreach($info as $ke => $va)
+                      @if($ke == 0)
+                        <div class="item active" id="index_jjfw_item{{$ke+1}}">
+                        	  <div class="col-md-8 col-sm-8 col-xs-8 col-xs-offset-2">
+                                <img src="{{$va->service_img}}" class="img-responsive" id="index_jjfw_img{{$ke+1}}">
+                                <p class="jjfw_bt">{{$va->service_name}}</p>
+                            </div>
+                        </div>
+                      @else
+                        <div class="item" id="index_jjfw_item{{$ke+1}}">
+                        	  <div class="col-md-8 col-sm-8 col-xs-8 col-xs-offset-2">
+                                <img src="{{$va->service_img}}" class="img-responsive" id="index_jjfw_img{{$ke+1}}">
+                                <p class="jjfw_bt">{{$va->service_name}}</p>
+                            </div>
+                        </div>
+                      @endif
+                      @endforeach
+                 </div>
+            </div>
+
+    </div>
+    
+</div>
+<script>
+$(function(){
+  $("#index_jjfw_item1").click(function(){
+    $("#index_jjfw_img1").attr("src",$("#index_jjfw_img1").attr("src")=="{{$info[0]->service_img}}"?"{{$info[0]->service_pic}}":"{{$info[0]->service_img}}");
+    })
+  $("#index_jjfw_item2").click(function(){
+    $("#index_jjfw_img2").attr("src",$("#index_jjfw_img2").attr("src")=="{{$info[1]->service_img}}"?"{{$info[1]->service_pic}}":"{{$info[1]->service_img}}");
+    })
+  $("#index_jjfw_item3").click(function(){
+    $("#index_jjfw_img3").attr("src",$("#index_jjfw_img3").attr("src")=="{{$info[2]->service_img}}"?"{{$info[2]->service_pic}}":"{{$info[2]->service_img}}");
+    })
+  $("#index_jjfw_item4").click(function(){
+    $("#index_jjfw_img4").attr("src",$("#index_jjfw_img4").attr("src")=="{{$info[3]->service_img}}"?"{{$info[3]->service_pic}}":"{{$info[3]->service_img}}");
+    })
+  $("#index_jjfw_item5").click(function(){
+    $("#index_jjfw_img5").attr("src",$("#index_jjfw_img5").attr("src")=="{{$info[4]->service_img}}"?"{{$info[4]->service_pic}}":"{{$info[4]->service_img}}");
+    })
+  $("#index_jjfw_item6").click(function(){
+    $("#index_jjfw_img6").attr("src",$("#index_jjfw_img6").attr("src")=="{{$info[5]->service_img}}"?"{{$info[5]->service_pic}}":"{{$info[5]->service_img}}");
+    })
+  $("#index_jjfw_item7").click(function(){
+    $("#index_jjfw_img7").attr("src",$("#index_jjfw_img7").attr("src")=="{{$info[6]->service_img}}"?"{{$info[6]->service_pic}}":"{{$info[6]->service_img}}");
+    })
+  })
+</script>
+<!--匠几案例-->
+<div class="container-fluid" style="margin-top:16vh">
+	<a href="/case"><div class="row index_zhuti_title"><img src="{{URL::asset('/yd_images/jiangjianli_title.png')}}" class="img-responsive"></div></a>
+
+    <div class="row index_zhuti_jjal_1">
+
+    		<div id="picz" data-interval="4200" class="carousel slide carousel-fade">
+            	<div class="carousel-inner">
+                @foreach($jiangji_case as $ke => $va)
+                @if($ke == 0)
+            		<div class="item active">
+					          <div><img src="{{$va->cover_pic}}" class="img-responsive"></div>
+                      <div class="index_zhuti_jjal_2" style="width:100%">
+                          <div class="index_zhuti_jjal_2">{{$va->case_title}}<a href="/case/details/{{$va->id}}">查看更多<img src="{{URL::asset('/yd_images/index_jjal_btn_jiantou.png')}}"></a></div>
+                          <div class="index_zhuti_jjal_3">
+                                {{$va->case_index}}
+                          </div>
                       </div>
-                  </div>
-                  <div class="item">
-				      <div class="index_banner2">
+            		</div>
+                @else
+            		<div class="item">
+					          <div><img src="{{$va->cover_pic}}" class="img-responsive"></div>
+                      <div class="index_zhuti_jjal_2" style="width:100%">
+                          <div class="index_zhuti_jjal_2">{{$va->case_title}}<a href="/case/details/{{$va->id}}">查看更多<img src="{{URL::asset('/yd_images/index_jjal_btn_jiantou.png')}}"></a></div>
+                          <div class="index_zhuti_jjal_3">
+                                {{$va->case_index}}
+                          </div>
                       </div>
-                  </div>
-                  <div class="item">
-				      <div class="index_banner3">
-                      </div>
-                  </div>
+            		</div>
+                @endif
+                @endforeach
+            	</div>
+        </div>
+                        
+        <a href="#picz" class="left carousel-control left1" data-slide="prev">
+              <img src="{{URL::asset('/yd_images/index_jjal_zuo.png')}}" class="img-responsive">
+        </a>
+        <a href="#picz" class="right carousel-control right1" data-slide="next">
+              <img src="{{URL::asset('/yd_images/index_jjal_you.png')}}" class="img-responsive">
+        </a>
+
+    </div>
+    
+    <div class="index_zhuti_jjal_4"><a href="/case">查看更多案例<img src="{{URL::asset('/yd_images/index_jjal_btn_jiantou.png')}}"></a></div>
+    
+</div>
+
+<!--匠几团队-->
+<div class="container-fluid" style="margin-top:15vh">
+	<div class="row index_zhuti_title"><img src="{{URL::asset('/yd_images/jiangjituandui_title.png')}}" class="img-responsive"></div>
+
+    <div class="row index_zhuti_jjtd_1">
+    
+        <div class="carousel slide" id="pic_tuandui" data-interval="3200" >
+            <div class="carousel-inner">
+                @foreach($jiangji_team as $ke => $va)
+                @if($ke == 0)
+                <div class="item active">
+                    @foreach($va as $v)
+            				<div class="col-md-4 col-sm-4 col-xs-4"><img src="{{$v->mobile_pic1}}" class="img-responsive"></div>
+                    @endforeach
+                </div>
+                @else
+                <div class="item">
+                    @foreach($va as $v)
+              			<div class="col-md-4 col-sm-4 col-xs-4"><img src="{{$v->mobile_pic1}}" class="img-responsive"></div>
+                    @endforeach
+                </div>
+                @endif
+                @endforeach
              </div>
         </div>
-
-    </div>
-    
-    
-    <!--导航-->
-    <div class="row index_daohangwenzi wow animated fadeInDown">
-    	<div class="col-xs-4">
-        	<a href="/index/me_wen"><img src="{{URL::asset('/images_yd/daohangwenzi_1.png')}}" class="img-responsive"></a>
-        </div>
-    	<div class="col-xs-4">
-        	<a href="/index/me_xiu"><img src="{{URL::asset('/images_yd/daohangwenzi_2.png')}}" class="img-responsive"></a>
-        </div>
-    	<div class="col-xs-4" style="border:0">
-        	<a href="/index/me_shang"><img src="{{URL::asset('/images_yd/daohangwenzi_3.png')}}" class="img-responsive"></a>
-        </div>
-    </div>
-    <div class="row index_daohangwenzi wow animated fadeInDown">
-    	<div class="col-xs-4">
-        	<a href="javascript:;" onclick="alert('店铺装修中,敬请期待')"><img src="{{URL::asset('/images_yd/daohangwenzi_4.png')}}" class="img-responsive"></a>
-        </div>
-    	<div class="col-xs-4">
-        	<a href="/index/me_bao"><img src="{{URL::asset('/images_yd/daohangwenzi_5.png')}}" class="img-responsive"></a>
-        </div>
-    	<div class="col-xs-4" style="border:0">
-        	<a href="/index/me_young"><img src="{{URL::asset('/images_yd/daohangwenzi_6.png')}}" class="img-responsive"></a>
-        </div>
-    </div>
-    
-    
-    <!--觅闻-->
-    <div class="row index_bt_miwen wow animated fadeInDown">觅&nbsp;&nbsp;&nbsp;闻</div>
-    <div class="row index_miwen">
-        @foreach($me_wen as $value)
-        <a href="/index/me_wen/cover/{{$value->id}}">
-        	<div class="col-xs-12">
-            	<div class="col-xs-3 wow animated fadeInDown"><img src="{{$value->little_pic}}" class="img-responsive"></div>
-            	<div class="col-xs-9 wow animated fadeInDown">
-                    <h2>{{$value->title}}</h2>
-                    {{$value->description}}
-                </div>
-                <p class="index_xinwen_xiahuaxian wow animated fadeInDown"></p>
-            </div>
+                        
+        <a href="#pic_tuandui" class="left carousel-control left2" data-slide="prev">
+              <img src="{{URL::asset('/yd_images/index_jjtd_zuo.png')}}" class="img-responsive">
         </a>
-        @endforeach
-    	<div class="col-xs-12 index_miwen_more wow animated fadeInDown">
-			<a href="/index/me_wen">查看更多</a>
-        </div>
+        <a href="#pic_tuandui" class="right carousel-control right2" data-slide="next">
+              <img src="{{URL::asset('/yd_images/index_jjtd_you.png')}}" class="img-responsive">
+        </a>
+
     </div>
     
-    
-    <!--觅秀-->
-    <div class="row index_bt_mixiu wow animated fadeInDown">觅&nbsp;&nbsp;&nbsp;秀</div>
-    @foreach($me_xiu_video as $value)
-    <div class="modal fade" id="picc{{$value->id}}" style="background:rgba(17,99,150,.6)">
-        <a href="javascript:;" class="index_mibao_tanchu_fanhu" data-dismiss="modal"><img src="{{URL::asset('/images_yd/video_close.png')}}" class="img-responsive"></a>
-        <div class="container" style="position:relative; height:100vh" id="mibao_xinxi">
-            <div class="modal-dialog mibao_mengceng">
-                <div class="row">
+</div>
 
-                    <video controls preload="none" style="width:100%">
-                      <source src="{{$value->video_path}}" type="video/mp4">
-                    </video>
-
-                </div>
-            
-            </div>
-        </div>
-    </div>
+<!--匠几动态-->
+<div class="container-fluid" style="margin-top:25vh">
+	<a href="/news"><div class="row index_zhuti_title"><img src="{{URL::asset('/yd_images/jiangjidongtai_title.png')}}" class="img-responsive"></div></a>
+    @foreach($jiangji_news as $ke => $va)
+    <div class="row index_zhuti_jjdt_1" id="index_jjdt{{$ke+1}}">
+      	<img src="{{$va->hot_pic}}" class="img-responsive">
+      	<div class="index_zhuti_jjdt_2"><span></span>{{$va->title}}<br><b>{{$va->date_time}}</b></div>
+        <div class="index_zhuti_jjal_2" style="margin-top:0 !important"><a href="/news/details/{{$va->id}}">查看更多<img src="{{URL::asset('/yd_images/index_jjal_btn_jiantou.png')}}"></a></div>
+	  </div>
     @endforeach
-
-    <div class="row index_mixiu">
-        @foreach($me_xiu_video as $value)
-		<div class="col-xs-12 wow animated fadeInDown">
-        	<div class="thumbnail">
-                <a href="#" data-toggle="modal" data-target="#picc{{$value->id}}">
-                	<div class="bofangceng">
-                        <img src="{{$value->video_pic_path}}" class="img-responsive"><span><img src="{{URL::asset('/images_yd/mixiu_bofang.png')}}" class="img-responsive"></span>
-                    </div>
-                </a>
- 				<p class="index_mixiu_spbt">{{$value->video_title}}</p>           
- 				<p class="index_mixiu_spnr">{{$value->video_descrip}}</p>           
-            </div>
-        </div>
-        @endforeach
-    	<div class="col-xs-12 index_mixiu_more wow animated fadeInDown">
-			<a href="/index/me_xiu">查看更多</a>
-        </div>
-    </div>
-
-
-    <!--觅尚-->
-    <div class="row index_bt_mishang wow animated fadeInDown">觅&nbsp;&nbsp;&nbsp;尚</div>
-    <div class="row index_mishang">
-        @foreach($me_shang_magazine as $value)
-        <a href="/index/me_shang/cover/{{$value->id}}">
-    		<div class="col-xs-12 wow animated fadeInDown">
-            	<div class="thumbnail col-xs-12 index_mishang_dadiv">
-    				<div class="col-xs-6"><img src="{{$value->magazine_path}}" class="img-responsive"></div>
-    				<div class="col-xs-6">
-                        <span class="index_mishang_mengceng"></span>
-                        <img src="{{$value->magazine_path}}" class="img-responsive">
-                        <div class="index_mishang_zazhijianjie">
-                        	<img src="{{URL::asset('/images_yd/logohei.png')}}" class="img-responsive">
-                            <p>{{$value->magazine_theme}}</p>
-                            <p style="text-align:left">{{$value->magazine_index}}</p>
-                            <p style="margin-top:2vh">{{$value->date}}</p>
-                            <p>{{$value->volume}}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </a>
-        @endforeach
-
-    	<div class="col-xs-12 index_mishang_more wow animated fadeInDown">
-			<a href="/index/me_shang">查看更多</a>
-        </div>
-    </div>
-
-
-    <!--觅宝-->
-    <div class="row index_bt_mibao wow animated fadeInDown">觅&nbsp;&nbsp;&nbsp;宝</div>
-    <div class="row index_mibao">
-        @foreach($me_bao as $key => $value)
-		<div class="col-xs-12 wow animated fadeInDown">
-            @foreach($value as $k => $v)
-        	<a href="#" data-toggle="modal" data-target="#picmc{{$v->id}}">
-            	<div class="col-xs-6 index_mibao_dadiv">
-    				<img src="{{$v->picture}}" class="img-responsive">
-                    <div class="index_mibao_xihuan"><p><img src="{{URL::asset('/images_yd/particle-2.png')}}" class="img-responsive"><span id="ke{{$v->id}}">{{$v->like}}<span></p></div>
-                </div>
-            </a>
-            @endforeach
-        </div>
-        @endforeach
-        @foreach($bao as $ke => $va)
-        <div class="modal fade" id="picmc{{$va->id}}" style="background:rgba(49,218,153,.6)">
-        	<a href="javascript:;" class="index_mibao_tanchu_fanhu" data-dismiss="modal"><img src="{{URL::asset('/images_yd/video_close.png')}}" class="img-responsive"></a>
-            <div class="container" style="position:relative; height:100vh" id="mibao_xinxi">
-                <div class="modal-dialog mibao_mengceng">
-					<div class="row">
-                    	<div class="col-xs-12 index_mibao_xinxi_datu"><img src="{{$va->picture_big}}" class="img-responsive" style="width:100%"></div>
-                    	<div class="col-xs-12">
-                        	<div class="col-xs-12" style=" background:#fff; padding:0;">
-                                <p class="index_mibao_mengceng_bt">
-                                    <img src="{{URL::asset('/images_yd/particle-2.png')}}" class="img-responsive"><span id="clike{{$va->id}}">{{$va->like}}</span>
-                                    <a class="index_mibao_dianzan_btn" onclick="dodianzan(this)" style="cursor:pointer"><input type="hidden" name="hidden" value="{{$va->id}}"/>给我点赞,么么哒<img src="{{URL::asset('/images_yd/particle-2.png')}}" class="img-responsive index_mibao_dianzan_xin{{$va->id}}"></a>
-                                </p>
-                                <div class="index_mibao_xinxi">
-                                	<div class="col-xs-6"><label>姓名：</label>{{$va->name}}</div>
-                                	<div class="col-xs-6"><label>性别：</label>{{$va->sex}}</div>
-                                	<div class="col-xs-6"><label>年龄：</label>{{$va->age}}</div>
-                                	<div class="col-xs-6"><label>地区：</label>{{$va->region}}</div>
-<!--                                 	<div class="col-xs-6">商品购买></div>
-                                	<div class="col-xs-6">更多搭配></div>
-                                	<div class="col-xs-6">淘宝市场>></div> -->
-                                </div>
-
-                            </div>
-                            <div class="col-xs-12" style="background:#fff">
-                                <img src="{{URL::asset('/images_yd/huaban.gif')}}" class="img-responsive">
-                            </div>
-                        </div>
-                    </div>
-				
-                </div>
-            </div>
-        </div>
-        @endforeach          
-
-    	<div class="col-xs-12 index_mibao_more wow animated fadeInDown">
-			<a href="/index/me_bao">查看更多</a>
-        </div>
-    </div>
-
-
-	<!--底部-->
-	<div class="row wow animated fadeInDown index_dibu">
-    	© 2006-2017 北京华艺卓尔文化传媒有限公司
-        <a href="javascript:;" id="toTop" title="回到顶部"></a><img src="{{URL::asset('/images_yd/top.png')}}" class="img-responsive" id="top_huojian">
-    </div>
-	
     
-</div>       
+    
+    <div class="row index_zhuti_jjdt_3">
+        @foreach($jiangji_news as $ke => $va)
+        <div class="col-md-3 col-sm-3 col-xs-3" id="index_jjdt_chufa{{$ke+1}}"><img src="{{$va->hot_pic}}" class="img-responsive"><div><span class="index_zhuti_jjdt_3_span"></span></div></div>
+        @endforeach
+    </div>
+    
+    <div class="index_zhuti_jjal_4" style="margin-top:8vh"><a href="/news">查看更多案例<img src="{{URL::asset('/yd_images/index_jjal_btn_jiantou.png')}}"></a></div>
+    
+</div>
+
+<!--合作流程-->
+<div class="container-fluid" style="margin-top:10vh; margin-bottom:10vh">
+	<div class="row index_zhuti_title"><img src="{{URL::asset('/yd_images/jiangjihezou_title.png')}}" class="img-responsive"></div>
+
+  <div class="row index_zhuti_hzlc_1">
+    	<img src="{{$jiangji_process->process_pic}}" class="img-responsive">
+	</div>
+</div>
+
+<!--底部-->
+
+  @include('yd_foot')
 
 
-
-</body>
-<script src="{{URL::asset('/js_yd/jquery-2.1.1.min.js')}}"></script>
-<script src="{{URL::asset('/js_yd/bootstrap.min.js')}}"></script>
-
-<script src="{{URL::asset('/js_yd/xin/jgestures.min.js')}}"></script>
-
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
+<![endif]-->
+<script type="text/javascript" src="{{URL::asset('/yd_js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('/yd_js/script.js')}}"></script>
 
 <script>
-$(document).ready(function(){
-    //手势右滑 回到上一个画面
-    $('#myCarousel').bind('swiperight swiperightup swiperightdown',function(){
-        $("#myCarousel").carousel('prev');
-    })
-    //手势左滑 进入下一个画面
-    $('#myCarousel').bind('swipeleft swipeleftup swipeleftdown',function(){
-        $("#myCarousel").carousel('next');
-    })
-})
-</script>
 
+　　wow = new WOW({
+      　　animateClass: 'animated',
+      });
+      wow.init();
 
-<script src="{{URL::asset('/js_yd/wow.min.js')}}"></script>
-<script src="{{URL::asset('/js_yd/index_js.js')}}"></script>
-<script>
-    function dodianzan(othis){
-        var data = othis.firstChild.getAttribute('value');
-        $(".index_mibao_dianzan_xin"+data).toggle();
-        if(data != ''){
-            $.ajax({
-                url:"/me_bao/dodianzan",
-                type:"post",
-                data:{'cid':data},
-                success:function(content){
-                     if(content.msg == 'ok'){
-                        var cl = 'clike'+data;
-                        var like = $("#"+cl).html();
-                        var like = parseInt(like) + 1;
-                        var ke = 'ke'+data;
-                        $("#"+cl).html(like);
-                        $("#"+ke).html(like);
-                     }else if(content.msg == 'no'){
-                        alert('发生未知错误');
-                     }
-                },
-                dataType:"json"
-            })
-        }
-        othis.firstChild.setAttribute('value','');
-    }
-</script>
-<script>
-    function logout(){
-        if(confirm('确认退出登录?') == false){
-            return false;
-        }else{
-            location.href = "/index/logout";
-        }
-    }
 </script>
 <style>
-    .index_banner1{width:100%; height:30vh; background:url({{$banner_wen['banner_path']}}) no-repeat center center; background-size:cover}
-    .index_banner2{width:100%; height:30vh; background:url({{$banner_xiu['banner_path']}}) no-repeat center center; background-size:cover}
-    .index_banner3{width:100%; height:30vh; background:url({{$banner_bao['banner_path']}}) no-repeat center center; background-size:cover}
-</style> 
-</html>
+.top-content.index2{
+  background-image: url("{{$jiangji_banner}}");
+}
+</style>
+
