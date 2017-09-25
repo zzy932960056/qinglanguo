@@ -90,9 +90,6 @@ class NewsController extends Controller
         }else if($template_no == ''){
             echo "<script>alert('详情模板编号不能为空')</script>";
             return self::news_index_insert();
-        }else if(!is_int($template_no)){
-            echo "<script>alert('请输入正确详情模板编号')</script>";
-            return self::news_index_insert();
         }
         $bool = DB::table('jiangji_news')->insert(
             ['title'=>$title,'date_time'=>$date_time,
@@ -168,9 +165,6 @@ class NewsController extends Controller
             }
         }else if($template_no == ''){
             echo "<script>alert('详情模板编号不能为空')</script>";
-            return self::news_index_update($id);
-        }else if(!is_int($template_no)){
-            echo "<script>alert('请输入正确详情模板编号')</script>";
             return self::news_index_update($id);
         }
         $num = DB::table('jiangji_news')->where('id',$id)->update(
