@@ -37,7 +37,7 @@
 
 
 @media screen and (max-width: 1400px) {
-.vmc-centered li{width:20vw !important; cursor:pointer; position:relative}
+.vmc-centered li{width:19.98vw !important; cursor:pointer; position:relative}
 .vmc-centered{ height:370px !important; overflow:hidden !important}
 
 }
