@@ -31,8 +31,7 @@
     }
     document.head.appendChild(linkNode);  
     document.head.appendChild(scriptNode);  
-    document.getElementById("scroll-bar").innerHTML = "您的浏览器是："+getBrowser();  
-
+    document.getElementById("scroll-bar").innerHTML = "您的浏览器是："+getBrowser(); 
 </script>
 <nav class="nav-lg hidden-xs">
     <div class="text-right">
