@@ -4,12 +4,13 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>联系匠几</title>
-
-    <link href="{{URL::asset('/css2/bootstrap.min.css')}}" rel="stylesheet" media="screen">
+  <link rel="shortcut icon" href="{{URL::asset('/images/jiangji.ico')}}">
+  <link rel="Bookmark" href="{{URL::asset('/images/jiangji.ico')}}">
+  <link href="{{URL::asset('/css2/bootstrap.min.css')}}" rel="stylesheet" media="screen">
 	<link href="{{URL::asset('/css2/so-ai.css')}}" rel="stylesheet" media="screen">
 	<link href="{{URL::asset('/css2/index.css')}}" rel="stylesheet" media="screen">
 	<link href="{{URL::asset('/css2/animate.css')}}" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="{{URL::asset('/dist/jquery.vm-carousel.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{URL::asset('/dist/jquery.vm-carousel.css')}}">
 	<script type="text/javascript" src="{{URL::asset('/js2/jquery-1.11.3.min.js')}}"></script>
 	<script type="text/javascript" src="{{URL::asset('/js2/wow.min.js')}}"></script>
     

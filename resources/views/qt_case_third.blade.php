@@ -4,7 +4,8 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>品牌案例</title>
-
+    <link rel="shortcut icon" href="{{URL::asset('/images/jiangji.ico')}}">
+    <link rel="Bookmark" href="{{URL::asset('/images/jiangji.ico')}}">
     <link href="{{URL::asset('/css2/bootstrap.min.css')}}" rel="stylesheet" media="screen">
 	<link href="{{URL::asset('/css2/so-ai.css')}}" rel="stylesheet" media="screen">
 	<link href="{{URL::asset('/css2/index.css')}}" rel="stylesheet" media="screen">
