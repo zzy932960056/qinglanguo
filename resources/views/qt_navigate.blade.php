@@ -1,6 +1,39 @@
-<!–[if IE]>
-        <link rel="stylesheet" href="{{URL::asset('/css2/ie.css')}}" />
-<![endif]–>
+<script type="text/javascript">  
+    function getBrowser() {    
+        var ua = window.navigator.userAgent;    
+        var isIE = window.ActiveXObject != undefined && ua.indexOf("MSIE") != -1;    
+        var isFirefox = ua.indexOf("Firefox") != -1;    
+        var isOpera = window.opr != undefined;    
+        var isChrome = ua.indexOf("Chrome") && window.chrome;    
+        var isSafari = ua.indexOf("Safari") != -1 && ua.indexOf("Version") != -1;    
+        if (isIE) {    
+            return "IE";    
+        } else if (isFirefox) {    
+            return "Firefox";    
+        } else if (isOpera) {    
+            return "Opera";    
+        } else if (isChrome) {    
+            return "Chrome";    
+        } else if (isSafari) {    
+            return "Safari";    
+        } else {    
+            return "Unkown";    
+        }    
+    }  
+      
+    var linkNode = document.createElement("link"),scriptNode = document.createElement("script");  
+    linkNode.setAttribute("rel","stylesheet");  
+    linkNode.setAttribute("type","text/css");  
+    scriptNode.setAttribute("type", "text/javascript");  
+      
+    if(getBrowser()=="IE"){  
+        linkNode.setAttribute("href","{{URL::asset('/css2/ie.css')}}"); 
+    }
+    document.head.appendChild(linkNode);  
+    document.head.appendChild(scriptNode);  
+    document.getElementById("scroll-bar").innerHTML = "您的浏览器是："+getBrowser();  
+
+</script>
 <nav class="nav-lg hidden-xs">
     <div class="text-right">
       <a class="index_daohang" href="/culture">匠几文化<span class="index_daohang_span1"></span><span class="index_daohang_span2 animated">CULTURE</span></a>

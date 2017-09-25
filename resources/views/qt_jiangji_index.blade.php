@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{URL::asset('/css2/Vidage.css')}}" />
     
 	<script type="text/javascript" src="{{URL::asset('/js2/jquery-1.11.3.min.js')}}"></script>
-	<script type="text/javascript" src="{{URL::asset('/js2/wow.min.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('/js2/wow.min.js')}}"></script>   
 </head>
 <?php
 $agent = $_SERVER['HTTP_USER_AGENT'];
