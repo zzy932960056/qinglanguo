@@ -58,10 +58,10 @@ class CaseController extends Controller
             if($cover_pic == ''){
                 echo "<script>alert('封面图路径不能为空')</script>";
                 return self::case_index_insert();
-            }
-        }else if($case_index == ''){
+            }else if($case_index == ''){
                 echo "<script>alert('封面图简介不能为空')</script>";
                 return self::case_index_insert();
+            }
         }else if($service_content == ''){
                 echo "<script>alert('服务内容不能为空')</script>";
                 return self::case_index_insert();
