@@ -333,7 +333,7 @@
 
 
 		<!--影音-->
-        if($case->video1)
+        @if($case->video1)
         <div class="jjal_sanji_shipin_da" id="picc1">
             <div class="jjal_sanji_shipin">
                         <div class="chacha" id="chacha1"><img src="{{URL::asset('/images/anniu_cha.png')}}" class="img-responsive"></div>
