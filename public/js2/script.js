@@ -142,17 +142,28 @@ $(function(){
 	
 //首页右上弹出	
 $(function(){
-	$(".index_youshang_tan").hide();
+	$("#index_youshang_tan").hide();
 	$(".index_youshang").click(function(){
-		$(".index_youshang_tan").toggle();
+		$("#index_youshang_tan").show();
+		$(".index_youshang_tan").animate({top:"17vh"},1800);
 		$("html").toggleClass("html_qcgdt")
 		})
 	$(".index_youshang_tan_cha").click(function(){
-		$(".index_youshang_tan").hide();
-		$("html").removeClass("html_qcgdt")
-
+		$("#index_youshang_tan").hide();
+		$("html").removeClass("html_qcgdt");
+		$(".index_youshang_tan").animate({top:"0vh"});
+		$("#youshang_deng").attr({"src":"http://static.meyoungbaby.com/dengpao1.png"})
 		})
 
+	$("#you2").mouseenter(function(){
+		$("#youshang_deng").attr("src",$("#youshang_deng").attr("src")=="http://static.meyoungbaby.com/dengpao1.png"?"http://static.meyoungbaby.com/56.gif":"http://static.meyoungbaby.com/56.gif");
+		})
+
+
+
+	$("#you2").click(function(){
+		$("#youshang_deng").attr("src",$("#youshang_deng").attr("src")=="http://static.meyoungbaby.com/56.gif"?"http://static.meyoungbaby.com/55.gif":"http://static.meyoungbaby.com/56.gif");
+		})
 })
 	
 	

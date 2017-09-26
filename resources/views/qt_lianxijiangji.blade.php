@@ -44,11 +44,7 @@
               </h4>
 		</div>
         
-        <div class="index_youshang">
-        	<img src="{{URL::asset('/images/dengpao.png')}}" class="img-responsive animated wow flipInY" data-wow-duration="1.5s" data-wow-delay="1s">
-        </div>
-        
-        <div class="container-fluid" id="index_youshang_tan">
+        <div class="container-fluid jjtd_tanchu_hei2" id="index_youshang_tan">
             <div class="container">
 	        	<div class="index_youshang_tan">
                 <img src="{{URL::asset('/images/tanchu_cha.png')}}" class="img-responsive index_youshang_tan_cha">
@@ -97,7 +93,7 @@
 
 <div class="container-fluid" style="position:relative; padding:20vh 60px;" >
         <div class="index_youshang" id="you2" style="position: fixed; right:8vw; top:115px; height:130px; z-index:999; display:none">
-        	<img src="{{URL::asset('/images/dengpao.png')}}" class="img-responsive">
+        	<img src="http://static.meyoungbaby.com/dengpao1.png" class="img-responsive" id="youshang_deng">
         </div>
 
         <img src="{{$contact[0]->relation_img}}" class="img-responsive" style="width:100%; position:relative; z-index:1000;">
