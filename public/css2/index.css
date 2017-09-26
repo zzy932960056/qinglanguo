@@ -85,9 +85,9 @@ body{ font-family:"苹方黑体-纤细-简" !important; font-size:16px; backgrou
 .index_jjfw_1 img{display:inline-block; margin-top:10px}
 
 .index_jjfw_2{font-size:16px; text-align:center; color:#fff; letter-spacing:2px; line-height:30px;}
-.index_jjfw .col-md-4{ text-align:center; font-size:16px; color:#fff; letter-spacing:2px; margin-top:3%; position:relative; cursor:pointer}
+.index_jjfw .col-md-4{ text-align:center; font-size:16px; color:#fff; letter-spacing:2px; margin-top:3%; position:relative;}
 .index_jjfw .col-md-4 img{ display:inline-block; margin-bottom:10px;}
-.index_jjfw .col-md-3{ text-align:center; font-size:16px; color:#fff; letter-spacing:2px; margin-top:3%; position:relative; cursor:pointer}
+.index_jjfw .col-md-3{ text-align:center; font-size:16px; color:#fff; letter-spacing:2px; margin-top:3%; position:relative;}
 .index_jjfw .col-md-3 img{ display:inline-block; margin-bottom:10px;}
 .index_jjfw_png{transition:all 0.3s; -moz-transition:all 0.3s; -o-transition:all 0.3s; -webkit-transition:all 0.3s;}
 .index_jjfw_gif{ position: absolute;top: 0%;left: 50%;transform: translate(-50%, -0%) !important;  /* 使用css3的transform来实现 */ opacity:0;
@@ -261,7 +261,7 @@ transition:all 0.3s; -moz-transition:all 0.3s; -o-transition:all 0.3s; -webkit-t
 
 .jjdt_sanji_nr1{width:80%; margin-left:10%}
 .jjdt_sanji_nr1 ul{ list-style-image:url(../images/dongtai_sanji0.png); text-align:left !important; margin-bottom:0; padding-left:0px}
-.jjdt_sanji_nr1 ul li{ padding-left:10px}
+/*.jjdt_sanji_nr1 ul li{ padding-left:10px}*/
 .jjdt_sanji_nr .col-md-6 img{width:100%}
 .jjdt_sanji_zuotu{padding-right:20px !important}
 .jjdt_sanji_youtu{padding-left:20px !important; margin-left:50%}
@@ -456,8 +456,12 @@ display: -moz-box;
 	.jjal_sanji_gongzai2{ display: none !important}
 	.jjal_sanji_gongzai3{ display: none !important}
   /*团队信息固定及弹出*/
-  .index_tuandui_tan{ position: fixed; top:17vh; left:30%; right:30%; background:#fff; border-radius:20px; padding:4vh; z-index:9999;}
-
+  .index_tuandui_tan{ position: fixed; top:17vh; left:35%; right:35%; background:#fff; border-radius:20px; padding:4vh; z-index:9999;}
+  .index_youshang_tan{ position: fixed; top:17vh; left:25%; right:25%; background:#fff; border-radius:20px; padding:7vh; z-index:9999; display:none;
+  -webkit-box-shadow:0 10px 10px rgba(100, 100, 100, .5);  
+  -moz-box-shadow:0 10px 10px rgba(100, 100, 100, .5);  
+  box-shadow:0 10px 10px rgba(100, 100, 100, .5);  }
+  
 }
 
 @media screen and (max-width: 1100px) {
