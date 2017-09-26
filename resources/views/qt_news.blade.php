@@ -119,7 +119,7 @@
                 <div class="col-md-12 col-xs-12 col-sm-12 jjdt_zhuti_dongtai">
                     <div class="col-md-3 col-sm-3 col-xs-3"><img src="{{$va->news_pic}}" class="img-responsive"></div>
                     <div class="col-md-7 col-sm-7 col-xs-7">
-                        <p style="font-size:26px; margin-bottom:20px; font-weight:700">{{$va->title}}</p>
+                        <p style="font-size:26px; margin-bottom:20px;">{{$va->title}}</p>
                         <p>{{$va->describe}}</p>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-2">

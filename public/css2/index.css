@@ -455,6 +455,9 @@ display: -moz-box;
 	
 	.jjal_sanji_gongzai2{ display: none !important}
 	.jjal_sanji_gongzai3{ display: none !important}
+  /*团队信息固定及弹出*/
+  .index_tuandui_tan{ position: fixed; top:17vh; left:30%; right:30%; background:#fff; border-radius:20px; padding:4vh; z-index:9999;}
+
 }
 
 @media screen and (max-width: 1100px) {
