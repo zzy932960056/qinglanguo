@@ -335,7 +335,7 @@ header("Location:http://m.jiangjimedia.com");
 </div>
 
     	<!--底部-->
-<a href="javascript:;" id="toTop" title="回到顶部"><div class="index_dibu_top_guding" id="index_totop"><img src="{{URL::asset('/images/top-2_1.gif')}}" class="img-responsive"></div></a>
+<a href="javascript:;" id="toTop" title="回到顶部"><div class="index_dibu_top_guding" id="index_totop"><img src="{{URL::asset('/images/jiangji_sun.gif')}}" class="img-responsive"></div></a>
        
 <div class="container-fluid" style="padding-bottom:55px;">
 	<div style="position:relative">
