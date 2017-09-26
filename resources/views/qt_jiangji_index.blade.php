@@ -188,10 +188,11 @@ header("Location:http://m.jiangjimedia.com");
                             <p>
                                 {{$value->case_index}}
                             </p>
-                            <p class="index_ppal_more_xiao"><a href="/case/details/{{$value->id}}">查看更多<span class="index_ppal_more_xiao_you"><img src="{{URL::asset('/images/anli_you.png')}}" class="img-circle"></span></a></p>
+                            <p class="index_ppal_more_xiao"><a href="/case/details/{{$value->id}}">了解详情<span class="index_ppal_more_xiao_you"><img src="{{URL::asset('/images/anli_you.png')}}" class="img-circle"></span></a></p>
                         </div>
                     </div>
                 </div>
+
         		@endforeach
                 <div class="col-md-12 col-sm-12 col-xs-12 index_ppal_xuanxiangka">
                 	<ul>
