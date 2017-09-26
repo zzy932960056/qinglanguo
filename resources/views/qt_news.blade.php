@@ -120,7 +120,7 @@
                     <div class="col-md-3 col-sm-3 col-xs-3"><img src="{{$va->news_pic}}" class="img-responsive"></div>
                     <div class="col-md-7 col-sm-7 col-xs-7">
                         <p style="font-size:26px; margin-bottom:20px;">{{$va->title}}</p>
-                        <p>{{$va->describe}}</p>
+                        <p>{!! $va->describe !!}</p>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-2">
 						<b>{!! $va->category2 !!}</b>
@@ -141,7 +141,7 @@
                     <div class="col-md-3 col-sm-3 col-xs-3"><img src="{{$va->news_pic}}" class="img-responsive"></div>
                     <div class="col-md-7 col-sm-7 col-xs-7">
                         <p style="font-size:26px; margin-bottom:20px">{{$va->title}}</p>
-                        <p>{{$va->describe}}</p>
+                        <p>{!! $va->describe !!}</p>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-2">
 						<b>{!! $va->category2 !!}</b>
@@ -159,7 +159,7 @@
                     <div class="col-md-3 col-sm-3 col-xs-3"><img src="{{$va->news_pic}}" class="img-responsive"></div>
                     <div class="col-md-7 col-sm-7 col-xs-7">
                         <p style="font-size:26px; margin-bottom:20px">{{$va->title}}</p>
-                        <p>{{$va->describe}}</p>
+                        <p>{!! $va->describe !!}</p>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-2">
 						<b>{!! $va->category2 !!}</b>
@@ -176,7 +176,7 @@
                     <div class="col-md-3 col-sm-3 col-xs-3"><img src="{{$va->news_pic}}" class="img-responsive"></div>
                     <div class="col-md-7 col-sm-7 col-xs-7">
                         <p style="font-size:26px; margin-bottom:20px">{{$va->title}}</p>
-                        <p>{{$va->describe}}</p>
+                        <p>{!! $va->describe !!}</p>
                     </div>
                     <div class="col-md-2 col-sm-2 col-xs-2">
 						<b>{!! $va->category2 !!}</b>
