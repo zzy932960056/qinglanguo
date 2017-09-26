@@ -113,8 +113,9 @@
               <img src="{{$case->badge}}" class="img-responsive"><div><p>NAME／{{$case->case_title}}</p><p>DATE／{{$case->date_time}}</p></div>
         </div>
 
-	
+	    
 		<!--文案-->
+        @if($case->document_pic1)
 		<div class="row jjal_sanji_wenan">
         	<div class="col-md-12 col-sm-12 col-xs-12" style="padding:0; margin-bottom:4vh"><img src="{{URL::asset('/images/anli_sanji7.png')}}" class="img-responsive"></div>
         	<div id="jjal_sanji_mianban1">
@@ -161,7 +162,7 @@
                     <p>{{$case->document_text4}}</p>
                 </div>
             </div>
-
+            
             
             <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_zhoubian">
 				<div class="col-md-3 col-sm-3 col-xs-3" id="jjal_sanji_chufa1"><img src="{{$case->document_pic1}}" class="img-responsive"><span class="jjal_sanji_wenan_span jjal_sanji_wenan_span_hei"></span></div>
@@ -170,10 +171,11 @@
 				<div class="col-md-3 col-sm-3 col-xs-3" id="jjal_sanji_chufa4"><img src="{{$case->document_pic4}}" class="img-responsive"><span class="jjal_sanji_wenan_span"></span></div>
             </div>
         </div>
-
+        @endif
 
 
 		<!--设计-->
+        @if($case->design_pic1)
 		<div class="row jjal_sanji_wenan">
         	<div class="col-md-12 col-sm-12 col-xs-12" style="padding:0; margin-bottom:4vh"><img src="{{URL::asset('/images/anli_sanji8.png')}}" class="img-responsive"></div>
         	<div id="jjal_sanji_mianban5">
@@ -221,9 +223,10 @@
 				<div class="col-md-3 col-sm-3 col-xs-3" id="jjal_sanji_chufa8"><img src="{{$case->design_pic4}}" class="img-responsive"><span class="jjal_sanji_wenan_span"></span></div>
             </div>
         </div>
-
+        @endif
 
 		<!--空间设计-->
+        @if($case->space_pic1)
 		<div class="row jjal_sanji_wenan">
         	<div class="col-md-12 col-sm-12 col-xs-12" style="padding:0; margin-bottom:4vh"><img src="{{URL::asset('/images/anli_sanji9.png')}}" class="img-responsive"></div>
         	<div id="jjal_sanji_mianban9">
@@ -279,9 +282,10 @@
 				<div class="col-md-3 col-sm-3 col-xs-3" id="jjal_sanji_chufa12"><img src="{{$case->space_pic4}}" class="img-responsive"><span class="jjal_sanji_wenan_span"></span></div>
             </div>
         </div>
-
+        @endif
 
 		<!--环创-->
+        @if($case->env_pic1)
 		<div class="row jjal_sanji_wenan">
         	<div class="col-md-12 col-sm-12 col-xs-12" style="padding:0; margin-bottom:4vh"><img src="{{URL::asset('/images/anli_sanji10.png')}}" class="img-responsive"></div>
         	<div id="jjal_sanji_mianban13">
@@ -325,10 +329,11 @@
 				<div class="col-md-3 col-sm-3 col-xs-3" id="jjal_sanji_chufa16"><img src="{{$case->env_pic4}}" class="img-responsive"><span class="jjal_sanji_wenan_span"></span></div>
             </div>
         </div>
-
+        @endif
 
 
 		<!--影音-->
+        if($case->video1)
         <div class="jjal_sanji_shipin_da" id="picc1">
             <div class="jjal_sanji_shipin">
                         <div class="chacha" id="chacha1"><img src="{{URL::asset('/images/anniu_cha.png')}}" class="img-responsive"></div>
@@ -472,7 +477,7 @@
 				<div class="col-md-3 col-sm-3 col-xs-3" id="jjal_sanji_chufa20"><img src="{{$case->video_pic4}}" class="img-responsive"><span class="jjal_sanji_wenan_span"></span></div>
             </div>
         </div>
-
+        @endif
     </div>
 </div>
 
