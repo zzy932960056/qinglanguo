@@ -176,7 +176,6 @@
         	<div class="col-md-12 col-sm-12 col-xs-12" style="padding:0; margin-bottom:4vh"><img src="{{URL::asset('/images/anli_sanji8.png')}}" class="img-responsive"></div>
         	<div id="jjal_sanji_mianban5">
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_jixiangwu">
-                    <div class="jjal_sanji_bg1_div"><img src="{{URL::asset('/images/anli_sanji12.png')}}" class="img-responsive jjal_sanji_bg1"></div>
                     <img src="{{$case->design_pic1}}" class="img-responsive">
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_bt">
@@ -185,7 +184,6 @@
             </div>
         	<div id="jjal_sanji_mianban6">
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_jixiangwu">
-                    <div class="jjal_sanji_bg1_div"><img src="{{URL::asset('/images/anli_sanji12.png')}}" class="img-responsive jjal_sanji_bg1"></div>
                     <img src="{{$case->design_pic2}}" class="img-responsive">
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_bt">
@@ -194,7 +192,6 @@
             </div>
         	<div id="jjal_sanji_mianban7">
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_jixiangwu">
-                    <div class="jjal_sanji_bg1_div"><img src="{{URL::asset('/images/anli_sanji12.png')}}" class="img-responsive jjal_sanji_bg1"></div>
                     <img src="{{$case->design_pic3}}" class="img-responsive">
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_bt">
@@ -203,7 +200,6 @@
             </div>
         	<div id="jjal_sanji_mianban8">
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_jixiangwu">
-                    <div class="jjal_sanji_bg1_div"><img src="{{URL::asset('/images/anli_sanji12.png')}}" class="img-responsive jjal_sanji_bg1"></div>
                     <img src="{{$case->design_pic4}}" class="img-responsive">
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_bt">
@@ -229,8 +225,8 @@
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_jixiangwu">
                     @if($case->doll_pic2)
                     <img src="{{$case->doll_pic2}}" class="img-responsive jjal_sanji_gongzai2">
-                    <img src="{{$case->space_pic1}}" class="img-responsive">
                     @endif
+                    <img src="{{$case->space_pic1}}" class="img-responsive">
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_wenan_bt">
                     <p>{{$case->space_text1}}</p>
