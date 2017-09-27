@@ -92,9 +92,9 @@
 
 
 <div class="container-fluid" style="position:relative; padding:20vh 60px;" >
-        <div class="index_youshang" id="you2" style="position: fixed; right:8vw; top:115px; height:130px; z-index:999; display:none">
+<!--         <div class="index_youshang" id="you2" style="position: fixed; right:8vw; top:115px; height:130px; z-index:999; display:none">
         	<img src="http://static.meyoungbaby.com/dengpao1.png" class="img-responsive" id="youshang_deng">
-        </div>
+        </div> -->
 
         <img src="{{$contact[0]->relation_img}}" class="img-responsive" style="width:100%; position:relative; z-index:1000;">
         <img src="{{URL::asset('/images/lianxijiangji_dian.gif')}}" class="img-responsive lxjj_dian">
