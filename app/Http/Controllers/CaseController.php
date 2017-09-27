@@ -68,12 +68,6 @@ class CaseController extends Controller
         }else if($coord == ''){
                 echo "<script>alert('坐标不能为空')</script>";
                 return self::case_index_insert();
-        }else if($badge == ''){
-                echo "<script>alert('园徽路径不能为空')</script>";
-                return self::case_index_insert();
-        }else if($date_time == ''){
-                echo "<script>alert('时间不能为空')</script>";
-                return self::case_index_insert();
         }
         $bool = DB::table('jiangji_case')->insert(
             ['case_title'=>$case_title,'is_cover'=>$is_cover,
@@ -125,12 +119,6 @@ class CaseController extends Controller
                 return self::case_index_insert();
         }else if($coord == ''){
                 echo "<script>alert('坐标不能为空')</script>";
-                return self::case_index_insert();
-        }else if($badge == ''){
-                echo "<script>alert('园徽路径不能为空')</script>";
-                return self::case_index_insert();
-        }else if($date_time == ''){
-                echo "<script>alert('时间不能为空')</script>";
                 return self::case_index_insert();
         }
         $num = DB::table('jiangji_case')->where('id',$id)->update(
