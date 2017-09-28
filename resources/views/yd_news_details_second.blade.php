@@ -83,15 +83,21 @@
             <div class="col-md-12 col-sm-12 col-xs-12 jjdt_sanji_santu">
 				<div class="col-md-12 col-sm-12 col-xs-12">
                 	<div><img src="{{$va->image_text_pic1}}" class="img-responsive"></div>
+                    @if($va->image_text_title1)
                     △{{$va->image_text_title1}}
+                    @endif
                 </div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
                 	<div><img src="{{$va->image_text_pic2}}" class="img-responsive"></div>
+                    @if($va->image_text_title2)
                     △{{$va->image_text_title2}}
+                    @endif
                 </div>
 				<div class="col-md-12 col-sm-12 col-xs-12">
                 	<div><img src="{{$va->image_text_pic3}}" class="img-responsive"></div>
+                    @if($va->image_text_title3)
                     △{{$va->image_text_title3}}
+                    @endif
                 </div>
             </div>          
             @elseif($va->right_big_pic1)
