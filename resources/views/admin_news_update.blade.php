@@ -198,7 +198,7 @@
 
 														<input type="text" name="date_time" value="{{$jiangji_news['date_time']}}" class="m-wrap huge" />
 
-														<span class="help-inline">(2017-01-01)</span>
+														<span class="help-inline">(2017.01.01)</span>
 
 													</div>
 
