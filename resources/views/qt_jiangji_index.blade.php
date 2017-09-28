@@ -288,7 +288,7 @@ header("Location:http://m.jiangjimedia.com");
                         <div class="col-md-2 col-sm-2 col-xs-2 index_jjdt_youxian"><img src="{{URL::asset('/images/jjdt1_wenzi_you.png')}}" class="img-responsive"></div>
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-6 index_jjdt_more">
-                        <p class="index_jjdt_more_xiao"><a href="/news/details/{{$value->id}}">查看更多<span class="index_jjdt_more_xiao_you"><img src="{{URL::asset('/images/anli_you.png')}}" class="img-circle"></span></a></p>
+                        <p class="index_jjdt_more_xiao"><a href="/news/details/{{$value->id}}">了解详情<span class="index_jjdt_more_xiao_you"><img src="{{URL::asset('/images/anli_you.png')}}" class="img-circle"></span></a></p>
                     </div>
                 </div>
                 @endforeach

@@ -112,7 +112,7 @@ transition:all 0.3s; -moz-transition:all 0.3s; -o-transition:all 0.3s; -webkit-t
 .index_ppal_tu img{width:100%}
 .index_ppal_wenzi_da{ position: absolute !important; right:0; top:25%;}
 .index_ppal_wenzi{display:block; padding:15px; width:100%; padding-left:10%;}
-.index_ppal_wenzi p{ font-size:16px; color:#fff; margin-bottom:25px}
+.index_ppal_wenzi p{ font-size:16px; color:#fff; margin-bottom:25px; letter-spacing: 4px;}
 .index_ppal_wenzi_bt{font-size:24px !important; color:#fff !important; margin-bottom:10px !important}
 .index_ppal_riqi{position:absolute; top:-28px; right:-35px; font-size:40px; color:#FFF;}
 .index_ppal_riqi span{font-size:16px !important; margin-right:5px}
