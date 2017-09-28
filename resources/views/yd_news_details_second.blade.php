@@ -105,7 +105,6 @@
 				        <div class="col-md-12 col-sm-12 col-xs-12"><img src="{{$va->right_big_pic1}}" class="img-responsive"></div>
 				        <div class="col-md-12 col-sm-12 col-xs-12"><img src="{{$va->right_big_pic2}}" class="img-responsive"></div>
             </div>
-            <br />
             @endif
             @endforeach
         </div>
