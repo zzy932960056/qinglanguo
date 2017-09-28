@@ -249,7 +249,7 @@ transition:all 0.3s; -moz-transition:all 0.3s; -o-transition:all 0.3s; -webkit-t
 .jjdt_sanji_bt span{ padding:10px 20px 0px 23px; width:auto; position:relative; display:inline-block}
 .jjdt_sanji_bt b{ font-size:14px !important; letter-spacing:1px !important;}
 .jjdt_sanji_nr{text-align:center; margin-top:5vh; font-size:18px; color:#fff; letter-spacing:2px;}
-.jjdt_sanji_nr p{ margin-bottom:1vh; text-align:left !important}
+.jjdt_sanji_nr p{text-align:left !important}
 .jjdt_sanji_nr img{display:inline-block}
 .jjdt_sanji_baixian{height:1px; background:#fff; margin-bottom:10vh !important;}
 .jjdt_sanji_nr .col-md-12{padding:0; position:relative; font-size:16px; color:#fff; letter-spacing:2px; line-height:35px;}
