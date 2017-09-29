@@ -65,7 +65,11 @@
         <!--匠几案例主体-->
         <div class="row jjal_sanji_zhuti">
             <div class="col-md-12 col-sm-12 col-xs-12 jjal_sanji_logo">
-                  <img src="{{$case->badge}}" class="img-responsive"><div><p>NAME／{{$case->case_title}}</p><p>DATE／{{$case->date_time}}</p></div>
+                @if($case->badge)
+                <img src="{{$case->badge}}" class="img-responsive"><div><p>NAME／{{$case->case_title}}</p><p>DATE／{{$case->date_time}}</p></div>
+                @else
+                <div><p>NAME／{{$case->case_title}}</p><p>DATE／{{$case->date_time}}</p></div>
+                @endif
             </div>
 
 		<!--文案-->
