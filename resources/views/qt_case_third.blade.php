@@ -106,7 +106,11 @@
         
         
 		<div class="row jjal_sanji_logo">
-              <img src="{{$case->badge}}" class="img-responsive"><div><p>NAME／{{$case->case_title}}</p><p>DATE／{{$case->date_time}}</p></div>
+            @if($case->badge)
+            <img src="{{$case->badge}}" class="img-responsive"><div><p>NAME／{{$case->case_title}}</p><p>DATE／{{$case->date_time}}</p></div>
+            @else
+            <div><p>NAME／{{$case->case_title}}</p><p>DATE／{{$case->date_time}}</p></div>
+            @endif
         </div>
 
 	    
