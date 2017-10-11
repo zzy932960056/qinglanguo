@@ -507,10 +507,10 @@
 </div>
 
 
-<!--[if lt IE 9]>
+<!-- [if lt IE 9]>
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" type="text/javascript"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" type="text/javascript"></script>
-<![endif]-->
+<![endif] -->
 <script type="text/javascript" src="{{URL::asset('/js2/bootstrap.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('/js2/script.js')}}"></script>
 <script src="{{URL::asset('/js2/modernizr.js')}}"></script>

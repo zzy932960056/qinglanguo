@@ -56,7 +56,7 @@
   @include('yd_navigation')
 
 <!--匠几服务-->
-<div class="container-fluid" style="margin-top:6vh">
+<div class="container-fluid" style="margin-top:260px">
 	<div class="row index_zhuti_title"><img src="{{URL::asset('/yd_images/peitaocaigou_title.png')}}" class="img-responsive"></div>
 	<div class="row ptcg_1">
     	<img src="{{$purchase->purchase_mobile}}" class="img-responsive">

@@ -58,7 +58,7 @@
   @include('yd_navigation')
 
 <!--匠几服务-->
-<div class="container-fluid" style="margin-top:6vh">
+<div class="container-fluid" style="margin-top:260px">
 	<div class="row index_zhuti_title"><img src="{{URL::asset('/yd_images/jiangjianli_erji_title.png')}}" class="img-responsive"></div>
 	
 
