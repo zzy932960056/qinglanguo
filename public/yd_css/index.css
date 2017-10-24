@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-body{ font-family:"苹方黑体-简" !important; font-size:16px; background:#b3b8ba; font-weight:700 !important}
+body{ font-family:"苹方黑体-简" !important; font-size:16px; background:#b3b8ba;}
 .hello span{color:#ffffff}
 
 @font-face {
@@ -134,7 +134,7 @@ body{ font-family:"苹方黑体-简" !important; font-size:16px; background:#b3b
 .index_zhuti_jjal_1{ position:relative}
 .index_zhuti_jjal_1 .item div{border:1px solid #fff; width:80%; margin:0 auto; padding:15px}
 .index_zhuti_jjal_1 .item div img{ width:100%}
-.index_zhuti_jjal_2{font-size:50px; font-weight:700; color:#fff; border:none !important; padding:0 !important; letter-spacing:2px; margin-top:5vh !important; margin-bottom:3vh !important}
+.index_zhuti_jjal_2{font-size:50px; color:#fff; border:none !important; padding:0 !important; letter-spacing:2px; margin-top:5vh !important; margin-bottom:3vh !important}
 .index_zhuti_jjal_2 a{font-size:30px !important; font-weight: normal !important; border:1px solid #fff; padding:5px 20px !important;
  color:#fff !important; float:right; margin-top:5px;}
 .index_zhuti_jjal_2 a img{display:inline-block; width:auto !important; margin-left:5px}
@@ -273,7 +273,7 @@ transition:all 0.3s; -moz-transition:all 0.3s; -o-transition:all 0.3s; -webkit-t
 
 /*匠几动态三级——1*/
 .jjdt_snaji_mianbaoxie{font-size:14px; color:#fff; padding-left:60px; margin-top:5vh;}
-.jjdt_sanji_bt{ font-size:34px; color:#FFF; font-weight:700; letter-spacing:3px; text-align:center; position:relative}
+.jjdt_sanji_bt{ font-size:34px; color:#FFF; letter-spacing:3px; text-align:center; position:relative}
 .jjdt_sanji_bt span{ padding:0px 20px 0px 23px; width:auto; position:relative; display:inline-block}
 .jjdt_sanji_bt b{ font-size:20px !important; letter-spacing:2px !important;}
 .jjdt_sanji_nr{text-align:center; margin-top:50px; font-size:24px !important; color:#fff; letter-spacing:2px;}
