@@ -139,7 +139,7 @@
 
 					<i class="icon-briefcase"></i>
 
-					<span class="title">CDN文件上传</span>
+					<span class="title">文件上传</span>
 
 					</a>
 
@@ -185,7 +185,7 @@
 
 					<i class="icon-briefcase"></i>
 
-					<span class="title">安吉拉首页</span>
+					<span class="title">青蓝果首页</span>
 
 					<span class="arrow "></span>
 
@@ -199,7 +199,7 @@
 
 							<i class="icon-cogs"></i>
 
-							安吉拉文化封面图</a>
+							青蓝果文化封面图</a>
 
 						</li>
 
@@ -267,7 +267,7 @@
 
 							<i class="icon-cogs"></i>
 
-							安吉拉早教</a>
+							青蓝果早教</a>
 
 						</li>
 
@@ -281,7 +281,7 @@
 
 					<i class="icon-briefcase"></i>
 
-					<span class="title">安吉拉文化</span>
+					<span class="title">青蓝果文化</span>
 
 					<span class="arrow "></span>
 
@@ -295,7 +295,7 @@
 
 							<i class="icon-cogs"></i>
 
-							安吉拉教育理念</a>
+							青蓝果教育理念</a>
 
 						</li>
 
@@ -305,7 +305,7 @@
 
 							<i class="icon-cogs"></i>
 
-							安吉拉文化</a>
+							青蓝果文化</a>
 
 						</li>
 
@@ -337,7 +337,7 @@
 
 							<i class="icon-cogs"></i>
 
-							安吉拉说</a>
+							青蓝果说</a>
 
 						</li>
 
@@ -487,7 +487,7 @@
 
 							<span class="icon-cogs"></span>
 
-							关于安吉拉
+							关于青蓝果
 
 							<span class="arrow"></span>
 
