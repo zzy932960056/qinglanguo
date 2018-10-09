@@ -5,7 +5,7 @@
 
 		<!-- BEGIN TOP NAVIGATION BAR -->
 
-		
+
 		<div class="navbar-inner">
 
 			<div class="container-fluid">
@@ -14,7 +14,7 @@
 
 				<a class="brand" href="/admin/adminindex">
 
-				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp匠几网站后台
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp青蓝果网站后台
 
 				</a>
 
@@ -26,11 +26,11 @@
 
 				<img src="{{ URL::asset('/image/menu-toggler.png') }}" alt="" />
 
-				</a>          
+				</a>
 
-				<!-- END RESPONSIVE MENU TOGGLER -->            
+				<!-- END RESPONSIVE MENU TOGGLER -->
 
-				<!-- BEGIN TOP NAVIGATION MENU -->              
+				<!-- BEGIN TOP NAVIGATION MENU -->
 
 				<ul class="nav pull-right">
 
@@ -67,7 +67,7 @@
 
 				</ul>
 
-				<!-- END TOP NAVIGATION MENU --> 
+				<!-- END TOP NAVIGATION MENU -->
 
 			</div>
 

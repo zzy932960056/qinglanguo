@@ -60,9 +60,9 @@
 
 		<div class="page-logo">
 
-			<a class="brand" href="index.html">
+			<a class="brand" href="#">
 
-			<font size="14">Me Young</font>
+			<font size="14">青蓝果</font>
 
 			</a>
 
@@ -104,7 +104,7 @@
 
 		<div class="page-footer">
 
-			2017 &copy; Me Young后台管理锁定界面
+			2018 &copy; 青蓝果后台管理锁定界面
 
 		</div>
 

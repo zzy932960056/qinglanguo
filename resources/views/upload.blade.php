@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- saved from url=(0027)http://jssdk.demo.qiniu.io/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+
     <title>七牛云存储 - 上传工具</title>
     <link href="http://jssdk.demo.qiniu.io/images/favicon.ico" rel="shortcut icon">
     <link rel="stylesheet" href="{{URL::asset('/css4/bootstrap.css')}}">

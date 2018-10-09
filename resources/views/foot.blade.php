@@ -2,7 +2,7 @@
 
 		<div class="footer-inner">
 
-			2017 &copy; 匠几后台管理界面
+			2018 &copy; 青蓝果后台管理界面
 
 		</div>
 

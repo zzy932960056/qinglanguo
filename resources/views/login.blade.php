@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>匠几后台管理登录</title>
+	<title>青蓝果后台管理登录</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -72,7 +72,7 @@
 
 		<form action="/admin/dologin" method="post" >
 
-			<h3 class="form-title">匠几后台管理</h3>
+			<h3 class="form-title">青蓝果后台管理</h3>
 
 			<div class="alert alert-error hide">
 
@@ -130,13 +130,13 @@
 
 				登录 <i class="m-icon-swapright m-icon-white"></i>
 
-				</button>            
+				</button>
 
 			</div>
 
 		</form>
 
-		<!-- END LOGIN FORM -->    
+		<!-- END LOGIN FORM -->
 
 	</div>
 
@@ -146,7 +146,7 @@
 
 	<div class="copyright">
 
-		2017 &copy; 匠几后台管理登录界面
+		2017 &copy; 青蓝果后台管理登录界面
 
 	</div>
 
@@ -162,7 +162,7 @@
 
 	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js') }} before bootstrap.min.js') }} to fix bootstrap tooltip conflict with jquery ui tooltip -->
 
-	<script src="{{ URL::asset('/js/jquery-ui-1.10.1.custom.min.js') }}" type="text/javascript"></script>      
+	<script src="{{ URL::asset('/js/jquery-ui-1.10.1.custom.min.js') }}" type="text/javascript"></script>
 
 	<script src="{{ URL::asset('/js/bootstrap.min.js') }}" type="text/javascript"></script>
 
@@ -170,13 +170,13 @@
 
 	<script src="{{ URL::asset('/js/excanvas.min.js') }}"></script>
 
-	<script src="{{ URL::asset('/js/respond.min.js') }}"></script>  
+	<script src="{{ URL::asset('/js/respond.min.js') }}"></script>
 
-	<![endif]-->   
+	<![endif]-->
 
 	<script src="{{ URL::asset('/js/jquery.slimscroll.min.js') }}" type="text/javascript"></script>
 
-	<script src="{{ URL::asset('/js/jquery.blockui.min.js') }}" type="text/javascript"></script>  
+	<script src="{{ URL::asset('/js/jquery.blockui.min.js') }}" type="text/javascript"></script>
 
 	<script src="{{ URL::asset('/js/jquery.cookie.min.js') }}" type="text/javascript"></script>
 
@@ -194,13 +194,13 @@
 
 	<script src="{{ URL::asset('/js/app.js') }}" type="text/javascript"></script>
 
-	<script src="{{ URL::asset('/js/login.js') }}" type="text/javascript"></script>      
+	<script src="{{ URL::asset('/js/login.js') }}" type="text/javascript"></script>
 
-	<!-- END PAGE LEVEL SCRIPTS --> 
+	<!-- END PAGE LEVEL SCRIPTS -->
 
 	<script>
 
-		jQuery(document).ready(function() {     
+		jQuery(document).ready(function() {
 
 		  App.init();
 
