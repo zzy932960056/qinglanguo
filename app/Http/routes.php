@@ -16,29 +16,29 @@
 Route::group(['domain' => 'm.qinglanguo.com'], function(){
 	// //主页
 	// Route::get('/','MobileController@index');
-	// //安吉拉教学特色二级(亿童课程)
+	// //青蓝果教学特色二级(亿童课程)
 	// Route::get('/teaching_yt','MobileController@teaching_yt');
-	// //安吉拉教学特色二级(亿童课程)(标题栏链接)
+	// //青蓝果教学特色二级(亿童课程)(标题栏链接)
 	// Route::get('/teaching_yt{test}','MobileController@teaching_yt');
-	// //安吉拉教学特色二级(布朗课程)
+	// //青蓝果教学特色二级(布朗课程)
 	// Route::get('/teaching_bl','MobileController@teaching_bl');
-	// //安吉拉教学特色二级(布朗课程)(标题栏链接)
+	// //青蓝果教学特色二级(布朗课程)(标题栏链接)
 	// Route::get('/teaching_bl{test}','MobileController@teaching_bl');
-	// //安吉拉教学特色二级(艺术创想)
+	// //青蓝果教学特色二级(艺术创想)
 	// Route::get('/teaching_ys','MobileController@teaching_ys');
-	// //安吉拉教学特色二级(艺术创想)(标题栏链接)
+	// //青蓝果教学特色二级(艺术创想)(标题栏链接)
 	// Route::get('/teaching_ys{test}','MobileController@teaching_ys');
-	// //安吉拉教学特色二级(安吉拉早教)
+	// //青蓝果教学特色二级(青蓝果早教)
 	// Route::get('/teaching_zj','MobileController@teaching_zj');
-	// //安吉拉教学特色二级(安吉拉早教)(标题栏链接)
+	// //青蓝果教学特色二级(青蓝果早教)(标题栏链接)
 	// Route::get('/teaching_zj{test}','MobileController@teaching_zj');
-	// //安吉拉教学特色三级
+	// //青蓝果教学特色三级
 	// Route::get('/teaching/details/{id}','MobileController@teaching_details')->where('id','[0-9]+');
-	// //安吉拉文化
+	// //青蓝果文化
 	// Route::get('/culture','MobileController@culture');
-	// //安吉拉文化(锚链接)
+	// //青蓝果文化(锚链接)
 	// Route::get('/culture{test}','MobileController@culture');
-	// //安吉拉文化三级
+	// //青蓝果文化三级
 	// Route::get('/culture/details/{id}','MobileController@culture_details')->where('id','[0-9]+');
 	// //园所动态二级(社会活动)
 	// Route::get('/news_sh','MobileController@news_sh');
@@ -71,29 +71,29 @@ Route::group(['domain' => 'm.qinglanguo.com'], function(){
 /*************************************移动端*********************************/
 	// //主页
 	// Route::get('/','MobileController@index');
-	// //安吉拉教学特色二级(亿童课程)
+	// //青蓝果教学特色二级(亿童课程)
 	// Route::get('/teaching_yt','MobileController@teaching_yt');
-	// //安吉拉教学特色二级(亿童课程)(标题栏链接)
+	// //青蓝果教学特色二级(亿童课程)(标题栏链接)
 	// Route::get('/teaching_yt{test}','MobileController@teaching_yt');
-	// //安吉拉教学特色二级(布朗课程)
+	// //青蓝果教学特色二级(布朗课程)
 	// Route::get('/teaching_bl','MobileController@teaching_bl');
-	// //安吉拉教学特色二级(布朗课程)(标题栏链接)
+	// //青蓝果教学特色二级(布朗课程)(标题栏链接)
 	// Route::get('/teaching_bl{test}','MobileController@teaching_bl');
-	// //安吉拉教学特色二级(艺术创想)
+	// //青蓝果教学特色二级(艺术创想)
 	// Route::get('/teaching_ys','MobileController@teaching_ys');
-	// //安吉拉教学特色二级(艺术创想)(标题栏链接)
+	// //青蓝果教学特色二级(艺术创想)(标题栏链接)
 	// Route::get('/teaching_ys{test}','MobileController@teaching_ys');
-	// //安吉拉教学特色二级(安吉拉早教)
+	// //青蓝果教学特色二级(青蓝果早教)
 	// Route::get('/teaching_zj','MobileController@teaching_zj');
-	// //安吉拉教学特色二级(安吉拉早教)(标题栏链接)
+	// //青蓝果教学特色二级(青蓝果早教)(标题栏链接)
 	// Route::get('/teaching_zj{test}','MobileController@teaching_zj');
-	// //安吉拉教学特色三级
+	// //青蓝果教学特色三级
 	// Route::get('/teaching/details/{id}','MobileController@teaching_details')->where('id','[0-9]+');
-	// //安吉拉文化
+	// //青蓝果文化
 	// Route::get('/culture','MobileController@culture');
-	// //安吉拉文化(锚链接)
+	// //青蓝果文化(锚链接)
 	// Route::get('/culture{test}','MobileController@culture');
-	// //安吉拉文化三级
+	// //青蓝果文化三级
 	// Route::get('/culture/details/{id}','MobileController@culture_details')->where('id','[0-9]+');
 	// //园所动态二级(社会活动)
 	// Route::get('/news_sh','MobileController@news_sh');
@@ -125,29 +125,29 @@ Route::group(['domain' => 'm.qinglanguo.com'], function(){
 /*************************************PC端*********************************/
 //主页
 // Route::get('/','IndexController@index');
-// //安吉拉教学特色二级(亿童课程)
+// //青蓝果教学特色二级(亿童课程)
 // Route::get('/teaching_yt','IndexController@teaching_yt');
-// //安吉拉教学特色二级(亿童课程)(标题栏链接)
+// //青蓝果教学特色二级(亿童课程)(标题栏链接)
 // Route::get('/teaching_yt{test}','IndexController@teaching_yt');
-// //安吉拉教学特色二级(布朗课程)
+// //青蓝果教学特色二级(布朗课程)
 // Route::get('/teaching_bl','IndexController@teaching_bl');
-// //安吉拉教学特色二级(布朗课程)(标题栏链接)
+// //青蓝果教学特色二级(布朗课程)(标题栏链接)
 // Route::get('/teaching_bl{test}','IndexController@teaching_bl');
-// //安吉拉教学特色二级(艺术创想)
+// //青蓝果教学特色二级(艺术创想)
 // Route::get('/teaching_ys','IndexController@teaching_ys');
-// //安吉拉教学特色二级(艺术创想)(标题栏链接)
+// //青蓝果教学特色二级(艺术创想)(标题栏链接)
 // Route::get('/teaching_ys{test}','IndexController@teaching_ys');
-// //安吉拉教学特色二级(安吉拉早教)
+// //青蓝果教学特色二级(青蓝果早教)
 // Route::get('/teaching_zj','IndexController@teaching_zj');
-// //安吉拉教学特色二级(安吉拉早教)(标题栏链接)
+// //青蓝果教学特色二级(青蓝果早教)(标题栏链接)
 // Route::get('/teaching_zj{test}','IndexController@teaching_zj');
-// //安吉拉教学特色三级
+// //青蓝果教学特色三级
 // Route::get('/teaching/details/{id}','IndexController@teaching_details')->where('id','[0-9]+');
-// //安吉拉文化
+// //青蓝果文化
 // Route::get('/culture','IndexController@culture');
-// //安吉拉文化(锚链接)
+// //青蓝果文化(锚链接)
 // Route::get('/culture{test}','IndexController@culture');
-// //安吉拉文化三级
+// //青蓝果文化三级
 // Route::get('/culture/details/{id}','IndexController@culture_details')->where('id','[0-9]+');
 // //园所动态二级(社会活动)
 // Route::get('/news_sh','IndexController@news_sh');
@@ -241,26 +241,30 @@ Route::get('/admin/video/update/{id}','AdminController@admin_video_update')->whe
 //cdnDoUpdate(视频)
 Route::post('/admin/video_doupdate','AdminController@admin_video_doUpdate');
 /*************************************管理员********************************************/
+//banner图管理
+Route::get('/banner/banner_pic','BannerController@banner_pic');
+//banner图管理编辑
+Route::get('/banner/banner_pic/update/{id}','BannerController@banner_pic_update')->where('id', '[0-9]+');
+//dobanner图管理编辑
+Route::post('/banner/banner_pic/doupdate/{id}','BannerController@banner_pic_doUpdate')->where('id', '[0-9]+');
+//网站信息维护(底部)
+Route::get('/info/info_index','InfoController@info_index');
+//底部信息编辑
+Route::get('/info/info_index/update/{id}','InfoController@info_index_update')->where('id', '[0-9]+');
+//do底部信息编辑
+Route::post('/info/info_index/doupdate/{id}','InfoController@info_index_doUpdate')->where('id', '[0-9]+');
+//首页青蓝果之家
+Route::get('/admin/home_info','HomeinfoController@home_info');
+//首页青蓝果之家编辑
+Route::get('/admin/home_info/update/{id}','HomeinfoController@home_info_update')->where('id', '[0-9]+');
+//do首页青蓝果之家编辑
+Route::post('/admin/home_info/doupdate/{id}','HomeinfoController@home_info_doUpdate')->where('id', '[0-9]+');
 
-
-
-// //banner图管理
-// Route::get('/banner/banner_pic','BannerController@banner_pic');
-// //banner图管理编辑
-// Route::get('/banner/banner_pic/update/{id}','BannerController@banner_pic_update')->where('id', '[0-9]+');
-// //dobanner图管理编辑
-// Route::post('/banner/banner_pic/doupdate/{id}','BannerController@banner_pic_doUpdate')->where('id', '[0-9]+');
-// //网站信息维护(底部)
-// Route::get('/info/info_index','InfoController@info_index');
-// //底部信息编辑
-// Route::get('/info/info_index/update/{id}','InfoController@info_index_update')->where('id', '[0-9]+');
-// //do底部信息编辑
-// Route::post('/info/info_index/doupdate/{id}','InfoController@info_index_doUpdate')->where('id', '[0-9]+');
-// //首页安吉拉文化封面图
+// //首页青蓝果文化封面图
 // Route::get('/home/culture_cover','HomeController@culture_cover');
-// //首页安吉拉文化封面图编辑
+// //首页青蓝果文化封面图编辑
 // Route::get('/home/culture_cover/update/{id}','HomeController@culture_cover_update')->where('id', '[0-9]+');
-// //do首页安吉拉文化封面图编辑
+// //do首页青蓝果文化封面图编辑
 // Route::post('/home/culture_cover/doupdate/{id}','HomeController@culture_cover_doUpdate')->where('id', '[0-9]+');
 // //首页底图
 // Route::get('/home/last_pic','HomeController@last_pic');
@@ -388,45 +392,45 @@ Route::post('/admin/video_doupdate','AdminController@admin_video_doUpdate');
 // Route::get('/admin/teaching_ys/label/details/text/update/{id}','TeachingController@teaching_ys_label_details_text_update')->where('id', '[0-9]+');
 // //do标签图文详情编辑(艺术创想)
 // Route::post('/admin/teaching_ys/label/details/text/doupdate/{id}','TeachingController@teaching_ys_label_details_text_doUpdate')->where('id', '[0-9]+');
-// //教学特色(安吉拉早教)
+// //教学特色(青蓝果早教)
 // Route::get('/admin/teaching_zj','TeachingController@teaching_zj');
-// //教学特色删除(安吉拉早教)
+// //教学特色删除(青蓝果早教)
 // Route::post('/admin/teaching_zj/dodelete','TeachingController@teaching_zj_doDelete');
-// //新增教学特色(安吉拉早教)
+// //新增教学特色(青蓝果早教)
 // Route::get('/admin/teaching_zj/insert','TeachingController@teaching_zj_insert');
-// //do新增教学特色(安吉拉早教)
+// //do新增教学特色(青蓝果早教)
 // Route::post('/admin/teaching_zj/doinsert','TeachingController@teaching_zj_doInsert');
-// //教学特色编辑(安吉拉早教)
+// //教学特色编辑(青蓝果早教)
 // Route::get('/admin/teaching_zj/update/{id}','TeachingController@teaching_zj_update')->where('id', '[0-9]+');
-// //do教学特色编辑(安吉拉早教)
+// //do教学特色编辑(青蓝果早教)
 // Route::post('/admin/teaching_zj/doupdate/{id}','TeachingController@teaching_zj_doUpdate')->where('id', '[0-9]+');
-// //课程详情标签展示(安吉拉早教)
+// //课程详情标签展示(青蓝果早教)
 // Route::get('/admin/teaching_zj/label/{id}','TeachingController@teaching_zj_label_index')->where('id', '[0-9]+');
-// //删除课程详情标签(安吉拉早教)
+// //删除课程详情标签(青蓝果早教)
 // Route::post('/admin/teaching_zj/label/dodelete','TeachingController@teaching_zj_label_doDelete');
-// //新增课程详情标签(安吉拉早教)
+// //新增课程详情标签(青蓝果早教)
 // Route::any('/admin/teaching_zj/label/insert/{id}','TeachingController@teaching_zj_label_insert')->where('id', '[0-9]+');
-// //do新增课程详情标签(安吉拉早教)
+// //do新增课程详情标签(青蓝果早教)
 // Route::post('/admin/teaching_zj/label/doinsert','TeachingController@teaching_zj_label_doInsert');
-// //课程详情标签编辑(安吉拉早教)
+// //课程详情标签编辑(青蓝果早教)
 // Route::get('/admin/teaching_zj/label/update/{id}','TeachingController@teaching_zj_label_update')->where('id', '[0-9]+');
-// //do课程详情标签编辑(安吉拉早教)
+// //do课程详情标签编辑(青蓝果早教)
 // Route::post('/admin/teaching_zj/label/doUpdate/{id}','TeachingController@teaching_zj_label_doUpdate')->where('id', '[0-9]+');
-// //标签图文详情展示(安吉拉早教)
+// //标签图文详情展示(青蓝果早教)
 // Route::get('/admin/teaching_zj/label/details/{id}','TeachingController@teaching_zj_label_details')->where('id', '[0-9]+');
-// //标签图文详情删除(安吉拉早教)
+// //标签图文详情删除(青蓝果早教)
 // Route::post('/admin/teaching_zj/label/details/dodelete','TeachingController@teaching_zj_label_details_doDelete');
-// //标签图文详情图片新增(安吉拉早教)
+// //标签图文详情图片新增(青蓝果早教)
 // Route::any('/admin/teaching_zj/label/details/pic/insert/{id}','TeachingController@teaching_zj_label_details_pic_insert')->where('id', '[0-9]+');
-// //do标签图文详情图片新增(安吉拉早教)
+// //do标签图文详情图片新增(青蓝果早教)
 // Route::post('/admin/teaching_zj/label/details/pic/doinsert','TeachingController@teaching_zj_label_details_pic_doInsert');
-// //标签图文详情文字新增(安吉拉早教)
+// //标签图文详情文字新增(青蓝果早教)
 // Route::any('/admin/teaching_zj/label/details/text/insert/{id}','TeachingController@teaching_zj_label_details_text_insert')->where('id', '[0-9]+');
-// //do标签图文详情文字新增(安吉拉早教)
+// //do标签图文详情文字新增(青蓝果早教)
 // Route::post('/admin/teaching_zj/label/details/text/doinsert','TeachingController@teaching_zj_label_details_text_doInsert');
-// //标签图文详情编辑(安吉拉早教)
+// //标签图文详情编辑(青蓝果早教)
 // Route::get('/admin/teaching_zj/label/details/text/update/{id}','TeachingController@teaching_zj_label_details_text_update')->where('id', '[0-9]+');
-// //do标签图文详情编辑(安吉拉早教)
+// //do标签图文详情编辑(青蓝果早教)
 // Route::post('/admin/teaching_zj/label/details/text/doupdate/{id}','TeachingController@teaching_zj_label_details_text_doUpdate')->where('id', '[0-9]+');
 // //常青藤课程(理念基础图文)
 // Route::get('/admin/curriculum_idea/chart','CourseController@curriculum_idea');
@@ -468,53 +472,53 @@ Route::post('/admin/video_doupdate','AdminController@admin_video_doUpdate');
 // Route::get('/admin/consultative_course/image_text/update/{id}','CourseController@consultative_course_image_text_update')->where('id', '[0-9]+');
 // //do常青藤课程图文编辑(协商式课程)
 // Route::post('/admin/consultative_course/image_text/doupdate/{id}','CourseController@consultative_course_image_text_doUpdate')->where('id', '[0-9]+');
-// //安吉拉文化教育理念
+// //青蓝果文化教育理念
 // Route::get('/admin/education_concept','EducationController@education_concept');
-// //安吉拉文化教育理念编辑
+// //青蓝果文化教育理念编辑
 // Route::get('/admin/education_concept/update/{id}','EducationController@education_concept_update')->where('id', '[0-9]+');
-// //do安吉拉文化教育理念编辑
+// //do青蓝果文化教育理念编辑
 // Route::post('/admin/education_concept/doupdate/{id}','EducationController@education_concept_doUpdate')->where('id', '[0-9]+');
-// //安吉拉说
+// //青蓝果说
 // Route::get('/admin/education_speak','EducationController@education_speak');
-// //安吉拉说编辑
+// //青蓝果说编辑
 // Route::get('/admin/education_speak/update/{id}','EducationController@education_speak_update')->where('id', '[0-9]+');
-// //do安吉拉说编辑
+// //do青蓝果说编辑
 // Route::post('/admin/education_speak/doupdate/{id}','EducationController@education_speak_doUpdate')->where('id', '[0-9]+');
-// //安吉拉团队图文
+// //青蓝果团队图文
 // Route::get('/admin/education_team','EducationController@education_team');
-// //安吉拉团队图文编辑
+// //青蓝果团队图文编辑
 // Route::get('/admin/education_team/update/{id}','EducationController@education_team_update')->where('id', '[0-9]+');
-// //do安吉拉团队图文编辑
+// //do青蓝果团队图文编辑
 // Route::post('/admin/education_team/doupdate/{id}','EducationController@education_team_doUpdate')->where('id', '[0-9]+');
-// //安吉拉团队教师展示
+// //青蓝果团队教师展示
 // Route::get('/admin/education_teacher','EducationController@education_teacher');
-// //安吉拉团队教师展示删除
+// //青蓝果团队教师展示删除
 // Route::post('/admin/education_teacher/dodelete','EducationController@education_teacher_doDelete');
-// //新增安吉拉团队教师
+// //新增青蓝果团队教师
 // Route::get('/admin/education_teacher/insert','EducationController@education_teacher_insert');
-// //do新增安吉拉团队教师
+// //do新增青蓝果团队教师
 // Route::post('/admin/education_teacher/doinsert','EducationController@education_teacher_doInsert');
-// //安吉拉团队教师编辑
+// //青蓝果团队教师编辑
 // Route::get('/admin/education_teacher/update/{id}','EducationController@education_teacher_update')->where('id', '[0-9]+');
-// //do安吉拉团队教师编辑
+// //do青蓝果团队教师编辑
 // Route::post('/admin/education_teacher/doupdate/{id}','EducationController@education_teacher_doUpdate')->where('id', '[0-9]+');
-// //安吉拉文化
+// //青蓝果文化
 // Route::get('/admin/culture','EducationController@culture');
-// //安吉拉文化编辑
+// //青蓝果文化编辑
 // Route::get('/admin/culture/update/{id}','EducationController@culture_update')->where('id', '[0-9]+');
-// //do安吉拉文化编辑
+// //do青蓝果文化编辑
 // Route::post('/admin/culture/doupdate/{id}','EducationController@culture_doUpdate')->where('id', '[0-9]+');
-// //安吉拉文化标签展示
+// //青蓝果文化标签展示
 // Route::get('/admin/culture/label/{id}','EducationController@culture_label_index')->where('id', '[0-9]+');
-// //删除安吉拉文化标签
+// //删除青蓝果文化标签
 // Route::post('/admin/culture/label/dodelete','EducationController@culture_label_index_doDelete');
-// //新增安吉拉文化标签
+// //新增青蓝果文化标签
 // Route::any('/admin/culture/label/insert/{id}','EducationController@culture_label_index_insert')->where('id', '[0-9]+');
-// //do新增安吉拉文化标签
+// //do新增青蓝果文化标签
 // Route::post('/admin/culture/label/doinsert','EducationController@culture_label_index_doInsert');
-// //安吉拉文化标签编辑
+// //青蓝果文化标签编辑
 // Route::get('/admin/culture/label/update/{id}','EducationController@culture_label_index_update')->where('id', '[0-9]+');
-// //do安吉拉文化标签编辑
+// //do青蓝果文化标签编辑
 // Route::post('/admin/culture/label/doUpdate/{id}','EducationController@culture_label_index_doUpdate')->where('id', '[0-9]+');
 // //标签图文详情展示
 // Route::get('/admin/culture/label/details/{id}','EducationController@culture_label_index_label_details')->where('id', '[0-9]+');
@@ -532,135 +536,135 @@ Route::post('/admin/video_doupdate','AdminController@admin_video_doUpdate');
 // Route::get('/admin/culture/label/details/text/update/{id}','EducationController@culture_label_details_text_update')->where('id', '[0-9]+');
 // //do标签图文详情编辑
 // Route::post('/admin/culture/label/details/text/doupdate/{id}','EducationController@culture_label_details_text_doUpdate')->where('id', '[0-9]+');
-// //安吉拉动态(社会活动)
+// //青蓝果动态(社会活动)
 // Route::get('/admin/news_social','NewsController@news_social');
-// //安吉拉动态删除(社会活动)
+// //青蓝果动态删除(社会活动)
 // Route::post('/admin/news_social/dodelete','NewsController@news_social_doDelete');
-// //新增安吉拉动态(社会活动)
+// //新增青蓝果动态(社会活动)
 // Route::get('/admin/news_social/insert','NewsController@news_social_insert');
-// //do新增安吉拉动态(社会活动)
+// //do新增青蓝果动态(社会活动)
 // Route::post('/admin/news_social/doinsert','NewsController@news_social_doInsert');
-// //安吉拉动态编辑(社会活动)
+// //青蓝果动态编辑(社会活动)
 // Route::get('/admin/news_social/update/{id}','NewsController@news_social_update')->where('id', '[0-9]+');
-// //do安吉拉动态编辑(社会活动)
+// //do青蓝果动态编辑(社会活动)
 // Route::post('/admin/news_social/doupdate/{id}','NewsController@news_social_doUpdate')->where('id', '[0-9]+');
-// //安吉拉动态详情展示(社会活动)
+// //青蓝果动态详情展示(社会活动)
 // Route::get('/admin/news_social/details/{id}','NewsController@news_social_details')->where('id', '[0-9]+');
-// //安吉拉动态详情展示删除(社会活动)
+// //青蓝果动态详情展示删除(社会活动)
 // Route::post('/admin/news_social/details/dodelete','NewsController@news_social_details_doDelete');
-// //安吉拉动态详情展示图片新增(社会活动)
+// //青蓝果动态详情展示图片新增(社会活动)
 // Route::any('/admin/news_social/details/pic/insert/{id}','NewsController@news_social_details_pic_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示图片新增(社会活动)
+// //do青蓝果动态详情展示图片新增(社会活动)
 // Route::post('/admin/news_social/details/pic/doinsert','NewsController@news_social_details_pic_doInsert');
-// //安吉拉动态详情展示文本新增(社会活动)
+// //青蓝果动态详情展示文本新增(社会活动)
 // Route::any('/admin/news_social/details/text/insert/{id}','NewsController@news_social_details_text_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示文本新增(社会活动)
+// //do青蓝果动态详情展示文本新增(社会活动)
 // Route::post('/admin/news_social/details/text/doinsert','NewsController@news_social_details_text_doInsert');
-// //安吉拉动态详情展示编辑(社会活动)
+// //青蓝果动态详情展示编辑(社会活动)
 // Route::get('/admin/news_social/details/update/{id}','NewsController@news_social_details_update')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示编辑(社会活动)
+// //do青蓝果动态详情展示编辑(社会活动)
 // Route::post('/admin/news_social/details/doupdate/{id}','NewsController@news_social_details_doUpdate')->where('id', '[0-9]+');
-// //安吉拉动态(节日活动)
+// //青蓝果动态(节日活动)
 // Route::get('/admin/news_festival','NewsController@news_festival');
-// //安吉拉动态删除(节日活动)
+// //青蓝果动态删除(节日活动)
 // Route::post('/admin/news_festival/dodelete','NewsController@news_festival_doDelete');
-// //新增安吉拉动态(节日活动)
+// //新增青蓝果动态(节日活动)
 // Route::get('/admin/news_festival/insert','NewsController@news_festival_insert');
-// //do新增安吉拉动态(节日活动)
+// //do新增青蓝果动态(节日活动)
 // Route::post('/admin/news_festival/doinsert','NewsController@news_festival_doInsert');
-// //安吉拉动态编辑(节日活动)
+// //青蓝果动态编辑(节日活动)
 // Route::get('/admin/news_festival/update/{id}','NewsController@news_festival_update')->where('id', '[0-9]+');
-// //do安吉拉动态编辑(节日活动)
+// //do青蓝果动态编辑(节日活动)
 // Route::post('/admin/news_festival/doupdate/{id}','NewsController@news_festival_doUpdate')->where('id', '[0-9]+');
-// //安吉拉动态详情展示(节日活动)
+// //青蓝果动态详情展示(节日活动)
 // Route::get('/admin/news_festival/details/{id}','NewsController@news_festival_details')->where('id', '[0-9]+');
-// //安吉拉动态详情展示删除(节日活动)
+// //青蓝果动态详情展示删除(节日活动)
 // Route::post('/admin/news_festival/details/dodelete','NewsController@news_festival_details_doDelete');
-// //安吉拉动态详情展示图片新增(节日活动)
+// //青蓝果动态详情展示图片新增(节日活动)
 // Route::any('/admin/news_festival/details/pic/insert/{id}','NewsController@news_festival_details_pic_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示图片新增(节日活动)
+// //do青蓝果动态详情展示图片新增(节日活动)
 // Route::post('/admin/news_festival/details/pic/doinsert','NewsController@news_festival_details_pic_doInsert');
-// //安吉拉动态详情展示文本新增(节日活动)
+// //青蓝果动态详情展示文本新增(节日活动)
 // Route::any('/admin/news_festival/details/text/insert/{id}','NewsController@news_festival_details_text_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示文本新增(节日活动)
+// //do青蓝果动态详情展示文本新增(节日活动)
 // Route::post('/admin/news_festival/details/text/doinsert','NewsController@news_festival_details_text_doInsert');
-// //安吉拉动态详情展示编辑(节日活动)
+// //青蓝果动态详情展示编辑(节日活动)
 // Route::get('/admin/news_festival/details/update/{id}','NewsController@news_festival_details_update')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示编辑(节日活动)
+// //do青蓝果动态详情展示编辑(节日活动)
 // Route::post('/admin/news_festival/details/doupdate/{id}','NewsController@news_festival_details_doUpdate')->where('id', '[0-9]+');
-// //安吉拉动态(班级活动)
+// //青蓝果动态(班级活动)
 // Route::get('/admin/news_class','NewsController@news_class');
-// //安吉拉动态删除(班级活动)
+// //青蓝果动态删除(班级活动)
 // Route::post('/admin/news_class/dodelete','NewsController@news_class_doDelete');
-// //新增安吉拉动态(班级活动)
+// //新增青蓝果动态(班级活动)
 // Route::get('/admin/news_class/insert','NewsController@news_class_insert');
-// //do新增安吉拉动态(班级活动)
+// //do新增青蓝果动态(班级活动)
 // Route::post('/admin/news_class/doinsert','NewsController@news_class_doInsert');
-// //安吉拉动态编辑(班级活动)
+// //青蓝果动态编辑(班级活动)
 // Route::get('/admin/news_class/update/{id}','NewsController@news_class_update')->where('id', '[0-9]+');
-// //do安吉拉动态编辑(班级活动)
+// //do青蓝果动态编辑(班级活动)
 // Route::post('/admin/news_class/doupdate/{id}','NewsController@news_class_doUpdate')->where('id', '[0-9]+');
-// //安吉拉动态详情展示(班级活动)
+// //青蓝果动态详情展示(班级活动)
 // Route::get('/admin/news_class/details/{id}','NewsController@news_class_details')->where('id', '[0-9]+');
-// //安吉拉动态详情展示删除(班级活动)
+// //青蓝果动态详情展示删除(班级活动)
 // Route::post('/admin/news_class/details/dodelete','NewsController@news_class_details_doDelete');
-// //安吉拉动态详情展示图片新增(班级活动)
+// //青蓝果动态详情展示图片新增(班级活动)
 // Route::any('/admin/news_class/details/pic/insert/{id}','NewsController@news_class_details_pic_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示图片新增(班级活动)
+// //do青蓝果动态详情展示图片新增(班级活动)
 // Route::post('/admin/news_class/details/pic/doinsert','NewsController@news_class_details_pic_doInsert');
-// //安吉拉动态详情展示文本新增(班级活动)
+// //青蓝果动态详情展示文本新增(班级活动)
 // Route::any('/admin/news_class/details/text/insert/{id}','NewsController@news_class_details_text_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示文本新增(班级活动)
+// //do青蓝果动态详情展示文本新增(班级活动)
 // Route::post('/admin/news_class/details/text/doinsert','NewsController@news_class_details_text_doInsert');
-// //安吉拉动态详情展示编辑(班级活动)
+// //青蓝果动态详情展示编辑(班级活动)
 // Route::get('/admin/news_class/details/update/{id}','NewsController@news_class_details_update')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示编辑(班级活动)
+// //do青蓝果动态详情展示编辑(班级活动)
 // Route::post('/admin/news_class/details/doupdate/{id}','NewsController@news_class_details_doUpdate')->where('id', '[0-9]+');
-// //安吉拉动态(父母沙龙)
+// //青蓝果动态(父母沙龙)
 // Route::get('/admin/news_parents','NewsController@news_parents');
-// //安吉拉动态删除(父母沙龙)
+// //青蓝果动态删除(父母沙龙)
 // Route::post('/admin/news_parents/dodelete','NewsController@news_parents_doDelete');
-// //新增安吉拉动态(父母沙龙)
+// //新增青蓝果动态(父母沙龙)
 // Route::get('/admin/news_parents/insert','NewsController@news_parents_insert');
-// //do新增安吉拉动态(父母沙龙)
+// //do新增青蓝果动态(父母沙龙)
 // Route::post('/admin/news_parents/doinsert','NewsController@news_parents_doInsert');
-// //安吉拉动态编辑(父母沙龙)
+// //青蓝果动态编辑(父母沙龙)
 // Route::get('/admin/news_parents/update/{id}','NewsController@news_parents_update')->where('id', '[0-9]+');
-// //do安吉拉动态编辑(父母沙龙)
+// //do青蓝果动态编辑(父母沙龙)
 // Route::post('/admin/news_parents/doupdate/{id}','NewsController@news_parents_doUpdate')->where('id', '[0-9]+');
-// //安吉拉动态详情展示(父母沙龙)
+// //青蓝果动态详情展示(父母沙龙)
 // Route::get('/admin/news_parents/details/{id}','NewsController@news_parents_details')->where('id', '[0-9]+');
-// //安吉拉动态详情展示删除(父母沙龙)
+// //青蓝果动态详情展示删除(父母沙龙)
 // Route::post('/admin/news_parents/details/dodelete','NewsController@news_parents_details_doDelete');
-// //安吉拉动态详情展示图片新增(父母沙龙)
+// //青蓝果动态详情展示图片新增(父母沙龙)
 // Route::any('/admin/news_parents/details/pic/insert/{id}','NewsController@news_parents_details_pic_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示图片新增(父母沙龙)
+// //do青蓝果动态详情展示图片新增(父母沙龙)
 // Route::post('/admin/news_parents/details/pic/doinsert','NewsController@news_parents_details_pic_doInsert');
-// //安吉拉动态详情展示文本新增(父母沙龙)
+// //青蓝果动态详情展示文本新增(父母沙龙)
 // Route::any('/admin/news_parents/details/text/insert/{id}','NewsController@news_parents_details_text_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示文本新增(父母沙龙)
+// //do青蓝果动态详情展示文本新增(父母沙龙)
 // Route::post('/admin/news_parents/details/text/doinsert','NewsController@news_parents_details_text_doInsert');
-// //安吉拉动态详情展示编辑(父母沙龙)
+// //青蓝果动态详情展示编辑(父母沙龙)
 // Route::get('/admin/news_parents/details/update/{id}','NewsController@news_parents_details_update')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示编辑(父母沙龙)
+// //do青蓝果动态详情展示编辑(父母沙龙)
 // Route::post('/admin/news_parents/details/doupdate/{id}','NewsController@news_parents_details_doUpdate')->where('id', '[0-9]+');
-// //关于安吉拉文本
+// //关于青蓝果文本
 // Route::get('/admin/about_us','AboutController@about_us');
-// //关于安吉拉文本编辑
+// //关于青蓝果文本编辑
 // Route::get('/admin/about_us/update/{id}','AboutController@about_us_update')->where('id', '[0-9]+');
-// //do关于安吉拉文本编辑
+// //do关于青蓝果文本编辑
 // Route::post('/admin/about_us/doupdate/{id}','AboutController@about_us_doUpdate')->where('id', '[0-9]+');
-// //关于安吉拉轮播图片
+// //关于青蓝果轮播图片
 // Route::get('/admin/about_us_pic','AboutController@about_us_pic');
-// //关于安吉拉轮播图片删除
+// //关于青蓝果轮播图片删除
 // Route::post('/admin/about_us_pic/dodelete','AboutController@about_us_pic_doDelete');
-// //新增关于安吉拉轮播图片
+// //新增关于青蓝果轮播图片
 // Route::get('/admin/about_us_pic/insert','AboutController@about_us_pic_insert');
-// //do新增关于安吉拉轮播图片
+// //do新增关于青蓝果轮播图片
 // Route::post('/admin/about_us_pic/doinsert','AboutController@about_us_pic_doInsert');
-// //关于安吉拉轮播图片编辑
+// //关于青蓝果轮播图片编辑
 // Route::get('/admin/about_us_pic/update/{id}','AboutController@about_us_pic_update')->where('id', '[0-9]+');
-// //do关于安吉拉轮播图片编辑
+// //do关于青蓝果轮播图片编辑
 // Route::post('/admin/about_us_pic/doupdate/{id}','AboutController@about_us_pic_doUpdate')->where('id', '[0-9]+');
 // //发展历程文本简介
 // Route::get('/admin/development_text','AboutController@development_text');

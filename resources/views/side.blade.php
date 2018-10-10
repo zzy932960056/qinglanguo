@@ -145,6 +145,48 @@
 
 				</li>
 
+				<li class="">
+
+					<a href="javascript:;">
+
+					<i class="icon-table"></i>
+
+					<span class="title">青蓝果首页</span>
+
+					<span class="arrow "></span>
+
+					</a>
+
+					<ul class="sub-menu">
+
+						<li >
+
+							<a href="/banner/banner_pic">
+
+							banner图管理</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/home_info">
+
+							青蓝果之家</a>
+
+						</li>
+
+						<li >
+
+							<a href="/info/info_index">
+
+							备案信息</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
 				<!-- <li class="">
 
 					<a href="javascript:;">
