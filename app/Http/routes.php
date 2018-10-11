@@ -259,13 +259,23 @@ Route::get('/admin/home_info','HomeinfoController@home_info');
 Route::get('/admin/home_info/update/{id}','HomeinfoController@home_info_update')->where('id', '[0-9]+');
 //do首页青蓝果之家编辑
 Route::post('/admin/home_info/doupdate/{id}','HomeinfoController@home_info_doUpdate')->where('id', '[0-9]+');
+//青蓝果之家中心园
+Route::get('/admin/home/zhongxin','HomeindexController@zhongxin');
+//青蓝果之家王舍园
+Route::get('/admin/home/wangshe','HomeindexController@wangshe');
+//青蓝果之家南家园
+Route::get('/admin/home/nanjia','HomeindexController@nanjia');
+//青蓝果之家芳草园
+Route::get('/admin/home/fangcao','HomeindexController@fangcao');
+//青蓝果之家颐丰园
+Route::get('/admin/home/yifeng','HomeindexController@yifeng');
+//青蓝果之家编辑
+Route::get('/admin/home/zhongxin/update/{id}','HomeindexController@zhongxin_update');
+//do青蓝果之家编辑
+Route::post('/admin/home/zhongxin/doupdate/{id}','HomeindexController@zhongxin_doUpdate')->where('id', '[0-9]+');
 
-// //首页青蓝果文化封面图
-// Route::get('/home/culture_cover','HomeController@culture_cover');
-// //首页青蓝果文化封面图编辑
-// Route::get('/home/culture_cover/update/{id}','HomeController@culture_cover_update')->where('id', '[0-9]+');
-// //do首页青蓝果文化封面图编辑
-// Route::post('/home/culture_cover/doupdate/{id}','HomeController@culture_cover_doUpdate')->where('id', '[0-9]+');
+
+
 // //首页底图
 // Route::get('/home/last_pic','HomeController@last_pic');
 // //首页底图编辑

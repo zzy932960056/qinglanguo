@@ -187,6 +187,64 @@
 
 				</li>
 
+				<li class="">
+
+					<a href="javascript:;">
+
+					<i class="icon-table"></i>
+
+					<span class="title">青蓝果之家</span>
+
+					<span class="arrow "></span>
+
+					</a>
+
+					<ul class="sub-menu">
+
+						<li >
+
+							<a href="/admin/home/zhongxin">
+
+							中心园管理</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/home/wangshe">
+
+							王舍园管理</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/home/nanjia">
+
+							南家园管理</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/home/fangcao">
+
+							芳草园管理</a>
+
+						</li>
+
+						<li >
+
+							<a href="/admin/home/yifeng">
+
+							颐丰园管理</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
 				<!-- <li class="">
 
 					<a href="javascript:;">
