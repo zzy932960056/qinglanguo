@@ -245,6 +245,72 @@
 
 				</li>
 
+				<li class="">
+
+					<a href="javascript:;">
+
+					<i class="icon-table"></i>
+
+					<span class="title">青蓝果教育</span>
+
+					<span class="arrow "></span>
+
+					</a>
+
+					<ul class="sub-menu">
+
+						<li >
+
+							<a href="/admin/education/culture">
+
+							传统文化</a>
+
+						</li>
+
+						<li >
+
+							<a href="">
+
+							探究空间</a>
+
+						</li>
+
+						<li >
+
+							<a href="">
+
+							健康领动</a>
+
+						</li>
+
+						<li >
+
+							<a href="">
+
+							艺术创想</a>
+
+						</li>
+
+						<li >
+
+							<a href="">
+
+							社会链接</a>
+
+						</li>
+
+						<li >
+
+							<a href="">
+
+							师资力量</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
 				<!-- <li class="">
 
 					<a href="javascript:;">

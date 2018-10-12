@@ -273,6 +273,14 @@ Route::get('/admin/home/yifeng','HomeindexController@yifeng');
 Route::get('/admin/home/zhongxin/update/{id}','HomeindexController@zhongxin_update');
 //do青蓝果之家编辑
 Route::post('/admin/home/zhongxin/doupdate/{id}','HomeindexController@zhongxin_doUpdate')->where('id', '[0-9]+');
+//青蓝果教育(传统文化)
+Route::get('/admin/education/culture','EducationindexController@culture');
+//青蓝果教育(传统文化)编辑
+Route::get('/admin/education/update/{id}','EducationindexController@culture_update');
+//do青蓝果教育(传统文化)编辑
+Route::post('/admin/education/doupdate/{id}','EducationindexController@culture_doUpdate')->where('id', '[0-9]+');
+
+
 
 
 
