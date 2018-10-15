@@ -279,6 +279,21 @@ Route::get('/admin/education/culture','EducationindexController@culture');
 Route::get('/admin/education/update/{id}','EducationindexController@culture_update');
 //do青蓝果教育(传统文化)编辑
 Route::post('/admin/education/doupdate/{id}','EducationindexController@culture_doUpdate')->where('id', '[0-9]+');
+//青蓝果教育(探究空间)
+Route::get('/admin/education/space','EducationindexController@space');
+//青蓝果教育(探究空间)编辑
+Route::get('/admin/education/space_update/{id}','EducationindexController@space_update');
+//do青蓝果教育(探究空间)编辑
+Route::post('/admin/education/space/doupdate/{id}','EducationindexController@space_doUpdate')->where('id', '[0-9]+');
+//青蓝果教育(健康领动)
+Route::get('/admin/education/health','EducationindexController@health');
+//青蓝果教育(健康领动)编辑
+Route::get('/admin/education/health_update/{id}','EducationindexController@health_update');
+//do青蓝果教育(健康领动)编辑
+Route::post('/admin/education/health/doupdate/{id}','EducationindexController@health_doUpdate')->where('id', '[0-9]+');
+
+
+
 
 
 

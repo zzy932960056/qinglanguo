@@ -269,7 +269,7 @@
 
 						<li >
 
-							<a href="">
+							<a href="/admin/education/space">
 
 							探究空间</a>
 
@@ -277,7 +277,7 @@
 
 						<li >
 
-							<a href="">
+							<a href="/admin/education/health">
 
 							健康领动</a>
 
