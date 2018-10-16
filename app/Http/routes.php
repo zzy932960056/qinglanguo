@@ -291,11 +291,18 @@ Route::get('/admin/education/health','EducationindexController@health');
 Route::get('/admin/education/health_update/{id}','EducationindexController@health_update');
 //do青蓝果教育(健康领动)编辑
 Route::post('/admin/education/health/doupdate/{id}','EducationindexController@health_doUpdate')->where('id', '[0-9]+');
-
-
-
-
-
+//青蓝果教育(艺术创想)
+Route::get('/admin/education/art','EducationindexController@art');
+//青蓝果教育(艺术创想)编辑
+Route::get('/admin/education/art_update/{id}','EducationindexController@art_update');
+//do青蓝果教育(艺术创想)编辑
+Route::post('/admin/education/art/doupdate/{id}','EducationindexController@art_doUpdate')->where('id', '[0-9]+');
+//青蓝果教育(社会链接)
+Route::get('/admin/education/social','EducationindexController@social');
+//青蓝果教育(社会链接)编辑
+Route::get('/admin/education/social_update/{id}','EducationindexController@social_update');
+//do青蓝果教育(社会链接)编辑
+Route::post('/admin/education/social/doupdate/{id}','EducationindexController@social_doUpdate')->where('id', '[0-9]+');
 
 
 

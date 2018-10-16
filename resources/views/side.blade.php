@@ -285,7 +285,7 @@
 
 						<li >
 
-							<a href="">
+							<a href="/admin/education/art">
 
 							艺术创想</a>
 
@@ -293,7 +293,7 @@
 
 						<li >
 
-							<a href="">
+							<a href="/admin/education/social">
 
 							社会链接</a>
 

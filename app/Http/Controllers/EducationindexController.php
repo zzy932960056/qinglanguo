@@ -177,5 +177,106 @@ class EducationindexController extends Controller
 				}
 		}
 
+		public function art(){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$data = [];
+				$art = DB::table('edu_art')->get();
+				$data['art'] = $art;
+				return view('admin_edu_art',$data);
+		}
+
+		public function art_update($id){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$bid = $id;
+				$art = DB::table('edu_art')->where(['id'=>$bid])->get();
+				$data = [];
+				$data['art'] = (array)$art[0];
+				return view('qlg_edu_art_update',$data);
+		}
+
+		public function art_doUpdate($id){
+				$art_pic1 = $_POST['art_pic1'];
+				$art_text1 = $_POST['art_text1'];
+				if($art_pic1 == ''){
+						echo "<script>alert('图片路径不能为空')</script>";
+						return self::art_update($id);
+				}else if($art_text1 == ''){
+						echo "<script>alert('段落文本不能为空')</script>";
+						return self::art_update($id);
+				}
+				$num = DB::table('edu_art')->where('id',$id)->update(
+								['art_pic1'=>$art_pic1,
+								'art_text1'=>$art_text1]
+						);
+				if($num == 1){
+						echo "<script>alert('信息修改成功')</script>";
+						 return self::art();
+				}else{
+						echo "<script>alert('发生未知错误,信息修改失败,请重新修改')</script>";
+						return self::art_update($id);
+				}
+		}
+
+		public function social(){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$data = [];
+				$social = DB::table('edu_social')->get();
+				$data['social'] = $social;
+				return view('admin_edu_social',$data);
+		}
+
+		public function social_update($id){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$bid = $id;
+				$social = DB::table('edu_social')->where(['id'=>$bid])->get();
+				$data = [];
+				$data['social'] = (array)$social[0];
+				return view('qlg_edu_social_update',$data);
+		}
+
+		public function social_doUpdate($id){
+				$soc_pic1 = $_POST['soc_pic1'];
+				$soc_text1 = $_POST['soc_text1'];
+				$soc_text2 = $_POST['soc_text2'];
+				$soc_pic2 = $_POST['soc_pic2'];
+				if($soc_pic1 == ''){
+						echo "<script>alert('图片1路径不能为空')</script>";
+						return self::social_update($id);
+				}else if($soc_text1 == ''){
+						echo "<script>alert('段落文本1不能为空')</script>";
+						return self::social_update($id);
+				}else if($soc_text2 == ''){
+						echo "<script>alert('段落文本2不能为空')</script>";
+						return self::social_update($id);
+				}else if($soc_pic2 == ''){
+						echo "<script>alert('图片2路径不能为空')</script>";
+						return self::social_update($id);
+				}
+				$num = DB::table('edu_social')->where('id',$id)->update(
+								['soc_pic1'=>$soc_pic1,
+								'soc_text1'=>$soc_text1,
+								'soc_text2'=>$soc_text2,
+								'soc_pic2'=>$soc_pic2]
+						);
+				if($num == 1){
+						echo "<script>alert('信息修改成功')</script>";
+						 return self::social();
+				}else{
+						echo "<script>alert('发生未知错误,信息修改失败,请重新修改')</script>";
+						return self::social_update($id);
+				}
+		}
 
 }
