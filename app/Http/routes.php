@@ -303,6 +303,15 @@ Route::get('/admin/education/social','EducationindexController@social');
 Route::get('/admin/education/social_update/{id}','EducationindexController@social_update');
 //do青蓝果教育(社会链接)编辑
 Route::post('/admin/education/social/doupdate/{id}','EducationindexController@social_doUpdate')->where('id', '[0-9]+');
+//青蓝果教育(师资力量)
+Route::get('/admin/education/teach','EducationindexController@teach');
+//青蓝果教育(师资力量)编辑
+Route::get('/admin/education/teach_update/{id}','EducationindexController@teach_update');
+//do蓝果教育(师资力量)编辑
+Route::post('/admin/education/teach/doupdate/{id}','EducationindexController@teach_doUpdate')->where('id', '[0-9]+');
+
+
+
 
 
 

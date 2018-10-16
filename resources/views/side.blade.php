@@ -301,7 +301,7 @@
 
 						<li >
 
-							<a href="">
+							<a href="/admin/education/teach">
 
 							师资力量</a>
 
