@@ -339,6 +339,26 @@ Route::get('/admin/culture/purpose','CultureindexController@purpose');
 Route::get('/admin/culture/purpose_update/{id}','CultureindexController@purpose_update');
 //do青蓝果文化-园所理念-办园宗旨编辑
 Route::post('/admin/culture/purpose/doupdate/{id}','CultureindexController@purpose_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-园所理念-园训
+Route::get('/admin/culture/teach','CultureindexController@teach');
+//青蓝果文化-园所理念-园训编辑
+Route::get('/admin/culture/teach_update/{id}','CultureindexController@teach_update');
+//do青蓝果文化-园所理念-园训编辑
+Route::post('/admin/culture/teach/doupdate/{id}','CultureindexController@teach_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-园所理念-团队文化
+Route::get('/admin/culture/team','CultureindexController@team');
+//青蓝果文化-园所理念-团队文化编辑
+Route::get('/admin/culture/team_update/{id}','CultureindexController@team_update');
+//do青蓝果文化-园所理念-团队文化编辑
+Route::post('/admin/culture/team/doupdate/{id}','CultureindexController@team_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-视觉形象-标志
+Route::get('/admin/vision/logo','VisionindexController@logo');
+//青蓝果文化-视觉形象-标志编辑
+Route::get('/admin/vision/logo_update/{id}','VisionindexController@logo_update');
+//do青蓝果文化-视觉形象-标志编辑
+Route::post('/admin/vision/logo/doupdate/{id}','VisionindexController@logo_doUpdate')->where('id', '[0-9]+');
+
+
 
 
 

@@ -264,70 +264,115 @@ class CultureindexController extends Controller
 				}
 		}
 
-		// public function teach(){
-		// 		@session_start();
-		// 		if(!isset($_SESSION['admin_name'])){
-		// 				return redirect('/admin/login');
-		// 		}
-		// 		$data = [];
-		// 		$teach = DB::table('edu_teach')->get();
-		// 		$data['teach'] = $teach;
-		// 		return view('admin_edu_teach',$data);
-		// }
-		//
-		// public function teach_update($id){
-		// 		@session_start();
-		// 		if(!isset($_SESSION['admin_name'])){
-		// 				return redirect('/admin/login');
-		// 		}
-		// 		$bid = $id;
-		// 		$teach = DB::table('edu_teach')->where(['id'=>$bid])->get();
-		// 		$data = [];
-		// 		$data['teach'] = (array)$teach[0];
-		// 		return view('qlg_edu_teach_update',$data);
-		// }
-		//
-		// public function teach_doUpdate($id){
-		// 		$k_pic1 = $_POST['k_pic1'];
-		// 		$k_name = $_POST['k_name'];
-		// 		$k_position = $_POST['k_position'];
-		// 		$k_text1 = $_POST['k_text1'];
-		// 		$k_text2 = $_POST['k_text2'];
-		// 		$k_pic2 = $_POST['k_pic2'];
-		// 		if($k_pic1 == ''){
-		// 				echo "<script>alert('园长头图路径不能为空')</script>";
-		// 				return self::teach_update($id);
-		// 		}else if($k_name == ''){
-		// 				echo "<script>alert('姓名不能为空')</script>";
-		// 				return self::teach_update($id);
-		// 		}else if($k_position == ''){
-		// 				echo "<script>alert('职位不能为空')</script>";
-		// 				return self::teach_update($id);
-		// 		}else if($k_text1 == ''){
-		// 				echo "<script>alert('文本简介1不能为空')</script>";
-		// 				return self::teach_update($id);
-		// 		}else if($k_text2 == ''){
-		// 				echo "<script>alert('文本简介2不能为空')</script>";
-		// 				return self::teach_update($id);
-		// 		}else if($k_pic2 == ''){
-		// 				echo "<script>alert('副园长图片路径不能为空')</script>";
-		// 				return self::teach_update($id);
-		// 		}
-		// 		$num = DB::table('edu_teach')->where('id',$id)->update(
-		// 						['k_pic1'=>$k_pic1,
-		// 						'k_name'=>$k_name,
-		// 						'k_position'=>$k_position,
-		// 						'k_text1'=>$k_text1,
-		// 						'k_text2'=>$k_text2,
-		// 						'k_pic2'=>$k_pic2]
-		// 				);
-		// 		if($num == 1){
-		// 				echo "<script>alert('信息修改成功')</script>";
-		// 				 return self::teach();
-		// 		}else{
-		// 				echo "<script>alert('发生未知错误,信息修改失败,请重新修改')</script>";
-		// 				return self::teach_update($id);
-		// 		}
-		// }
+		public function teach(){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$data = [];
+				$teach = DB::table('cul_teach')->get();
+				$data['teach'] = $teach;
+				return view('admin_cul_teach',$data);
+		}
 
+		public function teach_update($id){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$bid = $id;
+				$teach = DB::table('cul_teach')->where(['id'=>$bid])->get();
+				$data = [];
+				$data['teach'] = (array)$teach[0];
+				return view('qlg_cul_teach_update',$data);
+		}
+
+		public function teach_doUpdate($id){
+				$tea_pic1 = $_POST['tea_pic1'];
+				$tea_pic2 = $_POST['tea_pic2'];
+				$tea_pic3 = $_POST['tea_pic3'];
+				$tea_text1 = $_POST['tea_text1'];
+				$tea_text2 = $_POST['tea_text2'];
+				if($tea_pic1 == ''){
+						echo "<script>alert('图片1路径不能为空')</script>";
+						return self::teach_update($id);
+				}else if($tea_pic2 == ''){
+						echo "<script>alert('图片2路径不能为空')</script>";
+						return self::teach_update($id);
+				}else if($tea_pic3 == ''){
+						echo "<script>alert('图片3路径不能为空')</script>";
+						return self::teach_update($id);
+				}else if($tea_text1 == ''){
+						echo "<script>alert('文本简介1不能为空')</script>";
+						return self::teach_update($id);
+				}else if($tea_text2 == ''){
+						echo "<script>alert('文本简介2不能为空')</script>";
+						return self::teach_update($id);
+				}
+				$num = DB::table('cul_teach')->where('id',$id)->update(
+								['tea_pic1'=>$tea_pic1,
+								'tea_pic2'=>$tea_pic2,
+								'tea_pic3'=>$tea_pic3,
+								'tea_text1'=>$tea_text1,
+								'tea_text2'=>$tea_text2]
+						);
+				if($num == 1){
+						echo "<script>alert('信息修改成功')</script>";
+						 return self::teach();
+				}else{
+						echo "<script>alert('发生未知错误,信息修改失败,请重新修改')</script>";
+						return self::teach_update($id);
+				}
+		}
+
+		public function team(){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$data = [];
+				$team = DB::table('cul_team')->get();
+				$data['team'] = $team;
+				return view('admin_cul_team',$data);
+		}
+
+		public function team_update($id){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$bid = $id;
+				$team = DB::table('cul_team')->where(['id'=>$bid])->get();
+				$data = [];
+				$data['team'] = (array)$team[0];
+				return view('qlg_cul_team_update',$data);
+		}
+
+		public function team_doUpdate($id){
+				$team_pic = $_POST['team_pic'];
+				$team_text1 = $_POST['team_text1'];
+				$team_text2 = $_POST['team_text2'];
+				if($team_pic == ''){
+						echo "<script>alert('图片路径不能为空')</script>";
+						return self::team_update($id);
+				}else if($team_text1 == ''){
+					echo "<script>alert('文本1不能为空')</script>";
+					return self::team_update($id);
+				}else if($team_text2 == ''){
+					echo "<script>alert('文本2不能为空')</script>";
+					return self::team_update($id);
+				}
+				$num = DB::table('cul_team')->where('id',$id)->update(
+								['team_pic'=>$team_pic,
+								'team_text1'=>$team_text1,
+								'team_text2'=>$team_text2]
+						);
+				if($num == 1){
+						echo "<script>alert('信息修改成功')</script>";
+						 return self::team();
+				}else{
+						echo "<script>alert('发生未知错误,信息修改失败,请重新修改')</script>";
+						return self::team_update($id);
+				}
+		}
 }

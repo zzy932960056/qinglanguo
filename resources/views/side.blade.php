@@ -349,9 +349,9 @@
 
 								<li><a href="/admin/culture/purpose">办园宗旨</a></li>
 
-								<li><a href="">园训</a></li>
+								<li><a href="/admin/culture/teach">园训</a></li>
 
-								<li><a href="">团队文化</a></li>
+								<li><a href="/admin/culture/team">团队文化</a></li>
 
 							</ul>
 
@@ -371,7 +371,7 @@
 
 							<ul class="sub-menu">
 
-								<li><a href="">标志</a></li>
+								<li><a href="/admin/vision/logo">标志</a></li>
 
 								<li><a href="">吉祥物</a></li>
 
