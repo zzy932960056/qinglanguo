@@ -311,6 +311,104 @@
 
 				</li>
 
+				<li>
+
+					<a class="active" href="javascript:;">
+
+					<i class="icon-briefcase"></i>
+
+					<span class="title">青蓝果文化</span>
+
+					<span class="arrow "></span>
+
+					</a>
+
+					<ul class="sub-menu">
+
+						<li>
+
+							<a href="javascript:;">
+
+							<span class="icon-cogs"></span>
+
+							园所理念
+
+							<span class="arrow"></span>
+
+							</a>
+
+							<ul class="sub-menu">
+
+								<li><a href="/admin/culture/analysis">青蓝果解析</a></li>
+
+								<li><a href="/admin/culture/spirit">青蓝精神</a></li>
+
+								<li><a href="/admin/culture/slogan">青蓝果标语</a></li>
+
+								<li><a href="/admin/culture/idea">办园理念</a></li>
+
+								<li><a href="/admin/culture/purpose">办园宗旨</a></li>
+
+								<li><a href="">园训</a></li>
+
+								<li><a href="">团队文化</a></li>
+
+							</ul>
+
+						</li>
+
+						<li>
+
+							<a href="javascript:;">
+
+							<span class="icon-cogs"></span>
+
+							视觉形象
+
+							<span class="arrow"></span>
+
+							</a>
+
+							<ul class="sub-menu">
+
+								<li><a href="">标志</a></li>
+
+								<li><a href="">吉祥物</a></li>
+
+								<li><a href="">园服</a></li>
+
+							</ul>
+
+						</li>
+
+						<li>
+
+							<a href="">
+
+							<span class="icon-cogs"></span>
+
+							环境文化
+
+							</a>
+
+						</li>
+
+						<li>
+
+							<a href="">
+
+							<span class="icon-cogs"></span>
+
+							食育文化
+
+							</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
 				<!-- <li class="">
 
 					<a href="javascript:;">

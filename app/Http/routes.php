@@ -309,6 +309,41 @@ Route::get('/admin/education/teach','EducationindexController@teach');
 Route::get('/admin/education/teach_update/{id}','EducationindexController@teach_update');
 //do蓝果教育(师资力量)编辑
 Route::post('/admin/education/teach/doupdate/{id}','EducationindexController@teach_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-园所理念-青蓝果解析
+Route::get('/admin/culture/analysis','CultureindexController@analysis');
+//青蓝果文化-园所理念-青蓝果解析编辑
+Route::get('/admin/culture/analysis_update/{id}','CultureindexController@analysis_update');
+//do青蓝果文化-园所理念-青蓝果解析编辑
+Route::post('/admin/culture/analysis/doupdate/{id}','CultureindexController@analysis_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-园所理念-青蓝精神
+Route::get('/admin/culture/spirit','CultureindexController@spirit');
+//青蓝果文化-园所理念-青蓝精神编辑
+Route::get('/admin/culture/spirit_update/{id}','CultureindexController@spirit_update');
+//do青蓝果文化-园所理念-青蓝精神编辑
+Route::post('/admin/culture/spirit/doupdate/{id}','CultureindexController@spirit_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-园所理念-青蓝果标语
+Route::get('/admin/culture/slogan','CultureindexController@slogan');
+//青蓝果文化-园所理念-青蓝果标语编辑
+Route::get('/admin/culture/slogan_update/{id}','CultureindexController@slogan_update');
+//do青蓝果文化-园所理念-青蓝果标语编辑
+Route::post('/admin/culture/slogan/doupdate/{id}','CultureindexController@slogan_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-园所理念-办园理念
+Route::get('/admin/culture/idea','CultureindexController@idea');
+//青蓝果文化-园所理念-办园理念编辑
+Route::get('/admin/culture/idea_update/{id}','CultureindexController@idea_update');
+//do青蓝果文化-园所理念-办园理念编辑
+Route::post('/admin/culture/idea/doupdate/{id}','CultureindexController@idea_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-园所理念-办园宗旨
+Route::get('/admin/culture/purpose','CultureindexController@purpose');
+//青蓝果文化-园所理念-办园宗旨编辑
+Route::get('/admin/culture/purpose_update/{id}','CultureindexController@purpose_update');
+//do青蓝果文化-园所理念-办园宗旨编辑
+Route::post('/admin/culture/purpose/doupdate/{id}','CultureindexController@purpose_doUpdate')->where('id', '[0-9]+');
+
+
+
+
+
 
 
 
