@@ -137,7 +137,7 @@
 
 					<a target='_blank' href="/admin/upload">
 
-					<i class="icon-briefcase"></i>
+					<i class="icon-table"></i>
 
 					<span class="title">文件上传</span>
 
@@ -149,7 +149,7 @@
 
 					<a href="javascript:;">
 
-					<i class="icon-table"></i>
+					<i class="icon-briefcase"></i>
 
 					<span class="title">青蓝果首页</span>
 
@@ -191,7 +191,7 @@
 
 					<a href="javascript:;">
 
-					<i class="icon-table"></i>
+					<i class="icon-briefcase"></i>
 
 					<span class="title">青蓝果之家</span>
 
@@ -249,7 +249,7 @@
 
 					<a href="javascript:;">
 
-					<i class="icon-table"></i>
+					<i class="icon-briefcase"></i>
 
 					<span class="title">青蓝果教育</span>
 
@@ -373,9 +373,9 @@
 
 								<li><a href="/admin/vision/logo">标志</a></li>
 
-								<li><a href="">吉祥物</a></li>
+								<li><a href="/admin/vision/mascot">吉祥物</a></li>
 
-								<li><a href="">园服</a></li>
+								<li><a href="/admin/vision/clothes">园服</a></li>
 
 							</ul>
 
@@ -383,7 +383,7 @@
 
 						<li>
 
-							<a href="">
+							<a href="/admin/env">
 
 							<span class="icon-cogs"></span>
 
@@ -395,7 +395,7 @@
 
 						<li>
 
-							<a href="">
+							<a href="/admin/food">
 
 							<span class="icon-cogs"></span>
 

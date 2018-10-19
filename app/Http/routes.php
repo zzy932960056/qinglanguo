@@ -357,6 +357,35 @@ Route::get('/admin/vision/logo','VisionindexController@logo');
 Route::get('/admin/vision/logo_update/{id}','VisionindexController@logo_update');
 //do青蓝果文化-视觉形象-标志编辑
 Route::post('/admin/vision/logo/doupdate/{id}','VisionindexController@logo_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-视觉形象-吉祥物
+Route::get('/admin/vision/mascot','VisionindexController@mascot');
+//青蓝果文化-视觉形象-吉祥物编辑
+Route::get('/admin/vision/mascot_update/{id}','VisionindexController@mascot_update');
+//do青蓝果文化-视觉形象-吉祥物编辑
+Route::post('/admin/vision/mascot/doupdate/{id}','VisionindexController@mascot_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-视觉形象-园服
+Route::get('/admin/vision/clothes','VisionindexController@clothes');
+//青蓝果文化-视觉形象-园服编辑
+Route::get('/admin/vision/clothes_update/{id}','VisionindexController@clothes_update');
+//do青蓝果文化-视觉形象-园服编辑
+Route::post('/admin/vision/clothes/doupdate/{id}','VisionindexController@clothes_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-环境文化
+Route::get('/admin/env','EnvindexController@env');
+//青蓝果文化-环境文化编辑
+Route::get('/admin/env_update/{id}','EnvindexController@env_update');
+//do青蓝果文化-环境文化编辑
+Route::post('/admin/env/doupdate/{id}','EnvindexController@env_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-食育文化
+Route::get('/admin/food','FoodindexController@food');
+//青蓝果文化-食育文化编辑
+Route::get('/admin/food_update/{id}','FoodindexController@food_update');
+//do青蓝果文化-食育文化编辑
+Route::post('/admin/food/doupdate/{id}','FoodindexController@food_doUpdate')->where('id', '[0-9]+');
+
+
+
+
+
 
 
 
