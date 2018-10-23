@@ -381,6 +381,13 @@ Route::get('/admin/food','FoodindexController@food');
 Route::get('/admin/food_update/{id}','FoodindexController@food_update');
 //do青蓝果文化-食育文化编辑
 Route::post('/admin/food/doupdate/{id}','FoodindexController@food_doUpdate')->where('id', '[0-9]+');
+//青蓝果动态头图
+Route::get('/admin/news/picture','NewsindexController@picture');
+//青蓝果动态头图编辑
+Route::get('/admin/news/picture_update/{id}','NewsindexController@picture_update');
+//do青蓝果动态头图编辑
+Route::post('/admin/news/picture/doupdate/{id}','NewsindexController@picture_doUpdate')->where('id', '[0-9]+');
+
 
 
 

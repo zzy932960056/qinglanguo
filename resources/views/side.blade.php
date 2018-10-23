@@ -409,6 +409,48 @@
 
 				</li>
 
+				<li>
+
+					<a class="active" href="javascript:;">
+
+					<i class="icon-briefcase"></i>
+
+					<span class="title">青蓝果动态</span>
+
+					<span class="arrow "></span>
+
+					</a>
+
+					<ul class="sub-menu">
+
+						<li>
+
+							<a href="/admin/news/picture">
+
+							<span class="icon-cogs"></span>
+
+							动态头图
+
+							</a>
+
+						</li>
+
+						<li>
+
+							<a href="">
+
+							<span class="icon-cogs"></span>
+
+							青蓝果动态
+
+							</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+
 				<!-- <li class="">
 
 					<a href="javascript:;">
