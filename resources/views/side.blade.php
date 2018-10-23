@@ -437,7 +437,7 @@
 
 						<li>
 
-							<a href="">
+							<a href="/admin/news">
 
 							<span class="icon-cogs"></span>
 
