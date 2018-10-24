@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>青蓝果动态管理</title>
+	<title>青蓝果动态详情管理</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -71,6 +71,7 @@
 		<div class="page-content">
 
 			<!-- BEGIN PAGE CONTAINER-->
+
 			<div class="container-fluid">
 
 				<!-- BEGIN PAGE HEADER-->
@@ -85,11 +86,11 @@
 
 						<!-- END BEGIN STYLE CUSTOMIZER -->
 
-						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
-
 						<h3 class="page-title">
 
-							青蓝果动态管理 <small>青蓝果动态</small>
+							青蓝果动态管理
+
+							 <small>青蓝果动态详情大图片新增</small>
 
 						</h3>
 
@@ -99,23 +100,15 @@
 
 								<i class="icon-home"></i>
 
-								<a href="/admin/news">青蓝果动态</a>
+								<a href="/admin/news">青蓝果动态管理</a>
 
-								<i class="icon-angle-right"></i>
-
-							</li>
-
-							<li>
-
-								<a href="#">青蓝果动态</a>
-
-								<i class="icon-angle-right"></i>
+								<span class="icon-angle-right"></span>
 
 							</li>
+
+							<li><a href="#">青蓝果动态详情大图片新增</a></li>
 
 						</ul>
-
-						<!-- END PAGE TITLE & BREADCRUMB-->
 
 					</div>
 
@@ -129,114 +122,97 @@
 
 					<div class="span12">
 
-						<!-- BEGIN EXAMPLE TABLE PORTLET-->
+						<!-- BEGIN SAMPLE FORM PORTLET-->
 
-						<div class="portlet box blue">
+						<div class="portlet box blue tabbable">
 
 							<div class="portlet-title">
 
-								<div class="caption"><i class="icon-edit"></i>青蓝果动态列表</div>
+								<div class="caption">
 
-								<div class="tools">
+									<i class="icon-reorder"></i>
 
-									<a href="javascript:;" class="collapse"></a>
-
-									<a href="#portlet-config" data-toggle="modal" class="config"></a>
-
-									<a href="javascript:;" class="reload"></a>
-
-									<a href="javascript:;" class="remove"></a>
+									<span class="hidden-480">青蓝果动态详情大图片新增</span>
 
 								</div>
 
 							</div>
 
-							<div class="portlet-body">
+							<div class="portlet-body form">
 
-								<div class="clearfix">
+								<div class="tabbable portlet-tabs">
 
-									<div class="btn-group">
+									<ul class="nav nav-tabs">
 
-										<button id="sample_editable_1_new" class="btn green">
+										<li class="active"><a href="#portlet_tab1" data-toggle="tab">青蓝果动态详情大图片新增</a></li>
 
-										新增 <i class="icon-plus"></i>
+									</ul>
 
-										</button>
+									<div class="tab-content">
+
+										<div class="tab-pane active" id="portlet_tab1">
+
+											<!-- BEGIN FORM-->
+
+											<form action="/admin/news/details/big_pic/doinsert" class="form-horizontal" method="post">
+
+												<div class="control-group">
+
+													<label class="control-label">青蓝果动态详情大图片路径</label>
+
+													<div class="controls">
+
+														<input type="text" name="news_pic_b" placeholder="请输入青蓝果动态详情大图片路径" class="m-wrap huge" />
+
+														<span class="help-inline">请输入青蓝果动态详情大图片路径</span>
+
+													</div>
+
+												</div>
+
+												<div class="control-group">
+
+													<label class="control-label">所属动态id</label>
+
+													<div class="controls">
+
+														<input type="text" name="news_id" value="{{$news_id}}" readonly class="m-wrap huge" />
+
+													</div>
+
+												</div>
+
+												<div class="form-actions">
+
+													<button type="submit" class="btn blue"><i class="icon-ok"></i> 保存</button>
+
+													<button type="reset" class="btn">重置</button>
+
+												</div>
+
+											</form>
+
+											<!-- END FORM-->
+
+										</div>
 
 									</div>
 
 								</div>
 
-								<table class="table table-striped table-hover table-bordered" id="sample_editable_1">
-
-									<thead>
-
-										<tr>
-
-											<th>青蓝果动态ID</th>
-
-											<th>青蓝果动态标题</th>
-
-											<th>青蓝果动态日期</th>
-
-											<th>青蓝果动态季节</th>
-
-											<th>青蓝果动态类别</th>
-
-											<th>青蓝果动态详情</th>
-
-											<th>编辑</th>
-
-											<th>删除</th>
-
-										</tr>
-
-									</thead>
-
-									<tbody>
-										@foreach($news as $ne)
-										<tr class="">
-
-											<td>{{$ne->id}}</td>
-
-											<td>{{$ne->news_title}}</td>
-
-											<td>{{$ne->news_date}}</td>
-
-											<td>{{$ne->news_season}}</td>
-
-											<td>{{$ne->news_sort}}</td>
-
-											<td><a href="/admin/news/details/{{$ne->id}}">动态详情</a></td>
-
-											<td><a href="/admin/news/update/{{$ne->id}}">编辑</a></td>
-
-											<td><a class="delete" href="javascript:;">删除</a></td>
-
-										</tr>
-										@endforeach
-									</tbody>
-
-								</table>
-								<!-- 分页 -->
-								<div class="pull-right">
-									{{$news->render()}}
-								</div>
-								<style type="text/css">
-									.pagination li{float: left; list-style: none;
-										margin: 0 10px; padding: 5px; font-size: 18px;
-										 margin-top: 30px; }
-								</style>
-								<!-- 分页结束 -->
 							</div>
 
 						</div>
 
-						<!-- END EXAMPLE TABLE PORTLET-->
+						<!-- END SAMPLE FORM PORTLET-->
 
 					</div>
 
 				</div>
+
+				<!-- END PAGE CONTENT-->
+
+			</div>
 
 			<!-- END PAGE CONTAINER-->
 
@@ -297,36 +273,6 @@
 		   App.init();
 
 		});
-
-		$("#sample_editable_1_new").click(
-			function(){
-				location.href = "/admin/news/insert";
-			}
-		)
-
-		$(".delete").click(
-				function(othis){
-					if(confirm('确认删除?') == false){
-						return false;
-					}
-					var data = this.parentNode.parentNode.firstChild.nextSibling.innerHTML;
-					$.ajax({
-						url:"/admin/news/dodelete",
-						type:"post",
-						data:{'mid':data},
-						success:function(content){
-							if(content.msg == 'ok'){
-								alert('删除动态成功');
-								location.href = "/admin/news";
-							}else if(content.msg == 'no'){
-								alert('发生未知错误');
-								location.href = "/admin/news";
-							}
-						},
-						dataType:"json"
-					})
-				}
-			)
 
 	</script>
 

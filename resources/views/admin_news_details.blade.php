@@ -12,7 +12,7 @@
 
 	<meta charset="utf-8" />
 
-	<title>青蓝果动态管理</title>
+	<title>青蓝果动态详情管理</title>
 
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
@@ -89,7 +89,7 @@
 
 						<h3 class="page-title">
 
-							青蓝果动态管理 <small>青蓝果动态</small>
+							青蓝果动态管理 <small>青蓝果动态详情</small>
 
 						</h3>
 
@@ -99,7 +99,7 @@
 
 								<i class="icon-home"></i>
 
-								<a href="/admin/news">青蓝果动态</a>
+								<a href="/admin/news">青蓝果动态管理</a>
 
 								<i class="icon-angle-right"></i>
 
@@ -107,9 +107,7 @@
 
 							<li>
 
-								<a href="#">青蓝果动态</a>
-
-								<i class="icon-angle-right"></i>
+								<a href="#">青蓝果动态详情</a>
 
 							</li>
 
@@ -135,7 +133,7 @@
 
 							<div class="portlet-title">
 
-								<div class="caption"><i class="icon-edit"></i>青蓝果动态列表</div>
+								<div class="caption"><i class="icon-edit"></i>青蓝果动态详情</div>
 
 								<div class="tools">
 
@@ -159,31 +157,54 @@
 
 										<button id="sample_editable_1_new" class="btn green">
 
-										新增 <i class="icon-plus"></i>
+										添加文本 <i class="icon-plus"></i>
 
 										</button>
 
 									</div>
 
+									<div class="btn-group">
+
+										<button id="sample_editable_2_new" class="btn green">
+
+										添加大图片 <i class="icon-plus"></i>
+
+										</button>
+
+									</div>
+
+									<div class="btn-group">
+
+										<button id="sample_editable_3_new" class="btn green">
+
+										添加小图片 <i class="icon-plus"></i>
+
+										</button>
+
+									</div>
+
+									<div class="btn-group">
+
+										<button id="sample_editable_4_new" class="btn green">
+
+										添加视频 <i class="icon-plus"></i>
+
+										</button>
+
+									</div>
+
+										<input type = "hidden" id="hidden" value="{{$nid}}" />
+
 								</div>
 
 								<table class="table table-striped table-hover table-bordered" id="sample_editable_1">
-
 									<thead>
 
 										<tr>
 
-											<th>青蓝果动态ID</th>
+											<th>ID</th>
 
-											<th>青蓝果动态标题</th>
-
-											<th>青蓝果动态日期</th>
-
-											<th>青蓝果动态季节</th>
-
-											<th>青蓝果动态类别</th>
-
-											<th>青蓝果动态详情</th>
+											<th>内容详情</th>
 
 											<th>编辑</th>
 
@@ -193,41 +214,88 @@
 
 									</thead>
 
+									@foreach($details as $de)
+									<input type="hidden" id="news_id" value="{{$de->news_id}}">
+									@if($de->news_text)
+
 									<tbody>
-										@foreach($news as $ne)
+
 										<tr class="">
 
-											<td>{{$ne->id}}</td>
+											<td>{{$de->id}}</td>
 
-											<td>{{$ne->news_title}}</td>
+											<td>{{$de->news_text}}</td>
 
-											<td>{{$ne->news_date}}</td>
-
-											<td>{{$ne->news_season}}</td>
-
-											<td>{{$ne->news_sort}}</td>
-
-											<td><a href="/admin/news/details/{{$ne->id}}">动态详情</a></td>
-
-											<td><a href="/admin/news/update/{{$ne->id}}">编辑</a></td>
+											<td><a href="/admin/news_class/details/update/{{$de->id}}">编辑</a></td>
 
 											<td><a class="delete" href="javascript:;">删除</a></td>
 
 										</tr>
-										@endforeach
-									</tbody>
 
+									</tbody>
+									@elseif($de->news_pic_b)
+
+									<tbody>
+
+										<tr class="">
+
+											<td>{{$de->id}}</td>
+
+											<td><img src="{{$de->news_pic_b}}" width="50%"><span>大图</span></td>
+
+											<td><a href="/admin/news_class/details/update/{{$de->id}}">编辑</a></td>
+
+											<td><a class="delete" href="javascript:;">删除</a></td>
+
+										</tr>
+
+									</tbody>
+									@elseif($de->news_pic_s1)
+
+									<tbody>
+
+										<tr class="">
+
+											<td>{{$de->id}}</td>
+
+											<td>
+												<img src="{{$de->news_pic_s1}}" width="20%"><span>小图1</span>
+												<img src="{{$de->news_pic_s2}}" width="20%"><span>小图2</span>
+												<img src="{{$de->news_pic_s3}}" width="20%"><span>小图3</span>
+											</td>
+
+											<td><a href="/admin/news_class/details/update/{{$de->id}}">编辑</a></td>
+
+											<td><a class="delete" href="javascript:;">删除</a></td>
+
+										</tr>
+
+									</tbody>
+									@elseif($de->news_video)
+
+									<tbody>
+
+										<tr class="">
+
+											<td>{{$de->id}}</td>
+
+											<td>
+												<div><video src="{{$de->news_video}}" width="50%" controls="controls"></video><span>视频</span></div>
+
+												<div><img src="{{$de->news_video_pic}}" width="50%"><span>视频封面图</span></div>
+											</td>
+
+											<td><a href="/admin/news_class/details/update/{{$de->id}}">编辑</a></td>
+
+											<td><a class="delete" href="javascript:;">删除</a></td>
+
+										</tr>
+
+									</tbody>
+									@endif
+								@endforeach
 								</table>
-								<!-- 分页 -->
-								<div class="pull-right">
-									{{$news->render()}}
-								</div>
-								<style type="text/css">
-									.pagination li{float: left; list-style: none;
-										margin: 0 10px; padding: 5px; font-size: 18px;
-										 margin-top: 30px; }
-								</style>
-								<!-- 分页结束 -->
+
 							</div>
 
 						</div>
@@ -299,10 +367,32 @@
 		});
 
 		$("#sample_editable_1_new").click(
-			function(){
-				location.href = "/admin/news/insert";
-			}
-		)
+				function(){
+					var hid = $('#hidden').val();
+					location.href = "/admin/news/details/text/insert/"+hid;
+				}
+			)
+
+		$("#sample_editable_2_new").click(
+				function(){
+					var hid = $('#hidden').val();
+					location.href = "/admin/news/details/big_pic/insert/"+hid;
+				}
+			)
+
+		$("#sample_editable_3_new").click(
+				function(){
+					var hid = $('#hidden').val();
+					location.href = "/admin/news/details/small_pic/insert/"+hid;
+				}
+			)
+
+		$("#sample_editable_4_new").click(
+				function(){
+					var hid = $('#hidden').val();
+					location.href = "/admin/news/details/video/insert/"+hid;
+				}
+			)
 
 		$(".delete").click(
 				function(othis){
@@ -310,24 +400,24 @@
 						return false;
 					}
 					var data = this.parentNode.parentNode.firstChild.nextSibling.innerHTML;
+					var news_id = $("#news_id").val();
 					$.ajax({
-						url:"/admin/news/dodelete",
+						url:"/admin/news/details/dodelete",
 						type:"post",
 						data:{'mid':data},
 						success:function(content){
 							if(content.msg == 'ok'){
-								alert('删除动态成功');
-								location.href = "/admin/news";
+								alert('删除成功');
+								location.href = "/admin/news/details/"+news_id;
 							}else if(content.msg == 'no'){
 								alert('发生未知错误');
-								location.href = "/admin/news";
+								location.href = "/admin/news/details/"+news_id;
 							}
 						},
 						dataType:"json"
 					})
 				}
 			)
-
 	</script>
 
 	<!-- END JAVASCRIPTS -->

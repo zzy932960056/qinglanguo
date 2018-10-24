@@ -399,23 +399,33 @@ Route::post('/admin/news/doinsert','NewsindexController@news_doInsert');
 Route::get('/admin/news/update/{id}','NewsindexController@news_update')->where('id', '[0-9]+');
 //do青蓝果动态编辑
 Route::post('/admin/news/doupdate/{id}','NewsindexController@news_doUpdate')->where('id', '[0-9]+');
+//青蓝果动态详情展示
+Route::get('/admin/news/details/{id}','NewsindexController@news_details')->where('id', '[0-9]+');
+//青蓝果动态详情删除
+Route::post('/admin/news/details/dodelete','NewsindexController@news_details_doDelete');
+//青蓝果动态文本新增
+Route::any('/admin/news/details/text/insert/{id}','NewsindexController@news_details_text_insert')->where('id', '[0-9]+');
+//do青蓝果动态文本新增
+Route::post('/admin/news/details/text/doinsert','NewsindexController@news_details_text_doInsert');
+//青蓝果动态大图片新增
+Route::any('/admin/news/details/big_pic/insert/{id}','NewsindexController@news_details_big_pic_insert')->where('id', '[0-9]+');
+//do青蓝果动态大图片新增
+Route::post('/admin/news/details/big_pic/doinsert','NewsindexController@news_details_big_pic_doInsert');
+//青蓝果动态小图片新增
+Route::any('/admin/news/details/small_pic/insert/{id}','NewsindexController@news_details_small_pic_insert')->where('id', '[0-9]+');
+//do青蓝果动态小图片新增
+Route::post('/admin/news/details/small_pic/doinsert','NewsindexController@news_details_small_pic_doInsert');
+//青蓝果动态视频新增
+Route::any('/admin/news/details/video/insert/{id}','NewsindexController@news_details_video_insert')->where('id', '[0-9]+');
+//do青蓝果动态视频新增
+Route::post('/admin/news/details/video/doinsert','NewsindexController@news_details_video_doInsert');
 
 
 
 
 
-// //安吉拉动态详情展示(班级活动)
-// Route::get('/admin/news_class/details/{id}','NewsindexController@news_class_details')->where('id', '[0-9]+');
-// //安吉拉动态详情展示删除(班级活动)
-// Route::post('/admin/news_class/details/dodelete','NewsindexController@news_class_details_doDelete');
-// //安吉拉动态详情展示图片新增(班级活动)
-// Route::any('/admin/news_class/details/pic/insert/{id}','NewsindexController@news_class_details_pic_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示图片新增(班级活动)
-// Route::post('/admin/news_class/details/pic/doinsert','NewsindexController@news_class_details_pic_doInsert');
-// //安吉拉动态详情展示文本新增(班级活动)
-// Route::any('/admin/news_class/details/text/insert/{id}','NewsindexController@news_class_details_text_insert')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示文本新增(班级活动)
-// Route::post('/admin/news_class/details/text/doinsert','NewsindexController@news_class_details_text_doInsert');
+
+
 // //安吉拉动态详情展示编辑(班级活动)
 // Route::get('/admin/news_class/details/update/{id}','NewsindexController@news_class_details_update')->where('id', '[0-9]+');
 // //do安吉拉动态详情展示编辑(班级活动)
