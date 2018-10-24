@@ -320,32 +320,134 @@ class NewsindexController extends Controller
 				}
 		}
 
+    public function news_details_text_update($id){
+        @session_start();
+        if(!isset($_SESSION['admin_name'])){
+            return redirect('/admin/login');
+        }
+        $wid = $id;
+        $data = [];
+        $details = DB::table('qlg_news_detail')->where('id',$wid)->get();
+        $data['details'] = (array)$details[0];
+        return view('admin_news_details_text_update',$data);
+    }
 
+    public function news_details_text_doUpdate($id){
+        $news_text = $_POST['news_text'];
+        $news_id = $_POST['news_id'];
+				if($news_text == ''){
+						echo "<script>alert('文本不能为空')</script>";
+						return self::news_details_text_update($id);
+				}
+        $num = DB::table('qlg_news_detail')->where('id',$id)->update(
+            ['news_text'=>$news_text]
+            );
+        if($num == 1){
+            return redirect('/admin/news/details/'.$news_id);
+        }else{
+            return redirect()->back();
+        }
+    }
 
-    // public function news_class_details_update($id){
-    //     @session_start();
-    //     if(!isset($_SESSION['admin_name'])){
-    //         return redirect('/admin/login');
-    //     }
-    //     $wid = $id;
-    //     $data = [];
-    //     $details = DB::table('anjila_news_details')->where('id',$wid)->get();
-    //     $data['details'] = (array)$details[0];
-    //     return view('admin_news_class_details_update',$data);
-    // }
-		//
-    // public function news_class_details_doUpdate($id){
-    //     $news_text = $_POST['news_text'];
-    //     $news_pic = $_POST['news_pic'];
-    //     $news_id = $_POST['news_id'];
-    //     $num = DB::table('anjila_news_details')->where('id',$id)->update(
-    //         ['news_text'=>$news_text,'news_pic'=>$news_pic]
-    //         );
-    //     if($num == 1){
-    //         return redirect('/admin/news_class/details/'.$news_id);
-    //     }else{
-    //         return redirect()->back();
-    //     }
-    // }
+		public function news_details_big_pic_update($id){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$wid = $id;
+				$data = [];
+				$details = DB::table('qlg_news_detail')->where('id',$wid)->get();
+				$data['details'] = (array)$details[0];
+				return view('admin_news_details_big_pic_update',$data);
+		}
 
+		public function news_details_big_pic_doUpdate($id){
+				$news_pic_b = $_POST['news_pic_b'];
+				$news_id = $_POST['news_id'];
+				if($news_pic_b == ''){
+						echo "<script>alert('大图路径不能为空')</script>";
+						return self::news_details_big_pic_update($id);
+				}
+				$num = DB::table('qlg_news_detail')->where('id',$id)->update(
+						['news_pic_b'=>$news_pic_b]
+						);
+				if($num == 1){
+						return redirect('/admin/news/details/'.$news_id);
+				}else{
+						return redirect()->back();
+				}
+		}
+
+		public function news_details_small_pic_update($id){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$wid = $id;
+				$data = [];
+				$details = DB::table('qlg_news_detail')->where('id',$wid)->get();
+				$data['details'] = (array)$details[0];
+				return view('admin_news_details_small_pic_update',$data);
+		}
+
+		public function news_details_small_pic_doUpdate($id){
+				$news_pic_s1 = $_POST['news_pic_s1'];
+				$news_pic_s2 = $_POST['news_pic_s2'];
+				$news_pic_s3 = $_POST['news_pic_s3'];
+				$news_id = $_POST['news_id'];
+				if($news_pic_s1 == ''){
+						echo "<script>alert('小图1路径不能为空')</script>";
+						return self::news_details_small_pic_update($id);
+				}else if($news_pic_s2 == ''){
+						echo "<script>alert('小图2路径不能为空')</script>";
+						return self::news_details_small_pic_update($id);
+				}else if($news_pic_s3 == ''){
+						echo "<script>alert('小图3路径不能为空')</script>";
+						return self::news_details_small_pic_update($id);
+				}
+				$num = DB::table('qlg_news_detail')->where('id',$id)->update(
+						['news_pic_s1'=>$news_pic_s1,
+						'news_pic_s2'=>$news_pic_s2,
+						'news_pic_s3'=>$news_pic_s3]
+						);
+				if($num == 1){
+						return redirect('/admin/news/details/'.$news_id);
+				}else{
+						return redirect()->back();
+				}
+		}
+
+		public function news_details_video_update($id){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$wid = $id;
+				$data = [];
+				$details = DB::table('qlg_news_detail')->where('id',$wid)->get();
+				$data['details'] = (array)$details[0];
+				return view('admin_news_details_video_update',$data);
+		}
+
+		public function news_details_video_doUpdate($id){
+				$news_video = $_POST['news_video'];
+				$news_video_pic = $_POST['news_video_pic'];
+				$news_id = $_POST['news_id'];
+				if($news_video == ''){
+						echo "<script>alert('视频路径不能为空')</script>";
+						return self::news_details_video_update($id);
+				}else if($news_video_pic == ''){
+						echo "<script>alert('视频封面图路径不能为空')</script>";
+						return self::news_details_video_update($id);
+				}
+				$num = DB::table('qlg_news_detail')->where('id',$id)->update(
+						['news_video'=>$news_video,
+						'news_video_pic'=>$news_video_pic]
+						);
+				if($num == 1){
+						return redirect('/admin/news/details/'.$news_id);
+				}else{
+						return redirect()->back();
+				}
+		}
 }

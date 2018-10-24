@@ -217,7 +217,6 @@
 									@foreach($details as $de)
 									<input type="hidden" id="news_id" value="{{$de->news_id}}">
 									@if($de->news_text)
-
 									<tbody>
 
 										<tr class="">
@@ -226,7 +225,7 @@
 
 											<td>{{$de->news_text}}</td>
 
-											<td><a href="/admin/news_class/details/update/{{$de->id}}">编辑</a></td>
+											<td><a href="/admin/news/details/text/update/{{$de->id}}">编辑</a></td>
 
 											<td><a class="delete" href="javascript:;">删除</a></td>
 
@@ -234,7 +233,6 @@
 
 									</tbody>
 									@elseif($de->news_pic_b)
-
 									<tbody>
 
 										<tr class="">
@@ -243,7 +241,7 @@
 
 											<td><img src="{{$de->news_pic_b}}" width="50%"><span>大图</span></td>
 
-											<td><a href="/admin/news_class/details/update/{{$de->id}}">编辑</a></td>
+											<td><a href="/admin/news/details/big_pic/update/{{$de->id}}">编辑</a></td>
 
 											<td><a class="delete" href="javascript:;">删除</a></td>
 
@@ -251,7 +249,6 @@
 
 									</tbody>
 									@elseif($de->news_pic_s1)
-
 									<tbody>
 
 										<tr class="">
@@ -264,7 +261,7 @@
 												<img src="{{$de->news_pic_s3}}" width="20%"><span>小图3</span>
 											</td>
 
-											<td><a href="/admin/news_class/details/update/{{$de->id}}">编辑</a></td>
+											<td><a href="/admin/news/details/small_pic/update/{{$de->id}}">编辑</a></td>
 
 											<td><a class="delete" href="javascript:;">删除</a></td>
 
@@ -272,7 +269,6 @@
 
 									</tbody>
 									@elseif($de->news_video)
-
 									<tbody>
 
 										<tr class="">
@@ -285,7 +281,7 @@
 												<div><img src="{{$de->news_video_pic}}" width="50%"><span>视频封面图</span></div>
 											</td>
 
-											<td><a href="/admin/news_class/details/update/{{$de->id}}">编辑</a></td>
+											<td><a href="/admin/news/details/video/update/{{$de->id}}">编辑</a></td>
 
 											<td><a class="delete" href="javascript:;">删除</a></td>
 

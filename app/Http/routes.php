@@ -419,20 +419,22 @@ Route::post('/admin/news/details/small_pic/doinsert','NewsindexController@news_d
 Route::any('/admin/news/details/video/insert/{id}','NewsindexController@news_details_video_insert')->where('id', '[0-9]+');
 //do青蓝果动态视频新增
 Route::post('/admin/news/details/video/doinsert','NewsindexController@news_details_video_doInsert');
-
-
-
-
-
-
-
-// //安吉拉动态详情展示编辑(班级活动)
-// Route::get('/admin/news_class/details/update/{id}','NewsindexController@news_class_details_update')->where('id', '[0-9]+');
-// //do安吉拉动态详情展示编辑(班级活动)
-// Route::post('/admin/news_class/details/doupdate/{id}','NewsindexController@news_class_details_doUpdate')->where('id', '[0-9]+');
-
-
-
+//青蓝果动态详情文本编辑
+Route::get('/admin/news/details/text/update/{id}','NewsindexController@news_details_text_update')->where('id', '[0-9]+');
+//do青蓝果动态详情文本编辑
+Route::post('/admin/news/details/text/doupdate/{id}','NewsindexController@news_details_text_doUpdate')->where('id', '[0-9]+');
+//青蓝果动态详情大图编辑
+Route::get('/admin/news/details/big_pic/update/{id}','NewsindexController@news_details_big_pic_update')->where('id', '[0-9]+');
+//do青蓝果动态详情大图编辑
+Route::post('/admin/news/details/big_pic/doupdate/{id}','NewsindexController@news_details_big_pic_doUpdate')->where('id', '[0-9]+');
+//青蓝果动态详情小图编辑
+Route::get('/admin/news/details/small_pic/update/{id}','NewsindexController@news_details_small_pic_update')->where('id', '[0-9]+');
+//do青蓝果动态详情小图编辑
+Route::post('/admin/news/details/small_pic/doupdate/{id}','NewsindexController@news_details_small_pic_doUpdate')->where('id', '[0-9]+');
+//青蓝果动态详情视频编辑
+Route::get('/admin/news/details/video/update/{id}','NewsindexController@news_details_video_update')->where('id', '[0-9]+');
+//do青蓝果动态详情视频编辑
+Route::post('/admin/news/details/video/doupdate/{id}','NewsindexController@news_details_video_doUpdate')->where('id', '[0-9]+');
 
 
 
