@@ -13,7 +13,7 @@
 
 /*************************************************前台***************************************************/
 /*************************************移动端*********************************/
-Route::group(['domain' => 'm.qinglanguo.com'], function(){
+Route::group(['domain' => 'm.kinglengo.com'], function(){
 	// //主页
 	// Route::get('/','MobileController@index');
 	// //青蓝果教学特色二级(亿童课程)
@@ -123,10 +123,10 @@ Route::group(['domain' => 'm.qinglanguo.com'], function(){
 	// Route::get('/about/details/{id}','MobileController@about_details')->where('id','[0-9]+');
 
 /*************************************PC端*********************************/
-//主页
-// Route::get('/','IndexController@index');
-// //青蓝果教学特色二级(亿童课程)
-// Route::get('/teaching_yt','IndexController@teaching_yt');
+// 主页
+Route::get('/','IndexController@index');
+//青蓝果之家
+Route::get('/home','IndexController@home');
 // //青蓝果教学特色二级(亿童课程)(标题栏链接)
 // Route::get('/teaching_yt{test}','IndexController@teaching_yt');
 // //青蓝果教学特色二级(布朗课程)
@@ -435,12 +435,6 @@ Route::post('/admin/news/details/small_pic/doupdate/{id}','NewsindexController@n
 Route::get('/admin/news/details/video/update/{id}','NewsindexController@news_details_video_update')->where('id', '[0-9]+');
 //do青蓝果动态详情视频编辑
 Route::post('/admin/news/details/video/doupdate/{id}','NewsindexController@news_details_video_doUpdate')->where('id', '[0-9]+');
-
-
-
-
-
-
 
 /*********************************************************后台管理***************************************************/
 

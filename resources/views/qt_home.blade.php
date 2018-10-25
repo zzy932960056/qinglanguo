@@ -2,48 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>青果文化-园所理念</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
+    <title>青蓝果之家</title>
+    @include('qt_link')
+    <link rel="stylesheet" href="{{URL::asset('/css_qt/base.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css_qt/main.css')}}">
 </head>
 <body>
 <div class="cyanine-container">
     <!--header-->
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-tit"></div>
-            <ul class="header-ul">
-                <li>
-                    <a href="home.html">
-                        <img src="images/head1.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="teach.html">
-                        <img src="images/head2.png" alt="">
-                    </a>
-                </li>
-                <li class="logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="" class="header-logo">
-                    </a>
-                </li>
-                <li>
-                    <a href="culture-idea.html">
-                        <img src="images/head3.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="trends.html">
-                        <img src="images/head4.png" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    @include('qt_navigator')
     <!--header end-->
     <!--面包屑-->
     <div class="crumbs">
@@ -58,23 +27,23 @@
                 <ul class="culture-home-ul">
                     <li>
                         <i class="home-circle active"></i>
-                        <img src="images/home1.jpg" alt="">
+                        <img src="{{URL::asset('/images/home1.jpg')}}" alt="">
                     </li>
                     <li>
                         <i class="home-circle"></i>
-                        <img src="images/home2.jpg" alt="">
+                        <img src="{{URL::asset('/images/home2.jpg')}}" alt="">
                     </li>
                     <li>
                         <i class="home-circle"></i>
-                        <img src="images/home3.jpg" alt="">
+                        <img src="{{URL::asset('/images/home3.jpg')}}" alt="">
                     </li>
                     <li>
                         <i class="home-circle"></i>
-                        <img src="images/home4.jpg" alt="">
+                        <img src="{{URL::asset('/images/home4.jpg')}}" alt="">
                     </li>
                     <li>
                         <i class="home-circle"></i>
-                        <img src="images/home5.jpg" alt="">
+                        <img src="{{URL::asset('/images/home5.jpg')}}" alt="">
                     </li>
                 </ul>
             </div>
@@ -82,7 +51,7 @@
                 <div class="home-warp-items" style="display:block;">
                     <div class="culture-idea-left">
                         <div class="culture-idea-tit home-tit-left">
-                            <img src="images/home-z.jpg" alt="">
+                            <img src="{{URL::asset('/images/home-z.jpg')}}" alt="">
                         </div>
                         <div class="culture-idea-nav culture-left-nav">
                             <ul class="culture-item-nav">
@@ -110,7 +79,7 @@
                             <div class="culture-idea-items" id="item3">
                                 <div class="idea-items-tit home-items-tit"><i></i>园所环境</div>
                                 <div class="idea-items-con home-items-con">
-                                    <img src="images/z1.jpg" alt="">
+                                    <img src="{{URL::asset('/images/z1.jpg')}}" alt="">
                                 </div>
                             </div>
                             <div class="culture-idea-items" id="item4">
@@ -127,7 +96,7 @@
                 <div class="home-warp-items">
                     <div class="culture-idea-left">
                         <div class="culture-idea-tit home-tit-left">
-                            <img src="images/home-w.jpg" alt="">
+                            <img src="{{URL::asset('/images/home-w.jpg')}}" alt="">
                         </div>
                         <div class="culture-idea-nav culture-left-nav">
                             <ul class="culture-item-nav">
@@ -155,7 +124,7 @@
                             <div class="culture-idea-items" id="item7">
                                 <div class="idea-items-tit home-items-tit"><i></i>园所环境</div>
                                 <div class="idea-items-con home-items-con">
-                                    <img src="images/w1.jpg" alt="">
+                                    <img src="{{URL::asset('/images/w1.jpg')}}" alt="">
                                 </div>
                             </div>
                             <div class="culture-idea-items" id="item8">
@@ -172,7 +141,7 @@
                 <div class="home-warp-items">
                     <div class="culture-idea-left">
                         <div class="culture-idea-tit home-tit-left">
-                            <img src="images/home-n.jpg" alt="">
+                            <img src="{{URL::asset('/images/home-n.jpg')}}" alt="">
                         </div>
                         <div class="culture-idea-nav culture-left-nav">
                             <ul class="culture-item-nav">
@@ -210,7 +179,7 @@
                             <div class="culture-idea-items" id="item11">
                                 <div class="idea-items-tit home-items-tit"><i></i>园所环境</div>
                                 <div class="idea-items-con home-items-con">
-                                    <img src="images/n1.jpg" alt="">
+                                    <img src="{{URL::asset('/images/n1.jpg')}}" alt="">
                                 </div>
                             </div>
                             <div class="culture-idea-items" id="item12">
@@ -227,7 +196,7 @@
                 <div class="home-warp-items">
                     <div class="culture-idea-left">
                         <div class="culture-idea-tit home-tit-left">
-                            <img src="images/home-f.jpg" alt="">
+                            <img src="{{URL::asset('/images/home-f.jpg')}}" alt="">
                         </div>
                         <div class="culture-idea-nav culture-left-nav">
                             <ul class="culture-item-nav">
@@ -255,7 +224,7 @@
                             <div class="culture-idea-items" id="item15">
                                 <div class="idea-items-tit home-items-tit"><i></i>园所环境</div>
                                 <div class="idea-items-con home-items-con">
-                                    <img src="images/f1.jpg" alt="">
+                                    <img src="{{URL::asset('/images/f1.jpg')}}" alt="">
                                 </div>
                             </div>
                             <div class="culture-idea-items" id="item16">
@@ -272,7 +241,7 @@
                 <div class="home-warp-items">
                     <div class="culture-idea-left">
                         <div class="culture-idea-tit home-tit-left">
-                            <img src="images/home-y.jpg" alt="">
+                            <img src="{{URL::asset('/images/home-y.jpg')}}" alt="">
                         </div>
                         <div class="culture-idea-nav culture-left-nav">
                             <ul class="culture-item-nav">
@@ -300,7 +269,7 @@
                             <div class="culture-idea-items" id="item19">
                                 <div class="idea-items-tit home-items-tit"><i></i>园所环境</div>
                                 <div class="idea-items-con home-items-con">
-                                    <img src="images/y1.jpg" alt="">
+                                    <img src="{{URL::asset('/images/y1.jpg')}}" alt="">
                                 </div>
                             </div>
                             <div class="culture-idea-items" id="item20">
@@ -319,74 +288,13 @@
     </div>
     <!--内容 end-->
     <!--footer-->
-    <div class="footer-container">
-        <div class="footer-pos"></div>
-        <div class="footer-titp">
-            <div class="footer-top">
-                <img src="images/top.png" alt="">
-            </div>
-        </div>
-        <div class="footer-bg">
-            <div class="footer-inner">
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="images/footer-logo.png" alt="">
-                    </a>
-                </div>
-                <div class="footer-content">
-                    <ul>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/footer1.png" alt="">
-                            </a>
-                            <span><a href="javascript:;">中心园</a></span>
-                            <span><a href="javascript:;">王舍园</a></span>
-                            <span><a href="javascript:;">南家园</a></span>
-                            <span><a href="javascript:;">芳草园</a></span>
-                            <span><a href="javascript:;">颐丰园</a></span>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/footer2.png" alt="">
-                            </a>
-                            <span><a href="javascrip:;">传统文化</a></span>
-                            <span><a href="javascrip:;">探究空间</a></span>
-                            <span><a href="javascrip:;">健康领动</a></span>
-                            <span><a href="javascrip:;">艺术创想</a></span>
-                            <span><a href="javascrip:;">社会链接</a></span>
-                            <span><a href="javascrip:;">师资力量</a></span>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/footer3.png" alt="">
-                            </a>
-                            <span><a href="javascript:;">园所理念</a></span>
-                            <span><a href="javascript:;">视觉形象</a></span>
-                            <span><a href="javascript:;">环境文化</a></span>
-                            <span><a href="javascript;;">食育文化</a></span>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/footer4.png" alt="">
-                            </a>
-                            <span><a href="javascript:;">园所快报</a></span>
-                            <span><a href="javascript:;">健康护航</a></span>
-                            <span><a href="javascript:;">金色时光</a></span>
-                            <span><a href="javascript:;">最美芳华</a></span>
-                            <span><a href="javascript:;">为爱同行</a></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <p class="footer-d">copyright@kinglengo</p>
-        </div>
-    </div>
+    @include('qt_footer')
     <!--footer end-->
 </div>
 </body>
-<script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/scroll.js"></script>
+<script src="{{URL::asset('/js_qt/jquery-2.1.3.min.js')}}"></script>
+<script src="{{URL::asset('/js_qt/main.js')}}"></script>
+<script src="{{URL::asset('/js_qt/scroll.js')}}"></script>
 <script>
 </script>
 </html>
