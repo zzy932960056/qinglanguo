@@ -28,12 +28,12 @@
                         <a href="/education">
                             <img src="{{URL::asset('/images/footer2.png')}}" alt="">
                         </a>
-                        <span><a href="javascrip:;">传统文化</a></span>
-                        <span><a href="javascrip:;">探究空间</a></span>
-                        <span><a href="javascrip:;">健康领动</a></span>
-                        <span><a href="javascrip:;">艺术创想</a></span>
-                        <span><a href="javascrip:;">社会链接</a></span>
-                        <span><a href="javascrip:;">师资力量</a></span>
+                        <span><a href="/education#item1">传统文化</a></span>
+                        <span><a href="/education#item2">探究空间</a></span>
+                        <span><a href="/education#item3">健康领动</a></span>
+                        <span><a href="/education#item4">艺术创想</a></span>
+                        <span><a href="/education#item5">社会链接</a></span>
+                        <span><a href="/education#item6">师资力量</a></span>
                     </li>
                     <li>
                         <a href="/culture">

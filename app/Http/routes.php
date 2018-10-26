@@ -135,7 +135,10 @@ Route::get('/home_nj','IndexController@home_nj');
 Route::get('/home_fc','IndexController@home_fc');
 //青蓝果之家(颐丰)
 Route::get('/home_yf','IndexController@home_yf');
-
+//青蓝果教育
+Route::get('/education','IndexController@education');
+//青蓝果教育(锚链接)
+Route::get('/education{test}','IndexController@education');
 
 
 

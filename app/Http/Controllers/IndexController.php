@@ -119,6 +119,33 @@ class IndexController extends Controller
         return view('qt_home_yf',$data);
     }
 
+    //青蓝果教育
+    public function education(){
+        $data = [];
+        //传统文化
+        $edu_culture = DB::table('edu_culture')->get();
+        $data['edu_culture'] = $edu_culture;
+        //探究空间
+        $edu_space = DB::table('edu_space')->get();
+        $data['edu_space'] = $edu_space;
+        //健康领动
+        $edu_health = DB::table('edu_health')->get();
+        $data['edu_health'] = $edu_health;
+        //艺术创想
+        $edu_art = DB::table('edu_art')->get();
+        $data['edu_art'] = $edu_art;
+        //社会链接
+        $edu_social = DB::table('edu_social')->get();
+        $data['edu_social'] = $edu_social;
+        //师资力量
+        $edu_teach = DB::table('edu_teach')->get();
+        $data['edu_teach'] = $edu_teach;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_education',$data);
+    }
+
   //   //青蓝果教学特色(布朗课程)
   //   public function teaching_bl(){
   //       $data = [];

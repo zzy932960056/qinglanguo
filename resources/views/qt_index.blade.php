@@ -125,27 +125,27 @@ header("Location:http://m.kinglengo.com");
             <ul>
                 <li class="teach-tiem">
                     <img src="{{URL::asset('/images/j1.png')}}" alt="" class="teach-bg-img">
-                    <span><a href="javascript:;">传统文化</a></span>
+                    <span><a href="/education#item1">传统文化</a></span>
                 </li>
                 <li class="teach-tiem">
                     <img src="{{URL::asset('/images/j2.png')}}" alt="" class="teach-bg-img">
-                    <span><a href="javascript:;">探究空间</a></span>
+                    <span><a href="/education#item2">探究空间</a></span>
                 </li>
                 <li class="teach-tiem">
                     <img src="{{URL::asset('/images/j3.png')}}" alt="" class="teach-bg-img">
-                    <span><a href="javascript:;">健康领动</a></span>
+                    <span><a href="/education#item3">健康领动</a></span>
                 </li>
                 <li class="teach-tiem">
                     <img src="{{URL::asset('/images/j4.png')}}" alt="" class="teach-bg-img">
-                    <span><a href="javascript:;">艺术创想</a></span>
+                    <span><a href="/education#item4">艺术创想</a></span>
                 </li>
                 <li class="teach-tiem">
                     <img src="{{URL::asset('/images/j5.png')}}" alt="" class="teach-bg-img">
-                    <span><a href="javascript:;">社会链接</a></span>
+                    <span><a href="/education#item5">社会链接</a></span>
                 </li>
                 <li class="teach-tiem">
                     <img src="{{URL::asset('/images/j6.png')}}" alt="" class="teach-bg-img">
-                    <span><a href="javascript:;">师资力量</a></span>
+                    <span><a href="/education#item6">师资力量</a></span>
                 </li>
             </ul>
         </div>
