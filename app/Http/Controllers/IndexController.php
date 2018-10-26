@@ -59,16 +59,64 @@ class IndexController extends Controller
         return view('qt_index',$data);
     }
 
-    //青蓝果之家
+    //青蓝果之家(中心园)
     public function home(){
     	  $data = [];
+        //青蓝果之家
+        $home = DB::table('qlg_home')->get();
+        $data['home'] = $home;
         //备案信息
         $company_info = DB::table('company_info')->get();
         $data['company_info'] = $company_info;
-    	  // //青蓝果教学特色(亿童课程)
-        // $teaching_yt = Teaching::where('course_sign','yt')->orderBy('id','asc')->paginate(4);
-        // $data['teaching_yt'] = $teaching_yt;
     	  return view('qt_home',$data);
+    }
+
+    //青蓝果之家(王舍园)
+    public function home_ws(){
+        $data = [];
+        //青蓝果之家
+        $home = DB::table('qlg_home')->get();
+        $data['home'] = $home;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_home_ws',$data);
+    }
+
+    //青蓝果之家(南家园)
+    public function home_nj(){
+        $data = [];
+        //青蓝果之家
+        $home = DB::table('qlg_home')->get();
+        $data['home'] = $home;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_home_nj',$data);
+    }
+
+    //青蓝果之家(芳草园)
+    public function home_fc(){
+        $data = [];
+        //青蓝果之家
+        $home = DB::table('qlg_home')->get();
+        $data['home'] = $home;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_home_fc',$data);
+    }
+
+    //青蓝果之家(颐丰园)
+    public function home_yf(){
+        $data = [];
+        //青蓝果之家
+        $home = DB::table('qlg_home')->get();
+        $data['home'] = $home;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_home_yf',$data);
     }
 
   //   //青蓝果教学特色(布朗课程)

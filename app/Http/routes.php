@@ -125,8 +125,20 @@ Route::group(['domain' => 'm.kinglengo.com'], function(){
 /*************************************PC端*********************************/
 // 主页
 Route::get('/','IndexController@index');
-//青蓝果之家
+//青蓝果之家(中心)
 Route::get('/home','IndexController@home');
+//青蓝果之家(王舍)
+Route::get('/home_ws','IndexController@home_ws');
+//青蓝果之家(南家)
+Route::get('/home_nj','IndexController@home_nj');
+//青蓝果之家(芳草)
+Route::get('/home_fc','IndexController@home_fc');
+//青蓝果之家(颐丰)
+Route::get('/home_yf','IndexController@home_yf');
+
+
+
+
 // //青蓝果教学特色二级(亿童课程)(标题栏链接)
 // Route::get('/teaching_yt{test}','IndexController@teaching_yt');
 // //青蓝果教学特色二级(布朗课程)

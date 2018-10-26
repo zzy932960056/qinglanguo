@@ -18,11 +18,11 @@
                         <a href="/home">
                             <img src="{{URL::asset('/images/footer1.png')}}" alt="">
                         </a>
-                        <span><a href="javascript:;">中心园</a></span>
-                        <span><a href="javascript:;">王舍园</a></span>
-                        <span><a href="javascript:;">南家园</a></span>
-                        <span><a href="javascript:;">芳草园</a></span>
-                        <span><a href="javascript:;">颐丰园</a></span>
+                        <span><a href="/home">中心园</a></span>
+                        <span><a href="/home_ws">王舍园</a></span>
+                        <span><a href="/home_nj">南家园</a></span>
+                        <span><a href="/home_fc">芳草园</a></span>
+                        <span><a href="/home_yf">颐丰园</a></span>
                     </li>
                     <li>
                         <a href="/education">

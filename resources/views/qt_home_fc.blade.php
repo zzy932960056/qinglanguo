@@ -16,7 +16,7 @@
     <!--header end-->
     <!--面包屑-->
     <div class="crumbs">
-        当前位置 ：<span><a href="/home">青蓝果之家</a></span>><span id="gar">中心园</span>
+        当前位置 ：<span><a href="/home">青蓝果之家</a></span>><span id="gar">芳草园</span>
     </div>
     <!--面包屑 end-->
     <!--内容-->
@@ -26,7 +26,7 @@
             <div class="culture-nav culture-home-nav">
                 <ul class="culture-home-ul">
                     <li id="li1">
-                        <i class="home-circle active"></i>
+                        <i class="home-circle"></i>
                         <img src="{{URL::asset('/images/home1.jpg')}}" alt="">
                     </li>
                     <li id="li2">
@@ -38,7 +38,7 @@
                         <img src="{{URL::asset('/images/home3.jpg')}}" alt="">
                     </li>
                     <li id="li4">
-                        <i class="home-circle"></i>
+                        <i class="home-circle active"></i>
                         <img src="{{URL::asset('/images/home4.jpg')}}" alt="">
                     </li>
                     <li id="li5">
@@ -48,7 +48,7 @@
                 </ul>
             </div>
             <div class="culture-idea-con home-con">
-                <div class="home-warp-items" style="display:block;">
+                <div class="home-warp-items">
                     <div class="culture-idea-left">
                         <div class="culture-idea-tit home-tit-left">
                             <img src="{{URL::asset('/images/home-z.jpg')}}" alt="">
@@ -183,7 +183,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="home-warp-items">
+                <div class="home-warp-items" style="display:block;">
                     <div class="culture-idea-left">
                         <div class="culture-idea-tit home-tit-left">
                             <img src="{{URL::asset('/images/home-f.jpg')}}" alt="">
