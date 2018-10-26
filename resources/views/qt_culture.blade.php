@@ -2,52 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>青果文化-园所理念</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/main.css">
+    <title>青蓝果文化</title>
+    @include('qt_link')
+    <link rel="stylesheet" href="{{URL::asset('/css_qt/base.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('/css_qt/main.css')}}">
 </head>
 <body>
 <div class="cyanine-container">
     <!--header-->
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-tit"></div>
-            <ul class="header-ul">
-                <li>
-                    <a href="home.html">
-                        <img src="images/head1.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="teach.html">
-                        <img src="images/head2.png" alt="">
-                    </a>
-                </li>
-                <li class="logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="" class="header-logo">
-                    </a>
-                </li>
-                <li>
-                    <a href="culture-idea.html">
-                        <img src="images/head3.png" alt="">
-                    </a>
-                </li>
-                <li>
-                    <a href="trends.html">
-                        <img src="images/head4.png" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+    @include('qt_navigator')
     <!--header end-->
     <!--面包屑-->
     <div class="crumbs">
-        当前位置 ：<span><a href="javascript:;">青蓝果文化</a></span>><span>园所理念</span>
+        当前位置 ：<span><a href="/culture">青蓝果文化</a></span>><span id="cul">园所理念</span>
     </div>
     <!--面包屑 end-->
     <!--内容-->
@@ -56,16 +25,16 @@
         <div class="culture-con-content">
             <div class="culture-nav">
                 <ul>
-                    <li>
+                    <li id="li1">
                         <a href="javascript:;"  class="active">园所理念</a>
                     </li>
-                    <li>
+                    <li id="li2">
                         <a href="javascript:;">视觉形象</a>
                     </li>
-                    <li>
+                    <li id="li3">
                         <a href="javascript:;">环境文化</a>
                     </li>
-                    <li>
+                    <li id="li4">
                         <a href="javascript:;">食育文化</a>
                     </li>
                 </ul>
@@ -75,7 +44,7 @@
                 <div class="culture-idea-con culture-big-item" style="display:block;">
                     <div class="culture-idea-left ">
                         <div class="culture-idea-tit">
-                            <img src="images/idea-tit.jpg" alt="">
+                            <img src="{{URL::asset('/images/idea-tit.jpg')}}" alt="">
                         </div>
                         <div class="culture-idea-nav">
                             <ul class="culture-item-nav">
@@ -94,7 +63,7 @@
                             <div class="idea-items-tit"><i></i>青蓝果解析</div>
                             <div class="idea-items-con">
                                 <div class="idea-items-img">
-                                    <img src="images/idea1.jpg" alt="">
+                                    <img src="{{URL::asset('/images/idea1.jpg')}}" alt="">
                                 </div>
                                 <p>青蓝果幼教集团/KING LENGO  </p>
                                 <p>“青”寓意孩子，“蓝”体现教育，“果”即为未来。</p>
@@ -106,13 +75,13 @@
                                 <div class="idea-items-img idea-items-list">
                                     <ul>
                                         <li>
-                                            <img src="images/food2.jpg" alt="">
+                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/food2.jpg" alt="">
+                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/food2.jpg" alt="">
+                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
                                         </li>
                                     </ul>
                                 </div>
@@ -124,7 +93,7 @@
                             <div class="idea-items-tit"><i></i>青蓝果标语</div>
                             <div class="idea-items-con idea-custom">
                                 <div class="idea-items-img">
-                                    <img src="images/idea3.jpg" alt="">
+                                    <img src="{{URL::asset('/images/idea3.jpg')}}" alt="">
                                 </div>
                                 <p>倾听发现成长的声音</p>
                                 <p class="font-s">Listen to find the sound of growing up</p>
@@ -137,13 +106,13 @@
                                     <ul>
                                         <li>
                                             <div class="items-two-img">
-                                                <img src="images/food2.jpg" alt="">
+                                                <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
                                             </div>
                                             <p class="two-p">倾听世界 <i>listen the voice of world</i></p>
                                         </li>
                                         <li>
                                             <div class="items-two-img">
-                                                <img src="images/food2.jpg" alt="">
+                                                <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
                                             </div>
                                             <p class="two-p">发现自我 <i> find yourself</i></p>
                                         </li>
@@ -155,7 +124,7 @@
                             <div class="idea-items-tit"><i></i>办园宗旨</div>
                             <div class="idea-items-con idea-custom">
                                 <div class="idea-items-img idea-items-bottom">
-                                    <img src="images/idea2.jpg" alt="">
+                                    <img src="{{URL::asset('/images/idea2.jpg')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -165,13 +134,13 @@
                                 <div class="idea-items-img idea-items-list">
                                     <ul>
                                         <li>
-                                            <img src="images/food2.jpg" alt="">
+                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/food2.jpg" alt="">
+                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
                                         </li>
                                         <li>
-                                            <img src="images/food2.jpg" alt="">
+                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
                                         </li>
                                     </ul>
                                 </div>
@@ -185,14 +154,14 @@
                                 <ul class="idea-items-end">
                                     <li>
                                         <div class="idea-end-item">
-                                            <img src="images/ide1.png" alt="">
+                                            <img src="{{URL::asset('/images/ide1.png')}}" alt="">
                                             <div class="idea-end-text">
                                                 <p>关于孩子</p>
                                                 <p>我们尊重生命</p>
                                             </div>
                                         </div>
                                         <div class="idea-end-item">
-                                            <img src="images/ide2.png" alt="">
+                                            <img src="{{URL::asset('/images/ide2.png')}}" alt="">
                                             <div class="idea-end-text">
                                                 <p>关于工作</p>
                                                 <p>我们认真负责</p>
@@ -201,14 +170,14 @@
                                     </li>
                                     <li>
                                         <div class="idea-end-item">
-                                            <img src="images/ide3.png" alt="">
+                                            <img src="{{URL::asset('/images/ide3.png')}}" alt="">
                                             <div class="idea-end-text">
                                                 <p>关于团队</p>
                                                 <p>我们合作进取</p>
                                             </div>
                                         </div>
                                         <div class="idea-end-item">
-                                            <img src="images/ide4.png" alt="">
+                                            <img src="{{URL::asset('/images/ide4.png')}}" alt="">
                                             <div class="idea-end-text">
                                                 <p>关于父母</p>
                                                 <p>我们倾听理解</p>
@@ -217,7 +186,7 @@
                                     </li>
                                     <li>
                                         <div class="idea-end-item">
-                                            <img src="images/ide5.png" alt="">
+                                            <img src="{{URL::asset('/images/ide5.png')}}" alt="">
                                             <div class="idea-end-text">
                                                 <p>关于未来</p>
                                                 <p>我们开拓创新</p>
@@ -233,7 +202,7 @@
                 <div class="culture-idea-con culture-big-item">
                     <div class="culture-idea-left">
                         <div class="culture-idea-tit">
-                            <img src="images/sj.jpg" alt="">
+                            <img src="{{URL::asset('/images/sj.jpg')}}" alt="">
                         </div>
                         <div class="culture-idea-nav culture-vision-nav">
                             <ul class="culture-item-nav">
@@ -248,7 +217,7 @@
                             <div class="idea-items-tit"><i></i>标志</div>
                             <div class="idea-items-con vision-items-con">
                                 <div class="idea-items-img">
-                                    <img src="images/vis1.jpg" alt="">
+                                    <img src="{{URL::asset('/images/vis1.jpg')}}" alt="">
                                 </div>
                                 <p>鸟作为一种古老的生物，自古鸟便与太阳和长生联系，象征着人类心灵的光芒，包含着敬仰 和崇拜的归属。鸟类也代表着灵性、自由、聪慧、生命力，以鸟来寓意儿童，代表青蓝果寄予他们的美好期望。</p>
                                 <p>三种图形搭配组合成为一个坚实的房屋轮廓，象征青蓝果幼教集团，一个团结、融合、永远积极向上的教职工团体，探求真理的目标提升自我，严谨求实的态度陪伴儿童成长，敬业爱岗的精神建立最优质先进的幼儿教育体系。</p>
@@ -258,7 +227,7 @@
                             <div class="idea-items-tit"><i></i>吉祥物</div>
                             <div class="idea-items-con vision-items-con">
                                 <div class="idea-items-img">
-                                    <img src="images/vis2.jpg" alt="">
+                                    <img src="{{URL::asset('/images/vis2.jpg')}}" alt="">
                                 </div>
                                 <p>三只体态各异的小鸟分别对应着不同阶段的孩子们，黄色的雏鸟，围着肚兜，还未发育完全 的羽冠和翅膀扑棱着，懵懂未知的眼睛张望着世界，它就像新入园的小班的孩子们；蓝色的小鸟，带着领结，羽冠挺立，翅膀舒展，自信大方，有着旺盛的求知欲和探索欲，它就像已经适应幼儿园并自然成长的中班的孩子们；绿色的小鸟，系着领巾，带着眼镜，羽冠收起，翅膀长齐，汲取 了充足的养分，积蓄力量，准备着搏击长空，它就像逐渐长大即将离开的大班的孩子们，三种形态既方便幼儿园后期园区做具体区域或是其他层次划分的视觉标示，又可以隐喻孩子们在青蓝果的成长，从“本我”的自然驱动，到“自我”的洗礼，从而追求“超我”，让孩子们在个人意识与社会 意识中发现自我潜力，实现自我价值。</p>
                             </div>
@@ -267,14 +236,14 @@
                             <div class="idea-items-tit"><i></i>园服</div>
                             <div class="idea-items-con vision-items-con">
                                 <div class="idea-items-img">
-                                    <img src="images/vis3.jpg" alt="">
+                                    <img src="{{URL::asset('/images/vis3.jpg')}}" alt="">
                                 </div>
                                 <div class="vision-clothes">冬季正装</div>
                                 <p>男生为针织衫、长裤，女生为针织衫、百褶裙，颜色为“松柏绿”，配合黑色，针织衫带米黄边纹，平衡了颜色的清爽感，多了秋冬的温暖与厚重气息。上衣两边装饰以浅兜，上面添加青蓝果品牌主图形——正方形、三角形、圆形，潜移默化加深对青蓝果的品牌认知度。</p>
                                 <div class="vision-clothes vision-clothes-sport">冬季运动服</div>
                                 <p>服装灵感来自“棒球服”，男女生统一为上衣、长裤，轻便舒适，简洁帅气。棒球服是棒球文化的衍生品，主要发源于美国，注重竞技与智慧，强调团体意识，颜色与春夏运动装保持一致，沿用“松柏绿”与黑白色的搭配，青蓝果希望棒球文化可以让孩子们爱上运动的同时，又能培养他们的团队智慧与团队精神。</p>
                                 <div class="idea-items-img" style="margin-top:50px;">
-                                    <img src="images/vis4.jpg" alt="">
+                                    <img src="{{URL::asset('/images/vis4.jpg')}}" alt="">
                                 </div>
                                 <div class="vision-clothes">夏季正装</div>
                                 <p>服装灵感来自“水手服”，男生为上衣、领带、短裤，女生为上衣、蝴蝶结、百褶裙，领子外缘是直线形，领口呈V字形，简单又大方。青蓝果位于山东淄博，毗邻大海，水手服源自英国海军，代表着高贵与自由，青蓝果将这样的寓意送给孩子们，期望他们像海鸟一样，勇敢地穿梭在蓝天与大海之间。</p>
@@ -286,21 +255,21 @@
                 </div>
                 <!--环境文化-->
                 <div class="culture-ambient culture-big-item">
-                    <img src="images/no1.jpg" alt="">
-                    <img src="images/no2.jpg" alt="">
-                    <img src="images/no3.jpg" alt="">
+                    <img src="{{URL::asset('/images/no1.jpg')}}" alt="">
+                    <img src="{{URL::asset('/images/no2.jpg')}}" alt="">
+                    <img src="{{URL::asset('/images/no3.jpg')}}" alt="">
                 </div>
                 <!--食孕文化-->
                 <div class="culture-food culture-big-item">
                     <div class="culture-food-con">
                         <ul>
                             <li class="culture-food-tit">
-                                <img src="images/food-tit.jpg" alt="">
+                                <img src="{{URL::asset('/images/food-tit.jpg')}}" alt="">
                             </li>
                             <li class="culture-food-start">
                                 <div class="culture-food-img">
-                                    <img src="images/time1.png" alt="" class="time">
-                                    <img src="images/food.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/time1.png')}}" alt="" class="time">
+                                    <img src="{{URL::asset('/images/food.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -311,9 +280,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time2.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time2.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -324,9 +293,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time3.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time3.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -337,9 +306,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time4.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time4.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -350,9 +319,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time5.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time5.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -363,9 +332,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time6.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time6.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -376,9 +345,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time7.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time7.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -389,9 +358,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time8.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time8.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -402,9 +371,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time9.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time9.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -415,9 +384,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time10.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time10.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -428,9 +397,9 @@
                                 </div>
                             </li>
                             <li>
-                                <img src="images/time11.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time11.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food2.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -441,9 +410,9 @@
                                 </div>
                             </li>
                             <li class="culture-food-end">
-                                <img src="images/time12.png" alt="" class="time">
+                                <img src="{{URL::asset('/images/time12.png')}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="images/food.jpg" alt="" class="food-img-inner">
+                                    <img src="{{URL::asset('/images/food.jpg')}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
@@ -461,79 +430,30 @@
     </div>
     <!--内容 end-->
     <!--footer-->
-    <div class="footer-container">
-        <div class="footer-pos"></div>
-        <div class="footer-titp">
-            <div class="footer-top">
-                <img src="images/top.png" alt="">
-            </div>
-        </div>
-        <div class="footer-bg">
-            <div class="footer-inner">
-                <div class="footer-logo">
-                    <a href="index.html">
-                        <img src="images/footer-logo.png" alt="">
-                    </a>
-                </div>
-                <div class="footer-content">
-                    <ul>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/footer1.png" alt="">
-                            </a>
-                            <span><a href="javascript:;">中心园</a></span>
-                            <span><a href="javascript:;">王舍园</a></span>
-                            <span><a href="javascript:;">南家园</a></span>
-                            <span><a href="javascript:;">芳草园</a></span>
-                            <span><a href="javascript:;">颐丰园</a></span>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/footer2.png" alt="">
-                            </a>
-                            <span><a href="javascrip:;">传统文化</a></span>
-                            <span><a href="javascrip:;">探究空间</a></span>
-                            <span><a href="javascrip:;">健康领动</a></span>
-                            <span><a href="javascrip:;">艺术创想</a></span>
-                            <span><a href="javascrip:;">社会链接</a></span>
-                            <span><a href="javascrip:;">师资力量</a></span>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/footer3.png" alt="">
-                            </a>
-                            <span><a href="javascript:;">园所理念</a></span>
-                            <span><a href="javascript:;">视觉形象</a></span>
-                            <span><a href="javascript:;">环境文化</a></span>
-                            <span><a href="javascript;;">食育文化</a></span>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <img src="images/footer4.png" alt="">
-                            </a>
-                            <span><a href="javascript:;">园所快报</a></span>
-                            <span><a href="javascript:;">健康护航</a></span>
-                            <span><a href="javascript:;">金色时光</a></span>
-                            <span><a href="javascript:;">最美芳华</a></span>
-                            <span><a href="javascript:;">为爱同行</a></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <p class="footer-d">copyright@kinglengo</p>
-        </div>
-    </div>
+    @include('qt_footer')
     <!--footer end-->
 </div>
 </body>
-<script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/scroll.js"></script>
+<script src="{{URL::asset('/js_qt/jquery-2.1.3.min.js')}}"></script>
+<script src="{{URL::asset('/js_qt/main.js')}}"></script>
+<script src="{{URL::asset('/js_qt/scroll.js')}}"></script>
 <script>
     $('.culture-nav ul li a').on('click',function(){
         var index=$('.culture-nav ul li a').index(this);
         $('.culture-nav ul li a').removeClass('active').eq(index).addClass('active');
         $('.culture-big-item').hide().eq(index).show()
+    })
+    $("#li1").click(function(){
+        $("#cul").html('园所理念');
+    })
+    $("#li2").click(function(){
+        $("#cul").html('视觉形象');
+    })
+    $("#li3").click(function(){
+        $("#cul").html('环境文化');
+    })
+    $("#li4").click(function(){
+        $("#cul").html('食育文化');
     })
 </script>
 </html>

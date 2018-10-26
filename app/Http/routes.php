@@ -139,6 +139,8 @@ Route::get('/home_yf','IndexController@home_yf');
 Route::get('/education','IndexController@education');
 //青蓝果教育(锚链接)
 Route::get('/education{test}','IndexController@education');
+//青蓝果文化
+Route::get('/culture','IndexController@culture');
 
 
 
