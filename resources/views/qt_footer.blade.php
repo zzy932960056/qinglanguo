@@ -39,10 +39,10 @@
                         <a href="/culture">
                             <img src="{{URL::asset('/images/footer3.png')}}" alt="">
                         </a>
-                        <span><a href="javascript:;">园所理念</a></span>
-                        <span><a href="javascript:;">视觉形象</a></span>
-                        <span><a href="javascript:;">环境文化</a></span>
-                        <span><a href="javascript;;">食育文化</a></span>
+                        <span><a href="/culture">园所理念</a></span>
+                        <span><a href="/culture_vi">视觉形象</a></span>
+                        <span><a href="/culture_env">环境文化</a></span>
+                        <span><a href="/culture_food">食育文化</a></span>
                     </li>
                     <li>
                         <a href="/news">

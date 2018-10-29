@@ -156,10 +156,10 @@ header("Location:http://m.kinglengo.com");
     <!--main 3  -->
     <div class="cyanime-culture">
         <img src="{{URL::asset('/images/culture.jpg')}}" alt="" class="culture-bg-img">
-        <a href="javascript:;" class="culture-tit1 culture-tit-com"><img src="{{URL::asset('/images/inicon1.png')}}" alt=""></a>
-        <a href="javascript:;" class="culture-tit2 culture-tit-com"><img src="{{URL::asset('/images/inicon2.png')}}" alt=""></a>
-        <a href="javascript:;" class="culture-tit3 culture-tit-com"><img src="{{URL::asset('/images/inicon3.png')}}" alt=""></a>
-        <a href="javascript:;" class="culture-tit4 culture-tit-com"><img src="{{URL::asset('/images/inicon4.png')}}" alt=""></a>
+        <a href="/culture_vi" class="culture-tit1 culture-tit-com"><img src="{{URL::asset('/images/inicon1.png')}}" alt=""></a>
+        <a href="/culture_env" class="culture-tit2 culture-tit-com"><img src="{{URL::asset('/images/inicon2.png')}}" alt=""></a>
+        <a href="/culture" class="culture-tit3 culture-tit-com"><img src="{{URL::asset('/images/inicon3.png')}}" alt=""></a>
+        <a href="/culture_food" class="culture-tit4 culture-tit-com"><img src="{{URL::asset('/images/inicon4.png')}}" alt=""></a>
     </div>
     <!--main 3 end-->
     <!--main 4-->

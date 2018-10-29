@@ -63,10 +63,10 @@
                             <div class="idea-items-tit"><i></i>青蓝果解析</div>
                             <div class="idea-items-con">
                                 <div class="idea-items-img">
-                                    <img src="{{URL::asset('/images/idea1.jpg')}}" alt="">
+                                    <img src="{{$analysis[0]->ana_pic}}" alt="">
                                 </div>
-                                <p>青蓝果幼教集团/KING LENGO  </p>
-                                <p>“青”寓意孩子，“蓝”体现教育，“果”即为未来。</p>
+                                <p>{!! $analysis[0]->ana_text1 !!}</p>
+                                <p>{!! $analysis[0]->ana_text2 !!}</p>
                             </div>
                         </div>
                         <div class="culture-idea-items" id="item2">
@@ -75,28 +75,28 @@
                                 <div class="idea-items-img idea-items-list">
                                     <ul>
                                         <li>
-                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
+                                            <img src="{{$spirit[0]->spi_pic1}}" alt="">
                                         </li>
                                         <li>
-                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
+                                            <img src="{{$spirit[0]->spi_pic2}}" alt="">
                                         </li>
                                         <li>
-                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
+                                            <img src="{{$spirit[0]->spi_pic3}}" alt="">
                                         </li>
                                     </ul>
                                 </div>
-                                <p>感悟生命初始的力量   培养有吸收力的心灵</p>
-                                <p class="font-s">Conform to the children's natural power and develop the absorbent mind</p>
+                                <p>{!! $spirit[0]->spi_text1 !!}</p>
+                                <p class="font-s">{!! $spirit[0]->spi_text2 !!}</p>
                             </div>
                         </div>
                         <div class="culture-idea-items" id="item3">
                             <div class="idea-items-tit"><i></i>青蓝果标语</div>
                             <div class="idea-items-con idea-custom">
                                 <div class="idea-items-img">
-                                    <img src="{{URL::asset('/images/idea3.jpg')}}" alt="">
+                                    <img src="{{$slogan[0]->slo_pic1}}" alt="">
                                 </div>
-                                <p>倾听发现成长的声音</p>
-                                <p class="font-s">Listen to find the sound of growing up</p>
+                                <p>{!! $slogan[0]->slo_text1 !!}</p>
+                                <p class="font-s">{!! $slogan[0]->slo_text2 !!}</p>
                             </div>
                         </div>
                         <div class="culture-idea-items" id="item4">
@@ -104,18 +104,14 @@
                             <div class="idea-items-con idea-custom">
                                 <div class="idea-items-img idea-items-two">
                                     <ul>
+                                        @foreach($idea as $ke => $va)
                                         <li>
                                             <div class="items-two-img">
-                                                <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
+                                                <img src="{{$va->ide_pic}}" alt="">
                                             </div>
-                                            <p class="two-p">倾听世界 <i>listen the voice of world</i></p>
+                                            <p class="two-p">{!! $va->ide_text1 !!} <i>{!! $va->ide_text2 !!}</i></p>
                                         </li>
-                                        <li>
-                                            <div class="items-two-img">
-                                                <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
-                                            </div>
-                                            <p class="two-p">发现自我 <i> find yourself</i></p>
-                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>
@@ -124,7 +120,7 @@
                             <div class="idea-items-tit"><i></i>办园宗旨</div>
                             <div class="idea-items-con idea-custom">
                                 <div class="idea-items-img idea-items-bottom">
-                                    <img src="{{URL::asset('/images/idea2.jpg')}}" alt="">
+                                    <img src="{{$purpose[0]->pur_pic}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -134,18 +130,18 @@
                                 <div class="idea-items-img idea-items-list">
                                     <ul>
                                         <li>
-                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
+                                            <img src="{{$teach[0]->tea_pic1}}" alt="">
                                         </li>
                                         <li>
-                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
+                                            <img src="{{$teach[0]->tea_pic2}}" alt="">
                                         </li>
                                         <li>
-                                            <img src="{{URL::asset('/images/food2.jpg')}}" alt="">
+                                            <img src="{{$teach[0]->tea_pic3}}" alt="">
                                         </li>
                                     </ul>
                                 </div>
-                                <p>生活即教育 教育即生长</p>
-                                <p class="font-s">Life is education，education is growth</p>
+                                <p>{!! $teach[0]->tea_text1 !!}</p>
+                                <p class="font-s">{!! $teach[0]->tea_text2 !!}</p>
                             </div>
                         </div>
                         <div class="culture-idea-items" id="item7">
@@ -154,42 +150,42 @@
                                 <ul class="idea-items-end">
                                     <li>
                                         <div class="idea-end-item">
-                                            <img src="{{URL::asset('/images/ide1.png')}}" alt="">
+                                            <img src="{{$team[0]->team_pic}}" alt="">
                                             <div class="idea-end-text">
-                                                <p>关于孩子</p>
-                                                <p>我们尊重生命</p>
+                                                <p>{!! $team[0]->team_text1 !!}</p>
+                                                <p>{!! $team[0]->team_text2 !!}</p>
                                             </div>
                                         </div>
                                         <div class="idea-end-item">
-                                            <img src="{{URL::asset('/images/ide2.png')}}" alt="">
+                                            <img src="{{$team[1]->team_pic}}" alt="">
                                             <div class="idea-end-text">
-                                                <p>关于工作</p>
-                                                <p>我们认真负责</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="idea-end-item">
-                                            <img src="{{URL::asset('/images/ide3.png')}}" alt="">
-                                            <div class="idea-end-text">
-                                                <p>关于团队</p>
-                                                <p>我们合作进取</p>
-                                            </div>
-                                        </div>
-                                        <div class="idea-end-item">
-                                            <img src="{{URL::asset('/images/ide4.png')}}" alt="">
-                                            <div class="idea-end-text">
-                                                <p>关于父母</p>
-                                                <p>我们倾听理解</p>
+                                                <p>{!! $team[1]->team_text1 !!}</p>
+                                                <p>{!! $team[1]->team_text2 !!}</p>
                                             </div>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="idea-end-item">
-                                            <img src="{{URL::asset('/images/ide5.png')}}" alt="">
+                                            <img src="{{$team[2]->team_pic}}" alt="">
                                             <div class="idea-end-text">
-                                                <p>关于未来</p>
-                                                <p>我们开拓创新</p>
+                                                <p>{!! $team[2]->team_text1 !!}</p>
+                                                <p>{!! $team[2]->team_text2 !!}</p>
+                                            </div>
+                                        </div>
+                                        <div class="idea-end-item">
+                                            <img src="{{$team[3]->team_pic}}" alt="">
+                                            <div class="idea-end-text">
+                                                <p>{!! $team[3]->team_text1 !!}</p>
+                                                <p>{!! $team[3]->team_text2 !!}</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="idea-end-item">
+                                            <img src="{{$team[4]->team_pic}}" alt="">
+                                            <div class="idea-end-text">
+                                                <p>{!! $team[4]->team_text1 !!}</p>
+                                                <p>{!! $team[4]->team_text2 !!}</p>
                                             </div>
                                         </div>
                                     </li>
@@ -217,211 +213,99 @@
                             <div class="idea-items-tit"><i></i>标志</div>
                             <div class="idea-items-con vision-items-con">
                                 <div class="idea-items-img">
-                                    <img src="{{URL::asset('/images/vis1.jpg')}}" alt="">
+                                    <img src="{{$logo[0]->logo_pic}}" alt="">
                                 </div>
-                                <p>鸟作为一种古老的生物，自古鸟便与太阳和长生联系，象征着人类心灵的光芒，包含着敬仰 和崇拜的归属。鸟类也代表着灵性、自由、聪慧、生命力，以鸟来寓意儿童，代表青蓝果寄予他们的美好期望。</p>
-                                <p>三种图形搭配组合成为一个坚实的房屋轮廓，象征青蓝果幼教集团，一个团结、融合、永远积极向上的教职工团体，探求真理的目标提升自我，严谨求实的态度陪伴儿童成长，敬业爱岗的精神建立最优质先进的幼儿教育体系。</p>
+                                <p>{!! $logo[0]->logo_text1 !!}</p>
+                                <p>{!! $logo[0]->logo_text2 !!}</p>
                             </div>
                         </div>
                         <div class="culture-idea-items" id="item9">
                             <div class="idea-items-tit"><i></i>吉祥物</div>
                             <div class="idea-items-con vision-items-con">
                                 <div class="idea-items-img">
-                                    <img src="{{URL::asset('/images/vis2.jpg')}}" alt="">
+                                    <img src="{{$mascot[0]->mas_pic}}" alt="">
                                 </div>
-                                <p>三只体态各异的小鸟分别对应着不同阶段的孩子们，黄色的雏鸟，围着肚兜，还未发育完全 的羽冠和翅膀扑棱着，懵懂未知的眼睛张望着世界，它就像新入园的小班的孩子们；蓝色的小鸟，带着领结，羽冠挺立，翅膀舒展，自信大方，有着旺盛的求知欲和探索欲，它就像已经适应幼儿园并自然成长的中班的孩子们；绿色的小鸟，系着领巾，带着眼镜，羽冠收起，翅膀长齐，汲取 了充足的养分，积蓄力量，准备着搏击长空，它就像逐渐长大即将离开的大班的孩子们，三种形态既方便幼儿园后期园区做具体区域或是其他层次划分的视觉标示，又可以隐喻孩子们在青蓝果的成长，从“本我”的自然驱动，到“自我”的洗礼，从而追求“超我”，让孩子们在个人意识与社会 意识中发现自我潜力，实现自我价值。</p>
+                                <p>{!! $mascot[0]->mas_text !!}</p>
                             </div>
                         </div>
                         <div class="culture-idea-items" id="item10">
                             <div class="idea-items-tit"><i></i>园服</div>
                             <div class="idea-items-con vision-items-con">
+                                @foreach($clothes as $ke => $va)
+                                @if($ke == 0)
                                 <div class="idea-items-img">
-                                    <img src="{{URL::asset('/images/vis3.jpg')}}" alt="">
-                                </div>
-                                <div class="vision-clothes">冬季正装</div>
-                                <p>男生为针织衫、长裤，女生为针织衫、百褶裙，颜色为“松柏绿”，配合黑色，针织衫带米黄边纹，平衡了颜色的清爽感，多了秋冬的温暖与厚重气息。上衣两边装饰以浅兜，上面添加青蓝果品牌主图形——正方形、三角形、圆形，潜移默化加深对青蓝果的品牌认知度。</p>
-                                <div class="vision-clothes vision-clothes-sport">冬季运动服</div>
-                                <p>服装灵感来自“棒球服”，男女生统一为上衣、长裤，轻便舒适，简洁帅气。棒球服是棒球文化的衍生品，主要发源于美国，注重竞技与智慧，强调团体意识，颜色与春夏运动装保持一致，沿用“松柏绿”与黑白色的搭配，青蓝果希望棒球文化可以让孩子们爱上运动的同时，又能培养他们的团队智慧与团队精神。</p>
+                                @elseif($ke == 1)
                                 <div class="idea-items-img" style="margin-top:50px;">
-                                    <img src="{{URL::asset('/images/vis4.jpg')}}" alt="">
+                                @endif
+                                    <img src="{{$va->clo_pic}}" alt="">
                                 </div>
-                                <div class="vision-clothes">夏季正装</div>
-                                <p>服装灵感来自“水手服”，男生为上衣、领带、短裤，女生为上衣、蝴蝶结、百褶裙，领子外缘是直线形，领口呈V字形，简单又大方。青蓝果位于山东淄博，毗邻大海，水手服源自英国海军，代表着高贵与自由，青蓝果将这样的寓意送给孩子们，期望他们像海鸟一样，勇敢地穿梭在蓝天与大海之间。</p>
-                                <div class="vision-clothes vision-clothes-sport">夏季运动服</div>
-                                <p>服装灵感来自Polo衫，男女生统一为上衣、短裤，上衣立领且带门襟纽扣，整体质地轻巧，紧密有弹性，便于运动。Polo衫原本是贵族打马球的时候所穿的服装，彰显着古典与优雅，颜色为“松柏绿”，配合黑色、白色，吸汗透气，耐磨耐脏，让孩子可以自由玩耍的同时，又不失高雅。</p>
+                                <div class="vision-clothes">{!! $va->clo_title1 !!}</div>
+                                <p>{!! $va->clo_text1 !!}</p>
+                                <div class="vision-clothes vision-clothes-sport">{!! $va->clo_title2 !!}</div>
+                                <p>{!! $va->clo_text2 !!}</p>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--环境文化-->
                 <div class="culture-ambient culture-big-item">
-                    <img src="{{URL::asset('/images/no1.jpg')}}" alt="">
-                    <img src="{{URL::asset('/images/no2.jpg')}}" alt="">
-                    <img src="{{URL::asset('/images/no3.jpg')}}" alt="">
+                    <img src="{{$env[0]->env_pic1}}" alt="">
+                    <img src="{{$env[0]->env_pic2}}" alt="">
+                    <img src="{{$env[0]->env_pic3}}" alt="">
                 </div>
-                <!--食孕文化-->
+                <!--食育文化-->
                 <div class="culture-food culture-big-item">
                     <div class="culture-food-con">
                         <ul>
                             <li class="culture-food-tit">
                                 <img src="{{URL::asset('/images/food-tit.jpg')}}" alt="">
                             </li>
+                            @foreach($food as $ke => $va)
+                            @if($ke == 0)
                             <li class="culture-food-start">
                                 <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/time1.png')}}" alt="" class="time">
-                                    <img src="{{URL::asset('/images/food.jpg')}}" alt="" class="food-img-inner">
+                                    <img src="{{$va->clock_pic}}" alt="" class="time">
+                                    <img src="{{$va->food_pic}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
-                                        <span>入园</span>
-                                        <span>7:20</span>
+                                        <span>{!! $va->food_title !!}</span>
+                                        <span>{!! $va->food_time !!}</span>
                                     </div>
-                                    <p>小朋友入园后老师班前准备，接待幼儿；严细晨检，做好服药等记录。</p>
+                                    <p>{!! $va->food_text !!}</p>
                                 </div>
                             </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time2.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>早餐</span>
-                                        <span>7:50</span>
-                                    </div>
-                                    <p>老师整理晨检记录及晨检交接，<br />配合组织幼儿早餐，点名及教学准备</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time3.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>区域活动</span>
-                                        <span>8:30</span>
-                                    </div>
-                                    <p>老师组织幼儿区域教育活动，做好观察指导</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time4.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>户外活动</span>
-                                        <span>10:00</span>
-                                    </div>
-                                    <p>老师组织幼儿户外活动</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time5.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>午餐</span>
-                                        <span>11:10</span>
-                                    </div>
-                                    <p>老师组织幼儿餐后活动、散步午检、睡前准备</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time6.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>午睡</span>
-                                        <span>12:00</span>
-                                    </div>
-                                    <p>老师看睡，每隔15分钟巡视一次；备课</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time7.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>起床</span>
-                                        <span>14:00</span>
-                                    </div>
-                                    <p>老师组织起床、组织幼儿整理床铺、抬床、喝水、梳头</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time8.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>教育活动</span>
-                                        <span>14:20</span>
-                                    </div>
-                                    <p>老师组织幼儿教育活动。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time9.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>户外活动</span>
-                                        <span>15:00</span>
-                                    </div>
-                                    <p>老师进行教学整理、备课，准备第二天的教具等</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time10.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>下午茶</span>
-                                        <span>15:40</span>
-                                    </div>
-                                    <p>老师组织幼儿午点前准备、午点</p>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="{{URL::asset('/images/time11.png')}}" alt="" class="time">
-                                <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food2.jpg')}}" alt="" class="food-img-inner">
-                                </div>
-                                <div class="food-item-text">
-                                    <div class="food-item-time">
-                                        <span>户外活动</span>
-                                        <span>16:00</span>
-                                    </div>
-                                    <p>老师组织幼儿离园前活动</p>
-                                </div>
-                            </li>
+                            @elseif($ke == 11)
                             <li class="culture-food-end">
-                                <img src="{{URL::asset('/images/time12.png')}}" alt="" class="time">
+                                <img src="{{$va->clock_pic}}" alt="" class="time">
                                 <div class="culture-food-img">
-                                    <img src="{{URL::asset('/images/food.jpg')}}" alt="" class="food-img-inner">
+                                    <img src="{{$va->food_pic}}" alt="" class="food-img-inner">
                                 </div>
                                 <div class="food-item-text">
                                     <div class="food-item-time">
-                                        <span>离园</span>
-                                        <span>16:20</span>
+                                        <span>{!! $va->food_title !!}</span>
+                                        <span>{!! $va->food_time !!}</span>
                                     </div>
-                                    <p>老师组织幼儿离园；一日活动及教学整理。</p>
+                                    <p>{!! $va->food_text !!}</p>
                                 </div>
                             </li>
+                            @else
+                            <li>
+                                <img src="{{$va->clock_pic}}" alt="" class="time">
+                                <div class="culture-food-img">
+                                    <img src="{{$va->food_pic}}" alt="" class="food-img-inner">
+                                </div>
+                                <div class="food-item-text">
+                                    <div class="food-item-time">
+                                        <span>{!! $va->food_title !!}</span>
+                                        <span>{!! $va->food_time !!}</span>
+                                    </div>
+                                    <p>{!! $va->food_text !!}</p>
+                                </div>
+                            </li>
+                            @endif
+                            @endforeach
                         </ul>
                     </div>
                 </div>

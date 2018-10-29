@@ -139,8 +139,14 @@ Route::get('/home_yf','IndexController@home_yf');
 Route::get('/education','IndexController@education');
 //青蓝果教育(锚链接)
 Route::get('/education{test}','IndexController@education');
-//青蓝果文化
+//青蓝果文化(园所理念)
 Route::get('/culture','IndexController@culture');
+//青蓝果文化(视觉形象)
+Route::get('/culture_vi','IndexController@culture_vi');
+//青蓝果文化(环境文化)
+Route::get('/culture_env','IndexController@culture_env');
+//青蓝果文化(食育文化)
+Route::get('/culture_food','IndexController@culture_food');
 
 
 

@@ -146,7 +146,7 @@ class IndexController extends Controller
         return view('qt_education',$data);
     }
 
-    //青蓝果文化
+    //青蓝果文化(园所理念)
     public function culture(){
         $data = [];
         //青蓝果解析
@@ -191,5 +191,49 @@ class IndexController extends Controller
         return view('qt_culture',$data);
     }
 
+    //青蓝果文化(视觉形象)
+    public function culture_vi(){
+        $data = [];
+        //标志
+        $logo = DB::table('vis_logo')->get();
+        $data['logo'] = $logo;
+        //吉祥物
+        $mascot = DB::table('vis_mascot')->get();
+        $data['mascot'] = $mascot;
+        //园服
+        $clothes = DB::table('vis_clothes')->get();
+        $data['clothes'] = $clothes;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_culture_vision',$data);
+    }
 
+    //青蓝果文化(环境文化)
+    public function culture_env(){
+        $data = [];
+        //环境文化
+        $env = DB::table('env_cul')->get();
+        $data['env'] = $env;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_culture_ambient',$data);
+    }
+
+    //青蓝果文化(食育文化)
+    public function culture_food(){
+        $data = [];
+        //食育文化
+        $food = DB::table('food_cul')->get();
+        $data['food'] = $food;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_culture_food',$data);
+    }
+
+
+
+    
 }
