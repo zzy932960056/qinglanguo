@@ -14,145 +14,75 @@
 /*************************************************前台***************************************************/
 /*************************************移动端*********************************/
 Route::group(['domain' => 'm.kinglengo.com'], function(){
-	// //主页
-	// Route::get('/','MobileController@index');
-	// //青蓝果教学特色二级(亿童课程)
-	// Route::get('/teaching_yt','MobileController@teaching_yt');
-	// //青蓝果教学特色二级(亿童课程)(标题栏链接)
-	// Route::get('/teaching_yt{test}','MobileController@teaching_yt');
-	// //青蓝果教学特色二级(布朗课程)
-	// Route::get('/teaching_bl','MobileController@teaching_bl');
-	// //青蓝果教学特色二级(布朗课程)(标题栏链接)
-	// Route::get('/teaching_bl{test}','MobileController@teaching_bl');
-	// //青蓝果教学特色二级(艺术创想)
-	// Route::get('/teaching_ys','MobileController@teaching_ys');
-	// //青蓝果教学特色二级(艺术创想)(标题栏链接)
-	// Route::get('/teaching_ys{test}','MobileController@teaching_ys');
-	// //青蓝果教学特色二级(青蓝果早教)
-	// Route::get('/teaching_zj','MobileController@teaching_zj');
-	// //青蓝果教学特色二级(青蓝果早教)(标题栏链接)
-	// Route::get('/teaching_zj{test}','MobileController@teaching_zj');
-	// //青蓝果教学特色三级
-	// Route::get('/teaching/details/{id}','MobileController@teaching_details')->where('id','[0-9]+');
-	// //青蓝果文化
-	// Route::get('/culture','MobileController@culture');
-	// //青蓝果文化(锚链接)
-	// Route::get('/culture{test}','MobileController@culture');
-	// //青蓝果文化三级
-	// Route::get('/culture/details/{id}','MobileController@culture_details')->where('id','[0-9]+');
-	// //园所动态二级(社会活动)
-	// Route::get('/news_sh','MobileController@news_sh');
-	// //园所动态二级(社会活动)(标题栏链接)
-	// Route::get('/news_sh{test}','MobileController@news_sh');
-	// //园所动态二级(节日活动)
-	// Route::get('/news_jr','MobileController@news_jr');
-	// //园所动态二级(节日活动)(标题栏链接)
-	// Route::get('/news_jr{test}','MobileController@news_jr');
-	// //园所动态二级(班级活动)
-	// Route::get('/news_bj','MobileController@news_bj');
-	// //园所动态二级(班级活动)(标题栏链接)
-	// Route::get('/news_bj{test}','MobileController@news_bj');
-	// //园所动态二级(父母沙龙)
-	// Route::get('/news_fm','MobileController@news_fm');
-	// //园所动态二级(父母沙龙)(标题栏链接)
-	// Route::get('/news_fm{test}','MobileController@news_fm');
-	// //园所动态三级
-	// Route::get('/news/details/{id}','MobileController@news_details')->where('id','[0-9]+');
-	// //常青藤课程
-	// Route::get('/curriculum','MobileController@curriculum');
-	// //关于我们
-	// Route::get('/about','MobileController@about');
-	// //关于我们(锚链接)
-	// Route::get('/about{test}','MobileController@about');
-	// //园所分部三级详情
-	// Route::get('/about/details/{id}','MobileController@about_details')->where('id','[0-9]+');
+  //主页
+  Route::get('/','MobileController@index');
+
 });
 
 /*************************************移动端*********************************/
-	// //主页
-	// Route::get('/','MobileController@index');
-	// //青蓝果教学特色二级(亿童课程)
-	// Route::get('/teaching_yt','MobileController@teaching_yt');
-	// //青蓝果教学特色二级(亿童课程)(标题栏链接)
-	// Route::get('/teaching_yt{test}','MobileController@teaching_yt');
-	// //青蓝果教学特色二级(布朗课程)
-	// Route::get('/teaching_bl','MobileController@teaching_bl');
-	// //青蓝果教学特色二级(布朗课程)(标题栏链接)
-	// Route::get('/teaching_bl{test}','MobileController@teaching_bl');
-	// //青蓝果教学特色二级(艺术创想)
-	// Route::get('/teaching_ys','MobileController@teaching_ys');
-	// //青蓝果教学特色二级(艺术创想)(标题栏链接)
-	// Route::get('/teaching_ys{test}','MobileController@teaching_ys');
-	// //青蓝果教学特色二级(青蓝果早教)
-	// Route::get('/teaching_zj','MobileController@teaching_zj');
-	// //青蓝果教学特色二级(青蓝果早教)(标题栏链接)
-	// Route::get('/teaching_zj{test}','MobileController@teaching_zj');
-	// //青蓝果教学特色三级
-	// Route::get('/teaching/details/{id}','MobileController@teaching_details')->where('id','[0-9]+');
-	// //青蓝果文化
-	// Route::get('/culture','MobileController@culture');
-	// //青蓝果文化(锚链接)
-	// Route::get('/culture{test}','MobileController@culture');
-	// //青蓝果文化三级
-	// Route::get('/culture/details/{id}','MobileController@culture_details')->where('id','[0-9]+');
-	// //园所动态二级(社会活动)
-	// Route::get('/news_sh','MobileController@news_sh');
-	// //园所动态二级(社会活动)(标题栏链接)
-	// Route::get('/news_sh{test}','MobileController@news_sh');
-	// //园所动态二级(节日活动)
-	// Route::get('/news_jr','MobileController@news_jr');
-	// //园所动态二级(节日活动)(标题栏链接)
-	// Route::get('/news_jr{test}','MobileController@news_jr');
-	// //园所动态二级(班级活动)
-	// Route::get('/news_bj','MobileController@news_bj');
-	// //园所动态二级(班级活动)(标题栏链接)
-	// Route::get('/news_bj{test}','MobileController@news_bj');
-	// //园所动态二级(父母沙龙)
-	// Route::get('/news_fm','MobileController@news_fm');
-	// //园所动态二级(父母沙龙)(标题栏链接)
-	// Route::get('/news_fm{test}','MobileController@news_fm');
-	// //园所动态三级
-	// Route::get('/news/details/{id}','MobileController@news_details')->where('id','[0-9]+');
-	// //常青藤课程
-	// Route::get('/curriculum','MobileController@curriculum');
-	// //关于我们
-	// Route::get('/about','MobileController@about');
-	// //关于我们(锚链接)
-	// Route::get('/about{test}','MobileController@about');
-	// //园所分部三级详情
-	// Route::get('/about/details/{id}','MobileController@about_details')->where('id','[0-9]+');
+//主页
+Route::get('/','MobileController@index');
+// //青蓝果之家(中心)
+// Route::get('/home','IndexController@home');
+// //青蓝果之家(王舍)
+// Route::get('/home_ws','IndexController@home_ws');
+// //青蓝果之家(南家)
+// Route::get('/home_nj','IndexController@home_nj');
+// //青蓝果之家(芳草)
+// Route::get('/home_fc','IndexController@home_fc');
+// //青蓝果之家(颐丰)
+// Route::get('/home_yf','IndexController@home_yf');
+// //青蓝果教育
+// Route::get('/education','IndexController@education');
+// //青蓝果教育(锚链接)
+// Route::get('/education{test}','IndexController@education');
+// //青蓝果文化(园所理念)
+// Route::get('/culture','IndexController@culture');
+// //青蓝果文化(视觉形象)
+// Route::get('/culture_vi','IndexController@culture_vi');
+// //青蓝果文化(环境文化)
+// Route::get('/culture_env','IndexController@culture_env');
+// //青蓝果文化(食育文化)
+// Route::get('/culture_food','IndexController@culture_food');
+// //青蓝果动态
+// Route::get('/news','IndexController@news');
+// //青蓝果动态(锚链接)
+// Route::get('/news{test}','IndexController@news');
+// //青蓝果动态三级
+// Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
+
 
 /*************************************PC端*********************************/
-// 主页
-Route::get('/','IndexController@index');
-//青蓝果之家(中心)
-Route::get('/home','IndexController@home');
-//青蓝果之家(王舍)
-Route::get('/home_ws','IndexController@home_ws');
-//青蓝果之家(南家)
-Route::get('/home_nj','IndexController@home_nj');
-//青蓝果之家(芳草)
-Route::get('/home_fc','IndexController@home_fc');
-//青蓝果之家(颐丰)
-Route::get('/home_yf','IndexController@home_yf');
-//青蓝果教育
-Route::get('/education','IndexController@education');
-//青蓝果教育(锚链接)
-Route::get('/education{test}','IndexController@education');
-//青蓝果文化(园所理念)
-Route::get('/culture','IndexController@culture');
-//青蓝果文化(视觉形象)
-Route::get('/culture_vi','IndexController@culture_vi');
-//青蓝果文化(环境文化)
-Route::get('/culture_env','IndexController@culture_env');
-//青蓝果文化(食育文化)
-Route::get('/culture_food','IndexController@culture_food');
-//青蓝果动态
-Route::get('/news','IndexController@news');
-//青蓝果动态(锚链接)
-Route::get('/news{test}','IndexController@news');
-//青蓝果动态三级
-Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
+// // 主页
+// Route::get('/','IndexController@index');
+// //青蓝果之家(中心)
+// Route::get('/home','IndexController@home');
+// //青蓝果之家(王舍)
+// Route::get('/home_ws','IndexController@home_ws');
+// //青蓝果之家(南家)
+// Route::get('/home_nj','IndexController@home_nj');
+// //青蓝果之家(芳草)
+// Route::get('/home_fc','IndexController@home_fc');
+// //青蓝果之家(颐丰)
+// Route::get('/home_yf','IndexController@home_yf');
+// //青蓝果教育
+// Route::get('/education','IndexController@education');
+// //青蓝果教育(锚链接)
+// Route::get('/education{test}','IndexController@education');
+// //青蓝果文化(园所理念)
+// Route::get('/culture','IndexController@culture');
+// //青蓝果文化(视觉形象)
+// Route::get('/culture_vi','IndexController@culture_vi');
+// //青蓝果文化(环境文化)
+// Route::get('/culture_env','IndexController@culture_env');
+// //青蓝果文化(食育文化)
+// Route::get('/culture_food','IndexController@culture_food');
+// //青蓝果动态
+// Route::get('/news','IndexController@news');
+// //青蓝果动态(锚链接)
+// Route::get('/news{test}','IndexController@news');
+// //青蓝果动态三级
+// Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
 
 /*************************************PC端*********************************/
 
