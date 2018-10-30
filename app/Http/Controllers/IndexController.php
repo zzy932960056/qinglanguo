@@ -385,5 +385,24 @@ class IndexController extends Controller
         return view('qt_news',$data);
     }
 
+    //青蓝果动态(三级)
+    public function news_details($id){
+        $data = [];
+        //动态
+        $news = DB::table('qlg_news')
+                  ->where('id',$id)
+                  ->get();
+        $data['news'] = $news;
+        //动态详情
+        $news_details = DB::table('qlg_news_detail')
+                  ->orderBy('id','asc')
+                  ->where('news_id',$id)
+                  ->get();
+        $data['news_details'] = $news_details;
+        //备案信息
+        $company_info = DB::table('company_info')->get();
+        $data['company_info'] = $company_info;
+        return view('qt_news_details',$data);
+    }
 
 }

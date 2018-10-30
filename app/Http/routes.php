@@ -151,28 +151,8 @@ Route::get('/culture_food','IndexController@culture_food');
 Route::get('/news','IndexController@news');
 //青蓝果动态(锚链接)
 Route::get('/news{test}','IndexController@news');
-
-
-
-// //园所动态二级(社会活动)
-// Route::get('/news_sh','IndexController@news_sh');
-// //园所动态二级(社会活动)(标题栏链接)
-// Route::get('/news_sh{test}','IndexController@news_sh');
-// //园所动态二级(节日活动)
-// Route::get('/news_jr','IndexController@news_jr');
-// //园所动态二级(节日活动)(标题栏链接)
-// Route::get('/news_jr{test}','IndexController@news_jr');
-// //园所动态二级(班级活动)
-// Route::get('/news_bj','IndexController@news_bj');
-// //园所动态二级(班级活动)(标题栏链接)
-// Route::get('/news_bj{test}','IndexController@news_bj');
-// //园所动态二级(父母沙龙)
-// Route::get('/news_fm','IndexController@news_fm');
-// //园所动态二级(父母沙龙)(标题栏链接)
-// Route::get('/news_fm{test}','IndexController@news_fm');
-// //园所动态三级
-// Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
-
+//青蓝果动态三级
+Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
 
 /*************************************PC端*********************************/
 
