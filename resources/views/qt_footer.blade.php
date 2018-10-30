@@ -48,11 +48,11 @@
                         <a href="/news">
                             <img src="{{URL::asset('/images/footer4.png')}}" alt="">
                         </a>
-                        <span><a href="javascript:;">园所快报</a></span>
-                        <span><a href="javascript:;">健康护航</a></span>
-                        <span><a href="javascript:;">金色时光</a></span>
-                        <span><a href="javascript:;">最美芳华</a></span>
-                        <span><a href="javascript:;">为爱同行</a></span>
+                        <span><a href="/news#ys">园所快报</a></span>
+                        <span><a href="/news#jk">健康护航</a></span>
+                        <span><a href="/news#js">金色时光</a></span>
+                        <span><a href="/news#zm">最美芳华</a></span>
+                        <span><a href="/news#wa">为爱同行</a></span>
                     </li>
                 </ul>
             </div>

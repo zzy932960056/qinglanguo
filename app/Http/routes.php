@@ -147,31 +147,13 @@ Route::get('/culture_vi','IndexController@culture_vi');
 Route::get('/culture_env','IndexController@culture_env');
 //青蓝果文化(食育文化)
 Route::get('/culture_food','IndexController@culture_food');
+//青蓝果动态
+Route::get('/news','IndexController@news');
+//青蓝果动态(锚链接)
+Route::get('/news{test}','IndexController@news');
 
 
 
-// //青蓝果教学特色二级(亿童课程)(标题栏链接)
-// Route::get('/teaching_yt{test}','IndexController@teaching_yt');
-// //青蓝果教学特色二级(布朗课程)
-// Route::get('/teaching_bl','IndexController@teaching_bl');
-// //青蓝果教学特色二级(布朗课程)(标题栏链接)
-// Route::get('/teaching_bl{test}','IndexController@teaching_bl');
-// //青蓝果教学特色二级(艺术创想)
-// Route::get('/teaching_ys','IndexController@teaching_ys');
-// //青蓝果教学特色二级(艺术创想)(标题栏链接)
-// Route::get('/teaching_ys{test}','IndexController@teaching_ys');
-// //青蓝果教学特色二级(青蓝果早教)
-// Route::get('/teaching_zj','IndexController@teaching_zj');
-// //青蓝果教学特色二级(青蓝果早教)(标题栏链接)
-// Route::get('/teaching_zj{test}','IndexController@teaching_zj');
-// //青蓝果教学特色三级
-// Route::get('/teaching/details/{id}','IndexController@teaching_details')->where('id','[0-9]+');
-// //青蓝果文化
-// Route::get('/culture','IndexController@culture');
-// //青蓝果文化(锚链接)
-// Route::get('/culture{test}','IndexController@culture');
-// //青蓝果文化三级
-// Route::get('/culture/details/{id}','IndexController@culture_details')->where('id','[0-9]+');
 // //园所动态二级(社会活动)
 // Route::get('/news_sh','IndexController@news_sh');
 // //园所动态二级(社会活动)(标题栏链接)
@@ -190,14 +172,6 @@ Route::get('/culture_food','IndexController@culture_food');
 // Route::get('/news_fm{test}','IndexController@news_fm');
 // //园所动态三级
 // Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
-// //常青藤课程
-// Route::get('/curriculum','IndexController@curriculum');
-// //关于我们
-// Route::get('/about','IndexController@about');
-// //关于我们(锚链接)
-// Route::get('/about{test}','IndexController@about');
-// //园所分部三级详情
-// Route::get('/about/details/{id}','IndexController@about_details')->where('id','[0-9]+');
 
 
 /*************************************PC端*********************************/
