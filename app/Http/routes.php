@@ -22,41 +22,33 @@ Route::group(['domain' => 'm.kinglengo.com'], function(){
 /*************************************移动端*********************************/
 //主页
 Route::get('/','MobileController@index');
-// //青蓝果之家(中心)
-// Route::get('/home','IndexController@home');
-// //青蓝果之家(王舍)
-// Route::get('/home_ws','IndexController@home_ws');
-// //青蓝果之家(南家)
-// Route::get('/home_nj','IndexController@home_nj');
-// //青蓝果之家(芳草)
-// Route::get('/home_fc','IndexController@home_fc');
-// //青蓝果之家(颐丰)
-// Route::get('/home_yf','IndexController@home_yf');
+//青蓝果之家
+Route::get('/home','MobileController@home');
 // //青蓝果教育
-// Route::get('/education','IndexController@education');
+// Route::get('/education','MobileController@education');
 // //青蓝果教育(锚链接)
-// Route::get('/education{test}','IndexController@education');
+// Route::get('/education{test}','MobileController@education');
 // //青蓝果文化(园所理念)
-// Route::get('/culture','IndexController@culture');
+// Route::get('/culture','MobileController@culture');
 // //青蓝果文化(视觉形象)
-// Route::get('/culture_vi','IndexController@culture_vi');
+// Route::get('/culture_vi','MobileController@culture_vi');
 // //青蓝果文化(环境文化)
-// Route::get('/culture_env','IndexController@culture_env');
+// Route::get('/culture_env','MobileController@culture_env');
 // //青蓝果文化(食育文化)
-// Route::get('/culture_food','IndexController@culture_food');
+// Route::get('/culture_food','MobileController@culture_food');
 // //青蓝果动态
-// Route::get('/news','IndexController@news');
+// Route::get('/news','MobileController@news');
 // //青蓝果动态(锚链接)
-// Route::get('/news{test}','IndexController@news');
+// Route::get('/news{test}','MobileController@news');
 // //青蓝果动态三级
-// Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
+// Route::get('/news/details/{id}','MobileController@news_details')->where('id','[0-9]+');
 
 
 /*************************************PC端*********************************/
 // // 主页
 // Route::get('/','IndexController@index');
 // //青蓝果之家(中心)
-// Route::get('/home','IndexController@home');
+//Route::get('/home','IndexController@home');
 // //青蓝果之家(王舍)
 // Route::get('/home_ws','IndexController@home_ws');
 // //青蓝果之家(南家)
