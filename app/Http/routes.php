@@ -24,18 +24,18 @@ Route::group(['domain' => 'm.kinglengo.com'], function(){
 Route::get('/','MobileController@index');
 //青蓝果之家
 Route::get('/home','MobileController@home');
-// //青蓝果教育
-// Route::get('/education','MobileController@education');
-// //青蓝果教育(锚链接)
-// Route::get('/education{test}','MobileController@education');
-// //青蓝果文化(园所理念)
-// Route::get('/culture','MobileController@culture');
-// //青蓝果文化(视觉形象)
-// Route::get('/culture_vi','MobileController@culture_vi');
-// //青蓝果文化(环境文化)
-// Route::get('/culture_env','MobileController@culture_env');
-// //青蓝果文化(食育文化)
-// Route::get('/culture_food','MobileController@culture_food');
+//青蓝果教育
+Route::get('/education','MobileController@education');
+//青蓝果教育(锚链接)
+Route::get('/education{test}','MobileController@education');
+//青蓝果文化(园所理念)
+Route::get('/culture','MobileController@culture');
+//青蓝果文化(视觉形象)
+Route::get('/culture_vi','MobileController@culture_vi');
+//青蓝果文化(环境文化)
+Route::get('/culture_env','MobileController@culture_env');
+//青蓝果文化(食育文化)
+Route::get('/culture_food','MobileController@culture_food');
 // //青蓝果动态
 // Route::get('/news','MobileController@news');
 // //青蓝果动态(锚链接)
@@ -268,12 +268,18 @@ Route::get('/admin/vision/clothes','VisionindexController@clothes');
 Route::get('/admin/vision/clothes_update/{id}','VisionindexController@clothes_update');
 //do青蓝果文化-视觉形象-园服编辑
 Route::post('/admin/vision/clothes/doupdate/{id}','VisionindexController@clothes_doUpdate')->where('id', '[0-9]+');
-//青蓝果文化-环境文化
+//青蓝果文化-环境文化(pc端)
 Route::get('/admin/env','EnvindexController@env');
-//青蓝果文化-环境文化编辑
+//青蓝果文化-环境文化(pc端)编辑
 Route::get('/admin/env_update/{id}','EnvindexController@env_update');
-//do青蓝果文化-环境文化编辑
+//do青蓝果文化-环境文化(pc端)编辑
 Route::post('/admin/env/doupdate/{id}','EnvindexController@env_doUpdate')->where('id', '[0-9]+');
+//青蓝果文化-环境文化(移动端)
+Route::get('/admin/env_yd','EnvindexController@env_yd');
+//青蓝果文化-环境文化(移动端)编辑
+Route::get('/admin/env_yd_update/{id}','EnvindexController@env_yd_update');
+//do青蓝果文化-环境文化(移动端)编辑
+Route::post('/admin/env_yd/doupdate/{id}','EnvindexController@env_yd_doUpdate')->where('id', '[0-9]+');
 //青蓝果文化-食育文化
 Route::get('/admin/food','FoodindexController@food');
 //青蓝果文化-食育文化编辑

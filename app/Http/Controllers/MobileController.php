@@ -65,120 +65,198 @@ class MobileController extends Controller
     	  return view('yd_home',$data);
     }
 
-    // //青蓝果教育
-    // public function education(){
-    //     $data = [];
-    //     //传统文化
-    //     $edu_culture = DB::table('edu_culture')->get();
-    //     $data['edu_culture'] = $edu_culture;
-    //     //探究空间
-    //     $edu_space = DB::table('edu_space')->get();
-    //     $data['edu_space'] = $edu_space;
-    //     //健康领动
-    //     $edu_health = DB::table('edu_health')->get();
-    //     $data['edu_health'] = $edu_health;
-    //     //艺术创想
-    //     $edu_art = DB::table('edu_art')->get();
-    //     $data['edu_art'] = $edu_art;
-    //     //社会链接
-    //     $edu_social = DB::table('edu_social')->get();
-    //     $data['edu_social'] = $edu_social;
-    //     //师资力量
-    //     $edu_teach = DB::table('edu_teach')->get();
-    //     $data['edu_teach'] = $edu_teach;
-    //     //备案信息
-    //     $company_info = DB::table('company_info')->get();
-    //     $data['company_info'] = $company_info;
-    //     return view('qt_education',$data);
-    // }
-    //
-    // //青蓝果文化(园所理念)
-    // public function culture(){
-    //     $data = [];
-    //     //青蓝果解析
-    //     $analysis = DB::table('cul_analysis')->get();
-    //     $data['analysis'] = $analysis;
-    //     //青蓝精神
-    //     $spirit = DB::table('cul_spirit')->get();
-    //     $data['spirit'] = $spirit;
-    //     //青蓝果标语
-    //     $slogan = DB::table('cul_slogan')->get();
-    //     $data['slogan'] = $slogan;
-    //     //办园理念
-    //     $idea = DB::table('cul_idea')->get();
-    //     $data['idea'] = $idea;
-    //     //办园宗旨
-    //     $purpose = DB::table('cul_purpose')->get();
-    //     $data['purpose'] = $purpose;
-    //     //园训
-    //     $teach = DB::table('cul_teach')->get();
-    //     $data['teach'] = $teach;
-    //     //团队文化
-    //     $team = DB::table('cul_team')->get();
-    //     $data['team'] = $team;
-    //     //标志
-    //     $logo = DB::table('vis_logo')->get();
-    //     $data['logo'] = $logo;
-    //     //吉祥物
-    //     $mascot = DB::table('vis_mascot')->get();
-    //     $data['mascot'] = $mascot;
-    //     //园服
-    //     $clothes = DB::table('vis_clothes')->get();
-    //     $data['clothes'] = $clothes;
-    //     //环境文化
-    //     $env = DB::table('env_cul')->get();
-    //     $data['env'] = $env;
-    //     //食育文化
-    //     $food = DB::table('food_cul')->get();
-    //     $data['food'] = $food;
-    //     //备案信息
-    //     $company_info = DB::table('company_info')->get();
-    //     $data['company_info'] = $company_info;
-    //     return view('qt_culture',$data);
-    // }
-    //
-    // //青蓝果文化(视觉形象)
-    // public function culture_vi(){
-    //     $data = [];
-    //     //标志
-    //     $logo = DB::table('vis_logo')->get();
-    //     $data['logo'] = $logo;
-    //     //吉祥物
-    //     $mascot = DB::table('vis_mascot')->get();
-    //     $data['mascot'] = $mascot;
-    //     //园服
-    //     $clothes = DB::table('vis_clothes')->get();
-    //     $data['clothes'] = $clothes;
-    //     //备案信息
-    //     $company_info = DB::table('company_info')->get();
-    //     $data['company_info'] = $company_info;
-    //     return view('qt_culture_vision',$data);
-    // }
-    //
-    // //青蓝果文化(环境文化)
-    // public function culture_env(){
-    //     $data = [];
-    //     //环境文化
-    //     $env = DB::table('env_cul')->get();
-    //     $data['env'] = $env;
-    //     //备案信息
-    //     $company_info = DB::table('company_info')->get();
-    //     $data['company_info'] = $company_info;
-    //     return view('qt_culture_ambient',$data);
-    // }
-    //
-    // //青蓝果文化(食育文化)
-    // public function culture_food(){
-    //     $data = [];
-    //     //食育文化
-    //     $food = DB::table('food_cul')->get();
-    //     $data['food'] = $food;
-    //     //备案信息
-    //     $company_info = DB::table('company_info')->get();
-    //     $data['company_info'] = $company_info;
-    //     return view('qt_culture_food',$data);
-    // }
-    //
+    //青蓝果教育
+    public function education(){
+        $data = [];
+        //传统文化
+        $edu_culture = DB::table('edu_culture')->get();
+        $data['edu_culture'] = $edu_culture;
+        //探究空间
+        $edu_space = DB::table('edu_space')->get();
+        $data['edu_space'] = $edu_space;
+        //健康领动
+        $edu_health = DB::table('edu_health')->get();
+        $data['edu_health'] = $edu_health;
+        //艺术创想
+        $edu_art = DB::table('edu_art')->get();
+        $data['edu_art'] = $edu_art;
+        //社会链接
+        $edu_social = DB::table('edu_social')->get();
+        $data['edu_social'] = $edu_social;
+        //师资力量
+        $edu_teach = DB::table('edu_teach')->get();
+        $data['edu_teach'] = $edu_teach;
+        return view('yd_education',$data);
+    }
+
+    //青蓝果文化(园所理念)
+    public function culture(){
+        $data = [];
+        //青蓝果解析
+        $analysis = DB::table('cul_analysis')->get();
+        $data['analysis'] = $analysis;
+        //青蓝精神
+        $spirit = DB::table('cul_spirit')->get();
+        $data['spirit'] = $spirit;
+        //青蓝果标语
+        $slogan = DB::table('cul_slogan')->get();
+        $data['slogan'] = $slogan;
+        //办园理念
+        $idea = DB::table('cul_idea')->get();
+        $data['idea'] = $idea;
+        //办园宗旨
+        $purpose = DB::table('cul_purpose')->get();
+        $data['purpose'] = $purpose;
+        //园训
+        $teach = DB::table('cul_teach')->get();
+        $data['teach'] = $teach;
+        //团队文化
+        $team = DB::table('cul_team')->get();
+        $data['team'] = $team;
+        //标志
+        $logo = DB::table('vis_logo')->get();
+        $data['logo'] = $logo;
+        //吉祥物
+        $mascot = DB::table('vis_mascot')->get();
+        $data['mascot'] = $mascot;
+        //园服
+        $clothes = DB::table('vis_clothes')->get();
+        $data['clothes'] = $clothes;
+        //环境文化
+        $env = DB::table('env_cul_yd')->get();
+        $data['env'] = $env;
+        //食育文化
+        $food = DB::table('food_cul')->get();
+        $data['food'] = $food;
+        return view('yd_culture',$data);
+    }
+
+    //青蓝果文化(视觉形象)
+    public function culture_vi(){
+        $data = [];
+        //青蓝果解析
+        $analysis = DB::table('cul_analysis')->get();
+        $data['analysis'] = $analysis;
+        //青蓝精神
+        $spirit = DB::table('cul_spirit')->get();
+        $data['spirit'] = $spirit;
+        //青蓝果标语
+        $slogan = DB::table('cul_slogan')->get();
+        $data['slogan'] = $slogan;
+        //办园理念
+        $idea = DB::table('cul_idea')->get();
+        $data['idea'] = $idea;
+        //办园宗旨
+        $purpose = DB::table('cul_purpose')->get();
+        $data['purpose'] = $purpose;
+        //园训
+        $teach = DB::table('cul_teach')->get();
+        $data['teach'] = $teach;
+        //团队文化
+        $team = DB::table('cul_team')->get();
+        $data['team'] = $team;
+        //标志
+        $logo = DB::table('vis_logo')->get();
+        $data['logo'] = $logo;
+        //吉祥物
+        $mascot = DB::table('vis_mascot')->get();
+        $data['mascot'] = $mascot;
+        //园服
+        $clothes = DB::table('vis_clothes')->get();
+        $data['clothes'] = $clothes;
+        //环境文化
+        $env = DB::table('env_cul_yd')->get();
+        $data['env'] = $env;
+        //食育文化
+        $food = DB::table('food_cul')->get();
+        $data['food'] = $food;
+        return view('yd_culture_vi',$data);
+    }
+
+    //青蓝果文化(环境文化)
+    public function culture_env(){
+        $data = [];
+        //青蓝果解析
+        $analysis = DB::table('cul_analysis')->get();
+        $data['analysis'] = $analysis;
+        //青蓝精神
+        $spirit = DB::table('cul_spirit')->get();
+        $data['spirit'] = $spirit;
+        //青蓝果标语
+        $slogan = DB::table('cul_slogan')->get();
+        $data['slogan'] = $slogan;
+        //办园理念
+        $idea = DB::table('cul_idea')->get();
+        $data['idea'] = $idea;
+        //办园宗旨
+        $purpose = DB::table('cul_purpose')->get();
+        $data['purpose'] = $purpose;
+        //园训
+        $teach = DB::table('cul_teach')->get();
+        $data['teach'] = $teach;
+        //团队文化
+        $team = DB::table('cul_team')->get();
+        $data['team'] = $team;
+        //标志
+        $logo = DB::table('vis_logo')->get();
+        $data['logo'] = $logo;
+        //吉祥物
+        $mascot = DB::table('vis_mascot')->get();
+        $data['mascot'] = $mascot;
+        //园服
+        $clothes = DB::table('vis_clothes')->get();
+        $data['clothes'] = $clothes;
+        //环境文化
+        $env = DB::table('env_cul_yd')->get();
+        $data['env'] = $env;
+        //食育文化
+        $food = DB::table('food_cul')->get();
+        $data['food'] = $food;
+        return view('yd_culture_env',$data);
+    }
+
+    //青蓝果文化(食育文化)
+    public function culture_food(){
+        $data = [];
+        //青蓝果解析
+        $analysis = DB::table('cul_analysis')->get();
+        $data['analysis'] = $analysis;
+        //青蓝精神
+        $spirit = DB::table('cul_spirit')->get();
+        $data['spirit'] = $spirit;
+        //青蓝果标语
+        $slogan = DB::table('cul_slogan')->get();
+        $data['slogan'] = $slogan;
+        //办园理念
+        $idea = DB::table('cul_idea')->get();
+        $data['idea'] = $idea;
+        //办园宗旨
+        $purpose = DB::table('cul_purpose')->get();
+        $data['purpose'] = $purpose;
+        //园训
+        $teach = DB::table('cul_teach')->get();
+        $data['teach'] = $teach;
+        //团队文化
+        $team = DB::table('cul_team')->get();
+        $data['team'] = $team;
+        //标志
+        $logo = DB::table('vis_logo')->get();
+        $data['logo'] = $logo;
+        //吉祥物
+        $mascot = DB::table('vis_mascot')->get();
+        $data['mascot'] = $mascot;
+        //园服
+        $clothes = DB::table('vis_clothes')->get();
+        $data['clothes'] = $clothes;
+        //环境文化
+        $env = DB::table('env_cul_yd')->get();
+        $data['env'] = $env;
+        //食育文化
+        $food = DB::table('food_cul')->get();
+        $data['food'] = $food;
+        return view('yd_culture_food',$data);
+    }
+
     // //青蓝果动态
     // public function news(){
     //     $data = [];

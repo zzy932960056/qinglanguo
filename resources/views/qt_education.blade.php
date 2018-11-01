@@ -102,7 +102,7 @@
                             <img src="{{$edu_art[0]->art_pic1}}" alt="" class="teach-list-img">
                             <div class="teach-list-text">
                                 <p>
-                                  {!! $edu_art[0]->art_text1 !!}
+                                    {!! $edu_art[0]->art_text1 !!}
                                 </p>
                             </div>
                         </div>
