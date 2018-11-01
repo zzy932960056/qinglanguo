@@ -14,67 +14,82 @@
 /*************************************************前台***************************************************/
 /*************************************移动端*********************************/
 Route::group(['domain' => 'm.kinglengo.com'], function(){
-  //主页
-  Route::get('/','MobileController@index');
-
+    //主页
+    Route::get('/','MobileController@index');
+    //青蓝果之家
+    Route::get('/home','MobileController@home');
+    //青蓝果教育
+    Route::get('/education','MobileController@education');
+    //青蓝果教育(锚链接)
+    Route::get('/education{test}','MobileController@education');
+    //青蓝果文化(园所理念)
+    Route::get('/culture','MobileController@culture');
+    //青蓝果文化(视觉形象)
+    Route::get('/culture_vi','MobileController@culture_vi');
+    //青蓝果文化(环境文化)
+    Route::get('/culture_env','MobileController@culture_env');
+    //青蓝果文化(食育文化)
+    Route::get('/culture_food','MobileController@culture_food');
+    //青蓝果动态
+    Route::get('/news','MobileController@news');
+    //青蓝果动态三级
+    Route::get('/news/details/{id}','MobileController@news_details')->where('id','[0-9]+');
 });
 
 /*************************************移动端*********************************/
-//主页
-Route::get('/','MobileController@index');
-//青蓝果之家
-Route::get('/home','MobileController@home');
-//青蓝果教育
-Route::get('/education','MobileController@education');
-//青蓝果教育(锚链接)
-Route::get('/education{test}','MobileController@education');
-//青蓝果文化(园所理念)
-Route::get('/culture','MobileController@culture');
-//青蓝果文化(视觉形象)
-Route::get('/culture_vi','MobileController@culture_vi');
-//青蓝果文化(环境文化)
-Route::get('/culture_env','MobileController@culture_env');
-//青蓝果文化(食育文化)
-Route::get('/culture_food','MobileController@culture_food');
+// //主页
+// Route::get('/','MobileController@index');
+// //青蓝果之家
+// Route::get('/home','MobileController@home');
+// //青蓝果教育
+// Route::get('/education','MobileController@education');
+// //青蓝果教育(锚链接)
+// Route::get('/education{test}','MobileController@education');
+// //青蓝果文化(园所理念)
+// Route::get('/culture','MobileController@culture');
+// //青蓝果文化(视觉形象)
+// Route::get('/culture_vi','MobileController@culture_vi');
+// //青蓝果文化(环境文化)
+// Route::get('/culture_env','MobileController@culture_env');
+// //青蓝果文化(食育文化)
+// Route::get('/culture_food','MobileController@culture_food');
 // //青蓝果动态
 // Route::get('/news','MobileController@news');
-// //青蓝果动态(锚链接)
-// Route::get('/news{test}','MobileController@news');
 // //青蓝果动态三级
 // Route::get('/news/details/{id}','MobileController@news_details')->where('id','[0-9]+');
 
 
 /*************************************PC端*********************************/
-// // 主页
-// Route::get('/','IndexController@index');
-// //青蓝果之家(中心)
-//Route::get('/home','IndexController@home');
-// //青蓝果之家(王舍)
-// Route::get('/home_ws','IndexController@home_ws');
-// //青蓝果之家(南家)
-// Route::get('/home_nj','IndexController@home_nj');
-// //青蓝果之家(芳草)
-// Route::get('/home_fc','IndexController@home_fc');
-// //青蓝果之家(颐丰)
-// Route::get('/home_yf','IndexController@home_yf');
-// //青蓝果教育
-// Route::get('/education','IndexController@education');
-// //青蓝果教育(锚链接)
-// Route::get('/education{test}','IndexController@education');
-// //青蓝果文化(园所理念)
-// Route::get('/culture','IndexController@culture');
-// //青蓝果文化(视觉形象)
-// Route::get('/culture_vi','IndexController@culture_vi');
-// //青蓝果文化(环境文化)
-// Route::get('/culture_env','IndexController@culture_env');
-// //青蓝果文化(食育文化)
-// Route::get('/culture_food','IndexController@culture_food');
-// //青蓝果动态
-// Route::get('/news','IndexController@news');
-// //青蓝果动态(锚链接)
-// Route::get('/news{test}','IndexController@news');
-// //青蓝果动态三级
-// Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
+// 主页
+Route::get('/','IndexController@index');
+//青蓝果之家(中心)
+Route::get('/home','IndexController@home');
+//青蓝果之家(王舍)
+Route::get('/home_ws','IndexController@home_ws');
+//青蓝果之家(南家)
+Route::get('/home_nj','IndexController@home_nj');
+//青蓝果之家(芳草)
+Route::get('/home_fc','IndexController@home_fc');
+//青蓝果之家(颐丰)
+Route::get('/home_yf','IndexController@home_yf');
+//青蓝果教育
+Route::get('/education','IndexController@education');
+//青蓝果教育(锚链接)
+Route::get('/education{test}','IndexController@education');
+//青蓝果文化(园所理念)
+Route::get('/culture','IndexController@culture');
+//青蓝果文化(视觉形象)
+Route::get('/culture_vi','IndexController@culture_vi');
+//青蓝果文化(环境文化)
+Route::get('/culture_env','IndexController@culture_env');
+//青蓝果文化(食育文化)
+Route::get('/culture_food','IndexController@culture_food');
+//青蓝果动态
+Route::get('/news','IndexController@news');
+//青蓝果动态(锚链接)
+Route::get('/news{test}','IndexController@news');
+//青蓝果动态三级
+Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-9]+');
 
 /*************************************PC端*********************************/
 
@@ -286,12 +301,18 @@ Route::get('/admin/food','FoodindexController@food');
 Route::get('/admin/food_update/{id}','FoodindexController@food_update');
 //do青蓝果文化-食育文化编辑
 Route::post('/admin/food/doupdate/{id}','FoodindexController@food_doUpdate')->where('id', '[0-9]+');
-//青蓝果动态头图
+//青蓝果动态头图(pc端)
 Route::get('/admin/news/picture','NewsindexController@picture');
-//青蓝果动态头图编辑
+//青蓝果动态头图(pc端)编辑
 Route::get('/admin/news/picture_update/{id}','NewsindexController@picture_update');
-//do青蓝果动态头图编辑
+//do青蓝果动态头图(pc端)编辑
 Route::post('/admin/news/picture/doupdate/{id}','NewsindexController@picture_doUpdate')->where('id', '[0-9]+');
+//青蓝果动态头图(移动端)
+Route::get('/admin/news/picture_yd','NewsindexController@picture_yd');
+//青蓝果动态头图(移动端)编辑
+Route::get('/admin/news/picture_yd_update/{id}','NewsindexController@picture_yd_update');
+//do青蓝果动态头图(移动端)编辑
+Route::post('/admin/news/picture_yd/doupdate/{id}','NewsindexController@picture_yd_doUpdate')->where('id', '[0-9]+');
 //青蓝果动态
 Route::get('/admin/news','NewsindexController@news');
 //青蓝果动态删除

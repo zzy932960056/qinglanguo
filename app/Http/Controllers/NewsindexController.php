@@ -51,6 +51,47 @@ class NewsindexController extends Controller
         }
     }
 
+		public function picture_yd(){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$data = [];
+				$picture = DB::table('qlg_news_pic_yd')->get();
+				$data['picture'] = $picture;
+				return view('admin_news_picture_yd',$data);
+		}
+
+		public function picture_yd_update($id){
+				@session_start();
+				if(!isset($_SESSION['admin_name'])){
+						return redirect('/admin/login');
+				}
+				$bid = $id;
+				$picture = DB::table('qlg_news_pic_yd')->where(['id'=>$bid])->get();
+				$data = [];
+				$data['picture'] = (array)$picture[0];
+				return view('qlg_news_picture_yd_update',$data);
+		}
+
+		public function picture_yd_doUpdate($id){
+				$news_pic = $_POST['news_pic'];
+				if($news_pic == ''){
+						echo "<script>alert('动态头图路径不能为空')</script>";
+						return self::picture_yd_update($id);
+				}
+				$num = DB::table('qlg_news_pic_yd')->where('id',$id)->update(
+								['news_pic'=>$news_pic]
+						);
+				if($num == 1){
+						echo "<script>alert('信息修改成功')</script>";
+						 return self::picture_yd();
+				}else{
+						echo "<script>alert('发生未知错误,信息修改失败,请重新修改')</script>";
+						return self::picture_yd_update($id);
+				}
+		}
+
 		public function news(){
         @session_start();
         if(!isset($_SESSION['admin_name'])){

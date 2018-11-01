@@ -257,176 +257,170 @@ class MobileController extends Controller
         return view('yd_culture_food',$data);
     }
 
-    // //青蓝果动态
-    // public function news(){
-    //     $data = [];
-    //     //动态头图
-    //     $news_pic = DB::table('qlg_news_pic')->get();
-    //     $data['news_pic'] = $news_pic;
-    //     //春-园所快报
-    //     $chun_ys = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '春'],['news_sort', '=', '园所快报'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['chun_ys'] = $chun_ys;
-    //     //春-健康护航
-    //     $chun_jk = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '春'],['news_sort', '=', '健康护航'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['chun_jk'] = $chun_jk;
-    //     //春-金色时光
-    //     $chun_js = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '春'],['news_sort', '=', '金色时光'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['chun_js'] = $chun_js;
-    //     //春-最美芳华
-    //     $chun_zm = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '春'],['news_sort', '=', '最美芳华'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['chun_zm'] = $chun_zm;
-    //     //春-为爱同行
-    //     $chun_wa = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '春'],['news_sort', '=', '为爱同行'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['chun_wa'] = $chun_wa;
-    //     //夏-园所快报
-    //     $xia_ys = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '夏'],['news_sort', '=', '园所快报'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['xia_ys'] = $xia_ys;
-    //     //夏-健康护航
-    //     $xia_jk = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '夏'],['news_sort', '=', '健康护航'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['xia_jk'] = $xia_jk;
-    //     //夏-金色时光
-    //     $xia_js = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '夏'],['news_sort', '=', '金色时光'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['xia_js'] = $xia_js;
-    //     //夏-最美芳华
-    //     $xia_zm = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '夏'],['news_sort', '=', '最美芳华'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['xia_zm'] = $xia_zm;
-    //     //夏-为爱同行
-    //     $xia_wa = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '夏'],['news_sort', '=', '为爱同行'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['xia_wa'] = $xia_wa;
-    //     //秋-园所快报
-    //     $qiu_ys = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '秋'],['news_sort', '=', '园所快报'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['qiu_ys'] = $qiu_ys;
-    //     //秋-健康护航
-    //     $qiu_jk = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '秋'],['news_sort', '=', '健康护航'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['qiu_jk'] = $qiu_jk;
-    //     //秋-金色时光
-    //     $qiu_js = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '秋'],['news_sort', '=', '金色时光'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['qiu_js'] = $qiu_js;
-    //     //秋-最美芳华
-    //     $qiu_zm = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '秋'],['news_sort', '=', '最美芳华'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['qiu_zm'] = $qiu_zm;
-    //     //秋-为爱同行
-    //     $qiu_wa = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '秋'],['news_sort', '=', '为爱同行'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['qiu_wa'] = $qiu_wa;
-    //     //冬-园所快报
-    //     $dong_ys = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '冬'],['news_sort', '=', '园所快报'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['dong_ys'] = $dong_ys;
-    //     //冬-健康护航
-    //     $dong_jk = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '冬'],['news_sort', '=', '健康护航'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['dong_jk'] = $dong_jk;
-    //     //冬-金色时光
-    //     $dong_js = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '冬'],['news_sort', '=', '金色时光'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['dong_js'] = $dong_js;
-    //     //冬-最美芳华
-    //     $dong_zm = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '冬'],['news_sort', '=', '最美芳华'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['dong_zm'] = $dong_zm;
-    //     //冬-为爱同行
-    //     $dong_wa = DB::table('qlg_news')
-    //     ->where([['news_season', '=', '冬'],['news_sort', '=', '为爱同行'],])
-    //     ->limit(8)
-    //     ->orderBy('news_date','desc')
-    //     ->get();
-    //     $data['dong_wa'] = $dong_wa;
-    //     //备案信息
-    //     $company_info = DB::table('company_info')->get();
-    //     $data['company_info'] = $company_info;
-    //     return view('qt_news',$data);
-    // }
-    //
-    // //青蓝果动态(三级)
-    // public function news_details($id){
-    //     $data = [];
-    //     //动态
-    //     $news = DB::table('qlg_news')
-    //               ->where('id',$id)
-    //               ->get();
-    //     $data['news'] = $news;
-    //     //动态详情
-    //     $news_details = DB::table('qlg_news_detail')
-    //               ->orderBy('id','asc')
-    //               ->where('news_id',$id)
-    //               ->get();
-    //     $data['news_details'] = $news_details;
-    //     //备案信息
-    //     $company_info = DB::table('company_info')->get();
-    //     $data['company_info'] = $company_info;
-    //     return view('qt_news_details',$data);
-    // }
+    //青蓝果动态
+    public function news(){
+        $data = [];
+        //动态头图
+        $news_pic = DB::table('qlg_news_pic_yd')->get();
+        $data['news_pic'] = $news_pic;
+        //春-园所快报
+        $chun_ys = DB::table('qlg_news')
+        ->where([['news_season', '=', '春'],['news_sort', '=', '园所快报'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['chun_ys'] = $chun_ys;
+        //春-健康护航
+        $chun_jk = DB::table('qlg_news')
+        ->where([['news_season', '=', '春'],['news_sort', '=', '健康护航'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['chun_jk'] = $chun_jk;
+        //春-金色时光
+        $chun_js = DB::table('qlg_news')
+        ->where([['news_season', '=', '春'],['news_sort', '=', '金色时光'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['chun_js'] = $chun_js;
+        //春-最美芳华
+        $chun_zm = DB::table('qlg_news')
+        ->where([['news_season', '=', '春'],['news_sort', '=', '最美芳华'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['chun_zm'] = $chun_zm;
+        //春-为爱同行
+        $chun_wa = DB::table('qlg_news')
+        ->where([['news_season', '=', '春'],['news_sort', '=', '为爱同行'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['chun_wa'] = $chun_wa;
+        //夏-园所快报
+        $xia_ys = DB::table('qlg_news')
+        ->where([['news_season', '=', '夏'],['news_sort', '=', '园所快报'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['xia_ys'] = $xia_ys;
+        //夏-健康护航
+        $xia_jk = DB::table('qlg_news')
+        ->where([['news_season', '=', '夏'],['news_sort', '=', '健康护航'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['xia_jk'] = $xia_jk;
+        //夏-金色时光
+        $xia_js = DB::table('qlg_news')
+        ->where([['news_season', '=', '夏'],['news_sort', '=', '金色时光'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['xia_js'] = $xia_js;
+        //夏-最美芳华
+        $xia_zm = DB::table('qlg_news')
+        ->where([['news_season', '=', '夏'],['news_sort', '=', '最美芳华'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['xia_zm'] = $xia_zm;
+        //夏-为爱同行
+        $xia_wa = DB::table('qlg_news')
+        ->where([['news_season', '=', '夏'],['news_sort', '=', '为爱同行'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['xia_wa'] = $xia_wa;
+        //秋-园所快报
+        $qiu_ys = DB::table('qlg_news')
+        ->where([['news_season', '=', '秋'],['news_sort', '=', '园所快报'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['qiu_ys'] = $qiu_ys;
+        //秋-健康护航
+        $qiu_jk = DB::table('qlg_news')
+        ->where([['news_season', '=', '秋'],['news_sort', '=', '健康护航'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['qiu_jk'] = $qiu_jk;
+        //秋-金色时光
+        $qiu_js = DB::table('qlg_news')
+        ->where([['news_season', '=', '秋'],['news_sort', '=', '金色时光'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['qiu_js'] = $qiu_js;
+        //秋-最美芳华
+        $qiu_zm = DB::table('qlg_news')
+        ->where([['news_season', '=', '秋'],['news_sort', '=', '最美芳华'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['qiu_zm'] = $qiu_zm;
+        //秋-为爱同行
+        $qiu_wa = DB::table('qlg_news')
+        ->where([['news_season', '=', '秋'],['news_sort', '=', '为爱同行'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['qiu_wa'] = $qiu_wa;
+        //冬-园所快报
+        $dong_ys = DB::table('qlg_news')
+        ->where([['news_season', '=', '冬'],['news_sort', '=', '园所快报'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['dong_ys'] = $dong_ys;
+        //冬-健康护航
+        $dong_jk = DB::table('qlg_news')
+        ->where([['news_season', '=', '冬'],['news_sort', '=', '健康护航'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['dong_jk'] = $dong_jk;
+        //冬-金色时光
+        $dong_js = DB::table('qlg_news')
+        ->where([['news_season', '=', '冬'],['news_sort', '=', '金色时光'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['dong_js'] = $dong_js;
+        //冬-最美芳华
+        $dong_zm = DB::table('qlg_news')
+        ->where([['news_season', '=', '冬'],['news_sort', '=', '最美芳华'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['dong_zm'] = $dong_zm;
+        //冬-为爱同行
+        $dong_wa = DB::table('qlg_news')
+        ->where([['news_season', '=', '冬'],['news_sort', '=', '为爱同行'],])
+        ->limit(8)
+        ->orderBy('news_date','desc')
+        ->get();
+        $data['dong_wa'] = $dong_wa;
+        return view('yd_news',$data);
+    }
+
+    //青蓝果动态(三级)
+    public function news_details($id){
+        $data = [];
+        //动态
+        $news = DB::table('qlg_news')
+                  ->where('id',$id)
+                  ->get();
+        $data['news'] = $news;
+        //动态详情
+        $news_details = DB::table('qlg_news_detail')
+                  ->orderBy('id','asc')
+                  ->where('news_id',$id)
+                  ->get();
+        $data['news_details'] = $news_details;
+        return view('yd_news_details',$data);
+    }
 
 }

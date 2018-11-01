@@ -439,7 +439,19 @@
 
 							<span class="icon-cogs"></span>
 
-							动态头图
+							动态头图(pc端)
+
+							</a>
+
+						</li>
+
+						<li>
+
+							<a href="/admin/news/picture_yd">
+
+							<span class="icon-cogs"></span>
+
+							动态头图(移动端)
 
 							</a>
 

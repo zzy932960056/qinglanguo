@@ -88,10 +88,10 @@ class EnvindexController extends Controller
 				$env_pic2 = $_POST['env_pic2'];
 				if($env_pic1 == ''){
 						echo "<script>alert('图片1路径不能为空')</script>";
-						return self::env_update($id);
+						return self::env_yd_update($id);
 				}else if($env_pic2 == ''){
 						echo "<script>alert('图片2路径不能为空')</script>";
-						return self::env_update($id);
+						return self::env_yd_update($id);
 				}
 				$num = DB::table('env_cul_yd')->where('id',$id)->update(
 								['env_pic1'=>$env_pic1,
