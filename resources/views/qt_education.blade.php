@@ -171,24 +171,40 @@
 <script src="{{URL::asset('/js_qt/jquery-2.1.3.min.js')}}"></script>
 <script src="{{URL::asset('/js_qt/main.js')}}"></script>
 <script>
+    var navLeft=$('.teach-con-box').offset().top;
+    var teachConList=$('.teach-con-list');
+    var navSonList=[];
+    $.each(teachConList,function () {
+        navSonList.push($(this).offset().top);
+    });
     $(window).scroll(function(){
-        var navLeft=$('.teach-con-box').offset().top;
         var scrollTop=$(window).scrollTop();
-        console.log(navLeft)
-        console.log(scrollTop)
         if(scrollTop>=navLeft){
             $(".culture-item-nav").css({position:'relative',top:(scrollTop-navLeft-0)+"px"})
         }
-    })
+        for(var i=0;i<navSonList.length;i++){
+            if(i==navSonList.length-1){
+                if(scrollTop>=navSonList[i]){
+                    $(".culture-item-nav li a").removeClass("active").eq(i).addClass('active');
+                }
+            }else{
+                if(scrollTop>navSonList[i]&&scrollTop<=navSonList[i+1]){
+                    $(".culture-item-nav li a").removeClass("active").eq(i).addClass('active');
+                }
+            }
+
+        }
+
+    });
     $('.culture-item-nav li a').on("click",function(){
         var oA=$(this);
         var index=oA.parent().index();
-        var h=$('.teach-con-list').eq(index).offset().top + 'px';
+        var h=$('.teach-con-list').eq(index).offset().top+1 + 'px';
 
         if(oA.attr("class") != "active"){
             $(".active").removeClass("active");
             oA.addClass('active')
-            $('html,body').animate({scrollTop:h},300);
+            $('html,body').animate({scrollTop:h},0);
         }
     })
 </script>
