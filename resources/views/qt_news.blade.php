@@ -44,7 +44,17 @@
                         <img src="{{$news_pic[0]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($chun_ys as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -74,7 +84,17 @@
                         <img src="{{$news_pic[1]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($chun_jk as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -104,7 +124,17 @@
                         <img src="{{$news_pic[2]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($chun_js as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -134,7 +164,17 @@
                         <img src="{{$news_pic[3]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($chun_zm as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -164,7 +204,17 @@
                         <img src="{{$news_pic[4]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($chun_wa as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -197,7 +247,17 @@
                         <img src="{{$news_pic[0]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($xia_ys as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -227,7 +287,17 @@
                         <img src="{{$news_pic[1]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($xia_jk as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -257,7 +327,17 @@
                         <img src="{{$news_pic[2]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($xia_js as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -287,7 +367,17 @@
                         <img src="{{$news_pic[3]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($xia_zm as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -317,7 +407,17 @@
                         <img src="{{$news_pic[4]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($xia_wa as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -350,7 +450,17 @@
                         <img src="{{$news_pic[0]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($qiu_ys as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -380,7 +490,17 @@
                         <img src="{{$news_pic[1]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($qiu_jk as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -410,7 +530,17 @@
                         <img src="{{$news_pic[2]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($qiu_js as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -440,7 +570,17 @@
                         <img src="{{$news_pic[3]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($qiu_zm as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -470,7 +610,17 @@
                         <img src="{{$news_pic[4]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($qiu_wa as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -503,7 +653,17 @@
                         <img src="{{$news_pic[0]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($dong_ys as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -533,7 +693,17 @@
                         <img src="{{$news_pic[1]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($dong_jk as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -563,7 +733,17 @@
                         <img src="{{$news_pic[2]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($dong_js as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -593,7 +773,17 @@
                         <img src="{{$news_pic[3]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($dong_zm as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
@@ -623,7 +813,17 @@
                         <img src="{{$news_pic[4]->news_pic}}" alt="" class="trends-img">
                         <div class="trends-list-con">
                             @foreach($dong_wa as $k => $v)
-                            @if($k <= 1)
+                            @if($k == 0)
+                            <div class="trends-list-item">
+                                <a href="/news/details/{{$v->id}}">
+                                    <div class="trends-img-box">
+                                        <img src="{{URL::asset('/images/new.png')}}" alt="">
+                                        <span>{{$v->news_title}}</span>
+                                    </div>
+                                    <div class="trends-con-tiem">{{$v->news_date}}</div>
+                                </a>
+                            </div>
+                            @elseif($k == 1)
                             <div class="trends-list-item">
                                 <a href="/news/details/{{$v->id}}">
                                     <div class="trends-img-box">
