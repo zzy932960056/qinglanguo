@@ -722,7 +722,7 @@
     justify-content: space-between;
     border-bottom: 1px dotted #f79e46;
     color: #53310f;
-    font-size: 0.24px;
+    font-size: 0.24rem;
     margin-bottom: 0.2rem;
 }
 
@@ -1348,9 +1348,3 @@ video::-webkit-media-controls-panel {
     z-index:5;
     cursor:pointer;
 }
-
-
-
-
-
-
