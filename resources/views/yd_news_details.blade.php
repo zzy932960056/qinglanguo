@@ -124,14 +124,20 @@
                     </div>
                     <script>
                         $("#ion{{$va->id}}").on('click',function(){
-                            $('<div class="video-pop"><video class="video" src="{{$va->news_video}}" autoplay  controls></video></div>').appendTo('body');
-                        })
+                            alert();
+                            $('<div class="video-pop" id="vid{{$va->id}}"><video id="myVideo1{{$va->id}}" class="video" src="{{$va->news_video}}" autoplay  controls></video></div>').appendTo('body');
+                        });
                         $(document).on('click', '.video-pop', function() {
                             $('.video-pop').remove();
                         });
                         $(document).on('click', '.video', function(e) {
                             e.stopPropagation()
-                        })
+                        });
+                        var audio1 = document.getElementById('myVideo1{{$va->id}}');
+                        $("#vid{{$va->id}}").on('blur',function(){
+                            $("#vid{{$va->id}}").hide();
+                            audio1.pause();  //暂停
+                        });
                     </script>
                 </div>
                 @endif
