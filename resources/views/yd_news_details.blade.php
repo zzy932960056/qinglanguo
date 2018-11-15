@@ -124,7 +124,6 @@
                     </div>
                     <script>
                         $("#ion{{$va->id}}").on('click',function(){
-                            alert();
                             $('<div class="video-pop" id="vid{{$va->id}}"><video id="myVideo1{{$va->id}}" class="video" src="{{$va->news_video}}" autoplay  controls></video></div>').appendTo('body');
                         });
                         $(document).on('click', '.video-pop', function() {
