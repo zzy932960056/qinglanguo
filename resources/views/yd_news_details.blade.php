@@ -126,16 +126,11 @@
                         $("#ion{{$va->id}}").on('click',function(){
                             $('<div class="video-pop" id="vid{{$va->id}}"><video id="myVideo1{{$va->id}}" class="video" src="{{$va->news_video}}" autoplay  controls></video></div>').appendTo('body');
                         });
-                        $(document).on('click', '.video-pop', function() {
+                        $(document).on('click touchstart', '.video-pop', function() {
                             $('.video-pop').remove();
                         });
-                        $(document).on('click', '.video', function(e) {
+                        $(document).on('click touchstart', '.video', function(e) {
                             e.stopPropagation()
-                        });
-                        var audio1 = document.getElementById('myVideo1{{$va->id}}');
-                        $("#vid{{$va->id}}").on('blur',function(){
-                            $("#vid{{$va->id}}").hide();
-                            audio1.pause();  //暂停
                         });
                     </script>
                 </div>
