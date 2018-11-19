@@ -21,35 +21,35 @@ class IndexController extends Controller
         //园所动态(园所快报)
         $news_ys = DB::table('qlg_news')
                 ->where('news_sort','园所快报')
-                ->limit(3)
+                ->limit(5)
                 ->orderBy('news_date','desc')
                 ->get();
         $data['news_ys'] = $news_ys;
         //园所动态(健康护航)
         $news_jk = DB::table('qlg_news')
                 ->where('news_sort','健康护航')
-                ->limit(3)
+                ->limit(5)
                 ->orderBy('news_date','desc')
                 ->get();
         $data['news_jk'] = $news_jk;
         //园所动态(金色时光)
         $news_js = DB::table('qlg_news')
                 ->where('news_sort','金色时光')
-                ->limit(3)
+                ->limit(5)
                 ->orderBy('news_date','desc')
                 ->get();
         $data['news_js'] = $news_js;
         //园所动态(最美芳华)
         $news_zm = DB::table('qlg_news')
                 ->where('news_sort','最美芳华')
-                ->limit(3)
+                ->limit(5)
                 ->orderBy('news_date','desc')
                 ->get();
         $data['news_zm'] = $news_zm;
         //园所动态(为爱同行)
         $news_wa = DB::table('qlg_news')
                 ->where('news_sort','为爱同行')
-                ->limit(3)
+                ->limit(5)
                 ->orderBy('news_date','desc')
                 ->get();
         $data['news_wa'] = $news_wa;
