@@ -307,7 +307,7 @@ header("Location:http://m.kinglengo.com");
         loop: true,
         autoplay: true,
         slidesPerView: 'auto',
-        slidesOffsetBefore: 400,
+        slidesOffsetBefore: 550,
         spaceBetween: 45,
         pagination: {
             el: '.swiper-pagination',
