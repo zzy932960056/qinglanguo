@@ -344,7 +344,7 @@ header("Location:http://m.kinglengo.com");
     var mySwiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
         loop: true,
-        autoplay: 5000,
+        autoplay: true,
         // slidesPerView: "auto",
         // centeredSlides:true,
         // spaceBetween: 20,
