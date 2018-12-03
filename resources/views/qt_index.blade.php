@@ -21,8 +21,8 @@ header("Location:http://m.kinglengo.com");
     @include('qt_navigator')
     <!--header end-->
 
-    <!--banner-->
-    <div class="cyanine-banner">
+    <!-- banner-->
+    <!-- <div class="cyanine-banner">
         <div class="banner-bg"></div>
         <div class="banner swiper-container">
             <div class="swiper-wrapper banner-wrapper">
@@ -35,6 +35,31 @@ header("Location:http://m.kinglengo.com");
                 <div class="swiper-slide banner-slide green-banner" style="width:820px;">
                 @elseif($ke == 3)
                 <div class="swiper-slide banner-slide orange-banner" style="width:820px;">
+                @endif
+                    <div class="banner-inner">
+                        <img src="{{$ba->banner_path}}" alt="">
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            <div class="swiper-pagination cyanine-pagination"></div>
+        </div>
+    </div> -->
+    <!--banner end -->
+    <!--banner-->
+    <div class="cyanine-banner">
+        <!--<div class="banner-bg"></div>-->
+        <div class="banner swiper-container">
+            <div class="swiper-wrapper banner-wrapper">
+                @foreach($banner as $ke => $ba)
+                @if($ke == 0)
+                <div class="swiper-slide banner-slide blue-banner">
+                @elseif($ke == 1)
+                <div class="swiper-slide banner-slide yellow-banner">
+                @elseif($ke == 2)
+                <div class="swiper-slide banner-slide green-banner">
+                @elseif($ke == 3)
+                <div class="swiper-slide banner-slide orange-banner">
                 @endif
                     <div class="banner-inner">
                         <img src="{{$ba->banner_path}}" alt="">
@@ -302,13 +327,27 @@ header("Location:http://m.kinglengo.com");
 <script src="{{URL::asset('/js_qt/jquery-2.1.3.min.js')}}"></script>
 <script src="{{URL::asset('/js_qt/swiper.min.js')}}"></script>
 <script src="{{URL::asset('/js_qt/main.js')}}"></script>
-<script>
+<!-- <script>
     var mySwiper = new Swiper('.swiper-container', {
         loop: true,
         autoplay: true,
         slidesPerView: 'auto',
         slidesOffsetBefore: 550,
         spaceBetween: 45,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        }
+    })
+</script> -->
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        autoplay: 5000,
+        // slidesPerView: "auto",
+        // centeredSlides:true,
+        // spaceBetween: 20,
         pagination: {
             el: '.swiper-pagination',
             clickable: true

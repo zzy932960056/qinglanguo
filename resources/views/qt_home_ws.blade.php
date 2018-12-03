@@ -284,7 +284,7 @@
 </body>
 <script src="{{URL::asset('/js_qt/jquery-2.1.3.min.js')}}"></script>
 <script src="{{URL::asset('/js_qt/main.js')}}"></script>
-<script src="{{URL::asset('/js_qt/scroll.js')}}"></script>
+<script src="{{URL::asset('/js_qt/scroll1.js')}}"></script>
 <script>
     $("#li1").click(function(){
         $("#gar").html('中心园');
