@@ -85,6 +85,23 @@
                             <img src="{{$va->news_pic_b}}" alt="">
                         </div>
                     </div>
+                    @elseif($va->news_pic_m1)
+                    <div class="header-list-other">
+                        <div class="icon4"></div>
+                       <!-- <div class="health-inner-img header-c-inner">
+                            <img src="images/img.jpg" alt="">
+                        </div>-->
+                        <div class="header-other-left">
+                            <div class="header-other-img">
+                                <img src="{{$va->news_pic_m1}}" alt="">
+                            </div>
+                        </div>
+                        <div class="header-other-left">
+                            <div class="header-other-img">
+                                <img src="{{$va->news_pic_m2}}" alt="">
+                            </div>
+                        </div>
+                    </div>
                     @elseif($va->news_pic_s1)
                     <div class="health-comment health-clo-con">
                         <div class="icon3"></div>

@@ -337,6 +337,10 @@ Route::post('/admin/news/details/text/doinsert','NewsindexController@news_detail
 Route::any('/admin/news/details/big_pic/insert/{id}','NewsindexController@news_details_big_pic_insert')->where('id', '[0-9]+');
 //do青蓝果动态大图片新增
 Route::post('/admin/news/details/big_pic/doinsert','NewsindexController@news_details_big_pic_doInsert');
+//青蓝果动态中图片新增
+Route::any('/admin/news/details/mid_pic/insert/{id}','NewsindexController@news_details_mid_pic_insert')->where('id', '[0-9]+');
+//do青蓝果动态中图片新增
+Route::post('/admin/news/details/mid_pic/doinsert','NewsindexController@news_details_mid_pic_doInsert');
 //青蓝果动态小图片新增
 Route::any('/admin/news/details/small_pic/insert/{id}','NewsindexController@news_details_small_pic_insert')->where('id', '[0-9]+');
 //do青蓝果动态小图片新增
@@ -353,6 +357,10 @@ Route::post('/admin/news/details/text/doupdate/{id}','NewsindexController@news_d
 Route::get('/admin/news/details/big_pic/update/{id}','NewsindexController@news_details_big_pic_update')->where('id', '[0-9]+');
 //do青蓝果动态详情大图编辑
 Route::post('/admin/news/details/big_pic/doupdate/{id}','NewsindexController@news_details_big_pic_doUpdate')->where('id', '[0-9]+');
+//青蓝果动态详情中图编辑
+Route::get('/admin/news/details/mid_pic/update/{id}','NewsindexController@news_details_mid_pic_update')->where('id', '[0-9]+');
+//do青蓝果动态详情中图编辑
+Route::post('/admin/news/details/mid_pic/doupdate/{id}','NewsindexController@news_details_mid_pic_doUpdate')->where('id', '[0-9]+');
 //青蓝果动态详情小图编辑
 Route::get('/admin/news/details/small_pic/update/{id}','NewsindexController@news_details_small_pic_update')->where('id', '[0-9]+');
 //do青蓝果动态详情小图编辑

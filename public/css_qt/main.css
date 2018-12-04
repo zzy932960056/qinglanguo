@@ -982,7 +982,7 @@
     font-size:14px;
     color:#53310f;
     line-height:26px;
-    margin:15px 0 35px;
+    margin:30px 0 50px;
 }
 .health-comment{
     width:950px;
@@ -1121,15 +1121,51 @@
     border-radius: 0;
 }
 .icon4{
-    width:105px;
-    height:70px;
-    background:url('../images/icon4.png') no-repeat center 0;
+    width:102px;
+    height:72px;
+    background:url('../images/xjicon.png') no-repeat center 0;
     -webkit-background-size: cover;
     background-size: cover;
     position:absolute;
     bottom:-5px;
-    right:10px;
+    left:50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    transform: translate(-50%,0);
     z-index:3;
+}
+.header-list-other{
+    width:916px;
+    height:367px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+}
+.header-other-left{
+    width:450px;
+    height:367px;
+    background:url('../images/bjlist.png') no-repeat center 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    float:left;
+    overflow:hidden;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right:16px;
+}
+.header-list-other >div:nth-child(3){
+    margin-right:0;
+}
+.header-other-img{
+    width:434px;
+    height:305px;
+}
+.header-other-left img{
+    width:100%;
 }
 /*环境文化*/
 .culture-container{
@@ -1642,6 +1678,3 @@ video::-webkit-media-controls-panel {
         top:-50px;
     }
 }*/
-
-
-

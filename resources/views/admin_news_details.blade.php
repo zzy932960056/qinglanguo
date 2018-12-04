@@ -167,7 +167,17 @@
 
 										<button id="sample_editable_2_new" class="btn green">
 
-										添加大图片 <i class="icon-plus"></i>
+										添加大图片（1张） <i class="icon-plus"></i>
+
+										</button>
+
+									</div>
+
+									<div class="btn-group">
+
+										<button id="sample_editable_5_new" class="btn green">
+
+										添加中图片（2张） <i class="icon-plus"></i>
 
 										</button>
 
@@ -177,7 +187,7 @@
 
 										<button id="sample_editable_3_new" class="btn green">
 
-										添加小图片 <i class="icon-plus"></i>
+										添加小图片（3张） <i class="icon-plus"></i>
 
 										</button>
 
@@ -242,6 +252,25 @@
 											<td><img src="{{$de->news_pic_b}}" width="50%"><span>大图</span></td>
 
 											<td><a href="/admin/news/details/big_pic/update/{{$de->id}}">编辑</a></td>
+
+											<td><a class="delete" href="javascript:;">删除</a></td>
+
+										</tr>
+
+									</tbody>
+									@elseif($de->news_pic_m1)
+									<tbody>
+
+										<tr class="">
+
+											<td>{{$de->id}}</td>
+
+											<td>
+												<img src="{{$de->news_pic_m1}}" width="30%"><span>中图1</span>
+												<img src="{{$de->news_pic_m2}}" width="30%"><span>中图2</span>
+											</td>
+
+											<td><a href="/admin/news/details/mid_pic/update/{{$de->id}}">编辑</a></td>
 
 											<td><a class="delete" href="javascript:;">删除</a></td>
 
@@ -387,6 +416,13 @@
 				function(){
 					var hid = $('#hidden').val();
 					location.href = "/admin/news/details/video/insert/"+hid;
+				}
+			)
+
+		$("#sample_editable_5_new").click(
+				function(){
+					var hid = $('#hidden').val();
+					location.href = "/admin/news/details/mid_pic/insert/"+hid;
 				}
 			)
 
