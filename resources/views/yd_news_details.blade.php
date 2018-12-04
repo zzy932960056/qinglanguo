@@ -94,18 +94,18 @@
                     </div>
                 </div>
                 @elseif($va->news_pic_m1)
-                <div class="header-list-other">
-                    <div class="icon4"></div>
-                   <!-- <div class="health-inner-img header-c-inner">
-                        <img src="images/img.jpg" alt="">
-                    </div>-->
-                    <div class="header-other-left">
-                        <div class="header-other-img">
+                <div class="health-con-item">
+                    <div class="health-c-img health-comment">
+                        <div class="icon4"></div>
+                        <div class="health-inner-img header-c-inner">
                             <img src="{{$va->news_pic_m1}}" alt="">
                         </div>
                     </div>
-                    <div class="header-other-left">
-                        <div class="header-other-img">
+                </div>
+                <div class="health-con-item">
+                    <div class="health-c-img health-comment">
+                        <div class="icon4"></div>
+                        <div class="health-inner-img header-c-inner">
                             <img src="{{$va->news_pic_m2}}" alt="">
                         </div>
                     </div>
