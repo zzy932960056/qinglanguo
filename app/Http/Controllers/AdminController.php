@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
-{   
+{
     //登录
     public function login(){
     	return view('login');
@@ -275,7 +275,7 @@ class AdminController extends Controller
         }
         return view('admin_role_insert');
     }
-    
+
     //do管理员角色新增
     public function do_admin_role_insert(){
         $role_sign = $_POST['sign'];
@@ -304,7 +304,7 @@ class AdminController extends Controller
         }else{
             return new JsonResponse(
                     array('msg' => 'no')
-                );  
+                );
         }
     }
 
@@ -473,7 +473,7 @@ class AdminController extends Controller
                 //扩展名
                 $ext = $file->getClientOriginalExtension();
                 //MimeType
-                $type = $file->getClientMimeType(); 
+                $type = $file->getClientMimeType();
                 //临时文件绝对路径
                 $realPath = $file->getRealPath();
                 //文件名(最终)
@@ -483,7 +483,7 @@ class AdminController extends Controller
                 //上传成功
                 if($bool){
                     //获取图片描述
-                    $describe = $_POST['describe']; 
+                    $describe = $_POST['describe'];
                     //创建时间
                     $time = date('Y-m-d H:i:s');
                     //文件路径
@@ -555,7 +555,7 @@ class AdminController extends Controller
                 echo "<script>alert('图片信息修改失败')</script>";
                 return self::cdn_image();
             }
-        //更新了图片    
+        //更新了图片
         }else{
             if($request->isMethod('post')){
                 $file = $request->file('goods_file');
@@ -566,7 +566,7 @@ class AdminController extends Controller
                     //扩展名
                     $ext = $file->getClientOriginalExtension();
                     //MimeType
-                    $type = $file->getClientMimeType(); 
+                    $type = $file->getClientMimeType();
                     //临时文件绝对路径
                     $realPath = $file->getRealPath();
                     //文件名(最终)
@@ -632,7 +632,7 @@ class AdminController extends Controller
                 //扩展名
                 $ext = $file->getClientOriginalExtension();
                 //MimeType
-                $type = $file->getClientMimeType(); 
+                $type = $file->getClientMimeType();
                 //临时文件绝对路径
                 $realPath = $file->getRealPath();
                 //文件名(最终)
@@ -716,7 +716,7 @@ class AdminController extends Controller
         if($_FILES['goods_file']['name'] == ''){
             //描述
             $description = $_POST['describe'];
-            //id 
+            //id
             $id = $_POST['video_hidden'];
             //视频类型
             $video_type = $_POST['video_type'];
@@ -732,7 +732,7 @@ class AdminController extends Controller
                 echo "<script>alert('视频信息修改失败')</script>";
                 return self::cdn_video();
             }
-        //更新了视频封面图    
+        //更新了视频封面图
         }else{
             if($request->isMethod('post')){
                 $file = $request->file('goods_file');
@@ -743,7 +743,7 @@ class AdminController extends Controller
                     //扩展名
                     $ext = $file->getClientOriginalExtension();
                     //MimeType
-                    $type = $file->getClientMimeType(); 
+                    $type = $file->getClientMimeType();
                     //临时文件绝对路径
                     $realPath = $file->getRealPath();
                     //文件名(最终)
@@ -800,7 +800,7 @@ class AdminController extends Controller
                 //扩展名
                 $ext = $file->getClientOriginalExtension();
                 //MimeType
-                $type = $file->getClientMimeType(); 
+                $type = $file->getClientMimeType();
                 //临时文件绝对路径
                 $realPath = $file->getRealPath();
                 //文件名(最终)
@@ -815,7 +815,7 @@ class AdminController extends Controller
                 }
             }
         }
-    } 
+    }
 
-    
+
 }

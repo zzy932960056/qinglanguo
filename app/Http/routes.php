@@ -93,9 +93,47 @@ Route::get('/news/details/{id}','IndexController@news_details')->where('id','[0-
 
 /*************************************PC端*********************************/
 
-
-
 /*************************************************前台***************************************************/
+
+
+
+/*************************************物资盘点*********************************/
+//前台
+Route::get('/zcfy','ZcfyController@index');
+//后台
+Route::get('/zcfy/login','ZcfyadminController@login');
+Route::post('/zcfy/dologin','ZcfyadminController@doLogin');
+Route::get('/zcfy/index','ZcfyadminController@index');
+Route::post('/zcfy/index/dodelete','ZcfyadminController@index_doDelete');
+Route::get('/zcfy/index/insert','ZcfyadminController@index_insert');
+Route::post('/zcfy/index/asset','ZcfyadminController@index_asset');
+Route::post('/zcfy/index/doinsert','ZcfyadminController@index_doInsert');
+Route::get('/zcfy/index/update/{id}','ZcfyadminController@index_update')->where('id', '[0-9]+');
+Route::post('/zcfy/index/doupdate/{id}','ZcfyadminController@index_doUpdate')->where('id', '[0-9]+');
+Route::get('/zcfy/update','ZcfyadminController@update');
+Route::post('/zcfy/self/doupdate','ZcfyadminController@doUpdate');
+Route::get('/zcfy/logout','ZcfyadminController@logout');
+Route::get('/zcfy/lock','ZcfyadminController@adminLock');
+Route::post('/zcfy/locklogin','ZcfyadminController@lockLogin');
+Route::get('/zcfy/admin','ZcfyadminController@admin');
+Route::post('/zcfy/dodelete','ZcfyadminController@admin_doDelete');
+Route::get('/zcfy/insert','ZcfyadminController@admin_insert');
+Route::post('/zcfy/doinsert','ZcfyadminController@admin_doInsert');
+Route::get('/zcfy/update/{id}','ZcfyadminController@admin_update')->where('id', '[0-9]+');
+Route::post('/zcfy/doupdate/{id}','ZcfyadminController@admin_doUpdate')->where('id', '[0-9]+');
+Route::get('/zcfy/search','ZcfyadminController@search');
+Route::post('/zcfy/index/search','ZcfyadminController@index_search');
+Route::get('/zcfy/database','ZcfyadminController@database');
+Route::get('/zcfy/excel1','ZcfyadminController@excel1');
+Route::get('/zcfy/excel2','ZcfyadminController@excel2');
+Route::get('/zcfy/database/truncate','ZcfyadminController@database_truncate');
+Route::get('/zcfy/upload','ZcfyadminController@zcfy_upload');
+
+Route::get('/zcfy/qrcode','ZcfyadminController@zcfy_qrcode');
+
+/*************************************物资盘点*********************************/
+
+
 
 
 
